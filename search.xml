@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<search> 
+  
+  
+    
+    <entry>
+      <title>zono的学习日志003</title>
+      <link href="/2023/03/26/%E5%AD%A6%E4%B9%A0%E6%97%A5%E5%BF%972/"/>
+      <url>/2023/03/26/%E5%AD%A6%E4%B9%A0%E6%97%A5%E5%BF%972/</url>
+      
+        <content type="html"><![CDATA[<p>1、均方误差的理解<br>2、mit线性代数1.01<br>3、状态一直不是很好，可能计划太多，心情太乱。<br>4、进度可能跟不上了，能力不足加上心态不稳。<br>5、回去找找自己吧，一次就只干一件事。</p>]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> 学习日志 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>zono的学习日志002</title>
+      <link href="/2023/03/23/zono%E7%9A%84%E5%AD%A6%E4%B9%A0%E6%97%A5%E5%BF%97/"/>
+      <url>/2023/03/23/zono%E7%9A%84%E5%AD%A6%E4%B9%A0%E6%97%A5%E5%BF%97/</url>
+      
+        <content type="html"><![CDATA[<p>1、今天主要将ipad的平时使用环境搭建了，建立了科学上网的方法<br>2、了解到了内网渗透等服务器技术，从课中学到了一些linux的基础操作。下载了xshell并且连接了老师的服务器。<br>3、学了一些深度学习的基础，但还没能跟上课程的进展，明日认真赶一下《动手学深度学习》的进度。今天还尝试了热门的基于GPT-4的IDE，cursor。<br>明日计划：<br>1、优化一下blog，把blog基础构建设计一下，让内容更加有逻辑性。<br>2、对学校内课程进行一些复习。<br>3、跟上进度。</p>]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> 学习日志 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>zono的学习日志</title>
+      <link href="/2023/03/21/%E5%AD%A6%E4%B9%A0%E6%97%A5%E5%BF%971/"/>
+      <url>/2023/03/21/%E5%AD%A6%E4%B9%A0%E6%97%A5%E5%BF%971/</url>
+      
+        <content type="html"><![CDATA[<p>1、今日以hexo搭建了博客，原本打算创建域名结果要一系列的认证于是先搁置，服务器也是打算买的，但hexo为静态网站，以后搞动态blog在继续吧。<br>2、看《哲学家都干了些什么》又看了很大一段，对于价值观的冲击还是有的，以后会写一点随笔吧。最近发热，脑子也不太清醒。<br>3、还有加入了《动手学深度学习》的训练营，今日任务还未记录，先挂了网站。<br>4、做一点小flag：每天进行流水账记录学习日志</p>]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> 学习日志 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>Hello World</title>
+      <link href="/2023/03/21/hello-world/"/>
+      <url>/2023/03/21/hello-world/</url>
+      
+        <content type="html"><![CDATA[<p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p><h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/writing.html">Writing</a></p><h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/server.html">Server</a></p><h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/generating.html">Generating</a></p><h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>]]></content>
+      
+      
+      
+    </entry>
+    
+    
+  
+  
+</search>
