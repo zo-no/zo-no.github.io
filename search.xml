@@ -4,6 +4,25 @@
   
     
     <entry>
+      <title>学习日志004</title>
+      <link href="/2023/03/27/%E5%AD%A6%E4%B9%A0%E6%97%A5%E5%BF%974/"/>
+      <url>/2023/03/27/%E5%AD%A6%E4%B9%A0%E6%97%A5%E5%BF%974/</url>
+      
+        <content type="html"><![CDATA[<p>1、看完了《哲学家都干了什么》，按道理来说要写一点随笔，但第一次接触较完整哲学史，对三观的冲击是比较大的，我还得等它沉淀一段时间，同时有些问题我也得思考一番。<br>2、阅读准备大创的论文，还有很多没读，全英论文太难了<br><strong>阅读时遇见的问题：</strong><br>3、RNN的概念理解<a href="https://zhuanlan.zhihu.com/p/30844905">https://zhuanlan.zhihu.com/p/30844905</a><br>4、LSTM概念的理解<a href="https://zhuanlan.zhihu.com/p/32085405%EF%BC%9A">https://zhuanlan.zhihu.com/p/32085405：</a></p><ul><li>4.1序列数据：一串数据 </li><li>4.2softmax函数的理解<a href="https://zhuanlan.zhihu.com/p/105722023">https://zhuanlan.zhihu.com/p/105722023</a></li><li>4.3梯度消失和梯度爆炸问题<a href="https://zhuanlan.zhihu.com/p/68579467">https://zhuanlan.zhihu.com/p/68579467</a></li><li>4.4 激活函数</li><li>4.5 Hadamard Product和矩阵加法</li></ul>]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> 学习日志 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>zono的学习日志003</title>
       <link href="/2023/03/26/%E5%AD%A6%E4%B9%A0%E6%97%A5%E5%BF%972/"/>
       <url>/2023/03/26/%E5%AD%A6%E4%B9%A0%E6%97%A5%E5%BF%972/</url>
