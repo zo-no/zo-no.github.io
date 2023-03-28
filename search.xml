@@ -4,9 +4,9 @@
   
     
     <entry>
-      <title>学习日志004</title>
-      <link href="/2023/03/27/%E5%AD%A6%E4%B9%A0%E6%97%A5%E5%BF%974/"/>
-      <url>/2023/03/27/%E5%AD%A6%E4%B9%A0%E6%97%A5%E5%BF%974/</url>
+      <title>zono的学习日志004</title>
+      <link href="/2023/03/27/%E5%AD%A6%E4%B9%A0004/"/>
+      <url>/2023/03/27/%E5%AD%A6%E4%B9%A0004/</url>
       
         <content type="html"><![CDATA[<p>1、看完了《哲学家都干了什么》，按道理来说要写一点随笔，但第一次接触较完整哲学史，对三观的冲击是比较大的，我还得等它沉淀一段时间，同时有些问题我也得思考一番。<br>2、阅读准备大创的论文，还有很多没读，全英论文太难了<br><strong>阅读时遇见的问题：</strong><br>3、RNN的概念理解<a href="https://zhuanlan.zhihu.com/p/30844905">https://zhuanlan.zhihu.com/p/30844905</a><br>4、LSTM概念的理解<a href="https://zhuanlan.zhihu.com/p/32085405%EF%BC%9A">https://zhuanlan.zhihu.com/p/32085405：</a></p><ul><li>4.1序列数据：一串数据 </li><li>4.2softmax函数的理解<a href="https://zhuanlan.zhihu.com/p/105722023">https://zhuanlan.zhihu.com/p/105722023</a></li><li>4.3梯度消失和梯度爆炸问题<a href="https://zhuanlan.zhihu.com/p/68579467">https://zhuanlan.zhihu.com/p/68579467</a></li><li>4.4 激活函数</li><li>4.5 Hadamard Product和矩阵加法</li></ul>]]></content>
       
@@ -24,8 +24,8 @@
     
     <entry>
       <title>zono的学习日志003</title>
-      <link href="/2023/03/26/%E5%AD%A6%E4%B9%A0%E6%97%A5%E5%BF%972/"/>
-      <url>/2023/03/26/%E5%AD%A6%E4%B9%A0%E6%97%A5%E5%BF%972/</url>
+      <link href="/2023/03/26/%E5%AD%A6%E4%B9%A0003/"/>
+      <url>/2023/03/26/%E5%AD%A6%E4%B9%A0003/</url>
       
         <content type="html"><![CDATA[<p>1、均方误差的理解<br>2、mit线性代数1.01<br>3、状态一直不是很好，可能计划太多，心情太乱。<br>4、进度可能跟不上了，能力不足加上心态不稳。<br>5、回去找找自己吧，一次就只干一件事。</p>]]></content>
       
@@ -43,8 +43,8 @@
     
     <entry>
       <title>zono的学习日志002</title>
-      <link href="/2023/03/23/zono%E7%9A%84%E5%AD%A6%E4%B9%A0%E6%97%A5%E5%BF%97/"/>
-      <url>/2023/03/23/zono%E7%9A%84%E5%AD%A6%E4%B9%A0%E6%97%A5%E5%BF%97/</url>
+      <link href="/2023/03/23/%E5%AD%A6%E4%B9%A0002/"/>
+      <url>/2023/03/23/%E5%AD%A6%E4%B9%A0002/</url>
       
         <content type="html"><![CDATA[<p>1、今天主要将ipad的平时使用环境搭建了，建立了科学上网的方法<br>2、了解到了内网渗透等服务器技术，从课中学到了一些linux的基础操作。下载了xshell并且连接了老师的服务器。<br>3、学了一些深度学习的基础，但还没能跟上课程的进展，明日认真赶一下《动手学深度学习》的进度。今天还尝试了热门的基于GPT-4的IDE，cursor。<br>明日计划：<br>1、优化一下blog，把blog基础构建设计一下，让内容更加有逻辑性。<br>2、对学校内课程进行一些复习。<br>3、跟上进度。</p>]]></content>
       
@@ -62,8 +62,8 @@
     
     <entry>
       <title>zono的学习日志001</title>
-      <link href="/2023/03/21/%E5%AD%A6%E4%B9%A0%E6%97%A5%E5%BF%971/"/>
-      <url>/2023/03/21/%E5%AD%A6%E4%B9%A0%E6%97%A5%E5%BF%971/</url>
+      <link href="/2023/03/21/%E5%AD%A6%E4%B9%A0001/"/>
+      <url>/2023/03/21/%E5%AD%A6%E4%B9%A0001/</url>
       
         <content type="html"><![CDATA[<p>1、今日以hexo搭建了博客，原本打算创建域名结果要一系列的认证于是先搁置，服务器也是打算买的，但hexo为静态网站，以后搞动态blog在继续吧。<br>2、看《哲学家都干了些什么》又看了很大一段，对于价值观的冲击还是有的，以后会写一点随笔吧。最近发热，脑子也不太清醒。<br>3、还有加入了《动手学深度学习》的训练营，今日任务还未记录，先挂了网站。<br>4、做一点小flag：每天进行流水账记录学习日志</p>]]></content>
       
