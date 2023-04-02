@@ -4,32 +4,24 @@
   
     
     <entry>
-      <title>生活流水账（第一周）</title>
-      <link href="/2023/04/01/%E7%94%9F%E6%B4%BB%E6%B5%81%E6%B0%B4%E8%B4%A63.31-/"/>
-      <url>/2023/04/01/%E7%94%9F%E6%B4%BB%E6%B5%81%E6%B0%B4%E8%B4%A63.31-/</url>
+      <title>随思录</title>
+      <link href="/2023/04/02/%E9%9A%8F%E6%80%9D%E5%BD%95002/"/>
+      <url>/2023/04/02/%E9%9A%8F%E6%80%9D%E5%BD%95002/</url>
       
-        <content type="html"><![CDATA[<h1 id="周五（3-31）"><a href="#周五（3-31）" class="headerlink" title="周五（3.31）"></a>周五（3.31）</h1><p>上午常规的上课，下午去参加了和平精英的开发者沙龙，第一次知道国内也有在研究开发引擎，不过作为一个纯小白，顶多只能在大佬间浑水摸鱼了。<br>活动后的自由交流，居然发现上台分享的大佬是我们学长，缘妙不可言。<br>再就是认识了同为游戏爱好者的人大研究生学长和与好久不见的兄弟聚餐。</p><h1 id="周六（4-1）"><a href="#周六（4-1）" class="headerlink" title="周六（4.1）"></a>周六（4.1）</h1><p>今天忙着搞大创，要复现论文中的代码。所以活动较少。上午看了心理学导论，下午晚上除了和朋友一起外出打了一个小时台球，就一直呆在教室里看kmeans算法。</p><p><em>还有就是愚人节快乐！</em></p><h1 id=""><a href="#" class="headerlink" title=""></a></h1>]]></content>
+        <content type="html"><![CDATA[<h1 id="4-2"><a href="#4-2" class="headerlink" title="4-2"></a>4-2</h1><p>有个问题，为什么有很多朋友的人还是会感觉孤独呢？真的就找不到志同道合的人吗？过于浪漫也会让人难以合群？这样的人真的能有人理解吗？真想有办法一下子认识好多好多人，了解他们，找到共鸣，救赎他们也找到救赎自己的人。总是说习惯了一个人，但在热闹的操场外，一个人呆在教室也确实有孤独的感觉。希望真的有这样一个人，什么都喜欢，什么都好奇，然后来发现原来有个人正在寻找这样的朋友，然后啊，分享和聆听，救赎吧。（这段只是生活的恼骚，让感兴趣的人停留阅读这样的不通顺的文字吧）</p>]]></content>
       
       
-      
-        <tags>
-            
-            <tag> 随笔 </tag>
-            
-            <tag> 生活碎碎念 </tag>
-            
-        </tags>
       
     </entry>
     
     
     
     <entry>
-      <title>学习008</title>
-      <link href="/2023/04/01/%E5%AD%A6%E4%B9%A0008/"/>
-      <url>/2023/04/01/%E5%AD%A6%E4%B9%A0008/</url>
+      <title>zono的学习日志009</title>
+      <link href="/2023/04/02/%E5%AD%A6%E4%B9%A0009/"/>
+      <url>/2023/04/02/%E5%AD%A6%E4%B9%A0009/</url>
       
-        <content type="html"><![CDATA[<h1 id="阅读"><a href="#阅读" class="headerlink" title="阅读"></a>阅读</h1><p>1、阅读了《心理学导论》第三章</p><h1 id="经历"><a href="#经历" class="headerlink" title="经历"></a>经历</h1><p>1、昨日参加了和平精英的开发者沙龙，认识几位游戏届的大佬</p><h1 id="学习"><a href="#学习" class="headerlink" title="学习"></a>学习</h1><p>1、复习了python的模块导入。</p><pre><code>if __name__ == &quot;__main__&quot;:  </code></pre><p>2、找到了kmeans算法的演示代码，尝试用于大创中。</p>]]></content>
+        <content type="html"><![CDATA[<h1 id="阅读"><a href="#阅读" class="headerlink" title="阅读"></a>阅读</h1><p>1、阅读了《心理学导论》到148页</p><h1 id="学习"><a href="#学习" class="headerlink" title="学习"></a>学习</h1><p>1、知道了markdown表情包的插入办法&#x1F600;</p><p>2、</p>]]></content>
       
       
       
@@ -44,11 +36,51 @@
     
     
     <entry>
-      <title>学习007</title>
+      <title>生活流水账（第一周）</title>
+      <link href="/2023/04/01/%E7%94%9F%E6%B4%BB%E6%B5%81%E6%B0%B4%E8%B4%A63.31-/"/>
+      <url>/2023/04/01/%E7%94%9F%E6%B4%BB%E6%B5%81%E6%B0%B4%E8%B4%A63.31-/</url>
+      
+        <content type="html"><![CDATA[<h1 id="周五（3-31）"><a href="#周五（3-31）" class="headerlink" title="周五（3.31）"></a>周五（3.31）</h1><p>上午常规的上课，下午去参加了和平精英的开发者沙龙，第一次知道国内也有在研究开发引擎，不过作为一个纯小白，顶多只能在大佬间浑水摸鱼了。<br>活动后的自由交流，居然发现上台分享的大佬是我们学长，缘妙不可言。<br>再就是认识了同为游戏爱好者的人大研究生学长和与好久不见的兄弟聚餐。</p><h1 id="周六（4-1）"><a href="#周六（4-1）" class="headerlink" title="周六（4.1）"></a>周六（4.1）</h1><p>今天忙着搞大创，要复现论文中的代码。所以活动较少。上午看了心理学导论，下午晚上除了和朋友一起外出打了一个小时台球，就一直呆在教室里看kmeans算法。</p><p><em>还有就是愚人节快乐！</em></p><h1 id="周日（4-2）"><a href="#周日（4-2）" class="headerlink" title="周日（4.2）"></a>周日（4.2）</h1><p>参加了桌游社的ptcg活动，白嫖了一套50的初始卡组。可惜没能开出稀有卡（在想peach？:joy:）</p><p>与学长一起去看了《宇宙探索编辑部》，这是在看完哲学书后第一次观看文艺片，感受确实深了不少，但其实与我的初衷不符。我想的是看一部科幻的喜剧商业片，快乐快乐就好了，这样更符合我的“选择（待定）”。</p><p>这种文艺片讨论的哲学问题是我喜欢的，而最后的答案，我只能说无法完全回答这个庞大的问题，不过作为这个多选的题的其中一个答案，已经足够一个人用一辈子了。</p>]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> 生活碎碎念 </tag>
+            
+            <tag> 随笔 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>zono的学习日志008</title>
+      <link href="/2023/04/01/%E5%AD%A6%E4%B9%A0008/"/>
+      <url>/2023/04/01/%E5%AD%A6%E4%B9%A0008/</url>
+      
+        <content type="html"><![CDATA[<h1 id="阅读"><a href="#阅读" class="headerlink" title="阅读"></a>阅读</h1><p>1、阅读了《心理学导论》第三章</p><h1 id="经历"><a href="#经历" class="headerlink" title="经历"></a>经历</h1><p>1、昨日参加了和平精英的开发者沙龙，认识几位游戏届的大佬</p><h1 id="学习"><a href="#学习" class="headerlink" title="学习"></a>学习</h1><p>1、复习了python的模块导入。</p><pre><code>if __name__ == &quot;__main__&quot;:  </code></pre><p>2、找到了kmeans算法的演示代码，尝试用于大创中。</p><h1 id="需要记忆"><a href="#需要记忆" class="headerlink" title="需要记忆"></a>需要记忆</h1><p>1、包管理时使用conda而不是pip</p><h1 id="生活流水账"><a href="#生活流水账" class="headerlink" title="生活流水账"></a>生活流水账</h1><p>还有愚人节快乐呀。</p>]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> 学习日志 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>zono的学习日志007</title>
       <link href="/2023/03/30/%E5%AD%A6%E4%B9%A0007/"/>
       <url>/2023/03/30/%E5%AD%A6%E4%B9%A0007/</url>
       
-        <content type="html"><![CDATA[<h1 id="阅读"><a href="#阅读" class="headerlink" title="阅读"></a>阅读</h1><p>1、心理学导论——125</p><h1 id="学习"><a href="#学习" class="headerlink" title="学习"></a>学习</h1><h2 id="1、课内"><a href="#1、课内" class="headerlink" title="1、课内"></a>1、课内</h2><p>1、《计算机网络》阅读第三章<br>2、《机器学习》西瓜书 第四章 线性回归模型</p><h2 id="2、课外"><a href="#2、课外" class="headerlink" title="2、课外"></a>2、课外</h2><p>1、爬虫的尝试</p>]]></content>
+        <content type="html"><![CDATA[<h1 id="阅读"><a href="#阅读" class="headerlink" title="阅读"></a>阅读</h1><p>1、心理学导论——125</p><h1 id="学习"><a href="#学习" class="headerlink" title="学习"></a>学习</h1><h2 id="1、课内"><a href="#1、课内" class="headerlink" title="1、课内"></a>1、课内</h2><p>1、《计算机网络》阅读第三章<br>2、《机器学习》西瓜书 第四章 线性回归模型</p><h2 id="2、课外"><a href="#2、课外" class="headerlink" title="2、课外"></a>2、课外</h2><p>1、爬虫的尝试<br>2、阅读最顶尖的12给IT行业技能<a href="https://blog.csdn.net/lch614730/article/details/12572553">https://blog.csdn.net/lch614730/article/details/12572553</a></p>]]></content>
       
       
       
@@ -67,7 +99,7 @@
       <link href="/2023/03/29/%E5%AD%A6%E4%B9%A0006/"/>
       <url>/2023/03/29/%E5%AD%A6%E4%B9%A0006/</url>
       
-        <content type="html"><![CDATA[<p>1、初次接触6级阅读，没太读懂，好在我勾画的生词都是答案上记录了的。（正确率感人）<br>2、心理学导论阅读到104.（共765）。<br>3、体能恢复计划。</p>]]></content>
+        <content type="html"><![CDATA[<h1 id="阅读"><a href="#阅读" class="headerlink" title="阅读"></a>阅读</h1><p>1、心理学导论阅读到104.（共765）。</p><h1 id="学习"><a href="#学习" class="headerlink" title="学习"></a>学习</h1><p>1、初次接触6级阅读，没太读懂，好在我勾画的生词都是答案上记录了的。（正确率感人）</p><h1 id="生活"><a href="#生活" class="headerlink" title="生活"></a>生活</h1><p>1、体能恢复计划。</p>]]></content>
       
       
       
@@ -92,9 +124,9 @@
       
         <tags>
             
-            <tag> 随思录 </tag>
-            
             <tag> 随笔 </tag>
+            
+            <tag> 随思录 </tag>
             
         </tags>
       
