@@ -148,6 +148,172 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2023/04/08/Linux%E7%9A%84%E5%AD%A6%E4%B9%A0/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="zono">
+      <meta itemprop="description" content="zono是我的昵称，非常欢迎你能进入我的世界。如果你愿意可以像书一样阅读我，如果我能把自己的厚度变成书的话。人生长度我们无法决定，但厚度可以。">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="zono的世界">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2023/04/08/Linux%E7%9A%84%E5%AD%A6%E4%B9%A0/" class="post-title-link" itemprop="url">Linux的学习</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">Posted on</span>
+              
+
+              <time title="Created: 2023-04-08 20:07:02 / Modified: 22:09:38" itemprop="dateCreated datePublished" datetime="2023-04-08T20:07:02+08:00">2023-04-08</time>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <h1 id="作业"><a href="#作业" class="headerlink" title="作业"></a>作业</h1><h2 id="输入三个数然后排序"><a href="#输入三个数然后排序" class="headerlink" title="输入三个数然后排序"></a>输入三个数然后排序</h2><p>使用的是三个if..else模拟冒泡排序法</p>
+<pre>#!/bin/bash
+# read -p "PROMPT MWSSAGE"VARIABLE:PROMPT MWSSAGE是提示用户的信息
+read -p "输入：" a1 a2 a3
+
+# 模拟冒泡循环
+# 排序if[condition-is-true]
+if [ $a1 -gt $a2 ]; then
+# -gt是大于的意思
+        temp=$a1
+        a1=$a2
+        a2=$temp
+fi
+if [ $a2 -gt $a3 ]; then
+        tamp=$a2
+        a2=$a3
+        a3=$temp
+fi
+if [ $a1 -gt $a2 ]; then
+        temp=$a1
+        a1=$a2
+        a2=$temp
+fi
+        echo "升序：$a1 $a2 $a3"
+        echo "降序：$a3 $a2 $a1"                          
+</pre>
+<h2 id="100以内奇数偶数分类"><a href="#100以内奇数偶数分类" class="headerlink" title="100以内奇数偶数分类"></a>100以内奇数偶数分类</h2><pre>
+#!/bin/bash
+
+echo "奇数  偶数"
+sum=0
+for i in {1..100}
+do
+    if [ $((i%2)) -eq 0 ]
+    then
+        echo "  $i"
+    else
+        echo -e "$i \c "
+        if [ $i -le 10 ]
+        then
+            sum=$((sum+i))
+        fi
+    fi
+done
+echo "前10行数字的和为: $sum"
+</pre>
+<h3 id="awk版"><a href="#awk版" class="headerlink" title="awk版"></a>awk版</h3><h1 id="awk学习"><a href="#awk学习" class="headerlink" title="awk学习"></a>awk学习</h1><h1 id="问答区"><a href="#问答区" class="headerlink" title="问答区"></a>问答区</h1><h2 id="一、vim命令的个别按键的区别"><a href="#一、vim命令的个别按键的区别" class="headerlink" title="一、vim命令的个别按键的区别"></a>一、vim命令的个别按键的区别</h2><p>1.i命令用于在光标所在位置插入文本。(常用)<br>2.c命令用于删除一段文本并进入插入模式(是修改文本)</p>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2023/04/08/%E5%AD%A6%E4%B9%A0014/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="zono">
+      <meta itemprop="description" content="zono是我的昵称，非常欢迎你能进入我的世界。如果你愿意可以像书一样阅读我，如果我能把自己的厚度变成书的话。人生长度我们无法决定，但厚度可以。">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="zono的世界">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2023/04/08/%E5%AD%A6%E4%B9%A0014/" class="post-title-link" itemprop="url">zono的学习日志014</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">Posted on</span>
+              
+
+              <time title="Created: 2023-04-08 09:36:06 / Modified: 19:54:24" itemprop="dateCreated datePublished" datetime="2023-04-08T09:36:06+08:00">2023-04-08</time>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <h1 id="阅读"><a href="#阅读" class="headerlink" title="阅读"></a>阅读</h1><p>1、《艺术的故事》5-8章</p>
+<h1 id="学习"><a href="#学习" class="headerlink" title="学习"></a>学习</h1><p>1、《机器学习》(西瓜书)第四章第一次阅读<br>2、shell、vim、awk的使用，完成了作业</p>
+<h1 id="锻炼"><a href="#锻炼" class="headerlink" title="锻炼"></a>锻炼</h1><p>1、篮球（学到了新的技巧）</p>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
     <link itemprop="mainEntityOfPage" href="http://example.com/2023/04/07/%E5%AD%A6%E4%B9%A0013/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -162,7 +328,7 @@
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
           
-            <a href="/2023/04/07/%E5%AD%A6%E4%B9%A0013/" class="post-title-link" itemprop="url">学习013</a>
+            <a href="/2023/04/07/%E5%AD%A6%E4%B9%A0013/" class="post-title-link" itemprop="url">zono的学习日志013</a>
         </h2>
 
         <div class="post-meta">
@@ -174,6 +340,13 @@
 
               <time title="Created: 2023-04-07 22:02:37" itemprop="dateCreated datePublished" datetime="2023-04-07T22:02:37+08:00">2023-04-07</time>
             </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">Edited on</span>
+                <time title="Modified: 2023-04-08 20:11:26" itemprop="dateModified" datetime="2023-04-08T20:11:26+08:00">2023-04-08</time>
+              </span>
 
           
 
@@ -186,7 +359,9 @@
     <div class="post-body" itemprop="articleBody">
 
       
-          
+          <h1 id="学习"><a href="#学习" class="headerlink" title="学习"></a>学习</h1><p>1、大创进度卡住了，因为不会处理csv文件</p>
+<h1 id="锻炼"><a href="#锻炼" class="headerlink" title="锻炼"></a>锻炼</h1><p>跑步+篮球</p>
+
       
     </div>
 
@@ -228,10 +403,16 @@
                 <i class="far fa-calendar"></i>
               </span>
               <span class="post-meta-item-text">Posted on</span>
-              
 
-              <time title="Created: 2023-04-06 21:55:21 / Modified: 22:24:05" itemprop="dateCreated datePublished" datetime="2023-04-06T21:55:21+08:00">2023-04-06</time>
+              <time title="Created: 2023-04-06 21:55:21" itemprop="dateCreated datePublished" datetime="2023-04-06T21:55:21+08:00">2023-04-06</time>
             </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">Edited on</span>
+                <time title="Modified: 2023-04-07 22:09:34" itemprop="dateModified" datetime="2023-04-07T22:09:34+08:00">2023-04-07</time>
+              </span>
 
           
 
@@ -284,7 +465,7 @@
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
           
-            <a href="/2023/04/04/cvs%E6%96%87%E4%BB%B6%E5%A4%84%E7%90%86/" class="post-title-link" itemprop="url">cvs库学习</a>
+            <a href="/2023/04/04/cvs%E6%96%87%E4%BB%B6%E5%A4%84%E7%90%86/" class="post-title-link" itemprop="url">cvs文件的处理</a>
         </h2>
 
         <div class="post-meta">
@@ -301,7 +482,7 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">Edited on</span>
-                <time title="Modified: 2023-04-06 22:24:08" itemprop="dateModified" datetime="2023-04-06T22:24:08+08:00">2023-04-06</time>
+                <time title="Modified: 2023-04-07 22:09:34" itemprop="dateModified" datetime="2023-04-07T22:09:34+08:00">2023-04-07</time>
               </span>
 
           
@@ -333,7 +514,9 @@ finally:
 <h2 id="1、读取csv-reader"><a href="#1、读取csv-reader" class="headerlink" title="1、读取csv.reader()"></a>1、读取<code>csv.reader()</code></h2><p>从csvfile读取的每一行会以字符串列表的形式返回</p>
 <p><code>csv.reader(csvfile, delimiter=’’,quotechar=’’)</code><br>delimiter参数用来指明分隔符,quotechar参数表示引用符</p>
 <h2 id="2、写入csv-writer"><a href="#2、写入csv-writer" class="headerlink" title="2、写入csv.writer()"></a>2、写入<code>csv.writer()</code></h2><p>参数同上</p>
-
+<p>由于csv库无法满足要求，于是尝试改用pandas库（原因以后补充）</p>
+<h1 id="三、pandas库"><a href="#三、pandas库" class="headerlink" title="三、pandas库"></a>三、pandas库</h1><p><a target="_blank" rel="noopener" href="https://www.runoob.com/pandas/pandas-tutorial.html">https://www.runoob.com/pandas/pandas-tutorial.html</a></p>
+<h2 id=""><a href="#" class="headerlink" title=""></a></h2>
       
     </div>
 
@@ -433,7 +616,7 @@ finally:
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
           
-            <a href="/2023/04/02/%E9%9A%8F%E6%80%9D%E5%BD%95002/" class="post-title-link" itemprop="url">随思录</a>
+            <a href="/2023/04/02/%E9%9A%8F%E6%80%9D%E5%BD%95002/" class="post-title-link" itemprop="url">随思录一周版</a>
         </h2>
 
         <div class="post-meta">
@@ -450,7 +633,7 @@ finally:
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">Edited on</span>
-                <time title="Modified: 2023-04-04 20:06:25" itemprop="dateModified" datetime="2023-04-04T20:06:25+08:00">2023-04-04</time>
+                <time title="Modified: 2023-04-08 19:56:31" itemprop="dateModified" datetime="2023-04-08T19:56:31+08:00">2023-04-08</time>
               </span>
 
           
@@ -465,7 +648,7 @@ finally:
 
       
           <h1 id="4-2"><a href="#4-2" class="headerlink" title="4-2"></a>4-2</h1><p>有个问题，为什么有很多朋友的人还是会感觉孤独呢？真的就找不到志同道合的人吗？过于浪漫也会让人难以合群？这样的人真的能有人理解吗？真想有办法一下子认识好多好多人，了解他们，找到共鸣，救赎他们也找到救赎自己的人。总是说习惯了一个人，但在热闹的操场外，一个人呆在教室也确实有孤独的感觉。希望真的有这样一个人，什么都喜欢，什么都好奇，然后来发现原来有个人正在寻找这样的朋友，然后啊，分享和聆听，救赎吧。（这段只是生活的恼骚，让感兴趣的人停留，阅读这样的不通顺的文字吧）</p>
-
+<h1 id="4-8（周六）"><a href="#4-8（周六）" class="headerlink" title="4-8（周六）"></a>4-8（周六）</h1>
       
     </div>
 
@@ -576,7 +759,7 @@ finally:
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">Edited on</span>
-                <time title="Modified: 2023-04-07 22:08:41" itemprop="dateModified" datetime="2023-04-07T22:08:41+08:00">2023-04-07</time>
+                <time title="Modified: 2023-04-08 19:57:41" itemprop="dateModified" datetime="2023-04-08T19:57:41+08:00">2023-04-08</time>
               </span>
 
           
@@ -611,6 +794,10 @@ finally:
 <p>自习+运动，单调而有意义。</p>
 <p>有思考每天就写怎么一点何必写这么碎呢？但其实每一天不只如此不是吗，回头把生活流水账和学习日志结合起来会不会文字更多一点呢？</p>
 <p>不过也许没什么人会认真看吧。总之下周开始吧。</p>
+<h1 id="周六（4-8）"><a href="#周六（4-8）" class="headerlink" title="周六（4.8）"></a>周六（4.8）</h1><p>自习+运动。</p>
+<p>继续阅读艺术的故事，体会到了国画的特别和震撼。</p>
+<p>我真的有时间吗，是时间安排的问题吗？为什么不能完全空下来完善blog呢？</p>
+<p>重新计划一下？</p>
 
       
     </div>
@@ -698,142 +885,6 @@ finally:
   
   
 
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2023/03/30/%E5%AD%A6%E4%B9%A0007/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="zono">
-      <meta itemprop="description" content="zono是我的昵称，非常欢迎你能进入我的世界。如果你愿意可以像书一样阅读我，如果我能把自己的厚度变成书的话。人生长度我们无法决定，但厚度可以。">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="zono的世界">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2023/03/30/%E5%AD%A6%E4%B9%A0007/" class="post-title-link" itemprop="url">zono的学习日志007</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">Posted on</span>
-
-              <time title="Created: 2023-03-30 18:59:31" itemprop="dateCreated datePublished" datetime="2023-03-30T18:59:31+08:00">2023-03-30</time>
-            </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="far fa-calendar-check"></i>
-                </span>
-                <span class="post-meta-item-text">Edited on</span>
-                <time title="Modified: 2023-04-04 20:06:06" itemprop="dateModified" datetime="2023-04-04T20:06:06+08:00">2023-04-04</time>
-              </span>
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <h1 id="阅读"><a href="#阅读" class="headerlink" title="阅读"></a>阅读</h1><p>1、心理学导论——125</p>
-<h1 id="学习"><a href="#学习" class="headerlink" title="学习"></a>学习</h1><h2 id="1、课内"><a href="#1、课内" class="headerlink" title="1、课内"></a>1、课内</h2><p>1、《计算机网络》阅读第三章</p>
-<p>2、《机器学习》西瓜书 第四章 线性回归模型</p>
-<h2 id="2、课外"><a href="#2、课外" class="headerlink" title="2、课外"></a>2、课外</h2><p>1、爬虫的尝试</p>
-<p>2、阅读最顶尖的12给IT行业技能<a target="_blank" rel="noopener" href="https://blog.csdn.net/lch614730/article/details/12572553">https://blog.csdn.net/lch614730/article/details/12572553</a></p>
-
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2023/03/29/%E5%AD%A6%E4%B9%A0006/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="zono">
-      <meta itemprop="description" content="zono是我的昵称，非常欢迎你能进入我的世界。如果你愿意可以像书一样阅读我，如果我能把自己的厚度变成书的话。人生长度我们无法决定，但厚度可以。">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="zono的世界">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2023/03/29/%E5%AD%A6%E4%B9%A0006/" class="post-title-link" itemprop="url">zono的学习日志006</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">Posted on</span>
-
-              <time title="Created: 2023-03-29 19:42:19" itemprop="dateCreated datePublished" datetime="2023-03-29T19:42:19+08:00">2023-03-29</time>
-            </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="far fa-calendar-check"></i>
-                </span>
-                <span class="post-meta-item-text">Edited on</span>
-                <time title="Modified: 2023-04-02 22:18:37" itemprop="dateModified" datetime="2023-04-02T22:18:37+08:00">2023-04-02</time>
-              </span>
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <h1 id="阅读"><a href="#阅读" class="headerlink" title="阅读"></a>阅读</h1><p>1、心理学导论阅读到104.（共765）。</p>
-<h1 id="学习"><a href="#学习" class="headerlink" title="学习"></a>学习</h1><p>1、初次接触6级阅读，没太读懂，好在我勾画的生词都是答案上记录了的。（正确率感人）</p>
-<h1 id="生活"><a href="#生活" class="headerlink" title="生活"></a>生活</h1><p>1、体能恢复计划。</p>
-
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
 
   
   <nav class="pagination">
@@ -903,12 +954,12 @@ finally:
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">17</span>
+          <span class="site-state-item-count">19</span>
           <span class="site-state-item-name">posts</span>
         </a>
       </div>
       <div class="site-state-item site-state-tags">
-        <span class="site-state-item-count">5</span>
+        <span class="site-state-item-count">7</span>
         <span class="site-state-item-name">tags</span>
       </div>
   </nav>
