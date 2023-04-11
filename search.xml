@@ -4,6 +4,32 @@
   
     
     <entry>
+      <title>日志升级9999</title>
+      <link href="/2023/04/11/%E6%97%A5%E5%BF%97%E5%8D%87%E7%BA%A79999/"/>
+      <url>/2023/04/11/%E6%97%A5%E5%BF%97%E5%8D%87%E7%BA%A79999/</url>
+      
+        <content type="html"><![CDATA[<p>今日决定对blog内容升级，并且借此机会把我的计划重构，让未来可以有条理，而不至于让自己莫名其妙的处理突发事件。</p><h1 id="blog内容"><a href="#blog内容" class="headerlink" title="blog内容"></a>blog内容</h1><p>首先写下我建立blog的本意，1、是为了能为人生框定一个比较固定的框架能够保证我在不断挑战和突破中保留一片净土，2、是为了能够方便读懂自己，能在未来可能的三观变动的日子不断让心中之树成长，而且减去枝丫，解决问题。3、是为了留下点什么，这也是当初写日记的初衷。</p><p>希望它可以变成一艘船，可以渡己亦渡人，最后刻上我的名字变成一艘永生的墓碑。</p><h2 id="1、内容写作："><a href="#1、内容写作：" class="headerlink" title="1、内容写作："></a>1、内容写作：</h2><p>这里我会开始使用一些模板，并且长期实验它们，以求达到一个可以合服我自己的省时，有用的模板。</p><h3 id="日志类："><a href="#日志类：" class="headerlink" title="日志类："></a>日志类：</h3><p>这一项可能大多会写在日记本上，以求避免自己“虚伪”，可我大概已经虚伪了十几年了，说不定已经内化了呢？</p><p>这是一个参考的模板<br><img src="../-img/%E6%97%A5%E8%AE%B0%E6%A8%A1%E6%9D%BF.jpg" alt="日记模板图"></p><p>影响情绪的：记录好起因经过结果。（记录问题，找办法）</p><p>做了什么：随性，想到就写学习也是写入其中（记录流水账，方便复盘）</p><h3 id="思考了什么：等于以前的随笔吧（就改成随笔类吧）"><a href="#思考了什么：等于以前的随笔吧（就改成随笔类吧）" class="headerlink" title="思考了什么：等于以前的随笔吧（就改成随笔类吧）"></a>思考了什么：等于以前的随笔吧（就改成随笔类吧）</h3><ul><li>观察到什么</li><li>感悟到什么</li><li>与自己对话</li></ul><p>（加上计划）</p><h3 id="读书、学习笔记类："><a href="#读书、学习笔记类：" class="headerlink" title="读书、学习笔记类："></a>读书、学习笔记类：</h3><p>这是要单独立项的笔记类</p><p>重点——疑惑——拓展——总结</p>]]></content>
+      
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>markdown语法自查表</title>
+      <link href="/2023/04/10/markdown%E8%AF%AD%E6%B3%95%E8%87%AA%E6%9F%A5%E8%A1%A8/"/>
+      <url>/2023/04/10/markdown%E8%AF%AD%E6%B3%95%E8%87%AA%E6%9F%A5%E8%A1%A8/</url>
+      
+        <content type="html"><![CDATA[<p>4-10：</p><h2 id="任务列表"><a href="#任务列表" class="headerlink" title="任务列表"></a>任务列表</h2><ul><li><input disabled="" type="checkbox"> 任务一 未做任务 <code>- + 空格 + [ ]</code></li><li><input checked="" disabled="" type="checkbox"> 任务二 已做任务 <code>- + 空格 + [x]</code></li></ul>]]></content>
+      
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>Linux的学习</title>
       <link href="/2023/04/08/Linux%E7%9A%84%E5%AD%A6%E4%B9%A0/"/>
       <url>/2023/04/08/Linux%E7%9A%84%E5%AD%A6%E4%B9%A0/</url>
