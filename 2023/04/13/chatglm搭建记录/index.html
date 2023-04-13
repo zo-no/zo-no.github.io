@@ -20,20 +20,19 @@
     var CONFIG = {"hostname":"example.com","root":"/","scheme":"Muse","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
   </script>
 
-  <meta name="description" content="一、cvs文件处理之前1、with...as的使用with语句用于异常处理，封装了 try…except…finally编码范式. file &#x3D; open(&#39;.&#x2F;test_runoob.txt&#39;, &#39;w&#39;) try:     file.write(&#39;hello world&#39;) finally:     file.close()  等于 with open(&#39;.&#x2F;test_runoob.txt&#39;,">
+  <meta name="description" content="ChatGLM一、基本流程学习初衷1、ChatGLM简介github地址：https:&#x2F;&#x2F;github.com&#x2F;THUDM&#x2F;ChatGLM-6BChatGLM-6B 是一个开源的、支持中英双语的对话语言模型，基于 General Language Model (GLM) 架构，具有 62 亿参数。 1·1 搭建PyTorch环境如果你的电脑完全没有配置过python环境，你需要先学会如何安装An">
 <meta property="og:type" content="article">
-<meta property="og:title" content="cvs文件的处理">
-<meta property="og:url" content="http://example.com/2023/04/04/cvs%E6%96%87%E4%BB%B6%E5%A4%84%E7%90%86/index.html">
+<meta property="og:title" content="ChatGLM搭建记录">
+<meta property="og:url" content="http://example.com/2023/04/13/chatglm%E6%90%AD%E5%BB%BA%E8%AE%B0%E5%BD%95/index.html">
 <meta property="og:site_name" content="zono的世界">
-<meta property="og:description" content="一、cvs文件处理之前1、with...as的使用with语句用于异常处理，封装了 try…except…finally编码范式. file &#x3D; open(&#39;.&#x2F;test_runoob.txt&#39;, &#39;w&#39;) try:     file.write(&#39;hello world&#39;) finally:     file.close()  等于 with open(&#39;.&#x2F;test_runoob.txt&#39;,">
+<meta property="og:description" content="ChatGLM一、基本流程学习初衷1、ChatGLM简介github地址：https:&#x2F;&#x2F;github.com&#x2F;THUDM&#x2F;ChatGLM-6BChatGLM-6B 是一个开源的、支持中英双语的对话语言模型，基于 General Language Model (GLM) 架构，具有 62 亿参数。 1·1 搭建PyTorch环境如果你的电脑完全没有配置过python环境，你需要先学会如何安装An">
 <meta property="og:locale" content="en_US">
-<meta property="article:published_time" content="2023-04-04T12:05:43.000Z">
-<meta property="article:modified_time" content="2023-04-07T14:09:34.964Z">
+<meta property="article:published_time" content="2023-04-13T06:10:36.000Z">
+<meta property="article:modified_time" content="2023-04-13T06:51:50.805Z">
 <meta property="article:author" content="zono">
-<meta property="article:tag" content="python库">
 <meta name="twitter:card" content="summary">
 
-<link rel="canonical" href="http://example.com/2023/04/04/cvs%E6%96%87%E4%BB%B6%E5%A4%84%E7%90%86/">
+<link rel="canonical" href="http://example.com/2023/04/13/chatglm%E6%90%AD%E5%BB%BA%E8%AE%B0%E5%BD%95/">
 
 
 <script id="page-configurations">
@@ -46,7 +45,7 @@
   };
 </script>
 
-  <title>cvs文件的处理 | zono的世界</title>
+  <title>ChatGLM搭建记录 | zono的世界</title>
   
 
 
@@ -152,7 +151,7 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2023/04/04/cvs%E6%96%87%E4%BB%B6%E5%A4%84%E7%90%86/">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2023/04/13/chatglm%E6%90%AD%E5%BB%BA%E8%AE%B0%E5%BD%95/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.gif">
@@ -165,7 +164,7 @@
     </span>
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
-          cvs文件的处理
+          ChatGLM搭建记录
         </h1>
 
         <div class="post-meta">
@@ -174,16 +173,10 @@
                 <i class="far fa-calendar"></i>
               </span>
               <span class="post-meta-item-text">Posted on</span>
+              
 
-              <time title="Created: 2023-04-04 20:05:43" itemprop="dateCreated datePublished" datetime="2023-04-04T20:05:43+08:00">2023-04-04</time>
+              <time title="Created: 2023-04-13 14:10:36 / Modified: 14:51:50" itemprop="dateCreated datePublished" datetime="2023-04-13T14:10:36+08:00">2023-04-13</time>
             </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="far fa-calendar-check"></i>
-                </span>
-                <span class="post-meta-item-text">Edited on</span>
-                <time title="Modified: 2023-04-07 22:09:34" itemprop="dateModified" datetime="2023-04-07T22:09:34+08:00">2023-04-07</time>
-              </span>
 
           
 
@@ -196,27 +189,21 @@
     <div class="post-body" itemprop="articleBody">
 
       
-        <h1 id="一、cvs文件处理之前"><a href="#一、cvs文件处理之前" class="headerlink" title="一、cvs文件处理之前"></a>一、cvs文件处理之前</h1><h2 id="1、with-as的使用"><a href="#1、with-as的使用" class="headerlink" title="1、with...as的使用"></a>1、<code>with...as</code>的使用</h2><p><code>with</code>语句用于异常处理，封装了 <code>try…except…finally</code>编码范式.</p>
-<pre>file = open('./test_runoob.txt', 'w')
-try:
-    file.write('hello world')
-finally:
-    file.close()</pre>
+        <!-- 重点、难点、拓展、疑惑 -->
+<h1 id="ChatGLM"><a href="#ChatGLM" class="headerlink" title="ChatGLM"></a>ChatGLM</h1><h2 id="一、基本流程"><a href="#一、基本流程" class="headerlink" title="一、基本流程"></a>一、基本流程</h2><h3 id="学习初衷"><a href="#学习初衷" class="headerlink" title="学习初衷"></a>学习初衷</h3><h3 id="1、ChatGLM简介"><a href="#1、ChatGLM简介" class="headerlink" title="1、ChatGLM简介"></a>1、ChatGLM简介</h3><p>github地址：<a target="_blank" rel="noopener" href="https://github.com/THUDM/ChatGLM-6B">https://github.com/THUDM/ChatGLM-6B</a><br>ChatGLM-6B 是一个开源的、支持中英双语的对话语言模型，基于 General Language Model (GLM) 架构，具有 62 亿参数。</p>
+<h3 id="1·1-搭建PyTorch环境"><a href="#1·1-搭建PyTorch环境" class="headerlink" title="1·1 搭建PyTorch环境"></a>1·1 搭建PyTorch环境</h3><p>如果你的电脑完全没有配置过python环境，你需要先学会如何安装Anaconda等来配置python环境，这里因为我以前已经安装过，所以直接从搭建PyTorch环境开始。</p>
+<p><b>官方文档是默认你配置好环境了的。</b></p>
+<ul>
+<li>安装CUDA</li>
+<li>下载CuDNN</li>
+<li>conda创建PyTorch环境</li>
+<li>下载GPU版本的PyTorch<h3 id="1·2-安装-ChatGLM"><a href="#1·2-安装-ChatGLM" class="headerlink" title="1·2 安装 ChatGLM"></a>1·2 安装 ChatGLM</h3></li>
+<li>安装依赖</li>
+<li>安装Gridio</li>
+<li>运行效果</li>
+<li>GPU运行、CPU运行<h2 id="二、难点"><a href="#二、难点" class="headerlink" title="二、难点"></a>二、难点</h2><h3 id="1、显卡驱动的更新、CUDA、CuDNN版本的选择"><a href="#1、显卡驱动的更新、CUDA、CuDNN版本的选择" class="headerlink" title="1、显卡驱动的更新、CUDA、CuDNN版本的选择"></a>1、显卡驱动的更新、CUDA、CuDNN版本的选择</h3><h3 id="2、下载GPU版本的PyTorch"><a href="#2、下载GPU版本的PyTorch" class="headerlink" title="2、下载GPU版本的PyTorch"></a>2、<b>下载GPU版本的PyTorch</b></h3><h3 id="3、网络问题"><a href="#3、网络问题" class="headerlink" title="3、网络问题"></a>3、网络问题</h3><h2 id="三、拓展知识"><a href="#三、拓展知识" class="headerlink" title="三、拓展知识"></a>三、拓展知识</h2><h3 id="1、GLM模型"><a href="#1、GLM模型" class="headerlink" title="1、GLM模型"></a>1、GLM模型</h3><h3 id="2、PyTorch是什么"><a href="#2、PyTorch是什么" class="headerlink" title="2、PyTorch是什么"></a>2、PyTorch是什么</h3><h3 id="3、CUDA、CuDNN是什么"><a href="#3、CUDA、CuDNN是什么" class="headerlink" title="3、CUDA、CuDNN是什么"></a>3、CUDA、CuDNN是什么</h3><h3 id="4、Gridio是什么"><a href="#4、Gridio是什么" class="headerlink" title="4、Gridio是什么"></a>4、Gridio是什么</h3><h3 id="5、ChatGLM的更多了解"><a href="#5、ChatGLM的更多了解" class="headerlink" title="5、ChatGLM的更多了解"></a>5、ChatGLM的更多了解</h3><h2 id="四、疑惑"><a href="#四、疑惑" class="headerlink" title="四、疑惑"></a>四、疑惑</h2>日后将进一步阅读代码</li>
+</ul>
 
-<p>等于</p>
-<pre>with open('./test_runoob.txt', 'w') as file:
-    file.write('hello world !')</pre>
-<h2 id="2、open-的使用"><a href="#2、open-的使用" class="headerlink" title="2、open()的使用"></a>2、<code>open()</code>的使用</h2><p><a target="_blank" rel="noopener" href="https://www.runoob.com/python/python-files-io.html">https://www.runoob.com/python/python-files-io.html</a></p>
-<p>创建一个file对象，用<code>open()</code>打开文件赋值</p>
-<pre>file object = open(file_name [, access_mode][, buffering])</pre>
-<p>access_mode决定了打开文件的模式(默认”r=只读”)</p>
-<h1 id="二、cvs库"><a href="#二、cvs库" class="headerlink" title="二、cvs库"></a>二、cvs库</h1><p><a target="_blank" rel="noopener" href="https://docs.python.org/zh-cn/3/library/csv.html">https://docs.python.org/zh-cn/3/library/csv.html</a></p>
-<h2 id="1、读取csv-reader"><a href="#1、读取csv-reader" class="headerlink" title="1、读取csv.reader()"></a>1、读取<code>csv.reader()</code></h2><p>从csvfile读取的每一行会以字符串列表的形式返回</p>
-<p><code>csv.reader(csvfile, delimiter=’’,quotechar=’’)</code><br>delimiter参数用来指明分隔符,quotechar参数表示引用符</p>
-<h2 id="2、写入csv-writer"><a href="#2、写入csv-writer" class="headerlink" title="2、写入csv.writer()"></a>2、写入<code>csv.writer()</code></h2><p>参数同上</p>
-<p>由于csv库无法满足要求，于是尝试改用pandas库（原因以后补充）</p>
-<h1 id="三、pandas库"><a href="#三、pandas库" class="headerlink" title="三、pandas库"></a>三、pandas库</h1><p><a target="_blank" rel="noopener" href="https://www.runoob.com/pandas/pandas-tutorial.html">https://www.runoob.com/pandas/pandas-tutorial.html</a></p>
-<h2 id=""><a href="#" class="headerlink" title=""></a></h2>
     </div>
 
     
@@ -224,9 +211,6 @@ finally:
     
 
       <footer class="post-footer">
-          <div class="post-tags">
-              <a href="/tags/python%E5%BA%93/" rel="tag"># python库</a>
-          </div>
 
         
 
@@ -234,13 +218,10 @@ finally:
         
     <div class="post-nav">
       <div class="post-nav-item">
-    <a href="/2023/04/04/%E5%AD%A6%E4%B9%A0010/" rel="prev" title="zono的学习日志010">
-      <i class="fa fa-chevron-left"></i> zono的学习日志010
+    <a href="/2023/04/13/%E6%97%A5%E5%BF%970002/" rel="prev" title="日志0002">
+      <i class="fa fa-chevron-left"></i> 日志0002
     </a></div>
-      <div class="post-nav-item">
-    <a href="/2023/04/06/%E5%AD%A6%E4%B9%A0011-012/" rel="next" title="zono的学习日志011+012">
-      zono的学习日志011+012 <i class="fa fa-chevron-right"></i>
-    </a></div>
+      <div class="post-nav-item"></div>
     </div>
       </footer>
     
@@ -299,7 +280,7 @@ finally:
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
-          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E4%B8%80%E3%80%81cvs%E6%96%87%E4%BB%B6%E5%A4%84%E7%90%86%E4%B9%8B%E5%89%8D"><span class="nav-number">1.</span> <span class="nav-text">一、cvs文件处理之前</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#1%E3%80%81with-as%E7%9A%84%E4%BD%BF%E7%94%A8"><span class="nav-number">1.1.</span> <span class="nav-text">1、with...as的使用</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2%E3%80%81open-%E7%9A%84%E4%BD%BF%E7%94%A8"><span class="nav-number">1.2.</span> <span class="nav-text">2、open()的使用</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E4%BA%8C%E3%80%81cvs%E5%BA%93"><span class="nav-number">2.</span> <span class="nav-text">二、cvs库</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#1%E3%80%81%E8%AF%BB%E5%8F%96csv-reader"><span class="nav-number">2.1.</span> <span class="nav-text">1、读取csv.reader()</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2%E3%80%81%E5%86%99%E5%85%A5csv-writer"><span class="nav-number">2.2.</span> <span class="nav-text">2、写入csv.writer()</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E4%B8%89%E3%80%81pandas%E5%BA%93"><span class="nav-number">3.</span> <span class="nav-text">三、pandas库</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link"><span class="nav-number">3.1.</span> <span class="nav-text"></span></a></li></ol></li></ol></div>
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#ChatGLM"><span class="nav-number">1.</span> <span class="nav-text">ChatGLM</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%B8%80%E3%80%81%E5%9F%BA%E6%9C%AC%E6%B5%81%E7%A8%8B"><span class="nav-number">1.1.</span> <span class="nav-text">一、基本流程</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%AD%A6%E4%B9%A0%E5%88%9D%E8%A1%B7"><span class="nav-number">1.1.1.</span> <span class="nav-text">学习初衷</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#1%E3%80%81ChatGLM%E7%AE%80%E4%BB%8B"><span class="nav-number">1.1.2.</span> <span class="nav-text">1、ChatGLM简介</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#1%C2%B71-%E6%90%AD%E5%BB%BAPyTorch%E7%8E%AF%E5%A2%83"><span class="nav-number">1.1.3.</span> <span class="nav-text">1·1 搭建PyTorch环境</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#1%C2%B72-%E5%AE%89%E8%A3%85-ChatGLM"><span class="nav-number">1.1.4.</span> <span class="nav-text">1·2 安装 ChatGLM</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%BA%8C%E3%80%81%E9%9A%BE%E7%82%B9"><span class="nav-number">1.2.</span> <span class="nav-text">二、难点</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1%E3%80%81%E6%98%BE%E5%8D%A1%E9%A9%B1%E5%8A%A8%E7%9A%84%E6%9B%B4%E6%96%B0%E3%80%81CUDA%E3%80%81CuDNN%E7%89%88%E6%9C%AC%E7%9A%84%E9%80%89%E6%8B%A9"><span class="nav-number">1.2.1.</span> <span class="nav-text">1、显卡驱动的更新、CUDA、CuDNN版本的选择</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2%E3%80%81%E4%B8%8B%E8%BD%BDGPU%E7%89%88%E6%9C%AC%E7%9A%84PyTorch"><span class="nav-number">1.2.2.</span> <span class="nav-text">2、下载GPU版本的PyTorch</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3%E3%80%81%E7%BD%91%E7%BB%9C%E9%97%AE%E9%A2%98"><span class="nav-number">1.2.3.</span> <span class="nav-text">3、网络问题</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%B8%89%E3%80%81%E6%8B%93%E5%B1%95%E7%9F%A5%E8%AF%86"><span class="nav-number">1.3.</span> <span class="nav-text">三、拓展知识</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1%E3%80%81GLM%E6%A8%A1%E5%9E%8B"><span class="nav-number">1.3.1.</span> <span class="nav-text">1、GLM模型</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2%E3%80%81PyTorch%E6%98%AF%E4%BB%80%E4%B9%88"><span class="nav-number">1.3.2.</span> <span class="nav-text">2、PyTorch是什么</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3%E3%80%81CUDA%E3%80%81CuDNN%E6%98%AF%E4%BB%80%E4%B9%88"><span class="nav-number">1.3.3.</span> <span class="nav-text">3、CUDA、CuDNN是什么</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4%E3%80%81Gridio%E6%98%AF%E4%BB%80%E4%B9%88"><span class="nav-number">1.3.4.</span> <span class="nav-text">4、Gridio是什么</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#5%E3%80%81ChatGLM%E7%9A%84%E6%9B%B4%E5%A4%9A%E4%BA%86%E8%A7%A3"><span class="nav-number">1.3.5.</span> <span class="nav-text">5、ChatGLM的更多了解</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%9B%9B%E3%80%81%E7%96%91%E6%83%91"><span class="nav-number">1.4.</span> <span class="nav-text">四、疑惑</span></a></li></ol></li></ol></div>
       </div>
       <!--/noindex-->
 

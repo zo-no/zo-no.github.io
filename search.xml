@@ -4,6 +4,32 @@
   
     
     <entry>
+      <title>ChatGLM搭建记录</title>
+      <link href="/2023/04/13/chatglm%E6%90%AD%E5%BB%BA%E8%AE%B0%E5%BD%95/"/>
+      <url>/2023/04/13/chatglm%E6%90%AD%E5%BB%BA%E8%AE%B0%E5%BD%95/</url>
+      
+        <content type="html"><![CDATA[<!-- 重点、难点、拓展、疑惑 --><h1 id="ChatGLM"><a href="#ChatGLM" class="headerlink" title="ChatGLM"></a>ChatGLM</h1><h2 id="一、基本流程"><a href="#一、基本流程" class="headerlink" title="一、基本流程"></a>一、基本流程</h2><h3 id="学习初衷"><a href="#学习初衷" class="headerlink" title="学习初衷"></a>学习初衷</h3><h3 id="1、ChatGLM简介"><a href="#1、ChatGLM简介" class="headerlink" title="1、ChatGLM简介"></a>1、ChatGLM简介</h3><p>github地址：<a href="https://github.com/THUDM/ChatGLM-6B">https://github.com/THUDM/ChatGLM-6B</a><br>ChatGLM-6B 是一个开源的、支持中英双语的对话语言模型，基于 General Language Model (GLM) 架构，具有 62 亿参数。</p><h3 id="1·1-搭建PyTorch环境"><a href="#1·1-搭建PyTorch环境" class="headerlink" title="1·1 搭建PyTorch环境"></a>1·1 搭建PyTorch环境</h3><p>如果你的电脑完全没有配置过python环境，你需要先学会如何安装Anaconda等来配置python环境，这里因为我以前已经安装过，所以直接从搭建PyTorch环境开始。</p><p><b>官方文档是默认你配置好环境了的。</b></p><ul><li>安装CUDA</li><li>下载CuDNN</li><li>conda创建PyTorch环境</li><li>下载GPU版本的PyTorch<h3 id="1·2-安装-ChatGLM"><a href="#1·2-安装-ChatGLM" class="headerlink" title="1·2 安装 ChatGLM"></a>1·2 安装 ChatGLM</h3></li><li>安装依赖</li><li>安装Gridio</li><li>运行效果</li><li>GPU运行、CPU运行<h2 id="二、难点"><a href="#二、难点" class="headerlink" title="二、难点"></a>二、难点</h2><h3 id="1、显卡驱动的更新、CUDA、CuDNN版本的选择"><a href="#1、显卡驱动的更新、CUDA、CuDNN版本的选择" class="headerlink" title="1、显卡驱动的更新、CUDA、CuDNN版本的选择"></a>1、显卡驱动的更新、CUDA、CuDNN版本的选择</h3><h3 id="2、下载GPU版本的PyTorch"><a href="#2、下载GPU版本的PyTorch" class="headerlink" title="2、下载GPU版本的PyTorch"></a>2、<b>下载GPU版本的PyTorch</b></h3><h3 id="3、网络问题"><a href="#3、网络问题" class="headerlink" title="3、网络问题"></a>3、网络问题</h3><h2 id="三、拓展知识"><a href="#三、拓展知识" class="headerlink" title="三、拓展知识"></a>三、拓展知识</h2><h3 id="1、GLM模型"><a href="#1、GLM模型" class="headerlink" title="1、GLM模型"></a>1、GLM模型</h3><h3 id="2、PyTorch是什么"><a href="#2、PyTorch是什么" class="headerlink" title="2、PyTorch是什么"></a>2、PyTorch是什么</h3><h3 id="3、CUDA、CuDNN是什么"><a href="#3、CUDA、CuDNN是什么" class="headerlink" title="3、CUDA、CuDNN是什么"></a>3、CUDA、CuDNN是什么</h3><h3 id="4、Gridio是什么"><a href="#4、Gridio是什么" class="headerlink" title="4、Gridio是什么"></a>4、Gridio是什么</h3><h3 id="5、ChatGLM的更多了解"><a href="#5、ChatGLM的更多了解" class="headerlink" title="5、ChatGLM的更多了解"></a>5、ChatGLM的更多了解</h3><h2 id="四、疑惑"><a href="#四、疑惑" class="headerlink" title="四、疑惑"></a>四、疑惑</h2>日后将进一步阅读代码</li></ul>]]></content>
+      
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>日志0002</title>
+      <link href="/2023/04/13/%E6%97%A5%E5%BF%970002/"/>
+      <url>/2023/04/13/%E6%97%A5%E5%BF%970002/</url>
+      
+        <content type="html"><![CDATA[<h1 id="一、流水账"><a href="#一、流水账" class="headerlink" title="一、流水账"></a>一、流水账</h1><h2 id="学习内容"><a href="#学习内容" class="headerlink" title="学习内容"></a>学习内容</h2><!-- 记录阅读、学了什么等机械化的任务 --><h3 id="阅读内容："><a href="#阅读内容：" class="headerlink" title="阅读内容："></a>阅读内容：</h3><h2 id="生活内容："><a href="#生活内容：" class="headerlink" title="生活内容："></a>生活内容：</h2><!-- 记录锻炼、不怎么影响情绪的经历、普通的社交 --><h3 id="锻炼内容："><a href="#锻炼内容：" class="headerlink" title="锻炼内容："></a>锻炼内容：</h3><h3 id="发生的事："><a href="#发生的事：" class="headerlink" title="发生的事："></a>发生的事：</h3><!-- ### 影响情绪的:<b>正面：</b> <b>负面：</b> --><h1 id="二、计划和达成"><a href="#二、计划和达成" class="headerlink" title="二、计划和达成"></a>二、计划和达成</h1><!-- 立下flag --><h2 id="计划："><a href="#计划：" class="headerlink" title="计划："></a>计划：</h2><p>参看ipad</p><h2 id="达成"><a href="#达成" class="headerlink" title="达成"></a>达成</h2><p>1、完成了chatglm的搭建尝试</p><!-- ## 奖励 --><h1 id="三、随笔"><a href="#三、随笔" class="headerlink" title="三、随笔"></a>三、随笔</h1><!-- 感悟、观察、对话 -->]]></content>
+      
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>日志0001</title>
       <link href="/2023/04/11/%E6%97%A5%E5%BF%970001/"/>
       <url>/2023/04/11/%E6%97%A5%E5%BF%970001/</url>
