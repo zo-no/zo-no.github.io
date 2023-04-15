@@ -8,7 +8,7 @@
       <link href="/2023/04/15/%E6%97%A5%E5%BF%970003/"/>
       <url>/2023/04/15/%E6%97%A5%E5%BF%970003/</url>
       
-        <content type="html"><![CDATA[<h1 id="一、流水账"><a href="#一、流水账" class="headerlink" title="一、流水账"></a>一、流水账</h1><h2 id="1、学习内容"><a href="#1、学习内容" class="headerlink" title="1、学习内容"></a>1、学习内容<!-- 记录阅读、学了什么等机械化的任务 --></h2><h3 id="1-1阅读内容："><a href="#1-1阅读内容：" class="headerlink" title="1.1阅读内容："></a>1.1阅读内容：</h3><ul><li>《艺术的故事》15章<h3 id="1-2学习细节"><a href="#1-2学习细节" class="headerlink" title="1.2学习细节"></a>1.2学习细节</h3></li></ul><p>1.2.1 计算机通识</p><ul><li>c语言:#ifndef</li><li>知道了递归缩写，程序员的幽默</li><li>数据结构太难了</li><li>c语言的标准、GNU、GPL</li><li>python虚拟环境conda和virtualenv包的区别：虚拟环境的优点、我认为venv可以当成conda的细分来管理包使用</li><li>发现了《数据结构习题集》的代码博客，前辈们的努力真的让后来者有了学习的信心呀 <a href="https://www.cnblogs.com/kangjianwei101/p/5221816.html">https://www.cnblogs.com/kangjianwei101/p/5221816.html</a></li><li>extern 常变量时一定要加上 const</li></ul><h2 id="2、生活内容："><a href="#2、生活内容：" class="headerlink" title="2、生活内容："></a>2、生活内容：<!-- 记录锻炼、不怎么影响情绪的经历、普通的社交 --></h2><h3 id="2-1锻炼内容："><a href="#2-1锻炼内容：" class="headerlink" title="2.1锻炼内容："></a>2.1锻炼内容：</h3><h3 id="2-2发生的事："><a href="#2-2发生的事：" class="headerlink" title="2.2发生的事："></a>2.2发生的事：</h3><ul><li>与朋友出去吃了顿烤肉</li></ul><!-- ### 影响情绪的:<b>正面：</b> <b>负面：</b> --><h1 id="二、计划和达成"><a href="#二、计划和达成" class="headerlink" title="二、计划和达成"></a>二、计划和达成<!-- 立下flag --></h1><h2 id="2、大创记录"><a href="#2、大创记录" class="headerlink" title="2、大创记录"></a>2、大创记录</h2><h3 id="2-1未完成"><a href="#2-1未完成" class="headerlink" title="2.1未完成"></a>2.1未完成</h3><ul><li>阅读代码理解代码</li><li>将代码改写成GPU调用<h3 id="2-2新任务"><a href="#2-2新任务" class="headerlink" title="2.2新任务"></a>2.2新任务</h3>无<h3 id="2-3做了什么"><a href="#2-3做了什么" class="headerlink" title="2.3做了什么"></a>2.3做了什么</h3>无<!-- ## 奖励 --></li></ul><h1 id="三、随笔"><a href="#三、随笔" class="headerlink" title="三、随笔"></a>三、随笔<!-- 感悟、观察、对话 --></h1><p>1、《艺术的故事》阅读到了15章，这一章是讲鼎盛文艺复兴时期的，这一时期有三个耳熟能详的天才————达芬奇、米开朗基罗、拉斐尔。达芬奇是我一直都知道的，从初中时就当成偶像的存在，这一次我又感受到了他的天才之处，回头想他对我人生的影响应该是巨大的，对我自己的定义“不断好奇”可能就是从他开始；米开朗基罗的话，我也看过他的传记，开始时并不了解他的成就，只感觉他是个非常努力的怪人，然而当我看到《创造亚当》后，我开始意识到，天才名不虚传；至于拉斐尔可能之前没怎么了解，很高兴认识你。<br>2、达芬奇的渐隐法让我对绘画有了新的理解，三位天才从画法、内容研究、构图方面的创新和继承让我震撼。<br>3、网上的文章，无论是技术博客、还是生活经验，文笔真是参差不齐。</p>]]></content>
+        <content type="html"><![CDATA[<h1 id="一、流水账"><a href="#一、流水账" class="headerlink" title="一、流水账"></a>一、流水账</h1><h2 id="1、学习内容"><a href="#1、学习内容" class="headerlink" title="1、学习内容"></a>1、学习内容<!-- 记录阅读、学了什么等机械化的任务 --></h2><h3 id="1-1阅读内容："><a href="#1-1阅读内容：" class="headerlink" title="1.1阅读内容："></a>1.1阅读内容：</h3><ul><li>《艺术的故事》15章<h3 id="1-2学习细节"><a href="#1-2学习细节" class="headerlink" title="1.2学习细节"></a>1.2学习细节</h3></li></ul><p>1.2.1 计算机通识</p><ul><li>c语言:#ifndef</li><li>知道了递归缩写，程序员的幽默</li><li>数据结构太难了</li><li>c语言的标准、GNU、GPL</li><li>python虚拟环境conda和virtualenv包的区别：虚拟环境的优点、我认为venv可以当成conda的细分来管理包使用</li><li>发现了《数据结构习题集》的代码博客，前辈们的努力真的让后来者有了学习的信心呀 <a href="https://www.cnblogs.com/kangjianwei101/p/5221816.html">https://www.cnblogs.com/kangjianwei101/p/5221816.html</a></li><li>extern 常变量时一定要加上 const</li><li>西文字符就是ASCII码</li></ul><h2 id="2、生活内容："><a href="#2、生活内容：" class="headerlink" title="2、生活内容："></a>2、生活内容：<!-- 记录锻炼、不怎么影响情绪的经历、普通的社交 --></h2><h3 id="2-1锻炼内容："><a href="#2-1锻炼内容：" class="headerlink" title="2.1锻炼内容："></a>2.1锻炼内容：</h3><h3 id="2-2发生的事："><a href="#2-2发生的事：" class="headerlink" title="2.2发生的事："></a>2.2发生的事：</h3><ul><li>与朋友出去吃了顿烤肉</li></ul><!-- ### 影响情绪的:<b>正面：</b> <b>负面：</b> --><h1 id="二、计划和达成"><a href="#二、计划和达成" class="headerlink" title="二、计划和达成"></a>二、计划和达成<!-- 立下flag --></h1><h2 id="2、大创记录"><a href="#2、大创记录" class="headerlink" title="2、大创记录"></a>2、大创记录</h2><h3 id="2-1未完成"><a href="#2-1未完成" class="headerlink" title="2.1未完成"></a>2.1未完成</h3><ul><li>阅读代码理解代码</li><li>将代码改写成GPU调用<h3 id="2-2新任务"><a href="#2-2新任务" class="headerlink" title="2.2新任务"></a>2.2新任务</h3>无<h3 id="2-3做了什么"><a href="#2-3做了什么" class="headerlink" title="2.3做了什么"></a>2.3做了什么</h3>无<!-- ## 奖励 --></li></ul><h1 id="三、随笔"><a href="#三、随笔" class="headerlink" title="三、随笔"></a>三、随笔<!-- 感悟、观察、对话 --></h1><p>1、《艺术的故事》阅读到了15章，这一章是讲鼎盛文艺复兴时期的，这一时期有三个耳熟能详的天才————达芬奇、米开朗基罗、拉斐尔。达芬奇是我一直都知道的，从初中时就当成偶像的存在，这一次我又感受到了他的天才之处，回头想他对我人生的影响应该是巨大的，对我自己的定义“不断好奇”可能就是从他开始；米开朗基罗的话，我也看过他的传记，开始时并不了解他的成就，只感觉他是个非常努力的怪人，然而当我看到《创造亚当》后，我开始意识到，天才名不虚传；至于拉斐尔可能之前没怎么了解，很高兴认识你。<br>2、达芬奇的渐隐法让我对绘画有了新的理解，三位天才从画法、内容研究、构图方面的创新和继承让我震撼。<br>3、网上的文章，无论是技术博客、还是生活经验，文笔真是参差不齐。</p>]]></content>
       
       
       
@@ -135,11 +135,11 @@
       
         <tags>
             
+            <tag> 技术 </tag>
+            
             <tag> Linux </tag>
             
             <tag> shell </tag>
-            
-            <tag> 技术 </tag>
             
         </tags>
       
@@ -287,9 +287,9 @@
       
         <tags>
             
-            <tag> 随笔 </tag>
-            
             <tag> 生活碎碎念 </tag>
+            
+            <tag> 随笔 </tag>
             
         </tags>
       
@@ -365,9 +365,9 @@
       
         <tags>
             
-            <tag> 随思录 </tag>
-            
             <tag> 随笔 </tag>
+            
+            <tag> 随思录 </tag>
             
         </tags>
       
