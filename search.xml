@@ -4,13 +4,57 @@
   
     
     <entry>
+      <title>日志0006</title>
+      <link href="/2023/04/18/%E6%97%A5%E5%BF%970006/"/>
+      <url>/2023/04/18/%E6%97%A5%E5%BF%970006/</url>
+      
+        <content type="html"><![CDATA[<h1 id="一、流水账"><a href="#一、流水账" class="headerlink" title="一、流水账"></a>一、流水账</h1><h2 id="1、学习内容"><a href="#1、学习内容" class="headerlink" title="1、学习内容"></a>1、学习内容<!-- 记录阅读、学了什么等机械化的任务 --></h2><h3 id="1-1阅读内容："><a href="#1-1阅读内容：" class="headerlink" title="1.1阅读内容："></a>1.1阅读内容：</h3><p>1、《艺术的故事》19章</p><h3 id="1-2学习细节"><a href="#1-2学习细节" class="headerlink" title="1.2学习细节"></a>1.2学习细节</h3><p>1.2.1 一般<br>1.2.2 计算机通识</p><h2 id="2、生活内容："><a href="#2、生活内容：" class="headerlink" title="2、生活内容："></a>2、生活内容：<!-- 记录锻炼、不怎么影响情绪的经历、普通的社交 --></h2><h3 id="2-1锻炼内容："><a href="#2-1锻炼内容：" class="headerlink" title="2.1锻炼内容："></a>2.1锻炼内容：</h3><h3 id="2-2发生的事："><a href="#2-2发生的事：" class="headerlink" title="2.2发生的事："></a>2.2发生的事：<!-- ### 影响情绪的:<b>正面：</b> <b>负面：</b> --></h3><h1 id="二、计划和达成"><a href="#二、计划和达成" class="headerlink" title="二、计划和达成"></a>二、计划和达成<!-- 立下flag --></h1><h2 id="2、大创记录"><a href="#2、大创记录" class="headerlink" title="2、大创记录"></a>2、大创记录</h2><h3 id="2-1未完成"><a href="#2-1未完成" class="headerlink" title="2.1未完成"></a>2.1未完成</h3><p>1、阅读代码理解代码<br>2、将代码改写成GPU调用</p><h3 id="2-2新任务"><a href="#2-2新任务" class="headerlink" title="2.2新任务"></a>2.2新任务</h3><p>无</p><h3 id="2-3做了什么"><a href="#2-3做了什么" class="headerlink" title="2.3做了什么"></a>2.3做了什么</h3><!-- ## 奖励 --><h1 id="三、随笔"><a href="#三、随笔" class="headerlink" title="三、随笔"></a>三、随笔<!-- 感悟、观察、对话 --></h1>]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> 日志 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>日志0005</title>
+      <link href="/2023/04/17/%E6%97%A5%E5%BF%970005/"/>
+      <url>/2023/04/17/%E6%97%A5%E5%BF%970005/</url>
+      
+        <content type="html"><![CDATA[<h1 id="一、流水账"><a href="#一、流水账" class="headerlink" title="一、流水账"></a>一、流水账</h1><h2 id="1、学习内容"><a href="#1、学习内容" class="headerlink" title="1、学习内容"></a>1、学习内容<!-- 记录阅读、学了什么等机械化的任务 --></h2><h3 id="1-1阅读内容："><a href="#1-1阅读内容：" class="headerlink" title="1.1阅读内容："></a>1.1阅读内容：</h3><ul><li>《艺术的故事》17-18章<h3 id="1-2学习细节"><a href="#1-2学习细节" class="headerlink" title="1.2学习细节"></a>1.2学习细节</h3></li></ul><p>1.2.1 一般</p><ul><li>chatglm出了报错，发现是安装包的问题，有些包就是要换源才能安装。（缺失cchardet包，不知道为什么，之前就不缺）</li><li>复习了markdown的链接语法，有时间把以前的内容更新了</li><li>c语言：fflush(stdin)：刷新缓冲区,fflush(stdout)：刷新缓冲区,sleep()</li></ul><p>1.2.2 计算机通识</p><ul><li>python的<a href="https://chardet.readthedocs.io/en/latest/supported-encodings.html">chardet库网址</a>：用于bytes和str转换等相关操作。</li><li>bytes：几种常见编码西文编码等</li><li>堆栈上溢下溢</li><li>http状态码：信息响应(100–199)，成功响应(200–299)，重定向(300–399)，客户端错误(400–499)和服务器错误 (500–599)；常见404、200、500</li></ul><h2 id="2、生活内容："><a href="#2、生活内容：" class="headerlink" title="2、生活内容："></a>2、生活内容：<!-- 记录锻炼、不怎么影响情绪的经历、普通的社交 --></h2><h3 id="2-1锻炼内容："><a href="#2-1锻炼内容：" class="headerlink" title="2.1锻炼内容："></a>2.1锻炼内容：</h3><ul><li>3公里<h3 id="2-2发生的事："><a href="#2-2发生的事：" class="headerlink" title="2.2发生的事："></a>2.2发生的事：<!-- ### 影响情绪的:<b>正面：有人问我问题了</b> <b>负面：</b> --></h3></li><li>看了自动化院的十佳歌手活动。</li></ul><h1 id="二、计划和达成"><a href="#二、计划和达成" class="headerlink" title="二、计划和达成"></a>二、计划和达成<!-- 立下flag --></h1><h2 id="2、大创记录"><a href="#2、大创记录" class="headerlink" title="2、大创记录"></a>2、大创记录</h2><h3 id="2-1未完成"><a href="#2-1未完成" class="headerlink" title="2.1未完成"></a>2.1未完成</h3><p>1、阅读代码理解代码<br>2、将代码改写成GPU调用</p><h3 id="2-2新任务"><a href="#2-2新任务" class="headerlink" title="2.2新任务"></a>2.2新任务</h3><p>无</p><h3 id="2-3做了什么"><a href="#2-3做了什么" class="headerlink" title="2.3做了什么"></a>2.3做了什么</h3><!-- ## 奖励 --><ul><li>看了一点代码，知道了一些数据处理的知识</li></ul><h1 id="三、随笔"><a href="#三、随笔" class="headerlink" title="三、随笔"></a>三、随笔<!-- 感悟、观察、对话 --></h1><p>1、深切记得，当你站在舞台上时，下面的人都会变成小黑点。疫情后终于有些大学生的活动了。</p>]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> 日志 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>日志0004</title>
       <link href="/2023/04/16/%E6%97%A5%E5%BF%970004/"/>
       <url>/2023/04/16/%E6%97%A5%E5%BF%970004/</url>
       
-        <content type="html"><![CDATA[<h1 id="一、流水账"><a href="#一、流水账" class="headerlink" title="一、流水账"></a>一、流水账</h1><h2 id="1、学习内容"><a href="#1、学习内容" class="headerlink" title="1、学习内容"></a>1、学习内容<!-- 记录阅读、学了什么等机械化的任务 --></h2><h3 id="1-1阅读内容："><a href="#1-1阅读内容：" class="headerlink" title="1.1阅读内容："></a>1.1阅读内容：</h3><ul><li>《艺术的故事》16章<h3 id="1-2学习细节"><a href="#1-2学习细节" class="headerlink" title="1.2学习细节"></a>1.2学习细节</h3></li></ul><p>1.2.1 计算机通识</p><ul><li>vc和c语言的区别</li></ul><h2 id="2、生活内容："><a href="#2、生活内容：" class="headerlink" title="2、生活内容："></a>2、生活内容：<!-- 记录锻炼、不怎么影响情绪的经历、普通的社交 --></h2><h3 id="2-1锻炼内容："><a href="#2-1锻炼内容：" class="headerlink" title="2.1锻炼内容："></a>2.1锻炼内容：</h3><ul><li>骑了大概八九公里自行车。<h3 id="2-2发生的事："><a href="#2-2发生的事：" class="headerlink" title="2.2发生的事："></a>2.2发生的事：<!-- ### 影响情绪的:<b>正面：</b> <b>负面：似乎看见了闫与某个男生一起，装没看见就好了，反正我也没认真，只是真的会不介意吗？</b> --></h3></li><li>自习</li><li>去了AIGC黑客松观看路演，新的道路再眼前延生</li></ul><p>影响情绪的:<b>正面：</b></p><ul><li>AIGC hackation活动上认识了大佬。</li></ul><h1 id="二、计划和达成"><a href="#二、计划和达成" class="headerlink" title="二、计划和达成"></a>二、计划和达成<!-- 立下flag --></h1><h2 id="2、大创记录"><a href="#2、大创记录" class="headerlink" title="2、大创记录"></a>2、大创记录</h2><h3 id="2-1未完成"><a href="#2-1未完成" class="headerlink" title="2.1未完成"></a>2.1未完成</h3><p>1、阅读代码理解代码<br>2、将代码改写成GPU调用</p><h3 id="2-2新任务"><a href="#2-2新任务" class="headerlink" title="2.2新任务"></a>2.2新任务</h3><p>无</p><h3 id="2-3做了什么"><a href="#2-3做了什么" class="headerlink" title="2.3做了什么"></a>2.3做了什么</h3><!-- ## 奖励 --><p>无</p><h1 id="三、随笔"><a href="#三、随笔" class="headerlink" title="三、随笔"></a>三、随笔<!-- 感悟、观察、对话 --></h1><p>参加活动今天没有干太多事。</p>]]></content>
+        <content type="html"><![CDATA[<h1 id="一、流水账"><a href="#一、流水账" class="headerlink" title="一、流水账"></a>一、流水账</h1><h2 id="1、学习内容"><a href="#1、学习内容" class="headerlink" title="1、学习内容"></a>1、学习内容<!-- 记录阅读、学了什么等机械化的任务 --></h2><h3 id="1-1阅读内容："><a href="#1-1阅读内容：" class="headerlink" title="1.1阅读内容："></a>1.1阅读内容：</h3><ul><li>《艺术的故事》16章<h3 id="1-2学习细节"><a href="#1-2学习细节" class="headerlink" title="1.2学习细节"></a>1.2学习细节</h3></li></ul><p>1.2.1 计算机通识</p><ul><li>vc和c语言的区别</li></ul><h2 id="2、生活内容："><a href="#2、生活内容：" class="headerlink" title="2、生活内容："></a>2、生活内容：<!-- 记录锻炼、不怎么影响情绪的经历、普通的社交 --></h2><h3 id="2-1锻炼内容："><a href="#2-1锻炼内容：" class="headerlink" title="2.1锻炼内容："></a>2.1锻炼内容：</h3><ul><li>骑了大概八九公里自行车。<h3 id="2-2发生的事："><a href="#2-2发生的事：" class="headerlink" title="2.2发生的事："></a>2.2发生的事：<!-- ### 影响情绪的:<b>正面：</b> <b>负面：似乎看见了闫与某个男生一起，装没看见就好了，反正我也没认真，只是真的会不介意吗？</b> --></h3></li><li>自习</li><li>去了AIGC黑客松观看路演，新的道路再眼前延生。</li></ul><p>影响情绪的:<b>正面：</b></p><ul><li>AIGC hackation活动上认识了大佬。认识了小周老师，深切感受到他的人格魅力。</li></ul><h1 id="二、计划和达成"><a href="#二、计划和达成" class="headerlink" title="二、计划和达成"></a>二、计划和达成<!-- 立下flag --></h1><h2 id="2、大创记录"><a href="#2、大创记录" class="headerlink" title="2、大创记录"></a>2、大创记录</h2><h3 id="2-1未完成"><a href="#2-1未完成" class="headerlink" title="2.1未完成"></a>2.1未完成</h3><p>1、阅读代码理解代码<br>2、将代码改写成GPU调用</p><h3 id="2-2新任务"><a href="#2-2新任务" class="headerlink" title="2.2新任务"></a>2.2新任务</h3><p>无</p><h3 id="2-3做了什么"><a href="#2-3做了什么" class="headerlink" title="2.3做了什么"></a>2.3做了什么</h3><!-- ## 奖励 --><p>无</p><h1 id="三、随笔"><a href="#三、随笔" class="headerlink" title="三、随笔"></a>三、随笔<!-- 感悟、观察、对话 --></h1><p>参加活动今天没有干太多事。<br>1、一直感叹于创业者的勇气，可能我未来也会走上这条路，不过现在还是先把技术搞上去吧。</p>]]></content>
       
       
+      
+        <tags>
+            
+            <tag> 日志 </tag>
+            
+        </tags>
       
     </entry>
     
@@ -148,11 +192,11 @@
       
         <tags>
             
-            <tag> 技术 </tag>
-            
             <tag> Linux </tag>
             
             <tag> shell </tag>
+            
+            <tag> 技术 </tag>
             
         </tags>
       
