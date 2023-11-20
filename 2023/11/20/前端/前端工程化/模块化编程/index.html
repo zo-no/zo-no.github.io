@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width">
+<meta name="theme-color" content="#222"><meta name="generator" content="Hexo 5.4.2">
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/source/images/cat.jpg">
+  <link rel="icon" type="image/png" sizes="32x32" href="/source/images/cat.jpg">
+  <link rel="icon" type="image/png" sizes="16x16" href="/source/images/cat.jpg">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha256-CTSx/A06dm1B063156EVh15m6Y67pAjZZaQc89LLSrU=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.1.1/animate.min.css" integrity="sha256-PR7ttpcvz8qrF57fur/yAx1qXMFJeJFiA6pSzWi0OIE=" crossorigin="anonymous">
+
+<script class="next-config" data-name="main" type="application/json">{"hostname":"example.com","root":"/","images":"/images","scheme":"Gemini","darkmode":false,"version":"8.18.2","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":{"enable":false,"style":null},"fold":{"enable":false,"height":500},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"Searching...","empty":"We didn't find any results for the search: ${query}","hits_time":"${hits} results found in ${time} ms","hits":"${hits} results found"}}</script><script src="/js/config.js"></script>
+
+    <meta name="description" content="模块化编程拿到设计时，我们首先要把项目划分为一个个模块，或者组件   划分原则:  按照功能和需求划分：普通业务模块&#x2F; 组件 按照复用性划分：通用业务模块 通用功能模块组件【UI组件库】   1.1 模块化演化进程未来的项目一定是 模块化&#x2F;组件化 开发！！  模块化编程进化历史    单例设计模式    AMD「require.js」    CommonJS(node.js)    CMD「sea">
+<meta property="og:type" content="article">
+<meta property="og:title" content="ZONO&#39;s World">
+<meta property="og:url" content="http://example.com/2023/11/20/%E5%89%8D%E7%AB%AF/%E5%89%8D%E7%AB%AF%E5%B7%A5%E7%A8%8B%E5%8C%96/%E6%A8%A1%E5%9D%97%E5%8C%96%E7%BC%96%E7%A8%8B/index.html">
+<meta property="og:site_name" content="ZONO&#39;s World">
+<meta property="og:description" content="模块化编程拿到设计时，我们首先要把项目划分为一个个模块，或者组件   划分原则:  按照功能和需求划分：普通业务模块&#x2F; 组件 按照复用性划分：通用业务模块 通用功能模块组件【UI组件库】   1.1 模块化演化进程未来的项目一定是 模块化&#x2F;组件化 开发！！  模块化编程进化历史    单例设计模式    AMD「require.js」    CommonJS(node.js)    CMD「sea">
+<meta property="og:locale" content="en_US">
+<meta property="og:image" content="c:/Users/27421/AppData/Roaming/Typora/typora-user-images/image-20231112133515879.png">
+<meta property="article:published_time" content="2023-11-20T10:32:26.706Z">
+<meta property="article:modified_time" content="2023-11-15T07:08:06.874Z">
+<meta property="article:author" content="zono">
+<meta property="article:tag" content="freedom,love,life">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="c:/Users/27421/AppData/Roaming/Typora/typora-user-images/image-20231112133515879.png">
+
+
+<link rel="canonical" href="http://example.com/2023/11/20/%E5%89%8D%E7%AB%AF/%E5%89%8D%E7%AB%AF%E5%B7%A5%E7%A8%8B%E5%8C%96/%E6%A8%A1%E5%9D%97%E5%8C%96%E7%BC%96%E7%A8%8B/">
+
+
+
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"en","comments":true,"permalink":"http://example.com/2023/11/20/%E5%89%8D%E7%AB%AF/%E5%89%8D%E7%AB%AF%E5%B7%A5%E7%A8%8B%E5%8C%96/%E6%A8%A1%E5%9D%97%E5%8C%96%E7%BC%96%E7%A8%8B/","path":"2023/11/20/前端/前端工程化/模块化编程/","title":""}</script>
+
+<script class="next-config" data-name="calendar" type="application/json">""</script>
+<title> | ZONO's World</title>
+  
+
+
+
+
+
+
+
+
+  <noscript>
+    <link rel="stylesheet" href="/css/noscript.css">
+  </noscript>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" class="use-motion">
+  <div class="headband"></div>
+
+  <main class="main">
+    <div class="column">
+      <header class="header" itemscope itemtype="http://schema.org/WPHeader"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="Toggle navigation bar" role="button">
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <i class="logo-line"></i>
+      <p class="site-title">ZONO's World</p>
+      <i class="logo-line"></i>
+    </a>
+      <p class="site-subtitle" itemprop="description">welcome to my world</p>
+      <img class="custom-logo-image" src="/source/images/cat.jpg" alt="ZONO's World">
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger" aria-label="Search" role="button">
+    </div>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  <ul class="main-menu menu"><li class="menu-item menu-item-home"><a href="/" rel="section"><i class="fa fa-home fa-fw"></i>Home</a></li><li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>Archives</a></li><li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>Tags</a></li><li class="menu-item menu-item-categories"><a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>Categories</a></li><li class="menu-item menu-item-frontend"><a href="/frontend/" rel="section"><i class="fa fa-book fa-fw"></i>Frontend</a></li><li class="menu-item menu-item-运维"><a href="/%E8%BF%90%E7%BB%B4/" rel="section"><i class="fa fa-book fa-fw"></i>运维</a></li><li class="menu-item menu-item-about"><a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>About</a></li><li class="menu-item menu-item-others"><a href="/others/" rel="section"><i class="fa fa-th fa-fw"></i>others</a></li>
+  </ul>
+</nav>
+
+
+
+
+</header>
+        
+  
+  <aside class="sidebar">
+
+    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
+      <ul class="sidebar-nav">
+        <li class="sidebar-nav-toc">
+          Table of Contents
+        </li>
+        <li class="sidebar-nav-overview">
+          Overview
+        </li>
+      </ul>
+
+      <div class="sidebar-panel-container">
+        <!--noindex-->
+        <div class="post-toc-wrap sidebar-panel">
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E6%A8%A1%E5%9D%97%E5%8C%96%E7%BC%96%E7%A8%8B"><span class="nav-number">1.</span> <span class="nav-text">模块化编程</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#1-1-%E6%A8%A1%E5%9D%97%E5%8C%96%E6%BC%94%E5%8C%96%E8%BF%9B%E7%A8%8B"><span class="nav-number">1.1.</span> <span class="nav-text">1.1 模块化演化进程</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#1-2%E5%8D%95%E4%BE%8B%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F"><span class="nav-number">1.2.</span> <span class="nav-text">1.2单例设计模式</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#1-3-AMD%E3%80%8Crequire-js%E3%80%8D"><span class="nav-number">1.3.</span> <span class="nav-text">1.3 AMD「require.js」</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#1-4-CommonJS%E6%A8%A1%E5%9D%97%E5%8C%96%E8%A7%84%E8%8C%83"><span class="nav-number">1.4.</span> <span class="nav-text">1.4 CommonJS模块化规范</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#1-5-ES6Module%E6%A8%A1%E5%9D%97%E8%A7%84%E8%8C%83"><span class="nav-number">1.5.</span> <span class="nav-text">1.5 ES6Module模块规范</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-5-2%E5%AF%BC%E5%85%A5%E6%96%B9%E6%B3%95"><span class="nav-number">1.5.1.</span> <span class="nav-text">1.5.2导入方法</span></a></li></ol></li></ol></li></ol></div>
+        </div>
+        <!--/noindex-->
+
+        <div class="site-overview-wrap sidebar-panel">
+          <div class="site-author animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="zono"
+      src="/uploads/cat.jpg">
+  <p class="site-author-name" itemprop="name">zono</p>
+  <div class="site-description" itemprop="description">人生长度无法强求,但厚度可以靠努力</div>
+</div>
+<div class="site-state-wrap animated">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+        <a href="/archives/">
+          <span class="site-state-item-count">80</span>
+          <span class="site-state-item-name">posts</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+          <a href="/categories/">
+        <span class="site-state-item-count">1</span>
+        <span class="site-state-item-name">categories</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+          <a href="/tags/">
+        <span class="site-state-item-count">9</span>
+        <span class="site-state-item-name">tags</span></a>
+      </div>
+  </nav>
+</div>
+  <div class="links-of-author animated">
+      <span class="links-of-author-item">
+        <a href="https://github.com/zo-no" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;zo-no" rel="noopener me" target="_blank"><i class="fab fa-github fa-fw"></i>GitHub</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="/2742160682@qq.com" title="E-Mail → 2742160682@qq.com" rel="noopener me"><i class="fa fa-envelope fa-fw"></i>E-Mail</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="/x27421" title="WeChat → x27421" rel="noopener me"><i class="fab fa-weixin fa-fw"></i>WeChat</a>
+      </span>
+  </div>
+
+        </div>
+      </div>
+    </div>
+
+    
+  </aside>
+
+
+    </div>
+
+    <div class="main-inner post posts-expand">
+
+
+  
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="en">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2023/11/20/%E5%89%8D%E7%AB%AF/%E5%89%8D%E7%AB%AF%E5%B7%A5%E7%A8%8B%E5%8C%96/%E6%A8%A1%E5%9D%97%E5%8C%96%E7%BC%96%E7%A8%8B/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/uploads/cat.jpg">
+      <meta itemprop="name" content="zono">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="ZONO's World">
+      <meta itemprop="description" content="人生长度无法强求,但厚度可以靠努力">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content=" | ZONO's World">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          
+        </h1>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">Posted on</span>
+
+      <time title="Created: 2023-11-20 18:32:26" itemprop="dateCreated datePublished" datetime="2023-11-20T18:32:26+08:00">2023-11-20</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar-check"></i>
+      </span>
+      <span class="post-meta-item-text">Edited on</span>
+      <time title="Modified: 2023-11-15 15:08:06" itemprop="dateModified" datetime="2023-11-15T15:08:06+08:00">2023-11-15</time>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody"><h1 id="模块化编程"><a href="#模块化编程" class="headerlink" title="模块化编程"></a>模块化编程</h1><p>拿到设计时，我们首先要把项目划分为一个个模块，或者组件</p>
+<blockquote>
+<p> 划分原则:</p>
+<ul>
+<li>按照功能和需求划分：普通业务模块/ 组件</li>
+<li>按照复用性划分：通用业务模块</li>
+<li>通用功能模块组件【UI组件库】</li>
+</ul>
+</blockquote>
+<h2 id="1-1-模块化演化进程"><a href="#1-1-模块化演化进程" class="headerlink" title="1.1 模块化演化进程"></a>1.1 模块化演化进程</h2><p>未来的项目一定是 模块化/组件化 开发！！</p>
+<blockquote>
+<p>模块化编程进化历史</p>
+<ul>
+<li><p>  单例设计模式</p>
+</li>
+<li><p>  AMD「require.js」</p>
+</li>
+<li><p>  CommonJS(node.js)</p>
+</li>
+<li><p>  CMD「sea.js」</p>
+</li>
+<li><p>  ES6Module</p>
+</li>
+</ul>
+</blockquote>
+<h2 id="1-2单例设计模式"><a href="#1-2单例设计模式" class="headerlink" title="1.2单例设计模式"></a>1.2<strong>单例设计模式</strong></h2><p>也就是原生js写法，用<code>&lt;script src&gt;</code>,调用文件，把各个功能写在不同的模块下，最后合并到页面中。</p>
+<p><strong>问题</strong>：</p>
+<ul>
+<li>会出现全局变量污染，也就是模块间会有相互冲突。</li>
+<li>模块间相互引用问题，用window方法多了后也会冲突</li>
+</ul>
+<p><strong>解决问题</strong>：</p>
+<ul>
+<li><p>模块间相互冲突的问题:</p>
+<ul>
+<li>「闭包」 ;</li>
+</ul>
+</li>
+<li><p>模块间相互引用的问题：</p>
+<ul>
+<li><p>使用windows.XXX = XXX 暴露方法到全局</p>
+</li>
+<li><p>解决windows多了后冲突：直接导出整个对象，就像react组件一样，对象中有所有对应的方法。</p>
+<blockquote>
+<p>详细解释：让每个模块有一个独有的模块名xxxModule，也叫命名空间（回想起来c不就是吗）。</p>
+<p>模块闭包时，直接return对象，别人要用时，直接模块名.方法（）调用就行。</p>
+</blockquote>
+</li>
+</ul>
+</li>
+</ul>
+<p>如此单例设计模式就完成了。</p>
+<p><strong>注意</strong>：包导入的顺序</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//单例格式</span></span><br><span class="line"><span class="keyword">let</span> xxxModule = (<span class="keyword">function</span> (<span class="params"></span>) &#123;</span><br><span class="line">   <span class="keyword">let</span> time = <span class="keyword">new</span> <span class="title class_">Date</span>();</span><br><span class="line">   <span class="keyword">const</span> query = <span class="keyword">function</span> <span class="title function_">query</span>(<span class="params"></span>) &#123;</span><br><span class="line">       <span class="comment">// ...</span></span><br><span class="line">   &#125;;</span><br><span class="line">   <span class="keyword">const</span> handle = <span class="keyword">function</span> <span class="title function_">handle</span>(<span class="params"></span>) &#123;</span><br><span class="line">       <span class="comment">// ...</span></span><br><span class="line">   &#125;;</span><br><span class="line"></span><br><span class="line">   <span class="comment">// 把供其它板块调用的方法，暴露到全局对象上</span></span><br><span class="line">   <span class="comment">//「局限：暴露的内容比较多，则还会引发全局变量冲突」</span></span><br><span class="line">   <span class="comment">// window.query = query;</span></span><br><span class="line"></span><br><span class="line">   <span class="keyword">return</span> &#123;</span><br><span class="line">       query,</span><br><span class="line">       handle</span><br><span class="line">   &#125;;</span><br><span class="line">&#125;)();</span><br></pre></td></tr></table></figure>
+
+<p>没看例子：p132    37:17~52:30</p>
+<p><strong>不足之处</strong>：需要手动分析模块之间的依赖关系，按顺序依次导入相关模块；所有模块都是基于script一个个导入的，这样页面HTTP请求变多！</p>
+<h2 id="1-3-AMD「require-js」"><a href="#1-3-AMD「require-js」" class="headerlink" title="1.3 AMD「require.js」"></a>1.3 <strong>AMD「require.js」</strong></h2><p> <a target="_blank" rel="noopener" href="https://requirejs.org/">https://requirejs.org</a>  </p>
+<p><strong>优势</strong>：在保证模块之间独立和可以相互访问的基础上，HTML中无需再导入各个模块了「<strong>不存在顺序问题</strong>」，也不需要自己去分析相互间的依赖关系！<br><strong>不足</strong>：依赖模块的导入是“前置导入”，只有把依赖模块动态导入完毕，才会触发回调函数执行「阻碍代码执行速度」；代码书写的顺序也不是很方便；可能存在重复导入；</p>
+<p><img src="C:\Users\27421\AppData\Roaming\Typora\typora-user-images\image-20231112133515879.png" alt="image-20231112133515879"></p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//main.js</span></span><br><span class="line"><span class="built_in">require</span>.<span class="title function_">config</span>(&#123;</span><br><span class="line">    <span class="comment">//全局配置</span></span><br><span class="line">    <span class="attr">baseUrl</span>: <span class="string">&#x27;js/lib&#x27;</span>,</span><br><span class="line">&#125;);</span><br><span class="line"></span><br><span class="line"><span class="built_in">require</span>([<span class="string">&#x27;moduleB&#x27;</span>, <span class="string">&#x27;moduleA&#x27;</span>], <span class="keyword">function</span> (<span class="params">moduleB, moduleA</span>) &#123;</span><br><span class="line">    <span class="variable language_">console</span>.<span class="title function_">log</span>(moduleB.<span class="title function_">average</span>(<span class="number">10</span>, <span class="number">20</span>, <span class="number">30</span>, <span class="number">40</span>, <span class="number">50</span>));</span><br><span class="line">&#125;);</span><br><span class="line"></span><br><span class="line"><span class="comment">//moduleA.js</span></span><br><span class="line"><span class="title function_">define</span>(<span class="keyword">function</span> (<span class="params"></span>) &#123;</span><br><span class="line">    <span class="keyword">return</span> &#123;</span><br><span class="line">        <span class="title function_">sum</span>(<span class="params">...args</span>) &#123;</span><br><span class="line">            <span class="keyword">let</span> len = args.<span class="property">length</span>,</span><br><span class="line">                firstItem = args[<span class="number">0</span>];</span><br><span class="line">            <span class="keyword">if</span> (len === <span class="number">0</span>) <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">            <span class="keyword">if</span> (len === <span class="number">1</span>) <span class="keyword">return</span> firstItem;</span><br><span class="line">            <span class="keyword">return</span> args.<span class="title function_">reduce</span>(<span class="function">(<span class="params">total, item</span>) =&gt;</span> &#123;</span><br><span class="line">                <span class="keyword">return</span> total + item;</span><br><span class="line">            &#125;);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;;</span><br><span class="line">&#125;);</span><br><span class="line"></span><br><span class="line"><span class="comment">//moduleB.js</span></span><br><span class="line"><span class="title function_">define</span>([<span class="string">&#x27;moduleA&#x27;</span>], <span class="keyword">function</span> (<span class="params">moudleA</span>) &#123;</span><br><span class="line">    <span class="keyword">return</span> &#123;</span><br><span class="line">        <span class="comment">// 求平均数（去掉最大最小值）</span></span><br><span class="line">        <span class="title function_">average</span>(<span class="params">...args</span>) &#123;</span><br><span class="line">            <span class="keyword">let</span> len = args.<span class="property">length</span>,</span><br><span class="line">                firstItem = args[<span class="number">0</span>];</span><br><span class="line">            <span class="keyword">if</span> (len === <span class="number">0</span>) <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">            <span class="keyword">if</span> (len === <span class="number">1</span>) <span class="keyword">return</span> firstItem;</span><br><span class="line">            args.<span class="title function_">sort</span>(<span class="function">(<span class="params">a, b</span>) =&gt;</span> a - b);</span><br><span class="line">            args.<span class="title function_">pop</span>();</span><br><span class="line">            args.<span class="title function_">shift</span>();</span><br><span class="line">            <span class="keyword">return</span> (moudleA.<span class="title function_">sum</span>(...args) / args.<span class="property">length</span>).<span class="title function_">toFixed</span>(<span class="number">2</span>);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;;</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+
+<p>没看例子：p132    58:17~1:20:05</p>
+<h2 id="1-4-CommonJS模块化规范"><a href="#1-4-CommonJS模块化规范" class="headerlink" title="1.4 CommonJS模块化规范"></a>1.4 <strong>CommonJS模块化规范</strong></h2><blockquote>
+<p>node.js出现了,不用导入</p>
+</blockquote>
+<p>每创建一个js文件就创建了一个模块，里面的代码就是独立的。用<code>module.exports</code>导出对象。</p>
+<p>唯一的问题：<strong>浏览器端不支持CommonJS规范</strong><br>淘宝“玉伯”仿照CommonJS规范，研发了一款插件 sea.js ，旨在把CommonJS规范搬到浏览器端运行「这种模块思想被称之为CMD」</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/* ---A.js--- */</span></span><br><span class="line"><span class="keyword">const</span> sum = <span class="keyword">function</span> <span class="title function_">sum</span>(<span class="params">...params</span>) &#123;</span><br><span class="line">    <span class="keyword">return</span> params.<span class="title function_">reduce</span>(<span class="function">(<span class="params">result, item</span>) =&gt;</span> &#123;</span><br><span class="line">        <span class="keyword">return</span> result + item;</span><br><span class="line">    &#125;);</span><br><span class="line">&#125;;</span><br><span class="line"><span class="comment">// 暴露一些API</span></span><br><span class="line"><span class="variable language_">module</span>.<span class="property">exports</span> = &#123;</span><br><span class="line">    sum</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="comment">/* ---B.js--- */</span></span><br><span class="line"><span class="keyword">let</span> name = <span class="string">&#x27;哈哈&#x27;</span>;</span><br><span class="line"><span class="keyword">let</span> A = <span class="built_in">require</span>(<span class="string">&#x27;./A&#x27;</span>);</span><br><span class="line"><span class="keyword">const</span> average = <span class="keyword">function</span> <span class="title function_">average</span>(<span class="params">...params</span>) &#123;</span><br><span class="line">    <span class="keyword">return</span> (A.<span class="title function_">sum</span>(...params) / params.<span class="property">length</span>).<span class="title function_">toFixed</span>(<span class="number">2</span>);</span><br><span class="line">&#125;;</span><br><span class="line"><span class="variable language_">module</span>.<span class="property">exports</span> = &#123;</span><br><span class="line">    average</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="comment">/* ---main.js--- */</span></span><br><span class="line"><span class="keyword">let</span> A = <span class="built_in">require</span>(<span class="string">&#x27;./A&#x27;</span>);</span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(A.<span class="title function_">sum</span>(<span class="number">10</span>, <span class="number">20</span>, <span class="number">30</span>, <span class="number">40</span>));</span><br><span class="line"><span class="keyword">let</span> B = <span class="built_in">require</span>(<span class="string">&#x27;./B&#x27;</span>);</span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(B.<span class="title function_">average</span>(<span class="number">10</span>, <span class="number">20</span>, <span class="number">30</span>, <span class="number">40</span>));</span><br></pre></td></tr></table></figure>
+
+<p>缓存机制</p>
+<p>还是没有实战—27：35</p>
+<h2 id="1-5-ES6Module模块规范"><a href="#1-5-ES6Module模块规范" class="headerlink" title="1.5 ES6Module模块规范"></a>1.5 <strong>ES6Module模块规范</strong></h2><p><a target="_blank" rel="noopener" href="https://es6.ruanyifeng.com/#docs/module">https://es6.ruanyifeng.com/#docs/module</a>  </p>
+<p>可以直接运行在浏览器端；不支持IE；</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line">使用在html文件上时，导入文件前要加入type = <span class="variable language_">module</span>,预览要使用http协议（<span class="title class_">LiveServer</span>），不能使用<span class="title class_">File</span>协议。</span><br><span class="line">模块的导入导出:</span><br><span class="line">  整体来讲，每个模块导出的是一个<span class="title class_">Module</span>对象，我们可以基于 <span class="keyword">export</span>/<span class="keyword">export</span> <span class="keyword">default</span> 为对象中加入导出的内容</span><br><span class="line">    @导出方法<span class="number">1</span> <span class="keyword">export</span> <span class="keyword">default</span> xxx;</span><br><span class="line">      + xxx可以是任意类型值</span><br><span class="line">      + 给<span class="title class_">Module</span>对象新增一个 “<span class="keyword">default</span>” 属性，属性值就是导出的值</span><br><span class="line">      + 在一个模块中，<span class="keyword">export</span> <span class="keyword">default</span>只允许出现一次</span><br><span class="line">    @导出方法<span class="number">2</span> <span class="keyword">export</span> 创建值的表达式（声明变量 = 值）;</span><br><span class="line">      <span class="keyword">let</span> num = <span class="number">10</span>;</span><br><span class="line">      <span class="keyword">export</span> num; <span class="comment">//这样写是错误的</span></span><br><span class="line">      <span class="keyword">export</span> <span class="keyword">let</span> num = <span class="number">10</span>; <span class="comment">//这样写是正确的</span></span><br><span class="line">      ---</span><br><span class="line">      <span class="keyword">let</span> num = <span class="number">10</span>;</span><br><span class="line">      <span class="keyword">export</span> &#123;</span><br><span class="line">        num, <span class="comment">//这样写是可以的</span></span><br><span class="line">        <span class="attr">x</span>:<span class="number">100</span> <span class="comment">//这样写是错误的</span></span><br><span class="line">      &#125;;</span><br><span class="line">      ---</span><br><span class="line">      + <span class="keyword">export</span>可以出现多次，导出多个内容</span><br><span class="line">      + 声明的变量叫啥名字，最后给<span class="title class_">Module</span>对象加入的是同名的属性名，属性值就是变量的值</span><br></pre></td></tr></table></figure>
+
+<h3 id="1-5-2导入方法"><a href="#1-5-2导入方法" class="headerlink" title="1.5.2导入方法"></a>1.5.2导入方法</h3><p>我们会基于 import 方法导入模块「导入模块导出的内容」</p>
+<ul>
+<li>import N from ‘模块地址(在浏览器端不能忽略.js后缀名)’;</li>
+</ul>
+<p>N获取的不是整个导出的Module对象，仅仅获取的是Module中default这一项的值<br> 不能在import期间，直接对N解构赋值，因为涉及解构赋值就会变为另外一种情况</p>
+<ul>
+<li>解构赋值：import {x,y} from ‘模块地址’;</li>
+</ul>
+<p>直接对导出的Module对象中(排除default属性)，导出的内容进行解构赋值</p>
+<ul>
+<li>import * as M from ‘模块地址’;先导入所有导出的内容，赋值给M变量</li>
+</ul>
+<blockquote>
+<p>还是没有细看</p>
+</blockquote>
+
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+
+        
+
+          <div class="post-nav">
+            <div class="post-nav-item">
+                <a href="/2023/11/20/%E5%89%8D%E7%AB%AF/%E5%89%8D%E7%AB%AF%E5%B7%A5%E7%A8%8B%E5%8C%96/%E4%BB%A3%E7%A0%81%E9%A3%8E%E6%A0%BC/" rel="prev" title="">
+                  <i class="fa fa-angle-left"></i> 
+                </a>
+            </div>
+            <div class="post-nav-item">
+                <a href="/2023/11/20/%E5%89%8D%E7%AB%AF/%E5%89%8D%E7%AB%AF%E5%B7%A5%E7%A8%8B%E5%8C%96/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/" rel="next" title="">
+                   <i class="fa fa-angle-right"></i>
+                </a>
+            </div>
+          </div>
+    </footer>
+  </article>
+</div>
+
+
+
+
+
+
+</div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+
+  <div class="copyright">
+    &copy; 
+    <span itemprop="copyrightYear">2023</span>
+    <span class="with-love">
+      <i class="fa fa-heart"></i>
+    </span>
+    <span class="author" itemprop="copyrightHolder">zono</span>
+  </div>
+  <div class="powered-by">Powered by <a href="https://hexo.io/" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.js.org/" rel="noopener" target="_blank">NexT.Gemini</a>
+  </div>
+
+    </div>
+  </footer>
+
+  
+  <div class="back-to-top" role="button" aria-label="Back to top">
+    <i class="fa fa-arrow-up fa-lg"></i>
+    <span>0%</span>
+  </div>
+
+<noscript>
+  <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
+</noscript>
+
+
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js" integrity="sha256-XL2inqUJaslATFnHdJOi9GfQ60on8Wx1C2H8DYiN1xY=" crossorigin="anonymous"></script>
+<script src="/js/comments.js"></script><script src="/js/utils.js"></script><script src="/js/motion.js"></script><script src="/js/next-boot.js"></script>
+
+  
+
+
+
+
+
+
+  
+
+
+
+
+
+</body>
+</html>

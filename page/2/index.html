@@ -126,7 +126,7 @@
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
         <a href="/archives/">
-          <span class="site-state-item-count">43</span>
+          <span class="site-state-item-count">80</span>
           <span class="site-state-item-name">posts</span>
         </a>
       </div>
@@ -174,7 +174,7 @@
   
 
   <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2023/04/22/%E6%97%A5%E5%BF%970010/">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2023/11/20/%E5%89%8D%E7%AB%AF/%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/canvas/%E7%B2%92%E5%AD%90%E6%95%88%E6%9E%9C/index/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/uploads/cat.jpg">
@@ -192,7 +192,7 @@
     </span>
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
-          <a href="/2023/04/22/%E6%97%A5%E5%BF%970010/" class="post-title-link" itemprop="url">学习0010</a>
+          <a href="/2023/11/20/%E5%89%8D%E7%AB%AF/%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/canvas/%E7%B2%92%E5%AD%90%E6%95%88%E6%9E%9C/index/" class="post-title-link" itemprop="url">Untitled</a>
         </h2>
 
         <div class="post-meta-container">
@@ -203,14 +203,14 @@
       </span>
       <span class="post-meta-item-text">Posted on</span>
 
-      <time title="Created: 2023-04-22 20:54:46" itemprop="dateCreated datePublished" datetime="2023-04-22T20:54:46+08:00">2023-04-22</time>
+      <time title="Created: 2023-11-20 18:32:26" itemprop="dateCreated datePublished" datetime="2023-11-20T18:32:26+08:00">2023-11-20</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">Edited on</span>
-      <time title="Modified: 2023-04-23 20:36:44" itemprop="dateModified" datetime="2023-04-23T20:36:44+08:00">2023-04-23</time>
+      <time title="Modified: 2023-11-09 15:57:58" itemprop="dateModified" datetime="2023-11-09T15:57:58+08:00">2023-11-09</time>
     </span>
 
   
@@ -223,119 +223,21 @@
     
     
     <div class="post-body" itemprop="articleBody">
-          <p>星期六</p>
-<h1 id="一、流水账"><a href="#一、流水账" class="headerlink" title="一、流水账"></a>一、流水账</h1><h2 id="1、学习内容"><a href="#1、学习内容" class="headerlink" title="1、学习内容"></a>1、学习内容<!-- 记录阅读、学了什么等机械化的任务 --></h2><h3 id="1-1阅读内容："><a href="#1-1阅读内容：" class="headerlink" title="1.1阅读内容："></a>1.1阅读内容：</h3><h3 id="1-2学习细节"><a href="#1-2学习细节" class="headerlink" title="1.2学习细节"></a>1.2学习细节</h3><p>1.2.1 一般<br>1.2.2 计算机通识</p>
-<h2 id="2、生活内容："><a href="#2、生活内容：" class="headerlink" title="2、生活内容："></a>2、生活内容：<!-- 记录锻炼、不怎么影响情绪的经历、普通的社交 --></h2><h3 id="2-1锻炼内容："><a href="#2-1锻炼内容：" class="headerlink" title="2.1锻炼内容："></a>2.1锻炼内容：</h3><h3 id="2-2发生的事："><a href="#2-2发生的事：" class="headerlink" title="2.2发生的事："></a>2.2发生的事：<!-- ### 影响情绪的:<b>正面：</b> <b>负面：</b> --></h3><ul>
-<li>去了朝阳公园的书市，短时间内同时找一个人问路。</li>
-<li>晚上去操场唱歌</li>
-<li>理发+完成了政治类论文</li>
-</ul>
-<h1 id="二、计划和达成"><a href="#二、计划和达成" class="headerlink" title="二、计划和达成"></a>二、计划和达成<!-- 立下flag --></h1><h2 id="2、大创记录"><a href="#2、大创记录" class="headerlink" title="2、大创记录"></a>2、大创记录</h2><h3 id="2-1未完成"><a href="#2-1未完成" class="headerlink" title="2.1未完成"></a>2.1未完成</h3><p>1、阅读代码理解代码<br>2、将代码改写成GPU调用<br>3、准备前端</p>
-<h3 id="2-2新任务"><a href="#2-2新任务" class="headerlink" title="2.2新任务"></a>2.2新任务</h3><p>无</p>
-<h3 id="2-3做了什么"><a href="#2-3做了什么" class="headerlink" title="2.3做了什么"></a>2.3做了什么</h3><!-- ## 奖励 -->
+          
 
+let img = new Image();
+img.src = src;
+// canvas 获取粒子位置数据
+img.onload = () => {
+  // 获取图片像素数据
+  const tmp_canvas = document.createElement("canvas"); // 创建一个空的canvas
+  const tmp_ctx = tmp_canvas.getContext("2d");
 
+  tmp_ctx?.drawImage(img, 0, 0, imgW, imgH); // 将图片绘制到canvas中
+  const imgData = tmp_ctx?.getImageData(0, 0, imgW, imgH).data; // 获取像素点数据
+  tmp_ctx?.clearRect(0, 0, width, height);
+};
 
-<h1 id="三、随笔"><a href="#三、随笔" class="headerlink" title="三、随笔"></a>三、随笔<!-- 感悟、观察、对话 --></h1>
-      
-    </div>
-
-    
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-</div>
-
-
-
-
-    
-
-
-<div class="post-block">
-  
-  
-
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2023/04/21/%E6%97%A5%E5%BF%970009/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/uploads/cat.jpg">
-      <meta itemprop="name" content="zono">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="ZONO's World">
-      <meta itemprop="description" content="人生长度无法强求,但厚度可以靠努力">
-    </span>
-
-    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
-      <meta itemprop="name" content="undefined | ZONO's World">
-      <meta itemprop="description" content="">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/2023/04/21/%E6%97%A5%E5%BF%970009/" class="post-title-link" itemprop="url">日志0009</a>
-        </h2>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">Posted on</span>
-
-      <time title="Created: 2023-04-21 14:41:26" itemprop="dateCreated datePublished" datetime="2023-04-21T14:41:26+08:00">2023-04-21</time>
-    </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar-check"></i>
-      </span>
-      <span class="post-meta-item-text">Edited on</span>
-      <time title="Modified: 2023-04-23 20:33:13" itemprop="dateModified" datetime="2023-04-23T20:33:13+08:00">2023-04-23</time>
-    </span>
-
-  
-</div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          <p>星期五</p>
-<h1 id="一、流水账"><a href="#一、流水账" class="headerlink" title="一、流水账"></a>一、流水账</h1><h2 id="1、学习内容"><a href="#1、学习内容" class="headerlink" title="1、学习内容"></a>1、学习内容<!-- 记录阅读、学了什么等机械化的任务 --></h2><h3 id="1-1阅读内容："><a href="#1-1阅读内容：" class="headerlink" title="1.1阅读内容："></a>1.1阅读内容：</h3><ul>
-<li>《艺术的故事》22章<h3 id="1-2学习细节"><a href="#1-2学习细节" class="headerlink" title="1.2学习细节"></a>1.2学习细节</h3></li>
-</ul>
-<p>1.2.1 一般</p>
-<ul>
-<li><a target="_blank" rel="noopener" href="https://www.cnblogs.com/kangjianwei101/p/5223723.html">数据结构2.1</a>（线性表的一系列操作）</li>
-<li>VC风投的概念</li>
-<li>把blog部署到vercel上了，翻墙后浏览会快很多。</li>
-</ul>
-<p>1.2.2 计算机通识</p>
-<ul>
-<li>回顾GPL</li>
-</ul>
-<h2 id="2、生活内容："><a href="#2、生活内容：" class="headerlink" title="2、生活内容："></a>2、生活内容：<!-- 记录锻炼、不怎么影响情绪的经历、普通的社交 --></h2><h3 id="2-1锻炼内容："><a href="#2-1锻炼内容：" class="headerlink" title="2.1锻炼内容："></a>2.1锻炼内容：</h3><ul>
-<li>上午体测后打了一个多小时篮球。<h3 id="2-2发生的事："><a href="#2-2发生的事：" class="headerlink" title="2.2发生的事："></a>2.2发生的事：<!-- ### 影响情绪的:<b>正面：</b> <b>负面：</b> --></h3></li>
-<li>体测，运动了一上午</li>
-<li>完成了形策和思政实践论文，无聊的任务</li>
-</ul>
-<h1 id="二、计划和达成"><a href="#二、计划和达成" class="headerlink" title="二、计划和达成"></a>二、计划和达成<!-- 立下flag --></h1><h2 id="1、计划"><a href="#1、计划" class="headerlink" title="1、计划"></a>1、计划</h2><p>每周一次复习</p>
-<h2 id="2、大创记录"><a href="#2、大创记录" class="headerlink" title="2、大创记录"></a>2、大创记录</h2><h3 id="2-1未完成"><a href="#2-1未完成" class="headerlink" title="2.1未完成"></a>2.1未完成</h3><p>1、阅读代码理解代码<br>2、将代码改写成GPU调用<br>3、准备前端</p>
-<h3 id="2-2新任务"><a href="#2-2新任务" class="headerlink" title="2.2新任务"></a>2.2新任务</h3><p>无</p>
-<h3 id="2-3做了什么"><a href="#2-3做了什么" class="headerlink" title="2.3做了什么"></a>2.3做了什么</h3><!-- ## 奖励 -->
-<p>无</p>
-<h1 id="三、随笔"><a href="#三、随笔" class="headerlink" title="三、随笔"></a>三、随笔<!-- 感悟、观察、对话 --></h1><p>1、有时，两个人就如两块怎么拼都可以拼上的拼图块，但她是红色我是绿色，怎么拼都不好看。</p>
 
       
     </div>
@@ -362,7 +264,7 @@
   
 
   <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2023/04/20/%E6%97%A5%E5%BF%970008/">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2023/11/20/%E5%89%8D%E7%AB%AF/%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/canvas/%E7%AE%80%E5%8D%95%E7%94%BB%E6%9D%BF/index/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/uploads/cat.jpg">
@@ -380,7 +282,7 @@
     </span>
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
-          <a href="/2023/04/20/%E6%97%A5%E5%BF%970008/" class="post-title-link" itemprop="url">日志0008</a>
+          <a href="/2023/11/20/%E5%89%8D%E7%AB%AF/%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/canvas/%E7%AE%80%E5%8D%95%E7%94%BB%E6%9D%BF/index/" class="post-title-link" itemprop="url">Untitled</a>
         </h2>
 
         <div class="post-meta-container">
@@ -391,14 +293,14 @@
       </span>
       <span class="post-meta-item-text">Posted on</span>
 
-      <time title="Created: 2023-04-20 15:20:23" itemprop="dateCreated datePublished" datetime="2023-04-20T15:20:23+08:00">2023-04-20</time>
+      <time title="Created: 2023-11-20 18:32:26" itemprop="dateCreated datePublished" datetime="2023-11-20T18:32:26+08:00">2023-11-20</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">Edited on</span>
-      <time title="Modified: 2023-04-21 22:47:57" itemprop="dateModified" datetime="2023-04-21T22:47:57+08:00">2023-04-21</time>
+      <time title="Modified: 2023-11-09 15:34:18" itemprop="dateModified" datetime="2023-11-09T15:34:18+08:00">2023-11-09</time>
     </span>
 
   
@@ -411,34 +313,60 @@
     
     
     <div class="post-body" itemprop="articleBody">
-          <p>星期四</p>
-<h1 id="一、流水账"><a href="#一、流水账" class="headerlink" title="一、流水账"></a>一、流水账</h1><h2 id="1、学习内容"><a href="#1、学习内容" class="headerlink" title="1、学习内容"></a>1、学习内容<!-- 记录阅读、学了什么等机械化的任务 --></h2><h3 id="1-1阅读内容："><a href="#1-1阅读内容：" class="headerlink" title="1.1阅读内容："></a>1.1阅读内容：</h3><ul>
-<li>《艺术的故事》20章<h3 id="1-2学习细节"><a href="#1-2学习细节" class="headerlink" title="1.2学习细节"></a>1.2学习细节</h3></li>
-</ul>
-<p>1.2.1 一般</p>
-<ul>
-<li>awk学习</li>
-<li>正则表达式</li>
-</ul>
-<p>1.2.2 计算机通识</p>
-<ul>
-<li>web3是什么？</li>
-<li>语义网络、区块链是什么？（概念有点难懂）</li>
-</ul>
-<h2 id="2、生活内容："><a href="#2、生活内容：" class="headerlink" title="2、生活内容："></a>2、生活内容：<!-- 记录锻炼、不怎么影响情绪的经历、普通的社交 --></h2><h3 id="2-1锻炼内容："><a href="#2-1锻炼内容：" class="headerlink" title="2.1锻炼内容："></a>2.1锻炼内容：</h3><ul>
-<li>篮球50min</li>
-<li>三公里<h3 id="2-2发生的事："><a href="#2-2发生的事：" class="headerlink" title="2.2发生的事："></a>2.2发生的事：<!-- ### 影响情绪的:<b>正面：</b> <b>负面：</b> --></h3></li>
-<li>加入社团获得工位</li>
-</ul>
-<h1 id="二、计划和达成"><a href="#二、计划和达成" class="headerlink" title="二、计划和达成"></a>二、计划和达成<!-- 立下flag --></h1><h2 id="2、大创记录"><a href="#2、大创记录" class="headerlink" title="2、大创记录"></a>2、大创记录</h2><h3 id="2-1未完成"><a href="#2-1未完成" class="headerlink" title="2.1未完成"></a>2.1未完成</h3><p>1、阅读代码理解代码<br>2、将代码改写成GPU调用<br>3、准备前端</p>
-<h3 id="2-2新任务"><a href="#2-2新任务" class="headerlink" title="2.2新任务"></a>2.2新任务</h3><p>无</p>
-<h3 id="2-3做了什么"><a href="#2-3做了什么" class="headerlink" title="2.3做了什么"></a>2.3做了什么</h3><!-- ## 奖励 -->
+          /*
+@Date		:2023/11/09 15:33:53
+@Author		:zono
+@Description:
+TODO为什么script在html下面就无法使用？
+*/
+let painting = false; //画笔状态
+let startPoint = { x: 0, y: 0 }; //画笔位置
 
+var canvas = document.getElementById("canvas"); //获取元素
+var context = canvas.getContext("2d"); //显示方式
 
+canvas.onmousedown = (e) => {
+  let x = e.offsetX;
+  let y = e.offsetY;
+  startPoint = { x, y };
+  painting = true;
+};
 
-<h1 id="三、随笔"><a href="#三、随笔" class="headerlink" title="三、随笔"></a>三、随笔<!-- 感悟、观察、对话 --></h1><ul>
-<li>摄影是整体到局部，绘画是局部到整体。</li>
-</ul>
+canvas.onmousemove = (e) => {
+  let x = e.offsetX;
+  let y = e.offsetY;
+  newPoint = { x, y };
+  if (painting) {
+    drawLine(startPoint.x, startPoint.y, newPoint.x, newPoint.y);
+    startPoint = newPoint;
+  }
+};
+
+canvas.onmouseup = () => {
+  painting = false; //修改画笔状态
+};
+
+function drawLine(x1, y1, x2, y2) {
+  context.beginPath();
+  context.lineWidth = 3;
+  context.moveTo(x1, y1);
+  context.lineTo(x2, y2);
+  context.stroke();
+  context.closePath();
+}
+
+clear.onclick = () => {
+    context.fillStyle = "#ffffff";
+    context.fillRect(0, 0, canvas.width, canvas.height);
+}
+
+save.onclick = () => {
+    let image = canvas.toDataURL("image/png");
+    let a = document.createElement("a");
+    a.href = image;
+    a.download = "image.png";
+    a.click();
+}
 
       
     </div>
@@ -465,7 +393,7 @@
   
 
   <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2023/04/19/blog%E6%90%AD%E5%BB%BA%E8%AE%B0%E5%BD%95/">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2023/11/20/%E5%89%8D%E7%AB%AF/%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/canvas/%E7%AE%80%E5%8D%95%E7%94%BB%E6%9D%BF/index/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/uploads/cat.jpg">
@@ -483,7 +411,7 @@
     </span>
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
-          <a href="/2023/04/19/blog%E6%90%AD%E5%BB%BA%E8%AE%B0%E5%BD%95/" class="post-title-link" itemprop="url">blog搭建记录</a>
+          <a href="/2023/11/20/%E5%89%8D%E7%AB%AF/%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/canvas/%E7%AE%80%E5%8D%95%E7%94%BB%E6%9D%BF/index/" class="post-title-link" itemprop="url">Untitled</a>
         </h2>
 
         <div class="post-meta-container">
@@ -494,14 +422,14 @@
       </span>
       <span class="post-meta-item-text">Posted on</span>
 
-      <time title="Created: 2023-04-19 22:18:08" itemprop="dateCreated datePublished" datetime="2023-04-19T22:18:08+08:00">2023-04-19</time>
+      <time title="Created: 2023-11-20 18:32:26" itemprop="dateCreated datePublished" datetime="2023-11-20T18:32:26+08:00">2023-11-20</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">Edited on</span>
-      <time title="Modified: 2023-04-21 22:48:02" itemprop="dateModified" datetime="2023-04-21T22:48:02+08:00">2023-04-21</time>
+      <time title="Modified: 2023-11-09 15:33:38" itemprop="dateModified" datetime="2023-11-09T15:33:38+08:00">2023-11-09</time>
     </span>
 
   
@@ -514,7 +442,26 @@
     
     
     <div class="post-body" itemprop="articleBody">
-          <h1 id="4-19：尝试托管到vercel"><a href="#4-19：尝试托管到vercel" class="headerlink" title="4/19：尝试托管到vercel"></a>4/19：尝试托管到vercel</h1><p>1、git是什么</p>
+          <!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    
+  </head>
+  <body>
+    <div class="menu">
+      <button class="button">画板</button>
+      <button class="button" id="clear">重载</button>
+      <button class="button" id="save">保存</button>
+    </div>
+    <div class="window">
+      <canvas id="canvas" class="cursor1" width="500" height="500"></canvas>
+    </div>
+  </body>
+  <script src="index.js"></script>
+</html>
 
       
     </div>
@@ -541,7 +488,7 @@
   
 
   <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2023/04/19/%E6%97%A5%E5%BF%970007/">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2023/11/20/%E5%89%8D%E7%AB%AF/%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/canvas/Canvas/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/uploads/cat.jpg">
@@ -559,7 +506,7 @@
     </span>
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
-          <a href="/2023/04/19/%E6%97%A5%E5%BF%970007/" class="post-title-link" itemprop="url">日志0007</a>
+          <a href="/2023/11/20/%E5%89%8D%E7%AB%AF/%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/canvas/Canvas/" class="post-title-link" itemprop="url">Untitled</a>
         </h2>
 
         <div class="post-meta-container">
@@ -570,14 +517,14 @@
       </span>
       <span class="post-meta-item-text">Posted on</span>
 
-      <time title="Created: 2023-04-19 21:05:53" itemprop="dateCreated datePublished" datetime="2023-04-19T21:05:53+08:00">2023-04-19</time>
+      <time title="Created: 2023-11-20 18:32:26" itemprop="dateCreated datePublished" datetime="2023-11-20T18:32:26+08:00">2023-11-20</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">Edited on</span>
-      <time title="Modified: 2023-04-21 22:47:53" itemprop="dateModified" datetime="2023-04-21T22:47:53+08:00">2023-04-21</time>
+      <time title="Modified: 2023-11-09 15:57:52" itemprop="dateModified" datetime="2023-11-09T15:57:52+08:00">2023-11-09</time>
     </span>
 
   
@@ -590,30 +537,34 @@
     
     
     <div class="post-body" itemprop="articleBody">
-          <p>星期三</p>
-<h1 id="一、流水账"><a href="#一、流水账" class="headerlink" title="一、流水账"></a>一、流水账</h1><h2 id="1、学习内容"><a href="#1、学习内容" class="headerlink" title="1、学习内容"></a>1、学习内容<!-- 记录阅读、学了什么等机械化的任务 --></h2><h3 id="1-1阅读内容："><a href="#1-1阅读内容：" class="headerlink" title="1.1阅读内容："></a>1.1阅读内容：</h3><ul>
-<li>《艺术的故事》20章（因为对历史的不熟悉有一点脱节了，得读第二次）<h3 id="1-2学习细节"><a href="#1-2学习细节" class="headerlink" title="1.2学习细节"></a>1.2学习细节</h3></li>
+          <h1 id="Canvas"><a href="#Canvas" class="headerlink" title="Canvas"></a>Canvas</h1><ul>
+<li><input checked="" disabled="" type="checkbox"> 入门</li>
+<li><input disabled="" type="checkbox"> 看MDN <a target="_blank" rel="noopener" href="https://developer.mozilla.org/zh-CN/docs/Web/API/Canvas_API/Tutorial">Canvas 教程 - Web API 接口参考 | MDN (mozilla.org)</a></li>
 </ul>
-<p>1.2.1 一般</p>
-<ul>
-<li>尝试把blog托管到vercel（失败，明天继续）</li>
-<li>复习git的知识</li>
-</ul>
-<p>1.2.2 计算机通识</p>
-<ul>
-<li>Github pages是什么</li>
-<li>域名是什么（如何看域名对应的ip）</li>
-<li>serverless是什么</li>
-</ul>
-<h2 id="2、生活内容："><a href="#2、生活内容：" class="headerlink" title="2、生活内容："></a>2、生活内容：<!-- 记录锻炼、不怎么影响情绪的经历、普通的社交 --></h2><h3 id="2-1锻炼内容："><a href="#2-1锻炼内容：" class="headerlink" title="2.1锻炼内容："></a>2.1锻炼内容：</h3><ul>
-<li>三公里</li>
-<li>打篮球（上强度了）<h3 id="2-2发生的事："><a href="#2-2发生的事：" class="headerlink" title="2.2发生的事："></a>2.2发生的事：<!-- ### 影响情绪的:<b>正面：</b> <b>负面：</b> --></h3>平淡的一天，学校操场有公益活动，但没有兴趣。有一种刚看完哲学书后的虚无感，不过运动确实会让人开心。</li>
-</ul>
-<h1 id="二、计划和达成"><a href="#二、计划和达成" class="headerlink" title="二、计划和达成"></a>二、计划和达成<!-- 立下flag --></h1><h2 id="2、大创记录"><a href="#2、大创记录" class="headerlink" title="2、大创记录"></a>2、大创记录</h2><h3 id="2-1未完成"><a href="#2-1未完成" class="headerlink" title="2.1未完成"></a>2.1未完成</h3><p>1、阅读代码理解代码<br>2、将代码改写成GPU调用<br>3、准备前端</p>
-<h3 id="2-2新任务"><a href="#2-2新任务" class="headerlink" title="2.2新任务"></a>2.2新任务</h3><p>无</p>
-<h3 id="2-3做了什么"><a href="#2-3做了什么" class="headerlink" title="2.3做了什么"></a>2.3做了什么</h3><!-- ## 奖励 -->
-<p>1、继续阅读代码<br>2、看了点前端</p>
-<h1 id="三、随笔"><a href="#三、随笔" class="headerlink" title="三、随笔"></a>三、随笔<!-- 感悟、观察、对话 --></h1><p>1、可能我就是那种不喜欢表达的，其实非常重感情，但却会刻意回避。不过做了最后的决定后也洒脱了，还好最坏的结果不过是回到过去。</p>
+<blockquote>
+<p>只有两属性width和height，默认300*150</p>
+</blockquote>
+<p>接下来我们就可以利用js，获取渲染上下文，然后在它上面绘制。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">&lt;script&gt;</span><br><span class="line">    ....</span><br><span class="line">    <span class="comment">// 获取canvas对象</span></span><br><span class="line">    <span class="keyword">const</span> canvas = <span class="variable language_">document</span>.<span class="title function_">getElementById</span>(<span class="string">&#x27;canvas&#x27;</span>)</span><br><span class="line">    <span class="comment">// 获取渲染上下文对象</span></span><br><span class="line">    <span class="keyword">const</span> ctx = canvas.<span class="title function_">getContext</span>(<span class="string">&#x27;2d&#x27;</span>)</span><br><span class="line">    ...</span><br><span class="line">&lt;/script&gt;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<h2 id="Canvas-Api"><a href="#Canvas-Api" class="headerlink" title="Canvas Api"></a>Canvas Api</h2><h3 id="栅格"><a href="#栅格" class="headerlink" title="栅格"></a>栅格</h3><h3 id="绘制图形"><a href="#绘制图形" class="headerlink" title="绘制图形"></a>绘制图形</h3><h4 id="路径（Path）"><a href="#路径（Path）" class="headerlink" title="路径（Path）"></a>路径（Path）</h4><p>主要四个参数</p>
+<ol>
+<li>beginPath</li>
+<li>closePath</li>
+<li>stroke</li>
+<li>fill</li>
+</ol>
+<p>步骤</p>
+<pre><code> 1. 调用beginPath
+ 2. 调用目标函数
+ 3. 闭合（非必须）
+</code></pre>
+<h4 id="移动笔触（moveTo）"><a href="#移动笔触（moveTo）" class="headerlink" title="移动笔触（moveTo）"></a>移动笔触（moveTo）</h4><h4 id="直线（lineTo）"><a href="#直线（lineTo）" class="headerlink" title="直线（lineTo）"></a>直线（lineTo）</h4><h4 id="三角形（triangle）"><a href="#三角形（triangle）" class="headerlink" title="三角形（triangle）"></a>三角形（triangle）</h4><h4 id="矩形（rect）"><a href="#矩形（rect）" class="headerlink" title="矩形（rect）"></a>矩形（rect）</h4><h4 id="圆形（arc）"><a href="#圆形（arc）" class="headerlink" title="圆形（arc）"></a>圆形（arc）</h4><h3 id="样式、颜色"><a href="#样式、颜色" class="headerlink" title="样式、颜色"></a>样式、颜色</h3><h4 id="色彩（color）"><a href="#色彩（color）" class="headerlink" title="色彩（color）"></a>色彩（color）</h4><h3 id="绘制文本"><a href="#绘制文本" class="headerlink" title="绘制文本"></a>绘制文本</h3><h3 id="操作图片"><a href="#操作图片" class="headerlink" title="操作图片"></a>操作图片</h3><h3 id="动画"><a href="#动画" class="headerlink" title="动画"></a>动画</h3><h3 id="实现动画的步骤"><a href="#实现动画的步骤" class="headerlink" title="实现动画的步骤"></a>实现动画的步骤</h3><blockquote>
+<p><em>清理-&gt;绘制-&gt;清理-&gt;绘制…</em> </p>
+</blockquote>
+<h2 id="实战"><a href="#实战" class="headerlink" title="实战"></a>实战</h2><h3 id="画板"><a href="#画板" class="headerlink" title="画板"></a>画板</h3><h3 id="粒子效果"><a href="#粒子效果" class="headerlink" title="粒子效果"></a>粒子效果</h3><blockquote>
+<p><a target="_blank" rel="noopener" href="https://juejin.cn/post/7160491044222533639">【Canvas实战】仿明日方舟Logo粒子动画 vue3+ts - 掘金 (juejin.cn)</a></p>
+</blockquote>
 
       
     </div>
@@ -640,7 +591,7 @@
   
 
   <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2023/04/18/%E6%97%A5%E5%BF%970006/">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2023/11/20/%E5%89%8D%E7%AB%AF/%E5%89%8D%E7%AB%AF%E5%B7%A5%E7%A8%8B%E5%8C%96/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/uploads/cat.jpg">
@@ -658,7 +609,7 @@
     </span>
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
-          <a href="/2023/04/18/%E6%97%A5%E5%BF%970006/" class="post-title-link" itemprop="url">日志0006</a>
+          <a href="/2023/11/20/%E5%89%8D%E7%AB%AF/%E5%89%8D%E7%AB%AF%E5%B7%A5%E7%A8%8B%E5%8C%96/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/" class="post-title-link" itemprop="url">Untitled</a>
         </h2>
 
         <div class="post-meta-container">
@@ -668,9 +619,15 @@
         <i class="far fa-calendar"></i>
       </span>
       <span class="post-meta-item-text">Posted on</span>
-      
 
-      <time title="Created: 2023-04-18 09:47:11 / Modified: 23:16:30" itemprop="dateCreated datePublished" datetime="2023-04-18T09:47:11+08:00">2023-04-18</time>
+      <time title="Created: 2023-11-20 18:32:26" itemprop="dateCreated datePublished" datetime="2023-11-20T18:32:26+08:00">2023-11-20</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar-check"></i>
+      </span>
+      <span class="post-meta-item-text">Edited on</span>
+      <time title="Modified: 2023-11-14 14:57:50" itemprop="dateModified" datetime="2023-11-14T14:57:50+08:00">2023-11-14</time>
     </span>
 
   
@@ -683,28 +640,7 @@
     
     
     <div class="post-body" itemprop="articleBody">
-          <h1 id="一、流水账"><a href="#一、流水账" class="headerlink" title="一、流水账"></a>一、流水账</h1><h2 id="1、学习内容"><a href="#1、学习内容" class="headerlink" title="1、学习内容"></a>1、学习内容<!-- 记录阅读、学了什么等机械化的任务 --></h2><h3 id="1-1阅读内容："><a href="#1-1阅读内容：" class="headerlink" title="1.1阅读内容："></a>1.1阅读内容：</h3><p>1、《艺术的故事》19章</p>
-<h3 id="1-2学习细节"><a href="#1-2学习细节" class="headerlink" title="1.2学习细节"></a>1.2学习细节</h3><p>1.2.1 一般</p>
-<ul>
-<li>复习一下前端</li>
-</ul>
-<p>1.2.2 计算机通识</p>
-<ul>
-<li>逆向工程是什么</li>
-<li>了解大模型ing，看不懂</li>
-<li>知道了DeepMind</li>
-<li>想部署stability</li>
-</ul>
-<h2 id="2、生活内容："><a href="#2、生活内容：" class="headerlink" title="2、生活内容："></a>2、生活内容：<!-- 记录锻炼、不怎么影响情绪的经历、普通的社交 --></h2><h3 id="2-1锻炼内容："><a href="#2-1锻炼内容：" class="headerlink" title="2.1锻炼内容："></a>2.1锻炼内容：</h3><ul>
-<li>跑步<h3 id="2-2发生的事："><a href="#2-2发生的事：" class="headerlink" title="2.2发生的事："></a>2.2发生的事：<!-- ### 影响情绪的:<b>正面：</b> <b>负面：</b> --></h3></li>
-<li>五一有着落了</li>
-<li>本来准备晚上去吃烧烤，人不够就搁置了。</li>
-</ul>
-<h1 id="二、计划和达成"><a href="#二、计划和达成" class="headerlink" title="二、计划和达成"></a>二、计划和达成<!-- 立下flag --></h1><h2 id="2、大创记录"><a href="#2、大创记录" class="headerlink" title="2、大创记录"></a>2、大创记录</h2><h3 id="2-1未完成"><a href="#2-1未完成" class="headerlink" title="2.1未完成"></a>2.1未完成</h3><p>1、阅读代码理解代码<br>2、将代码改写成GPU调用</p>
-<h3 id="2-2新任务"><a href="#2-2新任务" class="headerlink" title="2.2新任务"></a>2.2新任务</h3><p>1、可能得写前端，复习一下微信小程序开发。</p>
-<h3 id="2-3做了什么"><a href="#2-3做了什么" class="headerlink" title="2.3做了什么"></a>2.3做了什么</h3><!-- ## 奖励 -->
-<p>前端环境部署</p>
-<h1 id="三、随笔"><a href="#三、随笔" class="headerlink" title="三、随笔"></a>三、随笔<!-- 感悟、观察、对话 --></h1>
+          <h1 id="设计模式"><a href="#设计模式" class="headerlink" title="设计模式"></a>设计模式</h1>
       
     </div>
 
@@ -730,7 +666,7 @@
   
 
   <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2023/04/17/%E6%97%A5%E5%BF%970005/">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2023/11/20/%E5%89%8D%E7%AB%AF/%E5%89%8D%E7%AB%AF%E5%B7%A5%E7%A8%8B%E5%8C%96/%E6%A8%A1%E5%9D%97%E5%8C%96%E7%BC%96%E7%A8%8B/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/uploads/cat.jpg">
@@ -748,7 +684,7 @@
     </span>
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
-          <a href="/2023/04/17/%E6%97%A5%E5%BF%970005/" class="post-title-link" itemprop="url">日志0005</a>
+          <a href="/2023/11/20/%E5%89%8D%E7%AB%AF/%E5%89%8D%E7%AB%AF%E5%B7%A5%E7%A8%8B%E5%8C%96/%E6%A8%A1%E5%9D%97%E5%8C%96%E7%BC%96%E7%A8%8B/" class="post-title-link" itemprop="url">Untitled</a>
         </h2>
 
         <div class="post-meta-container">
@@ -759,14 +695,14 @@
       </span>
       <span class="post-meta-item-text">Posted on</span>
 
-      <time title="Created: 2023-04-17 10:11:45" itemprop="dateCreated datePublished" datetime="2023-04-17T10:11:45+08:00">2023-04-17</time>
+      <time title="Created: 2023-11-20 18:32:26" itemprop="dateCreated datePublished" datetime="2023-11-20T18:32:26+08:00">2023-11-20</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">Edited on</span>
-      <time title="Modified: 2023-04-18 09:49:47" itemprop="dateModified" datetime="2023-04-18T09:49:47+08:00">2023-04-18</time>
+      <time title="Modified: 2023-11-15 15:08:06" itemprop="dateModified" datetime="2023-11-15T15:08:06+08:00">2023-11-15</time>
     </span>
 
   
@@ -779,129 +715,97 @@
     
     
     <div class="post-body" itemprop="articleBody">
-          <h1 id="一、流水账"><a href="#一、流水账" class="headerlink" title="一、流水账"></a>一、流水账</h1><h2 id="1、学习内容"><a href="#1、学习内容" class="headerlink" title="1、学习内容"></a>1、学习内容<!-- 记录阅读、学了什么等机械化的任务 --></h2><h3 id="1-1阅读内容："><a href="#1-1阅读内容：" class="headerlink" title="1.1阅读内容："></a>1.1阅读内容：</h3><ul>
-<li>《艺术的故事》17-18章<h3 id="1-2学习细节"><a href="#1-2学习细节" class="headerlink" title="1.2学习细节"></a>1.2学习细节</h3></li>
-</ul>
-<p>1.2.1 一般</p>
+          <h1 id="模块化编程"><a href="#模块化编程" class="headerlink" title="模块化编程"></a>模块化编程</h1><p>拿到设计时，我们首先要把项目划分为一个个模块，或者组件</p>
+<blockquote>
+<p> 划分原则:</p>
 <ul>
-<li>chatglm出了报错，发现是安装包的问题，有些包就是要换源才能安装。（缺失cchardet包，不知道为什么，之前就不缺）</li>
-<li>复习了markdown的链接语法，有时间把以前的内容更新了</li>
-<li>c语言：fflush(stdin)：刷新缓冲区,fflush(stdout)：刷新缓冲区,sleep()</li>
+<li>按照功能和需求划分：普通业务模块/ 组件</li>
+<li>按照复用性划分：通用业务模块</li>
+<li>通用功能模块组件【UI组件库】</li>
 </ul>
-<p>1.2.2 计算机通识</p>
+</blockquote>
+<h2 id="1-1-模块化演化进程"><a href="#1-1-模块化演化进程" class="headerlink" title="1.1 模块化演化进程"></a>1.1 模块化演化进程</h2><p>未来的项目一定是 模块化/组件化 开发！！</p>
+<blockquote>
+<p>模块化编程进化历史</p>
 <ul>
-<li>python的<a target="_blank" rel="noopener" href="https://chardet.readthedocs.io/en/latest/supported-encodings.html">chardet库网址</a>：用于bytes和str转换等相关操作。</li>
-<li>bytes：几种常见编码西文编码等</li>
-<li>堆栈上溢下溢</li>
-<li>http状态码：信息响应(100–199)，成功响应(200–299)，重定向(300–399)，客户端错误(400–499)和服务器错误 (500–599)；常见404、200、500</li>
+<li><p>  单例设计模式</p>
+</li>
+<li><p>  AMD「require.js」</p>
+</li>
+<li><p>  CommonJS(node.js)</p>
+</li>
+<li><p>  CMD「sea.js」</p>
+</li>
+<li><p>  ES6Module</p>
+</li>
 </ul>
-<h2 id="2、生活内容："><a href="#2、生活内容：" class="headerlink" title="2、生活内容："></a>2、生活内容：<!-- 记录锻炼、不怎么影响情绪的经历、普通的社交 --></h2><h3 id="2-1锻炼内容："><a href="#2-1锻炼内容：" class="headerlink" title="2.1锻炼内容："></a>2.1锻炼内容：</h3><ul>
-<li>3公里<h3 id="2-2发生的事："><a href="#2-2发生的事：" class="headerlink" title="2.2发生的事："></a>2.2发生的事：<!-- ### 影响情绪的:<b>正面：有人问我问题了</b> <b>负面：</b> --></h3></li>
-<li>看了自动化院的十佳歌手活动。</li>
-</ul>
-<h1 id="二、计划和达成"><a href="#二、计划和达成" class="headerlink" title="二、计划和达成"></a>二、计划和达成<!-- 立下flag --></h1><h2 id="2、大创记录"><a href="#2、大创记录" class="headerlink" title="2、大创记录"></a>2、大创记录</h2><h3 id="2-1未完成"><a href="#2-1未完成" class="headerlink" title="2.1未完成"></a>2.1未完成</h3><p>1、阅读代码理解代码<br>2、将代码改写成GPU调用</p>
-<h3 id="2-2新任务"><a href="#2-2新任务" class="headerlink" title="2.2新任务"></a>2.2新任务</h3><p>无</p>
-<h3 id="2-3做了什么"><a href="#2-3做了什么" class="headerlink" title="2.3做了什么"></a>2.3做了什么</h3><!-- ## 奖励 -->
+</blockquote>
+<h2 id="1-2单例设计模式"><a href="#1-2单例设计模式" class="headerlink" title="1.2单例设计模式"></a>1.2<strong>单例设计模式</strong></h2><p>也就是原生js写法，用<code>&lt;script src&gt;</code>,调用文件，把各个功能写在不同的模块下，最后合并到页面中。</p>
+<p><strong>问题</strong>：</p>
 <ul>
-<li>看了一点代码，知道了一些数据处理的知识</li>
+<li>会出现全局变量污染，也就是模块间会有相互冲突。</li>
+<li>模块间相互引用问题，用window方法多了后也会冲突</li>
 </ul>
-<h1 id="三、随笔"><a href="#三、随笔" class="headerlink" title="三、随笔"></a>三、随笔<!-- 感悟、观察、对话 --></h1><p>1、深切记得，当你站在舞台上时，下面的人都会变成小黑点。疫情后终于有些大学生的活动了。</p>
-
-      
-    </div>
-
-    
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-</div>
-
-
-
-
-    
-
-
-<div class="post-block">
-  
-  
-
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2023/04/16/%E6%97%A5%E5%BF%970004/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/uploads/cat.jpg">
-      <meta itemprop="name" content="zono">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="ZONO's World">
-      <meta itemprop="description" content="人生长度无法强求,但厚度可以靠努力">
-    </span>
-
-    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
-      <meta itemprop="name" content="undefined | ZONO's World">
-      <meta itemprop="description" content="">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/2023/04/16/%E6%97%A5%E5%BF%970004/" class="post-title-link" itemprop="url">日志0004</a>
-        </h2>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">Posted on</span>
-
-      <time title="Created: 2023-04-16 20:52:16" itemprop="dateCreated datePublished" datetime="2023-04-16T20:52:16+08:00">2023-04-16</time>
-    </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar-check"></i>
-      </span>
-      <span class="post-meta-item-text">Edited on</span>
-      <time title="Modified: 2023-04-18 09:49:45" itemprop="dateModified" datetime="2023-04-18T09:49:45+08:00">2023-04-18</time>
-    </span>
-
-  
-</div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          <h1 id="一、流水账"><a href="#一、流水账" class="headerlink" title="一、流水账"></a>一、流水账</h1><h2 id="1、学习内容"><a href="#1、学习内容" class="headerlink" title="1、学习内容"></a>1、学习内容<!-- 记录阅读、学了什么等机械化的任务 --></h2><h3 id="1-1阅读内容："><a href="#1-1阅读内容：" class="headerlink" title="1.1阅读内容："></a>1.1阅读内容：</h3><ul>
-<li>《艺术的故事》16章<h3 id="1-2学习细节"><a href="#1-2学习细节" class="headerlink" title="1.2学习细节"></a>1.2学习细节</h3></li>
-</ul>
-<p>1.2.1 计算机通识</p>
+<p><strong>解决问题</strong>：</p>
 <ul>
-<li>vc和c语言的区别</li>
-</ul>
-<h2 id="2、生活内容："><a href="#2、生活内容：" class="headerlink" title="2、生活内容："></a>2、生活内容：<!-- 记录锻炼、不怎么影响情绪的经历、普通的社交 --></h2><h3 id="2-1锻炼内容："><a href="#2-1锻炼内容：" class="headerlink" title="2.1锻炼内容："></a>2.1锻炼内容：</h3><ul>
-<li>骑了大概八九公里自行车。<h3 id="2-2发生的事："><a href="#2-2发生的事：" class="headerlink" title="2.2发生的事："></a>2.2发生的事：<!-- ### 影响情绪的:<b>正面：</b> <b>负面：似乎看见了闫与某个男生一起，装没看见就好了，反正我也没认真，只是真的会不介意吗？</b> --></h3></li>
-<li>自习</li>
-<li>去了AIGC黑客松观看路演，新的道路再眼前延生。</li>
-</ul>
-<p>影响情绪的:<b>正面：</b></p>
+<li><p>模块间相互冲突的问题:</p>
 <ul>
-<li>AIGC hackation活动上认识了大佬。认识了小周老师，深切感受到他的人格魅力。</li>
+<li>「闭包」 ;</li>
 </ul>
-<h1 id="二、计划和达成"><a href="#二、计划和达成" class="headerlink" title="二、计划和达成"></a>二、计划和达成<!-- 立下flag --></h1><h2 id="2、大创记录"><a href="#2、大创记录" class="headerlink" title="2、大创记录"></a>2、大创记录</h2><h3 id="2-1未完成"><a href="#2-1未完成" class="headerlink" title="2.1未完成"></a>2.1未完成</h3><p>1、阅读代码理解代码<br>2、将代码改写成GPU调用</p>
-<h3 id="2-2新任务"><a href="#2-2新任务" class="headerlink" title="2.2新任务"></a>2.2新任务</h3><p>无</p>
-<h3 id="2-3做了什么"><a href="#2-3做了什么" class="headerlink" title="2.3做了什么"></a>2.3做了什么</h3><!-- ## 奖励 -->
-<p>无</p>
-<h1 id="三、随笔"><a href="#三、随笔" class="headerlink" title="三、随笔"></a>三、随笔<!-- 感悟、观察、对话 --></h1><p>参加活动今天没有干太多事。<br>1、一直感叹于创业者的勇气，可能我未来也会走上这条路，不过现在还是先把技术搞上去吧。</p>
+</li>
+<li><p>模块间相互引用的问题：</p>
+<ul>
+<li><p>使用windows.XXX = XXX 暴露方法到全局</p>
+</li>
+<li><p>解决windows多了后冲突：直接导出整个对象，就像react组件一样，对象中有所有对应的方法。</p>
+<blockquote>
+<p>详细解释：让每个模块有一个独有的模块名xxxModule，也叫命名空间（回想起来c不就是吗）。</p>
+<p>模块闭包时，直接return对象，别人要用时，直接模块名.方法（）调用就行。</p>
+</blockquote>
+</li>
+</ul>
+</li>
+</ul>
+<p>如此单例设计模式就完成了。</p>
+<p><strong>注意</strong>：包导入的顺序</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//单例格式</span></span><br><span class="line"><span class="keyword">let</span> xxxModule = (<span class="keyword">function</span> (<span class="params"></span>) &#123;</span><br><span class="line">   <span class="keyword">let</span> time = <span class="keyword">new</span> <span class="title class_">Date</span>();</span><br><span class="line">   <span class="keyword">const</span> query = <span class="keyword">function</span> <span class="title function_">query</span>(<span class="params"></span>) &#123;</span><br><span class="line">       <span class="comment">// ...</span></span><br><span class="line">   &#125;;</span><br><span class="line">   <span class="keyword">const</span> handle = <span class="keyword">function</span> <span class="title function_">handle</span>(<span class="params"></span>) &#123;</span><br><span class="line">       <span class="comment">// ...</span></span><br><span class="line">   &#125;;</span><br><span class="line"></span><br><span class="line">   <span class="comment">// 把供其它板块调用的方法，暴露到全局对象上</span></span><br><span class="line">   <span class="comment">//「局限：暴露的内容比较多，则还会引发全局变量冲突」</span></span><br><span class="line">   <span class="comment">// window.query = query;</span></span><br><span class="line"></span><br><span class="line">   <span class="keyword">return</span> &#123;</span><br><span class="line">       query,</span><br><span class="line">       handle</span><br><span class="line">   &#125;;</span><br><span class="line">&#125;)();</span><br></pre></td></tr></table></figure>
+
+<p>没看例子：p132    37:17~52:30</p>
+<p><strong>不足之处</strong>：需要手动分析模块之间的依赖关系，按顺序依次导入相关模块；所有模块都是基于script一个个导入的，这样页面HTTP请求变多！</p>
+<h2 id="1-3-AMD「require-js」"><a href="#1-3-AMD「require-js」" class="headerlink" title="1.3 AMD「require.js」"></a>1.3 <strong>AMD「require.js」</strong></h2><p> <a target="_blank" rel="noopener" href="https://requirejs.org/">https://requirejs.org</a>  </p>
+<p><strong>优势</strong>：在保证模块之间独立和可以相互访问的基础上，HTML中无需再导入各个模块了「<strong>不存在顺序问题</strong>」，也不需要自己去分析相互间的依赖关系！<br><strong>不足</strong>：依赖模块的导入是“前置导入”，只有把依赖模块动态导入完毕，才会触发回调函数执行「阻碍代码执行速度」；代码书写的顺序也不是很方便；可能存在重复导入；</p>
+<p><img src="C:\Users\27421\AppData\Roaming\Typora\typora-user-images\image-20231112133515879.png" alt="image-20231112133515879"></p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//main.js</span></span><br><span class="line"><span class="built_in">require</span>.<span class="title function_">config</span>(&#123;</span><br><span class="line">    <span class="comment">//全局配置</span></span><br><span class="line">    <span class="attr">baseUrl</span>: <span class="string">&#x27;js/lib&#x27;</span>,</span><br><span class="line">&#125;);</span><br><span class="line"></span><br><span class="line"><span class="built_in">require</span>([<span class="string">&#x27;moduleB&#x27;</span>, <span class="string">&#x27;moduleA&#x27;</span>], <span class="keyword">function</span> (<span class="params">moduleB, moduleA</span>) &#123;</span><br><span class="line">    <span class="variable language_">console</span>.<span class="title function_">log</span>(moduleB.<span class="title function_">average</span>(<span class="number">10</span>, <span class="number">20</span>, <span class="number">30</span>, <span class="number">40</span>, <span class="number">50</span>));</span><br><span class="line">&#125;);</span><br><span class="line"></span><br><span class="line"><span class="comment">//moduleA.js</span></span><br><span class="line"><span class="title function_">define</span>(<span class="keyword">function</span> (<span class="params"></span>) &#123;</span><br><span class="line">    <span class="keyword">return</span> &#123;</span><br><span class="line">        <span class="title function_">sum</span>(<span class="params">...args</span>) &#123;</span><br><span class="line">            <span class="keyword">let</span> len = args.<span class="property">length</span>,</span><br><span class="line">                firstItem = args[<span class="number">0</span>];</span><br><span class="line">            <span class="keyword">if</span> (len === <span class="number">0</span>) <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">            <span class="keyword">if</span> (len === <span class="number">1</span>) <span class="keyword">return</span> firstItem;</span><br><span class="line">            <span class="keyword">return</span> args.<span class="title function_">reduce</span>(<span class="function">(<span class="params">total, item</span>) =&gt;</span> &#123;</span><br><span class="line">                <span class="keyword">return</span> total + item;</span><br><span class="line">            &#125;);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;;</span><br><span class="line">&#125;);</span><br><span class="line"></span><br><span class="line"><span class="comment">//moduleB.js</span></span><br><span class="line"><span class="title function_">define</span>([<span class="string">&#x27;moduleA&#x27;</span>], <span class="keyword">function</span> (<span class="params">moudleA</span>) &#123;</span><br><span class="line">    <span class="keyword">return</span> &#123;</span><br><span class="line">        <span class="comment">// 求平均数（去掉最大最小值）</span></span><br><span class="line">        <span class="title function_">average</span>(<span class="params">...args</span>) &#123;</span><br><span class="line">            <span class="keyword">let</span> len = args.<span class="property">length</span>,</span><br><span class="line">                firstItem = args[<span class="number">0</span>];</span><br><span class="line">            <span class="keyword">if</span> (len === <span class="number">0</span>) <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">            <span class="keyword">if</span> (len === <span class="number">1</span>) <span class="keyword">return</span> firstItem;</span><br><span class="line">            args.<span class="title function_">sort</span>(<span class="function">(<span class="params">a, b</span>) =&gt;</span> a - b);</span><br><span class="line">            args.<span class="title function_">pop</span>();</span><br><span class="line">            args.<span class="title function_">shift</span>();</span><br><span class="line">            <span class="keyword">return</span> (moudleA.<span class="title function_">sum</span>(...args) / args.<span class="property">length</span>).<span class="title function_">toFixed</span>(<span class="number">2</span>);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;;</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+
+<p>没看例子：p132    58:17~1:20:05</p>
+<h2 id="1-4-CommonJS模块化规范"><a href="#1-4-CommonJS模块化规范" class="headerlink" title="1.4 CommonJS模块化规范"></a>1.4 <strong>CommonJS模块化规范</strong></h2><blockquote>
+<p>node.js出现了,不用导入</p>
+</blockquote>
+<p>每创建一个js文件就创建了一个模块，里面的代码就是独立的。用<code>module.exports</code>导出对象。</p>
+<p>唯一的问题：<strong>浏览器端不支持CommonJS规范</strong><br>淘宝“玉伯”仿照CommonJS规范，研发了一款插件 sea.js ，旨在把CommonJS规范搬到浏览器端运行「这种模块思想被称之为CMD」</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/* ---A.js--- */</span></span><br><span class="line"><span class="keyword">const</span> sum = <span class="keyword">function</span> <span class="title function_">sum</span>(<span class="params">...params</span>) &#123;</span><br><span class="line">    <span class="keyword">return</span> params.<span class="title function_">reduce</span>(<span class="function">(<span class="params">result, item</span>) =&gt;</span> &#123;</span><br><span class="line">        <span class="keyword">return</span> result + item;</span><br><span class="line">    &#125;);</span><br><span class="line">&#125;;</span><br><span class="line"><span class="comment">// 暴露一些API</span></span><br><span class="line"><span class="variable language_">module</span>.<span class="property">exports</span> = &#123;</span><br><span class="line">    sum</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="comment">/* ---B.js--- */</span></span><br><span class="line"><span class="keyword">let</span> name = <span class="string">&#x27;哈哈&#x27;</span>;</span><br><span class="line"><span class="keyword">let</span> A = <span class="built_in">require</span>(<span class="string">&#x27;./A&#x27;</span>);</span><br><span class="line"><span class="keyword">const</span> average = <span class="keyword">function</span> <span class="title function_">average</span>(<span class="params">...params</span>) &#123;</span><br><span class="line">    <span class="keyword">return</span> (A.<span class="title function_">sum</span>(...params) / params.<span class="property">length</span>).<span class="title function_">toFixed</span>(<span class="number">2</span>);</span><br><span class="line">&#125;;</span><br><span class="line"><span class="variable language_">module</span>.<span class="property">exports</span> = &#123;</span><br><span class="line">    average</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="comment">/* ---main.js--- */</span></span><br><span class="line"><span class="keyword">let</span> A = <span class="built_in">require</span>(<span class="string">&#x27;./A&#x27;</span>);</span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(A.<span class="title function_">sum</span>(<span class="number">10</span>, <span class="number">20</span>, <span class="number">30</span>, <span class="number">40</span>));</span><br><span class="line"><span class="keyword">let</span> B = <span class="built_in">require</span>(<span class="string">&#x27;./B&#x27;</span>);</span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(B.<span class="title function_">average</span>(<span class="number">10</span>, <span class="number">20</span>, <span class="number">30</span>, <span class="number">40</span>));</span><br></pre></td></tr></table></figure>
+
+<p>缓存机制</p>
+<p>还是没有实战—27：35</p>
+<h2 id="1-5-ES6Module模块规范"><a href="#1-5-ES6Module模块规范" class="headerlink" title="1.5 ES6Module模块规范"></a>1.5 <strong>ES6Module模块规范</strong></h2><p><a target="_blank" rel="noopener" href="https://es6.ruanyifeng.com/#docs/module">https://es6.ruanyifeng.com/#docs/module</a>  </p>
+<p>可以直接运行在浏览器端；不支持IE；</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line">使用在html文件上时，导入文件前要加入type = <span class="variable language_">module</span>,预览要使用http协议（<span class="title class_">LiveServer</span>），不能使用<span class="title class_">File</span>协议。</span><br><span class="line">模块的导入导出:</span><br><span class="line">  整体来讲，每个模块导出的是一个<span class="title class_">Module</span>对象，我们可以基于 <span class="keyword">export</span>/<span class="keyword">export</span> <span class="keyword">default</span> 为对象中加入导出的内容</span><br><span class="line">    @导出方法<span class="number">1</span> <span class="keyword">export</span> <span class="keyword">default</span> xxx;</span><br><span class="line">      + xxx可以是任意类型值</span><br><span class="line">      + 给<span class="title class_">Module</span>对象新增一个 “<span class="keyword">default</span>” 属性，属性值就是导出的值</span><br><span class="line">      + 在一个模块中，<span class="keyword">export</span> <span class="keyword">default</span>只允许出现一次</span><br><span class="line">    @导出方法<span class="number">2</span> <span class="keyword">export</span> 创建值的表达式（声明变量 = 值）;</span><br><span class="line">      <span class="keyword">let</span> num = <span class="number">10</span>;</span><br><span class="line">      <span class="keyword">export</span> num; <span class="comment">//这样写是错误的</span></span><br><span class="line">      <span class="keyword">export</span> <span class="keyword">let</span> num = <span class="number">10</span>; <span class="comment">//这样写是正确的</span></span><br><span class="line">      ---</span><br><span class="line">      <span class="keyword">let</span> num = <span class="number">10</span>;</span><br><span class="line">      <span class="keyword">export</span> &#123;</span><br><span class="line">        num, <span class="comment">//这样写是可以的</span></span><br><span class="line">        <span class="attr">x</span>:<span class="number">100</span> <span class="comment">//这样写是错误的</span></span><br><span class="line">      &#125;;</span><br><span class="line">      ---</span><br><span class="line">      + <span class="keyword">export</span>可以出现多次，导出多个内容</span><br><span class="line">      + 声明的变量叫啥名字，最后给<span class="title class_">Module</span>对象加入的是同名的属性名，属性值就是变量的值</span><br></pre></td></tr></table></figure>
+
+<h3 id="1-5-2导入方法"><a href="#1-5-2导入方法" class="headerlink" title="1.5.2导入方法"></a>1.5.2导入方法</h3><p>我们会基于 import 方法导入模块「导入模块导出的内容」</p>
+<ul>
+<li>import N from ‘模块地址(在浏览器端不能忽略.js后缀名)’;</li>
+</ul>
+<p>N获取的不是整个导出的Module对象，仅仅获取的是Module中default这一项的值<br> 不能在import期间，直接对N解构赋值，因为涉及解构赋值就会变为另外一种情况</p>
+<ul>
+<li>解构赋值：import {x,y} from ‘模块地址’;</li>
+</ul>
+<p>直接对导出的Module对象中(排除default属性)，导出的内容进行解构赋值</p>
+<ul>
+<li>import * as M from ‘模块地址’;先导入所有导出的内容，赋值给M变量</li>
+</ul>
+<blockquote>
+<p>还是没有细看</p>
+</blockquote>
 
       
     </div>
@@ -928,7 +832,7 @@
   
 
   <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2023/04/15/%E6%97%A5%E5%BF%970003/">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2023/11/20/%E5%89%8D%E7%AB%AF/%E5%89%8D%E7%AB%AF%E5%B7%A5%E7%A8%8B%E5%8C%96/%E4%BB%A3%E7%A0%81%E9%A3%8E%E6%A0%BC/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/uploads/cat.jpg">
@@ -946,7 +850,7 @@
     </span>
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
-          <a href="/2023/04/15/%E6%97%A5%E5%BF%970003/" class="post-title-link" itemprop="url">日志0003</a>
+          <a href="/2023/11/20/%E5%89%8D%E7%AB%AF/%E5%89%8D%E7%AB%AF%E5%B7%A5%E7%A8%8B%E5%8C%96/%E4%BB%A3%E7%A0%81%E9%A3%8E%E6%A0%BC/" class="post-title-link" itemprop="url">Untitled</a>
         </h2>
 
         <div class="post-meta-container">
@@ -957,14 +861,14 @@
       </span>
       <span class="post-meta-item-text">Posted on</span>
 
-      <time title="Created: 2023-04-15 17:10:38" itemprop="dateCreated datePublished" datetime="2023-04-15T17:10:38+08:00">2023-04-15</time>
+      <time title="Created: 2023-11-20 18:32:26" itemprop="dateCreated datePublished" datetime="2023-11-20T18:32:26+08:00">2023-11-20</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">Edited on</span>
-      <time title="Modified: 2023-04-18 09:49:41" itemprop="dateModified" datetime="2023-04-18T09:49:41+08:00">2023-04-18</time>
+      <time title="Modified: 2023-11-11 19:16:13" itemprop="dateModified" datetime="2023-11-11T19:16:13+08:00">2023-11-11</time>
     </span>
 
   
@@ -977,37 +881,20 @@
     
     
     <div class="post-body" itemprop="articleBody">
-          <h1 id="一、流水账"><a href="#一、流水账" class="headerlink" title="一、流水账"></a>一、流水账</h1><h2 id="1、学习内容"><a href="#1、学习内容" class="headerlink" title="1、学习内容"></a>1、学习内容<!-- 记录阅读、学了什么等机械化的任务 --></h2><h3 id="1-1阅读内容："><a href="#1-1阅读内容：" class="headerlink" title="1.1阅读内容："></a>1.1阅读内容：</h3><ul>
-<li>《艺术的故事》15章<h3 id="1-2学习细节"><a href="#1-2学习细节" class="headerlink" title="1.2学习细节"></a>1.2学习细节</h3></li>
-</ul>
-<p>1.2.1 计算机通识</p>
-<ul>
-<li>c语言:#ifndef</li>
-<li>知道了递归缩写，程序员的幽默</li>
-<li>数据结构太难了</li>
-<li>c语言的标准、GNU、GPL</li>
-<li>python虚拟环境conda和virtualenv包的区别：虚拟环境的优点、我认为venv可以当成conda的细分来管理包使用</li>
-<li>发现了《数据结构习题集》的代码博客，前辈们的努力真的让后来者有了学习的信心呀 <a target="_blank" rel="noopener" href="https://www.cnblogs.com/kangjianwei101/p/5221816.html">https://www.cnblogs.com/kangjianwei101/p/5221816.html</a></li>
-<li>extern 常变量时一定要加上 const</li>
-<li>西文字符就是ASCII码</li>
-</ul>
-<p>1.2.2 画画感悟</p>
-<ul>
-<li>学会使用本能画画，就是把眼睛看见的变成图片，以此来提升速写能力。</li>
-</ul>
-<h2 id="2、生活内容："><a href="#2、生活内容：" class="headerlink" title="2、生活内容："></a>2、生活内容：<!-- 记录锻炼、不怎么影响情绪的经历、普通的社交 --></h2><h3 id="2-1锻炼内容："><a href="#2-1锻炼内容：" class="headerlink" title="2.1锻炼内容："></a>2.1锻炼内容：</h3><ul>
-<li>跑步三公里+篮球<h3 id="2-2发生的事："><a href="#2-2发生的事：" class="headerlink" title="2.2发生的事："></a>2.2发生的事：</h3></li>
-<li>与朋友出去吃了顿烤肉</li>
-</ul>
-<!-- ### 影响情绪的:<b>正面：</b> <b>负面：</b> -->
-
-
-
-<h1 id="二、计划和达成"><a href="#二、计划和达成" class="headerlink" title="二、计划和达成"></a>二、计划和达成<!-- 立下flag --></h1><h2 id="2、大创记录"><a href="#2、大创记录" class="headerlink" title="2、大创记录"></a>2、大创记录</h2><h3 id="2-1未完成"><a href="#2-1未完成" class="headerlink" title="2.1未完成"></a>2.1未完成</h3><ul>
-<li>阅读代码理解代码</li>
-<li>将代码改写成GPU调用<h3 id="2-2新任务"><a href="#2-2新任务" class="headerlink" title="2.2新任务"></a>2.2新任务</h3>无<h3 id="2-3做了什么"><a href="#2-3做了什么" class="headerlink" title="2.3做了什么"></a>2.3做了什么</h3>无<!-- ## 奖励 --></li>
-</ul>
-<h1 id="三、随笔"><a href="#三、随笔" class="headerlink" title="三、随笔"></a>三、随笔<!-- 感悟、观察、对话 --></h1><p>1、《艺术的故事》阅读到了15章，这一章是讲鼎盛文艺复兴时期的，这一时期有三个耳熟能详的天才————达芬奇、米开朗基罗、拉斐尔。达芬奇是我一直都知道的，从初中时就当成偶像的存在，这一次我又感受到了他的天才之处，回头想他对我人生的影响应该是巨大的，对我自己的定义“不断好奇”可能就是从他开始；米开朗基罗的话，我也看过他的传记，开始时并不了解他的成就，只感觉他是个非常努力的怪人，然而当我看到《创造亚当》后，我开始意识到，天才名不虚传；至于拉斐尔可能之前没怎么了解，很高兴认识你。<br>2、达芬奇的渐隐法让我对绘画有了新的理解，三位天才从画法、内容研究、构图方面的创新和继承让我震撼。<br>3、网上的文章，无论是技术博客、还是生活经验，文笔真是参差不齐。</p>
+          <h1 id="代码风格：ESLint和Prettier"><a href="#代码风格：ESLint和Prettier" class="headerlink" title="代码风格：ESLint和Prettier"></a>代码风格：ESLint和Prettier</h1><h1 id="CSS"><a href="#CSS" class="headerlink" title="CSS"></a>CSS</h1><h2 id="PostCSS"><a href="#PostCSS" class="headerlink" title="PostCSS"></a>PostCSS</h2><p>PostCSS 是一种 JavaScript 工具，可将你的 CSS 代码转换为抽象语法树 (AST)，然后提供 API（应用程序编程接口）用于使用 JavaScript 插件对其进行分析和修改。<a target="_blank" rel="noopener" href="https://juejin.cn/post/7062717813764390948">什么是 PostCSS？如何使用插件自动化 CSS 任务 - 掘金 (juejin.cn)</a></p>
+<h2 id="Tailwind-CSS"><a href="#Tailwind-CSS" class="headerlink" title="Tailwind CSS"></a>Tailwind CSS</h2><blockquote>
+<p>理解为内联的升级版，<a target="_blank" rel="noopener" href="https://tailwind.nodejs.cn/docs/utility-first#why-not-just-use-inline-styles">效用至上的基础 - Tailwind CSS 中文网 (nodejs.cn)</a>，里面有讲为什么不用内联</p>
+</blockquote>
+<h1 id="js"><a href="#js" class="headerlink" title="js"></a>js</h1><h2 id="ESLint"><a href="#ESLint" class="headerlink" title="ESLint"></a>ESLint</h2><blockquote>
+<p><strong>Lint</strong>（Linter） 是一种静态代码分析工具，用于标记代码中某些编码错误、风格问题和不具结构性（易导致 bug）的代码。</p>
+<p>主要是在运行时报错，可以通过插件来实现实时检测。</p>
+</blockquote>
+<h3 id="Install"><a href="#Install" class="headerlink" title="Install"></a>Install</h3><p>手动下载<code>npm i eslint -D</code></p>
+<p>脚手架下载时配置</p>
+<h3 id="基本用法"><a href="#基本用法" class="headerlink" title="基本用法"></a>基本用法</h3><h3 id="一些rule"><a href="#一些rule" class="headerlink" title="一些rule"></a>一些rule</h3><p><a target="_blank" rel="noopener" href="https://blog.csdn.net/qq2276031/article/details/105078962">vscode中配置ESLint 和配置中文_vscode使用esline 错误提示如何显示中文-CSDN博客</a></p>
+<p>TODO 以后细学</p>
+<h1 id="全部"><a href="#全部" class="headerlink" title="全部"></a>全部</h1><h2 id="Prettier"><a href="#Prettier" class="headerlink" title="Prettier"></a>Prettier</h2><p>Prettier 是一个代码格式化工具，可以格式化代码，但不具备代码检查功能，它可以通过解析代码并使用自己的规则重新打印它，并考虑最大行长来强制一致的样式，并在必要时包装代码，如今，它已成为解决所有代码格式问题的优选方案，支持多种语言，可以将 ESLint 和 Prettier 结合使用，提高代码质量。</p>
+<p><a target="_blank" rel="noopener" href="https://juejin.cn/post/7264062850200158266">前端代码格式化 - 【Prettier】 - 常见配置 + 踩坑日记 - 掘金 (juejin.cn)</a></p>
 
       
     </div>
@@ -1034,7 +921,7 @@
   
 
   <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2023/04/14/%E5%A4%A7%E5%88%9B%E8%AE%B0%E5%BD%95/">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2023/11/20/%E5%89%8D%E7%AB%AF/%E5%89%8D%E7%AB%AF%E5%B7%A5%E7%A8%8B%E5%8C%96/Webpack/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/uploads/cat.jpg">
@@ -1052,7 +939,7 @@
     </span>
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
-          <a href="/2023/04/14/%E5%A4%A7%E5%88%9B%E8%AE%B0%E5%BD%95/" class="post-title-link" itemprop="url">大创记录（合集）</a>
+          <a href="/2023/11/20/%E5%89%8D%E7%AB%AF/%E5%89%8D%E7%AB%AF%E5%B7%A5%E7%A8%8B%E5%8C%96/Webpack/" class="post-title-link" itemprop="url">Untitled</a>
         </h2>
 
         <div class="post-meta-container">
@@ -1063,14 +950,14 @@
       </span>
       <span class="post-meta-item-text">Posted on</span>
 
-      <time title="Created: 2023-04-14 21:48:17" itemprop="dateCreated datePublished" datetime="2023-04-14T21:48:17+08:00">2023-04-14</time>
+      <time title="Created: 2023-11-20 18:32:26" itemprop="dateCreated datePublished" datetime="2023-11-20T18:32:26+08:00">2023-11-20</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">Edited on</span>
-      <time title="Modified: 2023-04-15 23:21:08" itemprop="dateModified" datetime="2023-04-15T23:21:08+08:00">2023-04-15</time>
+      <time title="Modified: 2023-11-15 23:15:14" itemprop="dateModified" datetime="2023-11-15T23:15:14+08:00">2023-11-15</time>
     </span>
 
   
@@ -1083,12 +970,293 @@
     
     
     <div class="post-body" itemprop="articleBody">
-          <p>前面的日子是自己摸索，尝试了CVS文件处理，kmeans算法，这周三4/12拿到了学长的代码，现在开始尝试阅读和学习。</p>
-<h2 id="4-13"><a href="#4-13" class="headerlink" title="4/13"></a>4/13</h2><p>代码是用的jupyter notebook写的，尝试了在自己电脑上配置对应环境，失败，主力跑代码要用有两个显卡的服务器。</p>
-<h3 id="任务"><a href="#任务" class="headerlink" title="任务"></a>任务</h3><p>1、阅读代码理解代码<br>2、将代码改写成GPU调用</p>
-<h3 id="做了什么"><a href="#做了什么" class="headerlink" title="做了什么"></a>做了什么</h3><p>1、尝试了在自己电脑上配置对应环境（失败）<br>2、尝试改代码（时间不够，明日尝试）</p>
-<h2 id="4-14"><a href="#4-14" class="headerlink" title="4/14"></a>4/14</h2><h3 id="任务-1"><a href="#任务-1" class="headerlink" title="任务"></a>任务</h3><p>1、阅读代码理解代码<br>2、将代码改写成GPU调用</p>
+          <h1 id="Webpack「v5-0」"><a href="#Webpack「v5-0」" class="headerlink" title="Webpack「v5.0」"></a>Webpack「v5.0」</h1><blockquote>
+<p><a target="_blank" rel="noopener" href="https://webpack.docschina.org/concepts/">概念 | webpack 中文文档 (docschina.org)</a><br>webpack是一个现代JavaScript应用程序的静态模块打包工具。当webpack处理应用程序时，它会在内部构建一个依赖图(dependency [/dɪˈpendənsi/] graph [/ɡræf/])，此依赖图会映射项目所需的每个模块，并生成一个或多个bundle /ˈbʌndl/ 包！</p>
+</blockquote>
+<h2 id="0-预备知识"><a href="#0-预备知识" class="headerlink" title="0. 预备知识"></a>0. 预备知识</h2><h3 id="0-1-为啥要学webpack？"><a href="#0-1-为啥要学webpack？" class="headerlink" title="0.1 为啥要学webpack？"></a>0.1 为啥要学webpack？</h3><h4 id="0-1-1-性能优化"><a href="#0-1-1-性能优化" class="headerlink" title="0.1.1 性能优化"></a>0.1.1 性能优化</h4><blockquote>
+<p>见性能优化</p>
+</blockquote>
+<p>之前我们在讲前端的时候，我们可以从以下几个方面，去提高页面第一次渲染的速度，以及运行时的性能：</p>
+<figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br></pre></td><td class="code"><pre><span class="line">/* </span><br><span class="line">第一类：明显改善页面第一次加载的速度，减少白屏等待的时间</span><br><span class="line"><span class="code">    @1 使用骨架屏技术</span></span><br><span class="line"><span class="code">     + 服务器骨架屏：页面首屏内容是基于服务器渲染的</span></span><br><span class="line"><span class="code">     + 前端骨架屏：在真实内容渲染出来之前，我们给予相关位置用“色框”占位！(知乎？)</span></span><br><span class="line"><span class="code">    @2 减少HTTP请求的次数和大小</span></span><br><span class="line"><span class="code">     + CSS/JS都要做合并压缩「尽可能合并为一个CSS和一个JS」</span></span><br><span class="line"><span class="code">     + 图片的合并压缩，例如：雪碧图(CSS Sprit)</span></span><br><span class="line"><span class="code">     + 使用图片BASE64来加快图片的渲染！</span></span><br><span class="line"><span class="code">     + 图片一定要做延迟加载</span></span><br><span class="line"><span class="code">     + 使用字体图片和矢量图，来代替位图！！</span></span><br><span class="line"><span class="code">     + 音视频资源也要设置延迟加载「preload=&#x27;none&#x27;」</span></span><br><span class="line"><span class="code">     + 数据的异步加载</span></span><br><span class="line"><span class="code">     + 开启服务器端的GZIP压缩，可以让访问的资源压缩60%+</span></span><br><span class="line"><span class="code">    @3 渲染页面中的优化</span></span><br><span class="line"><span class="code">     + 因为&lt;script&gt;会阻碍GUI渲染，所以：把其放在页面末尾，或者设置async/defer！</span></span><br><span class="line"><span class="code">     + 因为&lt;link&gt;是异步加载CSS资源，所以建议放在页面开始，尽快获取样式资源！！</span></span><br><span class="line"><span class="code">     + 不要使用import导入CSS，因为其会阻碍GUI的渲染！</span></span><br><span class="line"><span class="code">     + 样式代码较少的情况下，使用&lt;style&gt;内嵌式，尤其是移动端开发！</span></span><br><span class="line"><span class="code">    @4 在网络传输中的优化</span></span><br><span class="line"><span class="code">     + 减少cookie的内容大小「因为只要向服务器发送请求，不论服务器是否需要，总会在请求头中把cookie传递给服务器，如果cookie比较大，会让所有的请求都变慢」</span></span><br><span class="line"><span class="code">     + 资源分服务器部署「例如：web服务器、图片服务器、数据服务器」，这样可以降低服务器压力，提高服务器的并发，让资源能更加合理的被利用；但是也会导致DNS解析次数增加，此时可以基于DNS Prefetch来优化DNS解析！！</span></span><br><span class="line"><span class="code">     + 基于HTTP/2.0来代替HTTP/1.1</span></span><br><span class="line"><span class="code">       + 基于新的二进制格式，让传输的内容更加丰富健壮</span></span><br><span class="line"><span class="code">       + header压缩，让传输速度更快(没改就不传)</span></span><br><span class="line"><span class="code">       + 服务端自动推送，可以减少HTTP请求次数</span></span><br><span class="line"><span class="code">       + 多路复用，让传输速度更快，避免线头阻塞(UDP)</span></span><br><span class="line"><span class="code">     + 基于Connection:keep-alive保持TCP通道长链接「HTTP/1.1版本会自动开启」</span></span><br><span class="line"><span class="code">     + 开启CDN「地域分布式服务器部署」</span></span><br><span class="line"><span class="code">     + 对于静态资源文件采取“强缓存和协商缓存”，对于不经常更新的数据请求，设置数据缓存！</span></span><br><span class="line"><span class="code">     </span></span><br><span class="line"><span class="code">第二类：提高页面运行时候的性能</span></span><br><span class="line"><span class="code">    @1 减少循环嵌套，降低时间复杂度；避免出现死循环/死递归；</span></span><br><span class="line"><span class="code">    @2 使用事件委托来优化事件绑定，性能可以提高40%+</span></span><br><span class="line"><span class="code">    @3 减少DOM的回流(重排)和重绘</span></span><br><span class="line"><span class="code">     + 样式分离读写「渲染队列机制」</span></span><br><span class="line"><span class="code">     + 批量新增元素「字符串拼接、文档碎片」</span></span><br><span class="line"><span class="code">     + 基于transform/opacity等方式操作样式</span></span><br><span class="line"><span class="code">     + 把需要频繁修改样式的元素(例如：JS实现动画)脱离文档流</span></span><br><span class="line"><span class="code">     + ...</span></span><br><span class="line"><span class="code">    @4 使用函数的防抖和节流处理高频触发操作</span></span><br><span class="line"><span class="code">    @5 合理使用闭包，避免内存泄漏，以及手动释放无用的内存！</span></span><br><span class="line"><span class="code">    @6 减少页面冗余代码，提高代码的重复使用率「也就是尽可能的做封装处理」</span></span><br><span class="line"><span class="code">    @7 尽可能不要使用for/in循环，因为其消耗性能</span></span><br><span class="line"><span class="code">    @8 避免使用eval/with等消耗性能的代码</span></span><br><span class="line"><span class="code">    @9 能用CSS3处理的动画坚决不用JS「JS动画尽可能基于requestAnimationFrame来代替定时器」</span></span><br><span class="line"><span class="code">    @10 避免使用CSS表达式，因为其非常消耗性能</span></span><br><span class="line"><span class="code">    @11 CSS选择器的前缀不要过长「因为CSS选择器渲染是从右到左」</span></span><br><span class="line"><span class="code">    @12 减少table布局「table的渲染是比较消耗性能的」</span></span><br><span class="line"><span class="code">......</span></span><br><span class="line"><span class="code">*/</span></span><br></pre></td></tr></table></figure>
 
+<p>我们</p>
+<h4 id="0-1-2为了兼容、预编译、开发预览"><a href="#0-1-2为了兼容、预编译、开发预览" class="headerlink" title="0.1.2为了兼容、预编译、开发预览"></a>0.1.2为了兼容、预编译、开发预览</h4><ul>
+<li><p>平时开发的时候，一般会使用less/sass/stylus等CSS预编译器「需要基于vscode插件把其编译为CSS」；</p>
+</li>
+<li><p>会直接使用ES6的语法「需要基于babel把其转换为ES5，以此兼容IE」；</p>
+</li>
+<li><p>会给CSS3样式加很多的前缀，以此来处理兼容问题……  </p>
+</li>
+<li><p>我们还会基于vscode中的liveserver插件，创建一个本地web服务器，来预览我们的项目…..<br>我们还要基于各种方案，来解决跨域访问的问题……</p>
+</li>
+</ul>
+<h3 id="0-2-webpack可以帮我们干的事情"><a href="#0-2-webpack可以帮我们干的事情" class="headerlink" title="0.2 webpack可以帮我们干的事情"></a>0.2 webpack可以帮我们干的事情</h3><ul>
+<li>  代码转换：TypeScript编译成JavaScript、LESS/SCSS编译成CSS、ES6/7编译为ES5、虚拟DOM编译为真实的DOM等等…</li>
+<li>  文件优化：压缩JS、CSS、HTML代码，压缩合并图片，图片BASE64等</li>
+<li>  代码分割：提取多个页面的公共代码、提取首屏不需要执行部分的代码等</li>
+<li>  模块合并：把模块分类合并成一个文件</li>
+<li>  自动刷新：创建本地Web服务器，监听本地源代码的变化，自动重新构建，刷新浏览器</li>
+<li>  代码校验：Eslint代码规范校验和检测、单元测试等</li>
+<li>  自动发布：自动构建出线上发布代码并传输给发布系统</li>
+<li>  跨域处理</li>
+<li>……</li>
+</ul>
+<blockquote>
+<p><strong>除了webpack外的其他：</strong></p>
+<ul>
+<li>  grunt(淘汰)</li>
+<li>  gulp(少了、老了)</li>
+<li>  Parcel</li>
+<li>  vite(底层原理是rollup，比webpack快,但兼容不好)</li>
+<li>  rollup</li>
+<li>  Turbopack(据说比webpack快700倍，比vite快10倍)</li>
+<li>  ……</li>
+</ul>
+</blockquote>
+<h4 id="webpack问题"><a href="#webpack问题" class="headerlink" title="webpack问题"></a>webpack<strong>问题</strong></h4><ul>
+<li>项目“比较大”时，由于底层，打包速度比较慢。</li>
+</ul>
+<hr>
+<h2 id="1-webpack打包原理"><a href="#1-webpack打包原理" class="headerlink" title="1.webpack打包原理"></a>1.webpack打包原理</h2><h2 id="2-webpack的基础操作"><a href="#2-webpack的基础操作" class="headerlink" title="2.webpack的基础操作"></a>2.webpack的基础操作</h2><h3 id="安装"><a href="#安装" class="headerlink" title="安装"></a><strong>安装</strong></h3><blockquote>
+<p>为防止全局安装webpack导致版本冲突，真实项目中以本地安装为主<br>弊端：本地安装就需要配置webpack命令<br>npm比较慢建议使用yarn、pnmp</p>
+</blockquote>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">$ npm init -y</span><br><span class="line">$ npm install webpack webpack-cli --save-dev</span><br><span class="line">OR</span><br><span class="line">$ yarn add webpack webpack-cli -D</span><br></pre></td></tr></table></figure>
+
+<h3 id="零配置使用"><a href="#零配置使用" class="headerlink" title="零配置使用"></a><strong>零配置使用</strong></h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">/*</span><br><span class="line"> * 默认会打包SRC目录中的JS文件（入口默认index.js）</span><br><span class="line"> * 打包完成的目录默认是DIST/MAIN.JS</span><br><span class="line"> * webpack默认支持CommonJS和ES6 Module的模块规范，依此进行依赖打包</span><br><span class="line"> */</span><br><span class="line">$ npx webpack</span><br></pre></td></tr></table></figure>
+
+<h3 id="自定义基础配置"><a href="#自定义基础配置" class="headerlink" title="自定义基础配置"></a><strong>自定义基础配置</strong></h3><blockquote>
+<p>webpack.config.js</p>
+</blockquote>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// Node内置的路径处理模块</span></span><br><span class="line"><span class="keyword">const</span> path = <span class="built_in">require</span>(<span class="string">&#x27;path&#x27;</span>);</span><br><span class="line"></span><br><span class="line"><span class="comment">// 导出自定义配置项</span></span><br><span class="line"><span class="variable language_">module</span>.<span class="property">exports</span> = &#123;</span><br><span class="line">    <span class="comment">// 环境模式「生产环境：production   开发环境：development」</span></span><br><span class="line">    <span class="attr">mode</span>: <span class="string">&#x27;production&#x27;</span>,</span><br><span class="line">    <span class="comment">// 打包入口「相对路径」</span></span><br><span class="line">    <span class="attr">entry</span>: <span class="string">&#x27;./src/index.js&#x27;</span>,</span><br><span class="line">    <span class="comment">// 打包出口</span></span><br><span class="line">    <span class="attr">output</span>: &#123;</span><br><span class="line">        <span class="comment">// 生成的文件名. [hash]创建随机哈希值</span></span><br><span class="line">        <span class="attr">filename</span>: <span class="string">&#x27;bundle.[hash].js&#x27;</span>,</span><br><span class="line">        <span class="comment">// 打包地址「绝对路径」</span></span><br><span class="line">        <span class="attr">path</span>: path.<span class="title function_">resolve</span>(__dirname, <span class="string">&#x27;dist&#x27;</span>)</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+
+<h3 id="html-webpack-plugin"><a href="#html-webpack-plugin" class="headerlink" title="html-webpack-plugin"></a><strong>html-webpack-plugin</strong></h3><blockquote>
+<p><a target="_blank" rel="noopener" href="https://www.webpackjs.com/plugins/html-webpack-plugin/">https://www.webpackjs.com/plugins/html-webpack-plugin/</a><br>$ yarn add html-webpack-plugin -D</p>
+</blockquote>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> <span class="title class_">HtmlWebpackPlugin</span> = <span class="built_in">require</span>(<span class="string">&#x27;html-webpack-plugin&#x27;</span>);</span><br><span class="line"><span class="variable language_">module</span>.<span class="property">exports</span> = &#123;</span><br><span class="line">    ...</span><br><span class="line">    <span class="attr">plugins</span>: [</span><br><span class="line">        <span class="keyword">new</span> <span class="title class_">HtmlWebpackPlugin</span>(&#123;</span><br><span class="line">            <span class="comment">// 指定视图模板</span></span><br><span class="line">            <span class="attr">template</span>: <span class="string">&#x27;./public/index.html&#x27;</span>,</span><br><span class="line">            <span class="comment">// 编译后视图的名字</span></span><br><span class="line">            <span class="attr">filename</span>: <span class="string">&#x27;index.html&#x27;</span>,</span><br><span class="line">            <span class="comment">// 是否压缩</span></span><br><span class="line">            <span class="attr">minify</span>: <span class="literal">true</span></span><br><span class="line">        &#125;)</span><br><span class="line">    ]</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="多入口-amp-多出口"><a href="#多入口-amp-多出口" class="headerlink" title="多入口 &amp; 多出口"></a><strong>多入口 &amp; 多出口</strong></h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> <span class="title class_">HtmlWebpackPlugin</span> = <span class="built_in">require</span>(<span class="string">&#x27;html-webpack-plugin&#x27;</span>);</span><br><span class="line"><span class="comment">// HtmlWebpackPlugin需要配置多套</span></span><br><span class="line"><span class="keyword">const</span> htmlPlugins = [<span class="string">&#x27;index&#x27;</span>, <span class="string">&#x27;login&#x27;</span>].<span class="title function_">map</span>(<span class="function"><span class="params">chunk</span> =&gt;</span> &#123;</span><br><span class="line">    <span class="keyword">return</span> <span class="keyword">new</span> <span class="title class_">HtmlWebpackPlugin</span>(&#123;</span><br><span class="line">        <span class="attr">template</span>: <span class="string">`./public/<span class="subst">$&#123;chunk&#125;</span>.html`</span>,</span><br><span class="line">        <span class="attr">filename</span>: <span class="string">`<span class="subst">$&#123;chunk&#125;</span>.html`</span>,</span><br><span class="line">        <span class="comment">// 指定导入的JS</span></span><br><span class="line">        <span class="attr">chunks</span>: [chunk],</span><br><span class="line">        <span class="attr">minify</span>: <span class="literal">true</span></span><br><span class="line">    &#125;);</span><br><span class="line">&#125;);</span><br><span class="line"><span class="variable language_">module</span>.<span class="property">exports</span> = &#123;</span><br><span class="line">    <span class="attr">mode</span>: <span class="string">&#x27;production&#x27;</span>,</span><br><span class="line">    <span class="comment">// 配置多入口</span></span><br><span class="line">    <span class="attr">entry</span>: &#123;</span><br><span class="line">        <span class="attr">index</span>: <span class="string">&quot;./src/index.js&quot;</span>,</span><br><span class="line">        <span class="attr">login</span>: <span class="string">&quot;./src/login.js&quot;</span>,</span><br><span class="line">    &#125;,</span><br><span class="line">    <span class="comment">// 出口采用相同的规则</span></span><br><span class="line">    <span class="attr">output</span>: &#123;</span><br><span class="line">        <span class="attr">filename</span>: <span class="string">&quot;[name].[hash].js&quot;</span>,</span><br><span class="line">        <span class="attr">path</span>: path.<span class="title function_">resolve</span>(__dirname, <span class="string">&quot;dist&quot;</span>)</span><br><span class="line">    &#125;,</span><br><span class="line">    <span class="attr">plugins</span>: [</span><br><span class="line">        ...htmlPlugins</span><br><span class="line">    ]</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+
+<h3 id="clean-webpack-plugin"><a href="#clean-webpack-plugin" class="headerlink" title="clean-webpack-plugin"></a><strong>clean-webpack-plugin</strong></h3><blockquote>
+<p>$ yarn add clean-webpack-plugin -D</p>
+</blockquote>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> &#123; <span class="title class_">CleanWebpackPlugin</span> &#125; = <span class="built_in">require</span>(<span class="string">&#x27;clean-webpack-plugin&#x27;</span>);</span><br><span class="line"><span class="variable language_">module</span>.<span class="property">exports</span> = &#123;</span><br><span class="line">    ...</span><br><span class="line">    <span class="attr">plugins</span>: [</span><br><span class="line">        <span class="keyword">new</span> <span class="title class_">CleanWebpackPlugin</span>()</span><br><span class="line">    ]</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+
+<h3 id="webpack-dev-server"><a href="#webpack-dev-server" class="headerlink" title="webpack-dev-server"></a><strong>webpack-dev-server</strong></h3><blockquote>
+<p><a target="_blank" rel="noopener" href="https://webpack.js.org/configuration/dev-server/">https://webpack.js.org/configuration/dev-server/</a><br>$ yarn add webpack-dev-server -D</p>
+</blockquote>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/* paclage.json */</span></span><br><span class="line"><span class="string">&quot;scripts&quot;</span>: &#123;</span><br><span class="line">   <span class="string">&quot;start&quot;</span>: <span class="string">&quot;webpack server&quot;</span>,</span><br><span class="line">   <span class="string">&quot;build&quot;</span>: <span class="string">&quot;webpack&quot;</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">/* webpack.config.js */</span></span><br><span class="line"><span class="variable language_">module</span>.<span class="property">exports</span> = &#123;</span><br><span class="line">    ... </span><br><span class="line">    <span class="attr">devServer</span>: &#123;</span><br><span class="line">        <span class="comment">// 域名</span></span><br><span class="line">        <span class="attr">host</span>: <span class="string">&#x27;127.0.0.1&#x27;</span>,</span><br><span class="line">        <span class="comment">// 断口号</span></span><br><span class="line">        <span class="attr">port</span>: <span class="number">3000</span>,</span><br><span class="line">        <span class="comment">// GZIP压缩</span></span><br><span class="line">        <span class="attr">compress</span>: <span class="literal">true</span>,</span><br><span class="line">        <span class="comment">// 自动打开浏览器</span></span><br><span class="line">        <span class="attr">open</span>: <span class="literal">true</span>,</span><br><span class="line">        <span class="comment">// 热更新</span></span><br><span class="line">        <span class="attr">hot</span>: <span class="literal">true</span>,</span><br><span class="line">        <span class="comment">// 跨域代理</span></span><br><span class="line">        <span class="attr">proxy</span>: &#123;</span><br><span class="line">            <span class="string">&quot;/jian&quot;</span>: &#123;</span><br><span class="line">                <span class="attr">target</span>: <span class="string">&quot;https://www.jianshu.com/asimov&quot;</span>,</span><br><span class="line">                <span class="attr">changeOrigin</span>: <span class="literal">true</span>,</span><br><span class="line">                <span class="attr">ws</span>: <span class="literal">true</span>,</span><br><span class="line">                <span class="attr">pathRewrite</span>: &#123; <span class="string">&quot;^/jian&quot;</span>: <span class="string">&quot;&quot;</span> &#125;</span><br><span class="line">            &#125;,</span><br><span class="line">            <span class="string">&quot;/zhi&quot;</span>: &#123;</span><br><span class="line">                <span class="attr">target</span>: <span class="string">&quot;https://news-at.zhihu.com/api/4&quot;</span>,</span><br><span class="line">                <span class="attr">changeOrigin</span>: <span class="literal">true</span>,</span><br><span class="line">                <span class="attr">ws</span>: <span class="literal">true</span>,</span><br><span class="line">                <span class="attr">pathRewrite</span>: &#123; <span class="string">&quot;^/zhi&quot;</span>: <span class="string">&quot;&quot;</span> &#125;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br><span class="line"><span class="comment">/* </span></span><br><span class="line"><span class="comment">测试接口 </span></span><br><span class="line"><span class="comment">  简书：</span></span><br><span class="line"><span class="comment">  https://www.jianshu.com/asimov/subscriptions/recommended_collections</span></span><br><span class="line"><span class="comment">  知乎：</span></span><br><span class="line"><span class="comment">  https://news-at.zhihu.com/api/4/news/latest</span></span><br><span class="line"><span class="comment">*/</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="处理样式的loader「加载器」"><a href="#处理样式的loader「加载器」" class="headerlink" title="处理样式的loader「加载器」"></a><strong>处理样式的loader「加载器」</strong></h3><blockquote>
+<p>$ yarn add css-loader style-loader less less-loader autoprefixer postcss-loader -D</p>
+</blockquote>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="variable language_">module</span>.<span class="property">exports</span> = &#123;</span><br><span class="line">    ...</span><br><span class="line">    <span class="comment">/* 配置模块加载器LOADER，执行顺序：从右向左、从下向上 */</span></span><br><span class="line">    <span class="attr">module</span>: &#123;</span><br><span class="line">        <span class="attr">rules</span>: [&#123;</span><br><span class="line">            <span class="attr">test</span>: <span class="regexp">/\.(css|less)$/</span>, <span class="comment">// 基于正则匹配哪些模块需要处理</span></span><br><span class="line">            <span class="attr">use</span>: [</span><br><span class="line">                <span class="string">&quot;style-loader&quot;</span>, <span class="comment">// 把CSS插入到HEAD中</span></span><br><span class="line">                <span class="string">&quot;css-loader&quot;</span>, <span class="comment">// 编译解析@import/URL()这种语法</span></span><br><span class="line">                <span class="string">&quot;postcss-loader&quot;</span>, <span class="comment">// 设置前缀</span></span><br><span class="line">                <span class="string">&quot;less-loader&quot;</span> <span class="comment">// 把LESS编译为CSS</span></span><br><span class="line">            ]</span><br><span class="line">        &#125;]</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+
+<p>postcss.config.js</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="variable language_">module</span>.<span class="property">exports</span> = &#123;</span><br><span class="line">    <span class="attr">plugins</span>: [</span><br><span class="line">        <span class="built_in">require</span>(<span class="string">&#x27;autoprefixer&#x27;</span>)</span><br><span class="line">    ]</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 或者在配置项中直接处理</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="attr">loader</span>: <span class="string">&quot;postcss-loader&quot;</span>,</span><br><span class="line">    <span class="attr">options</span>: &#123;</span><br><span class="line">        <span class="attr">postcssOptions</span>: &#123;</span><br><span class="line">            <span class="attr">plugins</span>: [</span><br><span class="line">                <span class="built_in">require</span>(<span class="string">&#x27;autoprefixer&#x27;</span>)</span><br><span class="line">            ]</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;,</span><br></pre></td></tr></table></figure>
+
+<p>package.json OR .browserslistrc</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// https://github.com/browserslist/browserslist</span></span><br><span class="line"><span class="string">&quot;browserslist&quot;</span>: [</span><br><span class="line">  <span class="string">&quot;&gt; 1%&quot;</span>,</span><br><span class="line">  <span class="string">&quot;last 2 versions&quot;</span>,</span><br><span class="line">  <span class="string">&quot;not dead&quot;</span></span><br><span class="line">]</span><br></pre></td></tr></table></figure>
+
+<h3 id="mini-css-extract-plugin-抽离CSS样式-ˈekstraekt"><a href="#mini-css-extract-plugin-抽离CSS样式-ˈekstraekt" class="headerlink" title="mini-css-extract-plugin 抽离CSS样式 /ˈekstrækt/"></a><strong>mini-css-extract-plugin 抽离CSS样式</strong> /ˈekstrækt/</h3><blockquote>
+<p><a target="_blank" rel="noopener" href="https://www.npmjs.com/package/mini-css-extract-plugin">https://www.npmjs.com/package/mini-css-extract-plugin</a><br>$ yarn add mini-css-extract-plugin -D</p>
+</blockquote>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> <span class="title class_">MiniCssExtractPlugin</span> = <span class="built_in">require</span>(<span class="string">&#x27;mini-css-extract-plugin&#x27;</span>);</span><br><span class="line"><span class="variable language_">module</span>.<span class="property">exports</span> = &#123;</span><br><span class="line">    ...</span><br><span class="line">    <span class="attr">plugins</span>: [</span><br><span class="line">        ...</span><br><span class="line">        <span class="keyword">new</span> <span class="title class_">MiniCssExtractPlugin</span>(&#123;</span><br><span class="line">            <span class="comment">// 设置编译后的文件名字</span></span><br><span class="line">            <span class="attr">filename</span>: <span class="string">&#x27;main.[hash].css&#x27;</span></span><br><span class="line">        &#125;)</span><br><span class="line">    ],</span><br><span class="line">    ...</span><br><span class="line">    <span class="attr">module</span>: &#123;</span><br><span class="line">        <span class="attr">rules</span>: [&#123;</span><br><span class="line">            <span class="attr">test</span>: <span class="regexp">/\.(css|less)$/</span>,</span><br><span class="line">            <span class="attr">use</span>: [</span><br><span class="line">                <span class="comment">// 使用插件中的LOADER代替STYLE方式</span></span><br><span class="line">                <span class="title class_">MiniCssExtractPlugin</span>.<span class="property">loader</span>,</span><br><span class="line">                ...</span><br><span class="line">            ]</span><br><span class="line">        &#125;]</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+
+<h3 id="基于babel实现ES6的转换"><a href="#基于babel实现ES6的转换" class="headerlink" title="基于babel实现ES6的转换"></a><strong>基于babel实现ES6的转换</strong></h3><blockquote>
+<p>$ yarn add babel babel-loader @babel/preset-env @babel/core -D</p>
+<p>$ yarn add @babel/polyfill</p>
+</blockquote>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="variable language_">module</span>.<span class="property">exports</span> = &#123;</span><br><span class="line">    ...</span><br><span class="line">    <span class="attr">module</span>: &#123;</span><br><span class="line">        <span class="attr">rules</span>: [&#123;</span><br><span class="line">            <span class="attr">test</span>: <span class="regexp">/\.js$/</span>,</span><br><span class="line">            <span class="attr">use</span>: [<span class="string">&#x27;babel-loader&#x27;</span>],</span><br><span class="line">            <span class="comment">// 设置编译时忽略的文件和指定编译目录</span></span><br><span class="line">            <span class="attr">include</span>: path.<span class="title function_">resolve</span>(__dirname, <span class="string">&#x27;src&#x27;</span>),</span><br><span class="line">            <span class="attr">exclude</span>: <span class="regexp">/node_modules/</span></span><br><span class="line">        &#125;]</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+
+<p>babel.config.js</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="variable language_">module</span>.<span class="property">exports</span> = &#123;</span><br><span class="line">    <span class="attr">presets</span>: [</span><br><span class="line">        <span class="string">&quot;@babel/preset-env&quot;</span></span><br><span class="line">    ]</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+
+<p>index.js</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> <span class="string">&#x27;@babel/polyfill&#x27;</span>;</span><br></pre></td></tr></table></figure>
+
+<h3 id="设置优化项：压缩CSS-JS"><a href="#设置优化项：压缩CSS-JS" class="headerlink" title="设置优化项：压缩CSS/JS"></a><strong>设置优化项：压缩CSS/JS</strong></h3><blockquote>
+<p>$ yarn add css-minimizer-webpack-plugin terser-webpack-plugin -D</p>
+</blockquote>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> <span class="title class_">TerserPlugin</span> = <span class="built_in">require</span>(<span class="string">&#x27;terser-webpack-plugin&#x27;</span>);</span><br><span class="line"><span class="keyword">const</span> <span class="title class_">CssMinimizerWebpackPlugin</span> = <span class="built_in">require</span>(<span class="string">&#x27;css-minimizer-webpack-plugin&#x27;</span>);</span><br><span class="line"><span class="variable language_">module</span>.<span class="property">exports</span> = &#123;</span><br><span class="line">    <span class="attr">optimization</span>: &#123;</span><br><span class="line">        <span class="comment">// 设置压缩方式</span></span><br><span class="line">        <span class="attr">minimizer</span>: [</span><br><span class="line">            <span class="keyword">new</span> <span class="title class_">CssMinimizerWebpackPlugin</span>(),</span><br><span class="line">            <span class="keyword">new</span> <span class="title class_">TerserPlugin</span>()</span><br><span class="line">        ]</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+
+<h3 id="设置解析器：配置别名"><a href="#设置解析器：配置别名" class="headerlink" title="设置解析器：配置别名"></a><strong>设置解析器：配置别名</strong></h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="variable language_">module</span>.<span class="property">exports</span> = &#123;</span><br><span class="line">    <span class="attr">resolve</span>: &#123;</span><br><span class="line">        <span class="attr">alias</span>: &#123;</span><br><span class="line">            <span class="string">&#x27;@&#x27;</span>: path.<span class="title function_">resolve</span>(__dirname, <span class="string">&#x27;./src&#x27;</span>)</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+
+<h3 id="图片的处理"><a href="#图片的处理" class="headerlink" title="图片的处理"></a><strong>图片的处理</strong></h3><blockquote>
+<p>$ yarn add file-loader url-loader -D</p>
+</blockquote>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line"><span class="variable language_">module</span>.<span class="property">exports</span> = &#123;</span><br><span class="line">    ...</span><br><span class="line">    <span class="attr">module</span>: &#123;</span><br><span class="line">        <span class="attr">rules</span>: [</span><br><span class="line">        ...</span><br><span class="line">        &#123;</span><br><span class="line">            <span class="attr">test</span>: <span class="regexp">/\.(png|jpe?g|gif)$/i</span>,</span><br><span class="line">            <span class="attr">type</span>: <span class="string">&#x27;javascript/auto&#x27;</span>,</span><br><span class="line">            <span class="attr">use</span>: [&#123;</span><br><span class="line">                <span class="comment">// 把指定大小内的图片BASE64</span></span><br><span class="line">                <span class="attr">loader</span>: <span class="string">&#x27;url-loader&#x27;</span>,</span><br><span class="line">                <span class="attr">options</span>: &#123;</span><br><span class="line">                    <span class="attr">limit</span>: <span class="number">200</span> * <span class="number">1024</span>,</span><br><span class="line">                    <span class="attr">esModule</span>: <span class="literal">false</span>,</span><br><span class="line">                    <span class="attr">name</span>: <span class="string">&#x27;images/[name].[hash].[ext]&#x27;</span></span><br><span class="line">                &#125;</span><br><span class="line">            &#125;]</span><br><span class="line">        &#125;]</span><br><span class="line">    &#125;,</span><br><span class="line">    <span class="comment">// 设置打包的最大资源大小</span></span><br><span class="line">    <span class="attr">performance</span>: &#123;</span><br><span class="line">        <span class="attr">maxAssetSize</span>: <span class="number">100</span> * <span class="number">1024</span> * <span class="number">1024</span> * <span class="number">1024</span>,</span><br><span class="line">        <span class="attr">maxEntrypointSize</span>: <span class="number">100</span> * <span class="number">1024</span> * <span class="number">1024</span> * <span class="number">1024</span></span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2023/11/20/%E5%89%8D%E7%AB%AF/%E5%89%8D%E7%AB%AF%E5%B7%A5%E7%A8%8B%E5%8C%96/Babel/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/uploads/cat.jpg">
+      <meta itemprop="name" content="zono">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="ZONO's World">
+      <meta itemprop="description" content="人生长度无法强求,但厚度可以靠努力">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="undefined | ZONO's World">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/2023/11/20/%E5%89%8D%E7%AB%AF/%E5%89%8D%E7%AB%AF%E5%B7%A5%E7%A8%8B%E5%8C%96/Babel/" class="post-title-link" itemprop="url">Untitled</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">Posted on</span>
+
+      <time title="Created: 2023-11-20 18:32:26" itemprop="dateCreated datePublished" datetime="2023-11-20T18:32:26+08:00">2023-11-20</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar-check"></i>
+      </span>
+      <span class="post-meta-item-text">Edited on</span>
+      <time title="Modified: 2023-11-11 14:38:21" itemprop="dateModified" datetime="2023-11-11T14:38:21+08:00">2023-11-11</time>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <h1 id="Babel"><a href="#Babel" class="headerlink" title="Babel"></a>Babel</h1><blockquote>
+<p><strong>Babel 是一个 JavaScript 编译器。</strong>可以把使用ES6/ES7等“高级”语法编写的Javascript代码转换为ES5/ES3的“通俗”语法（也可以把JSX语法转为Javascript）。</p>
+</blockquote>
+
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2023/11/20/%E5%89%8D%E7%AB%AF/%E4%BC%98%E5%8C%96/%E5%89%8D%E7%AB%AF%E6%80%A7%E8%83%BD%E4%BC%98%E5%8C%96%E6%80%9D%E8%B7%AF/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/uploads/cat.jpg">
+      <meta itemprop="name" content="zono">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="ZONO's World">
+      <meta itemprop="description" content="人生长度无法强求,但厚度可以靠努力">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="undefined | ZONO's World">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/2023/11/20/%E5%89%8D%E7%AB%AF/%E4%BC%98%E5%8C%96/%E5%89%8D%E7%AB%AF%E6%80%A7%E8%83%BD%E4%BC%98%E5%8C%96%E6%80%9D%E8%B7%AF/" class="post-title-link" itemprop="url">Untitled</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">Posted on</span>
+
+      <time title="Created: 2023-11-20 18:32:26" itemprop="dateCreated datePublished" datetime="2023-11-20T18:32:26+08:00">2023-11-20</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar-check"></i>
+      </span>
+      <span class="post-meta-item-text">Edited on</span>
+      <time title="Modified: 2023-11-11 23:01:02" itemprop="dateModified" datetime="2023-11-11T23:01:02+08:00">2023-11-11</time>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <h1 id="前端性能优化思路"><a href="#前端性能优化思路" class="headerlink" title="前端性能优化思路"></a>前端性能优化思路</h1><p>浏览器→资源→图片→代码层面</p>
+<p><a target="_blank" rel="noopener" href="https://juejin.cn/post/7029973323475845150">web前端性能优化（全汇总） - 掘金 (juejin.cn)</a></p>
+<h2 id="优化模块"><a href="#优化模块" class="headerlink" title="优化模块"></a>优化模块</h2><h3 id="1-浏览器"><a href="#1-浏览器" class="headerlink" title="1. 浏览器"></a>1. 浏览器</h3><h4 id="1-1-减少HTTP请求"><a href="#1-1-减少HTTP请求" class="headerlink" title="1.1 减少HTTP请求"></a>1.1 减少HTTP请求</h4><blockquote>
+<p>如Chrome浏览器最多同时允许对同一个域名Host建立6个TCP连接，不同的浏览器有所区别，减少http请求也就是减少我们html里css/js等资源的数量</p>
+</blockquote>
+<h4 id="1-2-使用HTTP2-0"><a href="#1-2-使用HTTP2-0" class="headerlink" title="1.2 使用HTTP2.0"></a>1.2 使用HTTP2.0</h4><p>http2.0优势：</p>
+<ol>
+<li>采用二进制格式传输数据, 1.1是文本格式</li>
+<li>对消息头采用Hpack进行压缩传输，能够节省消息头占用的网络流量，1.1每次请求，都会携带大量冗余的头信息，浪费了很多宽带资源</li>
+<li>异步连接多路复用</li>
+<li>Server Push，服务器端能够更快的把资源推送到客户端</li>
+<li>保持与HTTP 1.1语义的向后兼容性也是该版本的一个关键</li>
+</ol>
+<h4 id="1-3-设置浏览器缓存策略"><a href="#1-3-设置浏览器缓存策略" class="headerlink" title="1.3 设置浏览器缓存策略"></a>1.3 设置浏览器缓存策略</h4><h4 id="1-4-白屏时间加载动画"><a href="#1-4-白屏时间加载动画" class="headerlink" title="1.4 白屏时间加载动画"></a>1.4 白屏时间加载动画</h4><p>用户体验</p>
+<h3 id="2-资源"><a href="#2-资源" class="headerlink" title="2. 资源"></a>2. 资源</h3><h4 id="2-1-静态资源CDN"><a href="#2-1-静态资源CDN" class="headerlink" title="2.1 静态资源CDN"></a>2.1 静态资源CDN</h4><h4 id="2-2-静态资源单独域名"><a href="#2-2-静态资源单独域名" class="headerlink" title="2.2 静态资源单独域名"></a>2.2 静态资源单独域名</h4><h4 id="2-3-gzip压缩"><a href="#2-3-gzip压缩" class="headerlink" title="2.3 gzip压缩"></a>2.3 gzip压缩</h4><h4 id="2-4-做服务端渲染（SSR）"><a href="#2-4-做服务端渲染（SSR）" class="headerlink" title="2.4 做服务端渲染（SSR）"></a>2.4 做服务端渲染（SSR）</h4><h4 id="2-5-将CSS放在文件头部，JavaScript文件放在底部"><a href="#2-5-将CSS放在文件头部，JavaScript文件放在底部" class="headerlink" title="2.5 将CSS放在文件头部，JavaScript文件放在底部"></a>2.5 将CSS放在文件头部，JavaScript文件放在底部</h4><blockquote>
+<p>涉及到了浏览器的运行流程了</p>
+</blockquote>
+<h3 id="3-图片"><a href="#3-图片" class="headerlink" title="3. 图片"></a>3. 图片</h3><h4 id="3-1-字体图标代替图片图标"><a href="#3-1-字体图标代替图片图标" class="headerlink" title="3.1 字体图标代替图片图标"></a>3.1 字体图标代替图片图标</h4><h4 id="3-2-精灵图"><a href="#3-2-精灵图" class="headerlink" title="3.2 精灵图"></a>3.2 精灵图</h4><h4 id="3-3-图片懒加载"><a href="#3-3-图片懒加载" class="headerlink" title="3.3 图片懒加载"></a>3.3 图片懒加载</h4><p>金字塔</p>
+<h4 id="3-4-图片预加载"><a href="#3-4-图片预加载" class="headerlink" title="3.4 图片预加载"></a>3.4 图片预加载</h4><h4 id="3-5-使用png格式的图片"><a href="#3-5-使用png格式的图片" class="headerlink" title="3.5 使用png格式的图片"></a>3.5 使用png格式的图片</h4><h4 id="3-6-小于10k的图片可以打包为base64格式"><a href="#3-6-小于10k的图片可以打包为base64格式" class="headerlink" title="3.6 小于10k的图片可以打包为base64格式"></a>3.6 小于10k的图片可以打包为base64格式</h4><h3 id="4-代码"><a href="#4-代码" class="headerlink" title="4. 代码"></a>4. 代码</h3><h4 id="4-1-慎用全局变量"><a href="#4-1-慎用全局变量" class="headerlink" title="4.1 慎用全局变量"></a>4.1 慎用全局变量</h4><h4 id="4-2-缓存全局变量"><a href="#4-2-缓存全局变量" class="headerlink" title="4.2 缓存全局变量"></a>4.2 缓存全局变量</h4><h4 id="4-3-减少重绘回流"><a href="#4-3-减少重绘回流" class="headerlink" title="4.3 减少重绘回流"></a>4.3 减少重绘回流</h4><h4 id="4-4-节流、防抖"><a href="#4-4-节流、防抖" class="headerlink" title="4.4 节流、防抖"></a>4.4 节流、防抖</h4><h4 id="4-5-少用闭包、减少内存泄漏"><a href="#4-5-少用闭包、减少内存泄漏" class="headerlink" title="4.5 少用闭包、减少内存泄漏"></a>4.5 少用闭包、减少内存泄漏</h4><h4 id="4-6-减少数据读取次数"><a href="#4-6-减少数据读取次数" class="headerlink" title="4.6 减少数据读取次数"></a>4.6 减少数据读取次数</h4><h4 id="4-7-文档碎片优化节点添加"><a href="#4-7-文档碎片优化节点添加" class="headerlink" title="4.7 文档碎片优化节点添加"></a>4.7 文档碎片优化节点添加</h4><h4 id="4-8-减少判断层级"><a href="#4-8-减少判断层级" class="headerlink" title="4.8 减少判断层级"></a>4.8 减少判断层级</h4><h4 id="4-9-字面量与构造式"><a href="#4-9-字面量与构造式" class="headerlink" title="4.9 字面量与构造式"></a>4.9 字面量与构造式</h4><h3 id="5-项目方案提议"><a href="#5-项目方案提议" class="headerlink" title="5. 项目方案提议"></a>5. 项目方案提议</h3><h4 id="5-1-长列表优化"><a href="#5-1-长列表优化" class="headerlink" title="5.1 长列表优化"></a>5.1 长列表优化</h4><h4 id="5-2-web-worker"><a href="#5-2-web-worker" class="headerlink" title="5.2 web worker"></a>5.2 web worker</h4><h4 id="5-3-避免-ifarme-嵌套网页"><a href="#5-3-避免-ifarme-嵌套网页" class="headerlink" title="5.3 避免 ifarme 嵌套网页"></a>5.3 避免 ifarme 嵌套网页</h4><h3 id="6-webpack优化"><a href="#6-webpack优化" class="headerlink" title="6.webpack优化"></a>6.webpack优化</h3><h4 id="6-1-减小代码体积"><a href="#6-1-减小代码体积" class="headerlink" title="6.1 减小代码体积"></a>6.1 减小代码体积</h4><h4 id="6-2-按需加载"><a href="#6-2-按需加载" class="headerlink" title="6.2 按需加载"></a>6.2 按需加载</h4><h4 id="6-3-提取第三库代码"><a href="#6-3-提取第三库代码" class="headerlink" title="6.3 提取第三库代码"></a>6.3 提取第三库代码</h4><h4 id="6-4-webpack-dll优化"><a href="#6-4-webpack-dll优化" class="headerlink" title="6.4 webpack dll优化"></a>6.4 webpack dll优化</h4>
       
     </div>
 
@@ -1107,7 +1275,7 @@
 
 
   <nav class="pagination">
-    <a class="extend prev" rel="prev" title="Previous page" aria-label="Previous page" href="/"><i class="fa fa-angle-left"></i></a><a class="page-number" href="/">1</a><span class="page-number current">2</span><a class="page-number" href="/page/3/">3</a><span class="space">&hellip;</span><a class="page-number" href="/page/5/">5</a><a class="extend next" rel="next" title="Next page" aria-label="Next page" href="/page/3/"><i class="fa fa-angle-right"></i></a>
+    <a class="extend prev" rel="prev" title="Previous page" aria-label="Previous page" href="/"><i class="fa fa-angle-left"></i></a><a class="page-number" href="/">1</a><span class="page-number current">2</span><a class="page-number" href="/page/3/">3</a><span class="space">&hellip;</span><a class="page-number" href="/page/8/">8</a><a class="extend next" rel="next" title="Next page" aria-label="Next page" href="/page/3/"><i class="fa fa-angle-right"></i></a>
   </nav>
 
 </div>
