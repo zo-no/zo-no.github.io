@@ -121,18 +121,18 @@
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
         <a href="/archives/">
-          <span class="site-state-item-count">65</span>
+          <span class="site-state-item-count">74</span>
           <span class="site-state-item-name">posts</span>
         </a>
       </div>
       <div class="site-state-item site-state-categories">
           <a href="/categories/">
-        <span class="site-state-item-count">2</span>
+        <span class="site-state-item-count">8</span>
         <span class="site-state-item-name">categories</span></a>
       </div>
       <div class="site-state-item site-state-tags">
           <a href="/tags/">
-        <span class="site-state-item-count">5</span>
+        <span class="site-state-item-count">12</span>
         <span class="site-state-item-name">tags</span></a>
       </div>
   </nav>
@@ -718,123 +718,6 @@
   
 
   <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2023/11/20/%E6%8A%80%E6%9C%AF/%E5%89%8D%E7%AB%AF/react%E7%B2%BE%E5%AD%A6/%E6%B7%B1%E5%85%A5react/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/uploads/cat.jpg">
-      <meta itemprop="name" content="zono">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="ZONO's World">
-      <meta itemprop="description" content="人生长度无法强求,但厚度可以靠努力">
-    </span>
-
-    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
-      <meta itemprop="name" content="undefined | ZONO's World">
-      <meta itemprop="description" content="">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/2023/11/20/%E6%8A%80%E6%9C%AF/%E5%89%8D%E7%AB%AF/react%E7%B2%BE%E5%AD%A6/%E6%B7%B1%E5%85%A5react/" class="post-title-link" itemprop="url">Untitled</a>
-        </h2>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">Posted on</span>
-
-      <time title="Created: 2023-11-20 18:32:26" itemprop="dateCreated datePublished" datetime="2023-11-20T18:32:26+08:00">2023-11-20</time>
-    </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar-check"></i>
-      </span>
-      <span class="post-meta-item-text">Edited on</span>
-      <time title="Modified: 2023-11-17 03:22:52" itemprop="dateModified" datetime="2023-11-17T03:22:52+08:00">2023-11-17</time>
-    </span>
-
-  
-</div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          <h1 id="深入react"><a href="#深入react" class="headerlink" title="深入react"></a>深入react</h1><h2 id="1-react合成事件（react18中不再使用）"><a href="#1-react合成事件（react18中不再使用）" class="headerlink" title="1. react合成事件（react18中不再使用）"></a>1. react合成事件（react18中不再使用）</h2><blockquote>
-<p><a target="_blank" rel="noopener" href="https://segmentfault.com/a/1190000038251163">javascript - 探索 React 合成事件 - 前端自习课 - SegmentFault 思否</a></p>
-</blockquote>
-<p>存在原因：兼容、垃圾回收</p>
-<p>前置知识树</p>
-<ol>
-<li><p>事件池：是浏览器事件处理中，为了节省内存和提高性能，对事件对象的重复利用。</p>
-<blockquote>
-<p>(待细看)<a target="_blank" rel="noopener" href="https://juejin.cn/post/6844903862285893639">React 合成事件系统之事件池 - 掘金 (juejin.cn)</a></p>
-</blockquote>
-</li>
-<li><p>生命周期（待看）</p>
-<blockquote>
-<p><a target="_blank" rel="noopener" href="https://juejin.cn/post/7285540804734468150">一看就懂的React生命周期 - 掘金 (juejin.cn)</a></p>
-<p>看样子react生命周期已经被取代了<a target="_blank" rel="noopener" href="https://blog.csdn.net/qq_44906900/article/details/111214531">【精选】【React全解4】useEffect–在函数组件中使用生命周期函数_react useeffect 生命周期-CSDN博客</a></p>
-</blockquote>
-</li>
-</ol>
-<h2 id="2-理解fiber"><a href="#2-理解fiber" class="headerlink" title="2. 理解fiber"></a>2. 理解fiber</h2><blockquote>
-<p><a target="_blank" rel="noopener" href="https://juejin.cn/post/7010263907008937997#heading-2">React 的 Fiber 树是什么？ - 掘金 (juejin.cn)</a></p>
-<p><a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/26027085">React Fiber是什么 - 知乎 (zhihu.com)</a></p>
-</blockquote>
-<p>前置知识树</p>
-<ol>
-<li><p><a target="_blank" rel="noopener" href="https://www.ruanyifeng.com/blog/2020/09/react-hooks-useeffect-tutorial.html">轻松学会 React 钩子：以 useEffect() 为例 - 阮一峰的网络日志 (ruanyifeng.com)</a></p>
-</li>
-<li><p><a target="_blank" rel="noopener" href="https://blog.csdn.net/wei1273356078/article/details/106543967">什么是DOM?你了解DOM树吗？-CSDN博客</a></p>
-</li>
-<li><p>虚拟dom：React 的虚拟 DOM 使用以 JavaScript 对象为基础的结构，而 Vue 的虚拟 DOM 使用以 VNode 对象为基础的结构。</p>
-<blockquote>
-<p> <a target="_blank" rel="noopener" href="https://juejin.cn/post/6997579802215448606">Vue 虚拟 DOM 搞不懂？这篇文章帮你彻底搞定虚拟 DOM - 掘金 (juejin.cn)</a></p>
-</blockquote>
-</li>
-</ol>
-<h3 id="3-React-hook"><a href="#3-React-hook" class="headerlink" title="3. React hook"></a>3. React hook</h3><blockquote>
-<p><a target="_blank" rel="noopener" href="https://www.ruanyifeng.com/blog/2019/09/react-hooks.html">React Hooks 入门教程 - 阮一峰的网络日志 (ruanyifeng.com)</a></p>
-</blockquote>
-<h3 id="3-1memo"><a href="#3-1memo" class="headerlink" title="3.1memo"></a>3.1memo</h3><blockquote>
-<p><a target="_blank" rel="noopener" href="https://b23.tv/aTsXvrQ">用代码实验的方式，让你彻底理解React.memo-哔哩哔哩</a></p>
-</blockquote>
-<p>用于优化，避免因为别的组件被渲染了，它就渲染</p>
-<p>​        useMemo和memo的区别</p>
-<h3 id="3-2-实现原理"><a href="#3-2-实现原理" class="headerlink" title="3.2 实现原理"></a>3.2 实现原理</h3><h3 id="4-redux"><a href="#4-redux" class="headerlink" title="4. redux"></a>4. redux</h3>
-      
-    </div>
-
-    
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-</div>
-
-
-
-
-    
-
-
-<div class="post-block">
-  
-  
-
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
     <link itemprop="mainEntityOfPage" href="http://example.com/2023/11/20/%E6%8A%80%E6%9C%AF/%E5%89%8D%E7%AB%AF/react%E7%B2%BE%E5%AD%A6/%E4%BD%BF%E7%94%A8%20create-react-app%20%E6%9E%84%E5%BB%BAReact%E5%B7%A5%E7%A8%8B%E5%8C%96%E9%A1%B9%E7%9B%AE/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -1052,98 +935,6 @@
   
 
   <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2023/11/20/%E6%8A%80%E6%9C%AF/%E5%89%8D%E7%AB%AF/react%E7%B2%BE%E5%AD%A6/Next.js/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/uploads/cat.jpg">
-      <meta itemprop="name" content="zono">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="ZONO's World">
-      <meta itemprop="description" content="人生长度无法强求,但厚度可以靠努力">
-    </span>
-
-    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
-      <meta itemprop="name" content="undefined | ZONO's World">
-      <meta itemprop="description" content="">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/2023/11/20/%E6%8A%80%E6%9C%AF/%E5%89%8D%E7%AB%AF/react%E7%B2%BE%E5%AD%A6/Next.js/" class="post-title-link" itemprop="url">Untitled</a>
-        </h2>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">Posted on</span>
-
-      <time title="Created: 2023-11-20 18:32:26" itemprop="dateCreated datePublished" datetime="2023-11-20T18:32:26+08:00">2023-11-20</time>
-    </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar-check"></i>
-      </span>
-      <span class="post-meta-item-text">Edited on</span>
-      <time title="Modified: 2023-11-11 15:11:04" itemprop="dateModified" datetime="2023-11-11T15:11:04+08:00">2023-11-11</time>
-    </span>
-
-  
-</div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          <h1 id="Next-js"><a href="#Next-js" class="headerlink" title="Next.js"></a>Next.js</h1><p>前置知识</p>
-<ul>
-<li><p><input disabled="" type="checkbox">  ESlent</p>
-</li>
-<li><p><input disabled="" type="checkbox">  webpack</p>
-</li>
-<li><p><input disabled="" type="checkbox">  Tailwind CSS</p>
-</li>
-<li><p><input disabled="" type="checkbox">  必须使用打包程序（例如 webpack）打包代码，并使用 Babel 等编译器进行代码转换。</p>
-</li>
-<li><p><input disabled="" type="checkbox">  你需要针对生产环境进行优化，例如代码拆分。</p>
-</li>
-<li><p><input disabled="" type="checkbox">  你可能需要对一些页面进行预先渲染以提高页面性能和 SEO。你可能还希望使用服务器端渲染或客户端渲染。</p>
-</li>
-<li><p><input disabled="" type="checkbox">  你可能必须编写一些服务器端代码才能将 React 应用程序连接到数据存储。</p>
-</li>
-</ul>
-
-      
-    </div>
-
-    
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-</div>
-
-
-
-
-    
-
-
-<div class="post-block">
-  
-  
-
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
     <link itemprop="mainEntityOfPage" href="http://example.com/2023/11/20/%E6%8A%80%E6%9C%AF/%E5%89%8D%E7%AB%AF/node/hello-world/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -1224,8 +1015,171 @@ server.listen(port, hostname, () => {
 
 
 
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2023/11/20/%E6%8A%80%E6%9C%AF/%E5%90%8E%E7%AB%AF/python/SQLAlchemy2.0/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/uploads/cat.jpg">
+      <meta itemprop="name" content="zono">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="ZONO's World">
+      <meta itemprop="description" content="人生长度无法强求,但厚度可以靠努力">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="undefined | ZONO's World">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/2023/11/20/%E6%8A%80%E6%9C%AF/%E5%90%8E%E7%AB%AF/python/SQLAlchemy2.0/" class="post-title-link" itemprop="url">Untitled</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">Posted on</span>
+
+      <time title="Created: 2023-11-20 18:32:12" itemprop="dateCreated datePublished" datetime="2023-11-20T18:32:12+08:00">2023-11-20</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar-check"></i>
+      </span>
+      <span class="post-meta-item-text">Edited on</span>
+      <time title="Modified: 2023-11-17 23:02:21" itemprop="dateModified" datetime="2023-11-17T23:02:21+08:00">2023-11-17</time>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <h1 id="SQLAlchemy2-0"><a href="#SQLAlchemy2-0" class="headerlink" title="SQLAlchemy2.0"></a>SQLAlchemy2.0</h1><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">import sqlalchemy</span><br><span class="line">sqlalchemy.__version__  </span><br></pre></td></tr></table></figure>
+
+<h1 id="建立连接"><a href="#建立连接" class="headerlink" title="建立连接"></a>建立连接</h1><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> sqlalchemy <span class="keyword">import</span> create_engine</span><br><span class="line">engine = create_engine(<span class="string">&#x27;sqlite:///:memory:&#x27;</span>,echo=<span class="literal">True</span>)</span><br></pre></td></tr></table></figure>
+
+<p>echo参数为True时，会显示每条执行的SQL语句，可以关闭。</p>
+<h1 id="增删改查"><a href="#增删改查" class="headerlink" title="增删改查"></a>增删改查</h1><h3 id="insert"><a href="#insert" class="headerlink" title="insert"></a>insert</h3><h1 id="多表关系"><a href="#多表关系" class="headerlink" title="多表关系"></a>多表关系</h1>
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2023/11/20/%E6%8A%80%E6%9C%AF/%E7%BD%91%E7%BB%9C/TCP%E5%92%8CUDP/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/uploads/cat.jpg">
+      <meta itemprop="name" content="zono">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="ZONO's World">
+      <meta itemprop="description" content="人生长度无法强求,但厚度可以靠努力">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="undefined | ZONO's World">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/2023/11/20/%E6%8A%80%E6%9C%AF/%E7%BD%91%E7%BB%9C/TCP%E5%92%8CUDP/" class="post-title-link" itemprop="url">Untitled</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">Posted on</span>
+
+      <time title="Created: 2023-11-20 18:32:12" itemprop="dateCreated datePublished" datetime="2023-11-20T18:32:12+08:00">2023-11-20</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar-check"></i>
+      </span>
+      <span class="post-meta-item-text">Edited on</span>
+      <time title="Modified: 2023-11-13 14:17:24" itemprop="dateModified" datetime="2023-11-13T14:17:24+08:00">2023-11-13</time>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <h1 id="TCP和UDP"><a href="#TCP和UDP" class="headerlink" title="TCP和UDP"></a>TCP和UDP</h1><h2 id="区别"><a href="#区别" class="headerlink" title="区别"></a>区别</h2><p>一个基于连接，一个基于非连接</p>
+<h3 id="TCP（全双工）"><a href="#TCP（全双工）" class="headerlink" title="TCP（全双工）"></a>TCP（全双工）</h3><p>建立连接：三次握手</p>
+<p>客户端发往服务器how are you？（SYN）</p>
+<p>服务器回应I’m find and you？（SYN+ACK）</p>
+<p>客户端回应me too。（ACK）</p>
+<p>关闭连接：四次挥手</p>
+<p>都发一次fin+ack</p>
+<h3 id="UDP（非连接）"><a href="#UDP（非连接）" class="headerlink" title="UDP（非连接）"></a>UDP（非连接）</h3><p>稳定性弱，隧道网络</p>
+
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
+
   <nav class="pagination">
-    <a class="extend prev" rel="prev" title="Previous page" aria-label="Previous page" href="/"><i class="fa fa-angle-left"></i></a><a class="page-number" href="/">1</a><span class="page-number current">2</span><a class="page-number" href="/page/3/">3</a><span class="space">&hellip;</span><a class="page-number" href="/page/7/">7</a><a class="extend next" rel="next" title="Next page" aria-label="Next page" href="/page/3/"><i class="fa fa-angle-right"></i></a>
+    <a class="extend prev" rel="prev" title="Previous page" aria-label="Previous page" href="/"><i class="fa fa-angle-left"></i></a><a class="page-number" href="/">1</a><span class="page-number current">2</span><a class="page-number" href="/page/3/">3</a><span class="space">&hellip;</span><a class="page-number" href="/page/8/">8</a><a class="extend next" rel="next" title="Next page" aria-label="Next page" href="/page/3/"><i class="fa fa-angle-right"></i></a>
   </nav>
 
 </div>
