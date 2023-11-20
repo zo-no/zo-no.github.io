@@ -121,18 +121,18 @@
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
         <a href="/archives/">
-          <span class="site-state-item-count">78</span>
+          <span class="site-state-item-count">72</span>
           <span class="site-state-item-name">posts</span>
         </a>
       </div>
       <div class="site-state-item site-state-categories">
           <a href="/categories/">
-        <span class="site-state-item-count">1</span>
+        <span class="site-state-item-count">2</span>
         <span class="site-state-item-name">categories</span></a>
       </div>
       <div class="site-state-item site-state-tags">
           <a href="/tags/">
-        <span class="site-state-item-count">9</span>
+        <span class="site-state-item-count">10</span>
         <span class="site-state-item-name">tags</span></a>
       </div>
   </nav>
@@ -160,456 +160,6 @@
     </div>
 
     <div class="main-inner index posts-expand">
-
-    
-
-
-<div class="post-block">
-  
-  
-
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2023/11/20/%E7%AE%97%E6%B3%95/%E7%AE%97%E6%B3%95%E9%80%9A%E5%85%B3%E6%9D%91%E7%AC%AC%E4%B8%80%E5%85%B3%E2%80%94%E2%80%94%E2%80%94%E2%80%94%E9%93%BE%E8%A1%A8%E7%BB%8F%E5%85%B8%E9%97%AE%E9%A2%98/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/uploads/cat.jpg">
-      <meta itemprop="name" content="zono">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="ZONO's World">
-      <meta itemprop="description" content="人生长度无法强求,但厚度可以靠努力">
-    </span>
-
-    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
-      <meta itemprop="name" content="undefined | ZONO's World">
-      <meta itemprop="description" content="">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/2023/11/20/%E7%AE%97%E6%B3%95/%E7%AE%97%E6%B3%95%E9%80%9A%E5%85%B3%E6%9D%91%E7%AC%AC%E4%B8%80%E5%85%B3%E2%80%94%E2%80%94%E2%80%94%E2%80%94%E9%93%BE%E8%A1%A8%E7%BB%8F%E5%85%B8%E9%97%AE%E9%A2%98/" class="post-title-link" itemprop="url">Untitled</a>
-        </h2>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">Posted on</span>
-
-      <time title="Created: 2023-11-20 18:32:12" itemprop="dateCreated datePublished" datetime="2023-11-20T18:32:12+08:00">2023-11-20</time>
-    </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar-check"></i>
-      </span>
-      <span class="post-meta-item-text">Edited on</span>
-      <time title="Modified: 2023-11-03 21:17:19" itemprop="dateModified" datetime="2023-11-03T21:17:19+08:00">2023-11-03</time>
-    </span>
-
-  
-</div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          <h1 id="算法通关村第一关————链表经典问题"><a href="#算法通关村第一关————链表经典问题" class="headerlink" title="算法通关村第一关————链表经典问题"></a>算法通关村第一关————链表经典问题</h1><h2 id="1、五种办法解决两个链表的第一个公共子节点问题"><a href="#1、五种办法解决两个链表的第一个公共子节点问题" class="headerlink" title="1、五种办法解决两个链表的第一个公共子节点问题"></a>1、五种办法解决两个链表的第一个公共子节点问题</h2><p>问题描述：输入两个链表，找出它们的第一个公共结点。</p>
-<p>我的思路：（之前没练过算法，所以会有些笨，也叫暴力解法？），先检测链表是否符合链表要求，然后进行遍历对比，找到一个相同节点（值和存储的next都相同），返回该节点。这里应该用两个for循环，一个遍历链表1，另嵌套进去遍历链表2，然后逐个进行对比，找到相同的节点，返回该节点。</p>
-<h3 id="1-1、暴力解法"><a href="#1-1、暴力解法" class="headerlink" title="1.1、暴力解法"></a>1.1、暴力解法</h3><blockquote>
-<p>这个就是我想出来的办法了</p>
-</blockquote>
-<p>像冒泡排序一样，两个for循环，一个遍历链表1，另嵌套进去遍历链表2，然后逐个进行对比，找到相同的节点，返回该节点。但时间复杂度太高，不建议使用。</p>
-<h3 id="1-2、hash表法"><a href="#1-2、hash表法" class="headerlink" title="1.2、hash表法"></a>1.2、hash表法</h3><p>这里得对hash进行初步的理解，我们可以这样想，hash可以认为是一个用于查找的参考书，我们把一个链表加入参考书后，只需循环另一个链表，查看参考书是否有该节点，如果有，那就找到了该节点。<br>这里用了pythons的set集合，set集合是哈希表的实现，所以查找速度非常快。</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># hash集合版</span></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">getIntersectionNodebyHash</span>(<span class="params"> self, pHead1, pHead2</span>):</span><br><span class="line">    s = <span class="built_in">set</span>()<span class="comment">#创建一个集合</span></span><br><span class="line">    p,q = pHead1,pHead2</span><br><span class="line">    <span class="keyword">while</span> p:<span class="comment">#遍历p</span></span><br><span class="line">        s.add(p)<span class="comment">#把p全部都加入集合中</span></span><br><span class="line">        p = p.<span class="built_in">next</span></span><br><span class="line">    <span class="keyword">while</span> q:<span class="comment">#遍历q</span></span><br><span class="line">        <span class="keyword">if</span> q <span class="keyword">in</span> s:<span class="comment">#把q中的内容对s一一比对，看是否有相同节点</span></span><br><span class="line">            <span class="keyword">return</span> q</span><br><span class="line">        q = q.<span class="built_in">next</span></span><br><span class="line">    <span class="keyword">return</span> <span class="literal">None</span></span><br><span class="line"></span><br></pre></td></tr></table></figure>
-
-<h3 id="1-3、栈法"><a href="#1-3、栈法" class="headerlink" title="1.3、栈法"></a>1.3、栈法</h3><p>这里我们得先理解栈的概念，这里的栈，可以理解为一个存储数据的容器，先进后出，后进先出。</p>
-<p>可以知道的是，无论两个链表前面有多不同，它们最后都会到达一个相同的节点，所以我们可以把两个链表的节点都存入栈中，然后一一比对，找到相同的节点，返回该节点</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 栈版</span></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">getIntersectionNode</span>(<span class="params"> self, pHead1, pHead2</span>):</span><br><span class="line">    s1,s2 = [],[]<span class="comment">#创建两个数组</span></span><br><span class="line">    p,q = pHead1,pHead2</span><br><span class="line">    <span class="keyword">while</span> p:</span><br><span class="line">        s1.append(p)<span class="comment">#把p全部压入s1中</span></span><br><span class="line">        p = p.<span class="built_in">next</span><span class="comment">#更新“指针”</span></span><br><span class="line">    <span class="keyword">while</span> q:</span><br><span class="line">        s2.append(q)</span><br><span class="line">        q = q.<span class="built_in">next</span></span><br><span class="line">    p,q = s1.pop(),s2.pop()<span class="comment">#把p和q用s1代替</span></span><br><span class="line">    <span class="keyword">while</span> p <span class="keyword">and</span> q:<span class="comment">#从栈顶取数</span></span><br><span class="line">        <span class="keyword">if</span> p == q:</span><br><span class="line">            <span class="keyword">return</span> p</span><br><span class="line">        p,q = s1.pop(),s2.pop()</span><br><span class="line">    <span class="keyword">return</span> <span class="literal">None</span></span><br></pre></td></tr></table></figure>
-
-<h3 id="1-4、双指针"><a href="#1-4、双指针" class="headerlink" title="1.4、双指针"></a>1.4、双指针</h3><h2 id="2、判断链表是否为回文序列"><a href="#2、判断链表是否为回文序列" class="headerlink" title="2、判断链表是否为回文序列"></a>2、判断链表是否为回文序列</h2><blockquote>
-<p>问题描述</p>
-</blockquote>
-<h2 id="3-合并有序链表"><a href="#3-合并有序链表" class="headerlink" title="3. 合并有序链表"></a>3. 合并有序链表</h2><blockquote>
-<p>问题描述</p>
-</blockquote>
-
-      
-    </div>
-
-    
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-</div>
-
-
-
-
-    
-
-
-<div class="post-block">
-  
-  
-
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2023/11/20/%E7%AE%97%E6%B3%95/%E7%AC%AC%E4%B8%80%E9%A2%98%20leecode318/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/uploads/cat.jpg">
-      <meta itemprop="name" content="zono">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="ZONO's World">
-      <meta itemprop="description" content="人生长度无法强求,但厚度可以靠努力">
-    </span>
-
-    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
-      <meta itemprop="name" content="undefined | ZONO's World">
-      <meta itemprop="description" content="">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/2023/11/20/%E7%AE%97%E6%B3%95/%E7%AC%AC%E4%B8%80%E9%A2%98%20leecode318/" class="post-title-link" itemprop="url">Untitled</a>
-        </h2>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">Posted on</span>
-
-      <time title="Created: 2023-11-20 18:32:12" itemprop="dateCreated datePublished" datetime="2023-11-20T18:32:12+08:00">2023-11-20</time>
-    </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar-check"></i>
-      </span>
-      <span class="post-meta-item-text">Edited on</span>
-      <time title="Modified: 2023-11-06 11:14:31" itemprop="dateModified" datetime="2023-11-06T11:14:31+08:00">2023-11-06</time>
-    </span>
-
-  
-</div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          <h1 id="第一题-leecode318"><a href="#第一题-leecode318" class="headerlink" title="第一题 leecode318"></a>第一题 leecode318</h1><p>先想写一个比较字符串</p>
-<blockquote>
-<p>不知所谓的一些写法问题很大</p>
-</blockquote>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> comWords = <span class="keyword">function</span> (<span class="params">words1, words2</span>) &#123;</span><br><span class="line">    <span class="keyword">let</span> len = <span class="number">0</span>, tag1 = <span class="number">0</span>, tag2 = <span class="number">0</span>;</span><br><span class="line">    <span class="keyword">if</span> (words1.<span class="property">length</span> &gt; words2.<span class="property">length</span>) &#123;</span><br><span class="line">        len = words1.<span class="property">length</span></span><br><span class="line">        tag1 = words1<span class="comment">//大</span></span><br><span class="line">        tag2 = words2</span><br><span class="line">    &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">        len = words2.<span class="property">length</span></span><br><span class="line">        tag2 = words1</span><br><span class="line">        tag1 = words2 <span class="comment">// 大</span></span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">const</span> set = <span class="keyword">new</span> <span class="title class_">Set</span>()</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">let</span> i = <span class="number">0</span>; i &lt; tag1.<span class="property">len</span>; i++) &#123;</span><br><span class="line">        set.<span class="title function_">add</span>(tag1[i])</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">let</span> j = <span class="number">0</span>; j &lt; tag2.<span class="property">len</span>; j++)</span><br><span class="line">        <span class="keyword">if</span> (set.<span class="title function_">has</span>(tag2[j]))&#123;</span><br><span class="line">            <span class="keyword">return</span> <span class="number">0</span></span><br><span class="line">        &#125;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">1</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<p>修改后</p>
- <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> comWords = <span class="keyword">function</span> (<span class="params">words1, words2</span>) &#123;</span><br><span class="line">    <span class="keyword">const</span> set = <span class="keyword">new</span> <span class="title class_">Set</span>(words1);</span><br><span class="line"></span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">let</span> i = <span class="number">0</span>; i &lt; words2.<span class="property">length</span>; i++) &#123;</span><br><span class="line">        <span class="keyword">if</span> (set.<span class="title function_">has</span>(words2[i])) &#123;</span><br><span class="line">            <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">return</span> <span class="number">1</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<p>然后写一个暴力的两两组合</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> maxProduct = <span class="keyword">function</span> (<span class="params">words</span>) &#123;</span><br><span class="line">    max = <span class="number">0</span></span><br><span class="line">  <span class="keyword">for</span> (<span class="keyword">let</span> i = <span class="number">0</span>; i &lt; words.<span class="property">length</span>; i++) &#123;</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">let</span> j = i + <span class="number">1</span>; j &lt; words.<span class="property">length</span>; j++) &#123;</span><br><span class="line">      <span class="keyword">if</span> (<span class="title function_">comWords</span>(words[i], words[j])) &#123;<span class="comment">//以后看见这种写法,都应该优化掉</span></span><br><span class="line">        <span class="keyword">break</span>;</span><br><span class="line">      &#125;<span class="keyword">else</span> &#123;</span><br><span class="line">        <span class="keyword">if</span>(words[i].<span class="property">length</span> * words[j].<span class="property">length</span> &gt; max)&#123;</span><br><span class="line">          max = words[i].<span class="property">length</span> * words[j].<span class="property">length</span>;</span><br><span class="line">        &#125;</span><br><span class="line">      &#125;</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="keyword">return</span> max;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-
-<p>出问题了，输出答案有问题</p>
-<p>1、原因：break会直接结束循环，所以输出的都是连着一起的两个值</p>
-<p>修改后：</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@param</span> &#123;<span class="type">string[]</span>&#125; <span class="variable">words</span></span></span><br><span class="line"><span class="comment"> * <span class="doctag">@return</span> &#123;<span class="type">number</span>&#125;</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">var</span> comWords = <span class="keyword">function</span> (<span class="params">words1, words2</span>) &#123;</span><br><span class="line">    <span class="comment">/*</span></span><br><span class="line"><span class="comment">      @Description: 不相同返回1</span></span><br><span class="line"><span class="comment">      */</span></span><br><span class="line">    <span class="keyword">const</span> set = <span class="keyword">new</span> <span class="title class_">Set</span>(words1);</span><br><span class="line">    <span class="comment">// console.log(set);</span></span><br><span class="line">  </span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">let</span> j = <span class="number">0</span>; j &lt; words2.<span class="property">length</span>; j++) &#123;</span><br><span class="line">      <span class="keyword">if</span> (set.<span class="title function_">has</span>(words2[j])) &#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">      &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">1</span>;</span><br><span class="line">  &#125;;  </span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> maxProduct = <span class="keyword">function</span> (<span class="params">words</span>) &#123;</span><br><span class="line">    max = <span class="number">0</span></span><br><span class="line">  <span class="keyword">for</span> (<span class="keyword">let</span> i = <span class="number">0</span>; i &lt; words.<span class="property">length</span>; i++) &#123;</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">let</span> j = i + <span class="number">1</span>; j &lt; words.<span class="property">length</span>; j++) &#123;</span><br><span class="line">      <span class="keyword">if</span> (<span class="title function_">comWords</span>(words[i], words[j])) &#123;<span class="comment">//不相同再进行运算比较</span></span><br><span class="line">        <span class="keyword">if</span>(words[i].<span class="property">length</span> * words[j].<span class="property">length</span> &gt; max)&#123;</span><br><span class="line">          max = words[i].<span class="property">length</span> * words[j].<span class="property">length</span>;</span><br><span class="line">          <span class="variable language_">console</span>.<span class="title function_">log</span>(words[i], words[j]);</span><br><span class="line">        &#125;</span><br><span class="line">      &#125;</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="keyword">return</span> max;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
-
-<p>这样执行是通过了，但提交后说超出时间限制（暴力过头了😓）</p>
-<p>看题解有位运算</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> maxProduct = <span class="keyword">function</span>(<span class="params">words</span>) &#123;</span><br><span class="line">    <span class="keyword">const</span> map = <span class="keyword">new</span> <span class="title class_">Map</span>();</span><br><span class="line">    <span class="keyword">const</span> length = words.<span class="property">length</span>;</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">let</span> i = <span class="number">0</span>; i &lt; length; i++) &#123;</span><br><span class="line">        <span class="keyword">let</span> mask = <span class="number">0</span>;</span><br><span class="line">        <span class="keyword">const</span> word = words[i];</span><br><span class="line">        <span class="keyword">const</span> wordLength = word.<span class="property">length</span>;</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">let</span> j = <span class="number">0</span>; j &lt; wordLength; j++) &#123;</span><br><span class="line">            mask |= <span class="number">1</span> &lt;&lt; (word[j].<span class="title function_">charCodeAt</span>() - <span class="string">&#x27;a&#x27;</span>.<span class="title function_">charCodeAt</span>());</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">if</span> (wordLength &gt; (map.<span class="title function_">get</span>(mask) || <span class="number">0</span>)) &#123;</span><br><span class="line">            map.<span class="title function_">set</span>(mask, wordLength);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">let</span> maxProd = <span class="number">0</span>;</span><br><span class="line">    <span class="keyword">const</span> maskSet = <span class="title class_">Array</span>.<span class="title function_">from</span>(map.<span class="title function_">keys</span>());</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">const</span> mask1 <span class="keyword">of</span> maskSet) &#123;</span><br><span class="line">        <span class="keyword">const</span> wordLength1 = map.<span class="title function_">get</span>(mask1);</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">const</span> mask2 <span class="keyword">of</span> maskSet) &#123;</span><br><span class="line">            <span class="keyword">if</span> ((mask1 &amp; mask2) === <span class="number">0</span>) &#123;</span><br><span class="line">                <span class="keyword">const</span> wordLength2 = map.<span class="title function_">get</span>(mask2);</span><br><span class="line">                maxProd = <span class="title class_">Math</span>.<span class="title function_">max</span>(maxProd, wordLength1 * wordLength2);</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> maxProd;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
-
-
-
-
-
-
-      
-    </div>
-
-    
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-</div>
-
-
-
-
-    
-
-
-<div class="post-block">
-  
-  
-
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2023/11/20/%E7%AE%97%E6%B3%95/%E6%A0%91/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/uploads/cat.jpg">
-      <meta itemprop="name" content="zono">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="ZONO's World">
-      <meta itemprop="description" content="人生长度无法强求,但厚度可以靠努力">
-    </span>
-
-    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
-      <meta itemprop="name" content="undefined | ZONO's World">
-      <meta itemprop="description" content="">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/2023/11/20/%E7%AE%97%E6%B3%95/%E6%A0%91/" class="post-title-link" itemprop="url">Untitled</a>
-        </h2>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">Posted on</span>
-
-      <time title="Created: 2023-11-20 18:32:12" itemprop="dateCreated datePublished" datetime="2023-11-20T18:32:12+08:00">2023-11-20</time>
-    </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar-check"></i>
-      </span>
-      <span class="post-meta-item-text">Edited on</span>
-      <time title="Modified: 2023-11-15 14:21:34" itemprop="dateModified" datetime="2023-11-15T14:21:34+08:00">2023-11-15</time>
-    </span>
-
-  
-</div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          <h1 id="算法总结——树"><a href="#算法总结——树" class="headerlink" title="算法总结——树"></a>算法总结——树</h1><h2 id="概念"><a href="#概念" class="headerlink" title="概念"></a>概念</h2><h3 id="定义"><a href="#定义" class="headerlink" title="定义"></a>定义</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">TreeNode</span>&#123;</span><br><span class="line">	val,</span><br><span class="line">	TreeNode left,</span><br><span class="line">	TreeNode right</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<h3 id="遍历"><a href="#遍历" class="headerlink" title="遍历"></a>遍历</h3><p>前中后序</p>
-<h3 id="构造"><a href="#构造" class="headerlink" title="构造"></a>构造</h3><h4 id="复原二叉树"><a href="#复原二叉树" class="headerlink" title="复原二叉树"></a>复原二叉树</h4><ol>
-<li><h5 id="前"><a href="#前" class="headerlink" title="前"></a>前</h5></li>
-<li><h5 id="中"><a href="#中" class="headerlink" title="中"></a>中</h5></li>
-<li><h5 id="后"><a href="#后" class="headerlink" title="后"></a>后</h5></li>
-</ol>
-<h2 id="实战"><a href="#实战" class="headerlink" title="实战"></a>实战</h2><h3 id="BFS广度优先（层次遍历）和DFS深度优先"><a href="#BFS广度优先（层次遍历）和DFS深度优先" class="headerlink" title="BFS广度优先（层次遍历）和DFS深度优先"></a>BFS广度优先（层次遍历）和DFS深度优先</h3><blockquote>
-<p>深度更常使用</p>
-</blockquote>
-<p>LeeCode102</p>
-
-      
-    </div>
-
-    
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-</div>
-
-
-
-
-    
-
-
-<div class="post-block">
-  
-  
-
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2023/11/20/%E7%AE%97%E6%B3%95/JS%E7%AE%97%E6%B3%95%E6%80%BB%E7%BB%93/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/uploads/cat.jpg">
-      <meta itemprop="name" content="zono">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="ZONO's World">
-      <meta itemprop="description" content="人生长度无法强求,但厚度可以靠努力">
-    </span>
-
-    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
-      <meta itemprop="name" content="undefined | ZONO's World">
-      <meta itemprop="description" content="">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/2023/11/20/%E7%AE%97%E6%B3%95/JS%E7%AE%97%E6%B3%95%E6%80%BB%E7%BB%93/" class="post-title-link" itemprop="url">Untitled</a>
-        </h2>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">Posted on</span>
-
-      <time title="Created: 2023-11-20 18:32:12" itemprop="dateCreated datePublished" datetime="2023-11-20T18:32:12+08:00">2023-11-20</time>
-    </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar-check"></i>
-      </span>
-      <span class="post-meta-item-text">Edited on</span>
-      <time title="Modified: 2023-11-03 22:13:35" itemprop="dateModified" datetime="2023-11-03T22:13:35+08:00">2023-11-03</time>
-    </span>
-
-  
-</div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          <h1 id="JS算法总结"><a href="#JS算法总结" class="headerlink" title="JS算法总结"></a>JS算法总结</h1><h2 id="链表题"><a href="#链表题" class="headerlink" title="链表题"></a>链表题</h2><ol>
-<li>链表转数组</li>
-</ol>
-<blockquote>
-<p>场景：要使用栈方法时</p>
-</blockquote>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> isPalindrome = <span class="keyword">function</span> (<span class="params">head</span>) &#123;</span><br><span class="line">    <span class="keyword">const</span> vals = [];</span><br><span class="line">    <span class="keyword">while</span> (head !== <span class="literal">null</span>) &#123;</span><br><span class="line">        vals.<span class="title function_">push</span>(head.<span class="property">val</span>)<span class="comment">//压入值,把链表转化为数组</span></span><br><span class="line">        head = head.<span class="property">next</span></span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure>
-
-
-      
-    </div>
-
-    
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-</div>
-
-
-
-
-    
-
-
-<div class="post-block">
-  
-  
-
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2023/11/20/%E7%AE%97%E6%B3%95/1.%E6%8C%87%E5%AE%9A%E5%8C%BA%E9%97%B4%E5%8F%8D%E8%BD%AC/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/uploads/cat.jpg">
-      <meta itemprop="name" content="zono">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="ZONO's World">
-      <meta itemprop="description" content="人生长度无法强求,但厚度可以靠努力">
-    </span>
-
-    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
-      <meta itemprop="name" content="undefined | ZONO's World">
-      <meta itemprop="description" content="">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/2023/11/20/%E7%AE%97%E6%B3%95/1.%E6%8C%87%E5%AE%9A%E5%8C%BA%E9%97%B4%E5%8F%8D%E8%BD%AC/" class="post-title-link" itemprop="url">Untitled</a>
-        </h2>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">Posted on</span>
-
-      <time title="Created: 2023-11-20 18:32:12" itemprop="dateCreated datePublished" datetime="2023-11-20T18:32:12+08:00">2023-11-20</time>
-    </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar-check"></i>
-      </span>
-      <span class="post-meta-item-text">Edited on</span>
-      <time title="Modified: 2023-11-12 23:22:03" itemprop="dateModified" datetime="2023-11-12T23:22:03+08:00">2023-11-12</time>
-    </span>
-
-  
-</div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          <h1 id="第二关——链表反转拓展"><a href="#第二关——链表反转拓展" class="headerlink" title="第二关——链表反转拓展"></a>第二关——链表反转拓展</h1><h2 id="1-指定区间反转"><a href="#1-指定区间反转" class="headerlink" title="1.指定区间反转"></a>1.指定区间反转</h2><p>Leecode92：给你单链表的头指针 head 和两个整数 left 和 right ，其中 left &lt;= right 。请你反转从位置 left 到位置 right 的链表节点，返回反转后的链表 。<br><a target="_blank" rel="noopener" href="https://leetcode.cn/problems/reverse-linked-list-ii/description/">原题链接</a></p>
-<h3 id="1-1-思路"><a href="#1-1-思路" class="headerlink" title="1.1 思路"></a>1.1 思路</h3><p>对应上一篇文章，我们可以分成两种解决办法：头插法、穿针引线法</p>
-<h3 id="1-2-头插法"><a href="#1-2-头插法" class="headerlink" title="1.2 头插法"></a>1.2 头插法</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># class ListNode:</span></span><br><span class="line"><span class="comment">#     def __init__(self, val=0, next=None):</span></span><br><span class="line"><span class="comment">#         self.val = val</span></span><br><span class="line"><span class="comment">#         self.next = next</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">reverseBetween</span>(<span class="params">self,head,left,right</span>):</span><br><span class="line">	<span class="comment"># 设置dummyNode是这一类问题的一般做法</span></span><br><span class="line">	dummy_node = ListNode(-<span class="number">1</span>)<span class="comment"># 创建一个虚拟节点</span></span><br><span class="line">	dummy_node.<span class="built_in">next</span> = head</span><br><span class="line">	pre = deummy_node<span class="comment"># 用于跟踪左边界之前的节点</span></span><br><span class="line">	<span class="keyword">for</span> _ <span class="keyword">in</span> <span class="built_in">range</span>(left -<span class="number">1</span>):<span class="comment"># _用于占位，该函数运行left-1次</span></span><br><span class="line">		pre = pre.<span class="built_in">next</span><span class="comment"># 定位到要移动区</span></span><br><span class="line">	</span><br><span class="line">	cur = pre.<span class="built_in">next</span><span class="comment"># 取最近的一个开始交换</span></span><br><span class="line">	<span class="keyword">for</span> _ <span class="keyword">in</span> <span class="built_in">range</span>(right-left):</span><br><span class="line">		<span class="built_in">next</span> = cur.<span class="built_in">next</span></span><br><span class="line">		cur.<span class="built_in">next</span> = <span class="built_in">next</span>.<span class="built_in">next</span></span><br><span class="line">		<span class="built_in">next</span>.<span class="built_in">next</span> = pre.<span class="built_in">next</span></span><br><span class="line">		pre.<span class="built_in">next</span> = <span class="built_in">next</span></span><br><span class="line">	<span class="keyword">return</span> dummy_node.<span class="built_in">next</span>	</span><br></pre></td></tr></table></figure>
-<h3 id="1-3-穿针引线法"><a href="#1-3-穿针引线法" class="headerlink" title="1.3 穿针引线法"></a>1.3 穿针引线法</h3><h2 id="2-两两交换链表中的节点"><a href="#2-两两交换链表中的节点" class="headerlink" title="2.两两交换链表中的节点"></a>2.两两交换链表中的节点</h2><p>LeeCode24.给一个链表，两两交换其中相邻的节点，并返回交换后链表的头节点。你必须在不修改节点内部的值的情况下完成本题。</p>
-<h3 id="方法一-递归"><a href="#方法一-递归" class="headerlink" title="方法一 递归"></a>方法一 递归</h3><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * Definition for singly-linked list.</span></span><br><span class="line"><span class="comment"> * function ListNode(val, next) &#123;</span></span><br><span class="line"><span class="comment"> *     this.val = (val===undefined ? 0 : val)</span></span><br><span class="line"><span class="comment"> *     this.next = (next===undefined ? null : next)</span></span><br><span class="line"><span class="comment"> * &#125;</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@param</span> &#123;<span class="type">ListNode</span>&#125; <span class="variable">head</span></span></span><br><span class="line"><span class="comment"> * <span class="doctag">@return</span> &#123;<span class="type">ListNode</span>&#125;</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> swapPairs = <span class="keyword">function</span>(<span class="params">head</span>) &#123;</span><br><span class="line">    <span class="keyword">if</span>(head === <span class="literal">null</span> ||head.<span class="property">next</span> ===<span class="literal">null</span>)&#123;</span><br><span class="line">        <span class="keyword">return</span> head</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">const</span> newhead = head.<span class="property">next</span>;</span><br><span class="line">    head.<span class="property">next</span> = <span class="title function_">swapPairs</span>(newhead.<span class="property">next</span>)<span class="comment">//连接第一个和第三个</span></span><br><span class="line">    newhead.<span class="property">next</span> = head;<span class="comment">//连接第二个和第一个</span></span><br><span class="line">    <span class="keyword">return</span> newhead</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
-
-<h3 id="方法二-迭代"><a href="#方法二-迭代" class="headerlink" title="方法二 迭代"></a>方法二 迭代</h3><blockquote>
-<p>这里涉及到深浅拷贝问题</p>
-</blockquote>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/*</span></span><br><span class="line"><span class="comment">@Date		:2023/11/12 21:50:47</span></span><br><span class="line"><span class="comment">@Author		:zono</span></span><br><span class="line"><span class="comment">@Description:链表设置</span></span><br><span class="line"><span class="comment">*/</span></span><br><span class="line"><span class="keyword">function</span> <span class="title function_">ListNode</span>(<span class="params">val, next</span>) &#123;</span><br><span class="line">  <span class="variable language_">this</span>.<span class="property">val</span> = val === <span class="literal">undefined</span> ? <span class="number">0</span> : val;</span><br><span class="line">  <span class="variable language_">this</span>.<span class="property">next</span> = next === <span class="literal">undefined</span> ? <span class="literal">null</span> : next;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 创建链表节点</span></span><br><span class="line"><span class="keyword">const</span> node1 = <span class="keyword">new</span> <span class="title class_">ListNode</span>(<span class="number">1</span>);</span><br><span class="line"><span class="keyword">const</span> node2 = <span class="keyword">new</span> <span class="title class_">ListNode</span>(<span class="number">2</span>);</span><br><span class="line"><span class="keyword">const</span> node3 = <span class="keyword">new</span> <span class="title class_">ListNode</span>(<span class="number">3</span>);</span><br><span class="line"><span class="keyword">const</span> node4 = <span class="keyword">new</span> <span class="title class_">ListNode</span>(<span class="number">4</span>);</span><br><span class="line"></span><br><span class="line"><span class="comment">// 构建链表关系</span></span><br><span class="line">node1.<span class="property">next</span> = node2;</span><br><span class="line">node2.<span class="property">next</span> = node3;</span><br><span class="line">node3.<span class="property">next</span> = node4;</span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> swapPairs = <span class="keyword">function</span> (<span class="params">head</span>) &#123;</span><br><span class="line">  <span class="keyword">const</span> dummyHead = <span class="keyword">new</span> <span class="title class_">ListNode</span>(<span class="number">0</span>);</span><br><span class="line">  dummyHead.<span class="property">next</span> = head;</span><br><span class="line">  <span class="keyword">let</span> temp = dummyHead;<span class="comment">//这里需要思考深浅拷贝</span></span><br><span class="line">  <span class="keyword">while</span> (temp.<span class="property">next</span> !== <span class="literal">null</span> &amp;&amp; temp.<span class="property">next</span>.<span class="property">next</span> !== <span class="literal">null</span>) &#123;</span><br><span class="line">    <span class="keyword">const</span> node1 = temp.<span class="property">next</span>;</span><br><span class="line">    <span class="keyword">const</span> node2 = temp.<span class="property">next</span>.<span class="property">next</span>;</span><br><span class="line">    temp.<span class="property">next</span> = node2;</span><br><span class="line">    node1.<span class="property">next</span> = node2.<span class="property">next</span>;</span><br><span class="line">    node2.<span class="property">next</span> = node1;</span><br><span class="line">    temp = node1;</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="keyword">return</span> dummyHead.<span class="property">next</span>;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="keyword">function</span> <span class="title function_">sort</span>(<span class="params">currentNode</span>) &#123;</span><br><span class="line">  <span class="keyword">while</span> (currentNode !== <span class="literal">null</span>) &#123;</span><br><span class="line">    <span class="variable language_">console</span>.<span class="title function_">log</span>(currentNode.<span class="property">val</span>);</span><br><span class="line">    currentNode = currentNode.<span class="property">next</span>;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="title function_">sort</span>(<span class="title function_">swapPairs</span>(node1));</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-
-<h2 id="3-单链表加一"><a href="#3-单链表加一" class="headerlink" title="3.单链表加一"></a>3.单链表加一</h2><h2 id="4-链表加法"><a href="#4-链表加法" class="headerlink" title="4.链表加法"></a>4.链表加法</h2>
-      
-    </div>
-
-    
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-</div>
-
-
-
 
     
 
@@ -722,7 +272,7 @@
   
 
   <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2023/05/04/%E4%BB%A5%E5%89%8D%E7%9A%84%E5%86%85%E5%AE%B9/%E6%97%A5%E5%BF%97%E5%8D%87%E7%BA%A702/">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2023/05/04/%E4%BA%BA%E7%94%9F%E8%AE%B0%E5%BD%95/blog%E6%9C%89%E5%85%B3/%E6%97%A5%E5%BF%97%E5%8D%87%E7%BA%A702/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/uploads/cat.jpg">
@@ -740,7 +290,7 @@
     </span>
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
-          <a href="/2023/05/04/%E4%BB%A5%E5%89%8D%E7%9A%84%E5%86%85%E5%AE%B9/%E6%97%A5%E5%BF%97%E5%8D%87%E7%BA%A702/" class="post-title-link" itemprop="url">日志升级02</a>
+          <a href="/2023/05/04/%E4%BA%BA%E7%94%9F%E8%AE%B0%E5%BD%95/blog%E6%9C%89%E5%85%B3/%E6%97%A5%E5%BF%97%E5%8D%87%E7%BA%A702/" class="post-title-link" itemprop="url">日志升级02</a>
         </h2>
 
         <div class="post-meta-container">
@@ -758,7 +308,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">Edited on</span>
-      <time title="Modified: 2023-11-20 18:21:00" itemprop="dateModified" datetime="2023-11-20T18:21:00+08:00">2023-11-20</time>
+      <time title="Modified: 2023-11-20 19:08:08" itemprop="dateModified" datetime="2023-11-20T19:08:08+08:00">2023-11-20</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -766,7 +316,7 @@
       </span>
       <span class="post-meta-item-text">In</span>
         <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/schedule/" itemprop="url" rel="index"><span itemprop="name">schedule</span></a>
+          <a href="/categories/%E4%BA%BA%E7%94%9F%E8%AE%B0%E5%BD%95/" itemprop="url" rel="index"><span itemprop="name">人生记录</span></a>
         </span>
     </span>
 
@@ -1067,6 +617,491 @@
 
 
 <h1 id="三、随笔"><a href="#三、随笔" class="headerlink" title="三、随笔"></a>三、随笔<!-- 感悟、观察、对话 --></h1>
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2023/04/29/%E4%BB%A5%E5%89%8D%E7%9A%84%E5%86%85%E5%AE%B9/%E6%97%A5%E5%BF%97/%E6%97%A5%E5%BF%970015/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/uploads/cat.jpg">
+      <meta itemprop="name" content="zono">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="ZONO's World">
+      <meta itemprop="description" content="人生长度无法强求,但厚度可以靠努力">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="undefined | ZONO's World">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/2023/04/29/%E4%BB%A5%E5%89%8D%E7%9A%84%E5%86%85%E5%AE%B9/%E6%97%A5%E5%BF%97/%E6%97%A5%E5%BF%970015/" class="post-title-link" itemprop="url">日志0015</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">Posted on</span>
+      
+
+      <time title="Created: 2023-04-29 15:02:08 / Modified: 23:02:27" itemprop="dateCreated datePublished" datetime="2023-04-29T15:02:08+08:00">2023-04-29</time>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <p>星期</p>
+<h1 id="一、流水账"><a href="#一、流水账" class="headerlink" title="一、流水账"></a>一、流水账</h1><h2 id="1、学习内容"><a href="#1、学习内容" class="headerlink" title="1、学习内容"></a>1、学习内容<!-- 记录阅读、学了什么等机械化的任务 --></h2><h3 id="1-1阅读内容："><a href="#1-1阅读内容：" class="headerlink" title="1.1阅读内容："></a>1.1阅读内容：</h3><h3 id="1-2学习细节"><a href="#1-2学习细节" class="headerlink" title="1.2学习细节"></a>1.2学习细节</h3><p>1.2.1 一般</p>
+<ul>
+<li>看大模型，有点难</li>
+</ul>
+<p>1.2.2 计算机通识</p>
+<h2 id="2、生活内容："><a href="#2、生活内容：" class="headerlink" title="2、生活内容："></a>2、生活内容：<!-- 记录锻炼、不怎么影响情绪的经历、普通的社交 --></h2><h3 id="2-1锻炼内容："><a href="#2-1锻炼内容：" class="headerlink" title="2.1锻炼内容："></a>2.1锻炼内容：</h3><ul>
+<li>篮球<h3 id="2-2发生的事："><a href="#2-2发生的事：" class="headerlink" title="2.2发生的事："></a>2.2发生的事：<!-- ### 影响情绪的:<b>正面：</b> <b>负面：</b> --></h3></li>
+<li>上午打扫卫生</li>
+<li>下午看了《头文字D》和玩缺氧</li>
+<li>晚上打篮球</li>
+</ul>
+<h1 id="二、计划和达成"><a href="#二、计划和达成" class="headerlink" title="二、计划和达成"></a>二、计划和达成<!-- 立下flag --></h1><h2 id="1、Datewhale"><a href="#1、Datewhale" class="headerlink" title="1、Datewhale"></a>1、Datewhale</h2><h3 id="1-1未完成"><a href="#1-1未完成" class="headerlink" title="1.1未完成"></a>1.1未完成</h3><p>1、组织队伍<br>2、确定项目<br>3、学习技术<br>4、看回放（1、2）</p>
+<h3 id="1-3做-学了什么"><a href="#1-3做-学了什么" class="headerlink" title="1.3做|学了什么"></a>1.3做|学了什么</h3><h2 id="2、大创记录"><a href="#2、大创记录" class="headerlink" title="2、大创记录"></a>2、大创记录</h2><h3 id="2-1未完成"><a href="#2-1未完成" class="headerlink" title="2.1未完成"></a>2.1未完成</h3><p>1、阅读代码理解代码<br>2、将代码改写成GPU调用<br>3、准备前端</p>
+<h3 id="2-2新任务"><a href="#2-2新任务" class="headerlink" title="2.2新任务"></a>2.2新任务</h3><p>无</p>
+<h3 id="2-3做了什么"><a href="#2-3做了什么" class="headerlink" title="2.3做了什么"></a>2.3做了什么</h3><!-- ## 奖励 -->
+
+
+
+<h1 id="三、随笔"><a href="#三、随笔" class="headerlink" title="三、随笔"></a>三、随笔<!-- 感悟、观察、对话 --></h1><p>1、最后发现还是无法再日志上记录真心，在改一下日志的内容吧。</p>
+
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2023/04/27/%E4%BB%A5%E5%89%8D%E7%9A%84%E5%86%85%E5%AE%B9/%E6%97%A5%E5%BF%97/%E6%97%A5%E5%BF%970014/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/uploads/cat.jpg">
+      <meta itemprop="name" content="zono">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="ZONO's World">
+      <meta itemprop="description" content="人生长度无法强求,但厚度可以靠努力">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="undefined | ZONO's World">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/2023/04/27/%E4%BB%A5%E5%89%8D%E7%9A%84%E5%86%85%E5%AE%B9/%E6%97%A5%E5%BF%97/%E6%97%A5%E5%BF%970014/" class="post-title-link" itemprop="url">日志0014</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">Posted on</span>
+
+      <time title="Created: 2023-04-27 22:41:51" itemprop="dateCreated datePublished" datetime="2023-04-27T22:41:51+08:00">2023-04-27</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar-check"></i>
+      </span>
+      <span class="post-meta-item-text">Edited on</span>
+      <time title="Modified: 2023-04-29 23:02:31" itemprop="dateModified" datetime="2023-04-29T23:02:31+08:00">2023-04-29</time>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <p>星期三和四</p>
+<h1 id="一、流水账"><a href="#一、流水账" class="headerlink" title="一、流水账"></a>一、流水账</h1><h2 id="1、学习内容"><a href="#1、学习内容" class="headerlink" title="1、学习内容"></a>1、学习内容<!-- 记录阅读、学了什么等机械化的任务 --></h2><h3 id="1-1阅读内容："><a href="#1-1阅读内容：" class="headerlink" title="1.1阅读内容："></a>1.1阅读内容：</h3><p>1、完成阅读《艺术的故事》</p>
+<h3 id="1-2学习细节"><a href="#1-2学习细节" class="headerlink" title="1.2学习细节"></a>1.2学习细节</h3><p>1.2.1 一般</p>
+<ul>
+<li>补音标知识                                                                            </li>
+</ul>
+<p>1.2.2 计算机通识</p>
+<ul>
+<li>OOA、OOP等概念的理解</li>
+<li>补码计算先背</li>
+</ul>
+<h2 id="2、生活内容："><a href="#2、生活内容：" class="headerlink" title="2、生活内容："></a>2、生活内容：<!-- 记录锻炼、不怎么影响情绪的经历、普通的社交 --></h2><h3 id="2-1锻炼内容："><a href="#2-1锻炼内容：" class="headerlink" title="2.1锻炼内容："></a>2.1锻炼内容：</h3><ul>
+<li>跑步+篮球*2<h3 id="2-2发生的事："><a href="#2-2发生的事：" class="headerlink" title="2.2发生的事："></a>2.2发生的事：<!-- ### 影响情绪的:<b>正面：</b> <b>负面：</b> --></h3>1、被鸽了<br>1、Linux课上分享自己的最近，感觉自己好像真没干过啥事。</li>
+</ul>
+<h1 id="二、计划和达成"><a href="#二、计划和达成" class="headerlink" title="二、计划和达成"></a>二、计划和达成<!-- 立下flag --></h1><h2 id="1、Datewhale"><a href="#1、Datewhale" class="headerlink" title="1、Datewhale"></a>1、Datewhale</h2><h3 id="1-1未完成"><a href="#1-1未完成" class="headerlink" title="1.1未完成"></a>1.1未完成</h3><p>1、组织队伍<br>2、确定项目<br>3、学习技术<br>4、看回放（1、2）</p>
+<h3 id="1-3做-学了什么"><a href="#1-3做-学了什么" class="headerlink" title="1.3做|学了什么"></a>1.3做|学了什么</h3><h2 id="2、大创记录"><a href="#2、大创记录" class="headerlink" title="2、大创记录"></a>2、大创记录</h2><h3 id="2-1未完成"><a href="#2-1未完成" class="headerlink" title="2.1未完成"></a>2.1未完成</h3><p>1、阅读代码理解代码<br>2、将代码改写成GPU调用<br>3、准备前端</p>
+<h3 id="2-2新任务"><a href="#2-2新任务" class="headerlink" title="2.2新任务"></a>2.2新任务</h3><p>无</p>
+<h3 id="2-3做了什么"><a href="#2-3做了什么" class="headerlink" title="2.3做了什么"></a>2.3做了什么</h3><!-- ## 奖励 -->
+
+
+
+<h1 id="三、随笔"><a href="#三、随笔" class="headerlink" title="三、随笔"></a>三、随笔<!-- 感悟、观察、对话 --></h1><p>1、以后还得再读一次《艺术的故事》，先读一次世界历史吧。<br>2、周四有点累了，就早点回去吧，整理一下自己。</p>
+
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2023/04/25/%E4%BB%A5%E5%89%8D%E7%9A%84%E5%86%85%E5%AE%B9/%E6%97%A5%E5%BF%97/%E6%97%A5%E5%BF%970013/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/uploads/cat.jpg">
+      <meta itemprop="name" content="zono">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="ZONO's World">
+      <meta itemprop="description" content="人生长度无法强求,但厚度可以靠努力">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="undefined | ZONO's World">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/2023/04/25/%E4%BB%A5%E5%89%8D%E7%9A%84%E5%86%85%E5%AE%B9/%E6%97%A5%E5%BF%97/%E6%97%A5%E5%BF%970013/" class="post-title-link" itemprop="url">日志0013</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">Posted on</span>
+
+      <time title="Created: 2023-04-25 20:29:07" itemprop="dateCreated datePublished" datetime="2023-04-25T20:29:07+08:00">2023-04-25</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar-check"></i>
+      </span>
+      <span class="post-meta-item-text">Edited on</span>
+      <time title="Modified: 2023-04-27 14:52:43" itemprop="dateModified" datetime="2023-04-27T14:52:43+08:00">2023-04-27</time>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <p>星期二</p>
+<h1 id="一、流水账"><a href="#一、流水账" class="headerlink" title="一、流水账"></a>一、流水账</h1><h2 id="1、学习内容"><a href="#1、学习内容" class="headerlink" title="1、学习内容"></a>1、学习内容<!-- 记录阅读、学了什么等机械化的任务 --></h2><h3 id="1-1阅读内容："><a href="#1-1阅读内容：" class="headerlink" title="1.1阅读内容："></a>1.1阅读内容：</h3><ul>
+<li>《艺术的故事》27章（还有最后一章了）<h3 id="1-2学习细节"><a href="#1-2学习细节" class="headerlink" title="1.2学习细节"></a>1.2学习细节</h3></li>
+</ul>
+<p>1.2.1 一般</p>
+<ul>
+<li>篮球基本功</li>
+</ul>
+<p>1.2.2 计算机通识</p>
+<ul>
+<li>ssl证书是什么</li>
+<li>doc和docx的意思（docx的妙用）</li>
+<li>什么是Embedding？</li>
+</ul>
+<h2 id="2、生活内容："><a href="#2、生活内容：" class="headerlink" title="2、生活内容："></a>2、生活内容：<!-- 记录锻炼、不怎么影响情绪的经历、普通的社交 --></h2><h3 id="2-1锻炼内容："><a href="#2-1锻炼内容：" class="headerlink" title="2.1锻炼内容："></a>2.1锻炼内容：</h3><ul>
+<li>三公里+篮球基本功练习  <h3 id="2-2发生的事："><a href="#2-2发生的事：" class="headerlink" title="2.2发生的事："></a>2.2发生的事：<!-- ### 影响情绪的:<b>正面：</b> <b>负面：</b> --></h3></li>
+<li>决定当学习的小组长了，要忙起来吧</li>
+</ul>
+<h1 id="二、计划和达成"><a href="#二、计划和达成" class="headerlink" title="二、计划和达成"></a>二、计划和达成<!-- 立下flag --></h1><h2 id="1、Datewhale"><a href="#1、Datewhale" class="headerlink" title="1、Datewhale"></a>1、Datewhale</h2><h3 id="1-1未完成"><a href="#1-1未完成" class="headerlink" title="1.1未完成"></a>1.1未完成</h3><p>1、组织队伍<br>2、确定项目<br>3、学习技术<br>4、看回放（0、1）</p>
+<h3 id="1-3做-学了什么"><a href="#1-3做-学了什么" class="headerlink" title="1.3做|学了什么"></a>1.3做|学了什么</h3><p>1、了解了ppo是什么？（ac构建）看不太懂<br>2、阅读了学习手册<br>3、观看了开营仪式<br>4、可能：AI api变成组件、微调、多机多卡</p>
+<h2 id="2、大创记录"><a href="#2、大创记录" class="headerlink" title="2、大创记录"></a>2、大创记录</h2><h3 id="2-1未完成"><a href="#2-1未完成" class="headerlink" title="2.1未完成"></a>2.1未完成</h3><p>1、阅读代码理解代码<br>2、将代码改写成GPU调用<br>3、准备前端</p>
+<h3 id="2-2新任务"><a href="#2-2新任务" class="headerlink" title="2.2新任务"></a>2.2新任务</h3><p>无</p>
+<h3 id="2-3做了什么"><a href="#2-3做了什么" class="headerlink" title="2.3做了什么"></a>2.3做了什么</h3><!-- ## 奖励 -->
+
+
+
+<h1 id="三、随笔"><a href="#三、随笔" class="headerlink" title="三、随笔"></a>三、随笔<!-- 感悟、观察、对话 --></h1><p>1、AIgc的应用会带来生产力大爆发吗，真的很期待这个未来呀。小时候以为长大能看见太空电梯，如今没看见，但另一方面的世界出现了，很震撼。</p>
+
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2023/04/24/%E4%BB%A5%E5%89%8D%E7%9A%84%E5%86%85%E5%AE%B9/%E6%97%A5%E5%BF%97/%E6%97%A5%E5%BF%970012/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/uploads/cat.jpg">
+      <meta itemprop="name" content="zono">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="ZONO's World">
+      <meta itemprop="description" content="人生长度无法强求,但厚度可以靠努力">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="undefined | ZONO's World">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/2023/04/24/%E4%BB%A5%E5%89%8D%E7%9A%84%E5%86%85%E5%AE%B9/%E6%97%A5%E5%BF%97/%E6%97%A5%E5%BF%970012/" class="post-title-link" itemprop="url">日志0012</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">Posted on</span>
+
+      <time title="Created: 2023-04-24 11:10:14" itemprop="dateCreated datePublished" datetime="2023-04-24T11:10:14+08:00">2023-04-24</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar-check"></i>
+      </span>
+      <span class="post-meta-item-text">Edited on</span>
+      <time title="Modified: 2023-04-25 21:03:07" itemprop="dateModified" datetime="2023-04-25T21:03:07+08:00">2023-04-25</time>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <p>星期一</p>
+<h1 id="一、流水账"><a href="#一、流水账" class="headerlink" title="一、流水账"></a>一、流水账</h1><h2 id="1、学习内容"><a href="#1、学习内容" class="headerlink" title="1、学习内容"></a>1、学习内容<!-- 记录阅读、学了什么等机械化的任务 --></h2><h3 id="1-1阅读内容："><a href="#1-1阅读内容：" class="headerlink" title="1.1阅读内容："></a>1.1阅读内容：</h3><ul>
+<li>《艺术的故事》26章</li>
+<li>《机器学习》第六章内容<h3 id="1-2学习细节"><a href="#1-2学习细节" class="headerlink" title="1.2学习细节"></a>1.2学习细节</h3></li>
+</ul>
+<p>1.2.1 一般</p>
+<ul>
+<li>归并排序</li>
+<li>零知识证明</li>
+<li>机器学习的一些数学知识（还得花时间）</li>
+<li>背书的意思</li>
+<li>服务器的一些指标概念</li>
+</ul>
+<p>1.2.2 计算机通识</p>
+<h2 id="2、生活内容："><a href="#2、生活内容：" class="headerlink" title="2、生活内容："></a>2、生活内容：<!-- 记录锻炼、不怎么影响情绪的经历、普通的社交 --></h2><h3 id="2-1锻炼内容："><a href="#2-1锻炼内容：" class="headerlink" title="2.1锻炼内容："></a>2.1锻炼内容：</h3><ul>
+<li>篮球+跑步<h3 id="2-2发生的事："><a href="#2-2发生的事：" class="headerlink" title="2.2发生的事："></a>2.2发生的事：<!-- ### 影响情绪的:<b>正面：</b> <b>负面：</b> --></h3></li>
+</ul>
+<h1 id="二、计划和达成"><a href="#二、计划和达成" class="headerlink" title="二、计划和达成"></a>二、计划和达成<!-- 立下flag --></h1><h2 id="2、大创记录"><a href="#2、大创记录" class="headerlink" title="2、大创记录"></a>2、大创记录</h2><h3 id="2-1未完成"><a href="#2-1未完成" class="headerlink" title="2.1未完成"></a>2.1未完成</h3><p>1、阅读代码理解代码<br>2、将代码改写成GPU调用<br>3、准备前端</p>
+<h3 id="2-2新任务"><a href="#2-2新任务" class="headerlink" title="2.2新任务"></a>2.2新任务</h3><p>无</p>
+<h3 id="2-3做了什么"><a href="#2-3做了什么" class="headerlink" title="2.3做了什么"></a>2.3做了什么</h3><!-- ## 奖励 -->
+<p>无</p>
+<h1 id="三、随笔"><a href="#三、随笔" class="headerlink" title="三、随笔"></a>三、随笔<!-- 感悟、观察、对话 --></h1><ul>
+<li>web3的时代数据存储会日渐抽象化，更加难以理解。</li>
+</ul>
+
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2023/04/23/%E4%BB%A5%E5%89%8D%E7%9A%84%E5%86%85%E5%AE%B9/%E6%97%A5%E5%BF%97/%E6%97%A5%E5%BF%970011/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/uploads/cat.jpg">
+      <meta itemprop="name" content="zono">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="ZONO's World">
+      <meta itemprop="description" content="人生长度无法强求,但厚度可以靠努力">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="undefined | ZONO's World">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/2023/04/23/%E4%BB%A5%E5%89%8D%E7%9A%84%E5%86%85%E5%AE%B9/%E6%97%A5%E5%BF%97/%E6%97%A5%E5%BF%970011/" class="post-title-link" itemprop="url">日志0011</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">Posted on</span>
+
+      <time title="Created: 2023-04-23 20:33:07" itemprop="dateCreated datePublished" datetime="2023-04-23T20:33:07+08:00">2023-04-23</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar-check"></i>
+      </span>
+      <span class="post-meta-item-text">Edited on</span>
+      <time title="Modified: 2023-04-24 11:09:25" itemprop="dateModified" datetime="2023-04-24T11:09:25+08:00">2023-04-24</time>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <p>星期天</p>
+<h1 id="一、流水账"><a href="#一、流水账" class="headerlink" title="一、流水账"></a>一、流水账</h1><h2 id="1、学习内容"><a href="#1、学习内容" class="headerlink" title="1、学习内容"></a>1、学习内容<!-- 记录阅读、学了什么等机械化的任务 --></h2><h3 id="1-1阅读内容："><a href="#1-1阅读内容：" class="headerlink" title="1.1阅读内容："></a>1.1阅读内容：</h3><ul>
+<li>《艺术的故事》24-25章</li>
+<li>《艺用解剖笔记》第二章（跳过第一章）<h3 id="1-2学习细节"><a href="#1-2学习细节" class="headerlink" title="1.2学习细节"></a>1.2学习细节</h3></li>
+</ul>
+<p>1.2.1 一般</p>
+<ul>
+<li>GPT:single-use、大模型的生成置信度无法确定、</li>
+<li><a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/67120415%E7%A0%94%E7%A9%B6%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%EF%BC%8C%E7%9B%AE%E5%89%8D%E5%88%B0%E8%BF%99%E9%87%8C">https://zhuanlan.zhihu.com/p/67120415研究机器学习，目前到这里</a></li>
+</ul>
+<p>1.2.2 计算机通识</p>
+<h2 id="2、生活内容："><a href="#2、生活内容：" class="headerlink" title="2、生活内容："></a>2、生活内容：<!-- 记录锻炼、不怎么影响情绪的经历、普通的社交 --></h2><h3 id="2-1锻炼内容："><a href="#2-1锻炼内容：" class="headerlink" title="2.1锻炼内容："></a>2.1锻炼内容：</h3><ul>
+<li>跑步+篮球<h3 id="2-2发生的事："><a href="#2-2发生的事：" class="headerlink" title="2.2发生的事："></a>2.2发生的事：<!-- ### 影响情绪的:<b>正面：</b> <b>负面：</b> --></h3></li>
+<li>五一调休，今天上周二的课</li>
+<li>开始Datewhale的四月课程</li>
+</ul>
+<h1 id="二、计划和达成"><a href="#二、计划和达成" class="headerlink" title="二、计划和达成"></a>二、计划和达成<!-- 立下flag --></h1><h2 id="2、大创记录"><a href="#2、大创记录" class="headerlink" title="2、大创记录"></a>2、大创记录</h2><h3 id="2-1未完成"><a href="#2-1未完成" class="headerlink" title="2.1未完成"></a>2.1未完成</h3><p>1、阅读代码理解代码<br>2、将代码改写成GPU调用<br>3、准备前端</p>
+<h3 id="2-2新任务"><a href="#2-2新任务" class="headerlink" title="2.2新任务"></a>2.2新任务</h3><p>无</p>
+<h3 id="2-3做了什么"><a href="#2-3做了什么" class="headerlink" title="2.3做了什么"></a>2.3做了什么</h3><!-- ## 奖励 -->
+
+
+
+<h1 id="三、随笔"><a href="#三、随笔" class="headerlink" title="三、随笔"></a>三、随笔<!-- 感悟、观察、对话 --></h1><p>1、谁发明的调休呀<br>2、随着认识，越来越发现大模型的领域还有很多很多，GPT并没有想象中那么强。但对社会行业的冲击比我想象的大，比如说替代平面模特。<br>3、开始发现我不是对游戏美术感兴趣，只是对画画能讲故事感兴趣，现在读了艺术的故事后就是加上对艺术的喜欢了。</p>
+
       
     </div>
 
