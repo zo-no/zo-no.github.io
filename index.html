@@ -169,6 +169,144 @@
   
 
   <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2023/11/21/%E6%8A%80%E6%9C%AF/%E5%89%8D%E7%AB%AF/%E6%91%B8%E5%BA%95%E5%87%86%E5%A4%87/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/uploads/cat.jpg">
+      <meta itemprop="name" content="zono">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="ZONO's World">
+      <meta itemprop="description" content="人生长度无法强求,但厚度可以靠努力">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="undefined | ZONO's World">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/2023/11/21/%E6%8A%80%E6%9C%AF/%E5%89%8D%E7%AB%AF/%E6%91%B8%E5%BA%95%E5%87%86%E5%A4%87/" class="post-title-link" itemprop="url">摸底准备</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">Posted on</span>
+      
+
+      <time title="Created: 2023-11-21 18:16:14 / Modified: 23:19:56" itemprop="dateCreated datePublished" datetime="2023-11-21T18:16:14+08:00">2023-11-21</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">In</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/%E6%8A%80%E6%9C%AF/" itemprop="url" rel="index"><span itemprop="name">技术</span></a>
+        </span>
+          , 
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/%E6%8A%80%E6%9C%AF/%E5%89%8D%E7%AB%AF%E5%9F%BA%E7%A1%80/" itemprop="url" rel="index"><span itemprop="name">前端基础</span></a>
+        </span>
+          , 
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/%E6%8A%80%E6%9C%AF/%E5%89%8D%E7%AB%AF%E5%9F%BA%E7%A1%80/%E5%85%AB%E8%82%A1/" itemprop="url" rel="index"><span itemprop="name">八股</span></a>
+        </span>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <h1 id="八股第一部分"><a href="#八股第一部分" class="headerlink" title="八股第一部分"></a>八股第一部分</h1><h2 id="instanceof的原理"><a href="#instanceof的原理" class="headerlink" title="instanceof的原理"></a>instanceof的原理</h2><blockquote>
+<p>答：instanceof用于检测构造函数prototype属性是否出现在某个实例对象的原型链。</p>
+<p>​        它会检查右边构建函数的原型对象（prototype），是否在左边对象的原型链上。</p>
+</blockquote>
+<h3 id="手写"><a href="#手写" class="headerlink" title="手写"></a>手写</h3><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">function</span> <span class="title function_">myInstanceof</span>(<span class="params">Obj, constructor</span>) &#123;</span><br><span class="line">  <span class="keyword">let</span> proto = <span class="title class_">Object</span>.<span class="title function_">getPrototypeOf</span>(<span class="title class_">Obj</span>); <span class="comment">//获取原型</span></span><br><span class="line">  <span class="keyword">while</span> (proto) &#123;</span><br><span class="line">    <span class="keyword">if</span> (proto === constructor.<span class="property">pro</span>) &#123;</span><br><span class="line">      <span class="keyword">return</span> <span class="literal">true</span>;</span><br><span class="line">    &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">      proto = proto.<span class="title function_">getPrototypeOf</span>(proto); <span class="comment">//获取下一个原型</span></span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="new的原理"><a href="#new的原理" class="headerlink" title="new的原理"></a>new的原理</h2><p>使用<code>new</code>命令时，它后面的函数依次执行下面的步骤。</p>
+<ol>
+<li>创建一个空对象，作为将要返回的对象实例。</li>
+<li>将这个空对象的原型，指向构造函数的<code>prototype</code>属性。</li>
+<li>将这个空对象赋值给函数内部的<code>this</code>关键字。</li>
+<li>开始执行构造函数内部的代码。</li>
+</ol>
+<h3 id="手写-1"><a href="#手写-1" class="headerlink" title="手写"></a>手写</h3><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">function</span> <span class="title function_">myNew</span>(<span class="params">constructor, ...args</span>) &#123;</span><br><span class="line">  <span class="comment">//1.创建一个空对象</span></span><br><span class="line">  <span class="keyword">let</span> obj = &#123;&#125;;</span><br><span class="line">  obj.<span class="property">__proto__</span> = constructor.<span class="property"><span class="keyword">prototype</span></span>;</span><br><span class="line">  <span class="keyword">let</span> result = constructor.<span class="title function_">apply</span>(obj, args);</span><br><span class="line">  <span class="keyword">return</span> result <span class="keyword">instanceof</span> <span class="title class_">Object</span> ? result : obj;</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">//这个实现并不完整，因为没有考虑到原型链的问题，如果构造函数的原型链上有属性，那么这个属性也会被继承到实例上</span></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<h2 id="js作用域的理解"><a href="#js作用域的理解" class="headerlink" title="js作用域的理解"></a>js作用域的理解</h2><h2 id="原型链"><a href="#原型链" class="headerlink" title="原型链"></a>原型链</h2><blockquote>
+<p>[Js中prototype、<a target="_blank" rel="noopener" href="https://blog.csdn.net/qq_38722097/article/details/88046377">[prototype]]和__proto__的区别和用法-CSDN博客</a></p>
+</blockquote>
+<h2 id="this指向问题"><a href="#this指向问题" class="headerlink" title="this指向问题"></a>this指向问题</h2><h1 id="八股第二部分react"><a href="#八股第二部分react" class="headerlink" title="八股第二部分react"></a>八股第二部分react</h1><h3 id="hooks的使用限制"><a href="#hooks的使用限制" class="headerlink" title="hooks的使用限制"></a>hooks的使用限制</h3><h4 id="通用限制"><a href="#通用限制" class="headerlink" title="通用限制"></a>通用限制</h4><p><a target="_blank" rel="noopener" href="https://juejin.cn/post/7020811068955951135">为什么React Hooks会有两条使用规则 - 掘金 (juejin.cn)</a></p>
+<ol>
+<li>只能在只能在函数组件的顶层使用或自定义Hooks中使用</li>
+<li>不能再条件语句中使用</li>
+</ol>
+<h5 id="一些反例"><a href="#一些反例" class="headerlink" title="一些反例"></a>一些反例</h5><ol>
+<li>在条件/循环语句中使用 Hooks：</li>
+</ol>
+<figure class="highlight jsx"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">function</span> <span class="title function_">MyComponent</span>(<span class="params"></span>) &#123;</span><br><span class="line">  <span class="keyword">if</span> (someCondition) &#123;</span><br><span class="line">    <span class="title function_">useState</span>(); <span class="comment">// 错误！Hooks 不应在条件语句中使用</span></span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  <span class="keyword">return</span> <span class="language-xml"><span class="tag">&lt;<span class="name">div</span>&gt;</span>Hello, World!<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">function</span> <span class="title function_">MyComponent</span>(<span class="params"></span>) &#123;</span><br><span class="line">  <span class="keyword">for</span> (<span class="keyword">let</span> i = <span class="number">0</span>; i &lt; <span class="number">5</span>; i++) &#123;</span><br><span class="line">    <span class="title function_">useState</span>(); <span class="comment">// 错误！Hooks 不应在循环中使用</span></span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  <span class="keyword">return</span> <span class="language-xml"><span class="tag">&lt;<span class="name">div</span>&gt;</span>Hello, World!<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<ol start="2">
+<li>在嵌套函数中使用 Hooks：</li>
+</ol>
+<figure class="highlight jsx"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">function</span> <span class="title function_">MyComponent</span>(<span class="params"></span>) &#123;</span><br><span class="line">  <span class="keyword">function</span> <span class="title function_">nestedFunction</span>(<span class="params"></span>) &#123;</span><br><span class="line">    <span class="title function_">useState</span>(); <span class="comment">// 错误！Hooks 不应在嵌套函数中使用</span></span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  <span class="keyword">return</span> <span class="language-xml"><span class="tag">&lt;<span class="name">div</span>&gt;</span>Hello, World!<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<ol start="3">
+<li>在类组件中使用 Hooks：</li>
+</ol>
+<figure class="highlight jsx"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">MyComponent</span> <span class="keyword">extends</span> <span class="title class_ inherited__">React.Component</span> &#123;</span><br><span class="line">  <span class="title function_">componentDidMount</span>(<span class="params"></span>) &#123;</span><br><span class="line">    <span class="title function_">useState</span>(); <span class="comment">// 错误！Hooks 不应在类组件中使用，Hooks 只能在函数组件的顶层使用</span></span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  <span class="title function_">render</span>(<span class="params"></span>) &#123;</span><br><span class="line">    <span class="keyword">return</span> <span class="language-xml"><span class="tag">&lt;<span class="name">div</span>&gt;</span>Hello, World!<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span>;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<ol start="4">
+<li>在普通 JavaScript 函数中使用 Hooks：</li>
+</ol>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">function</span> <span class="title function_">myFunction</span>(<span class="params"></span>) &#123;</span><br><span class="line">  <span class="title function_">useState</span>(); <span class="comment">// 错误！Hooks 只能在函数组件的顶层使用</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h4 id="具体限制"><a href="#具体限制" class="headerlink" title="具体限制"></a>具体限制</h4><ol>
+<li>useState的值不能直接修改</li>
+<li>useEffect的回调函数中不能使用异步函数</li>
+<li>useContext必须再useContext所对应的Context.Provider中使用</li>
+</ol>
+<h2 id="react-hooks的原理"><a href="#react-hooks的原理" class="headerlink" title="react hooks的原理"></a>react hooks的原理</h2><p>函数组件和闭包</p>
+<h2 id="react-setState是同步还是异步-react的批量更新机制"><a href="#react-setState是同步还是异步-react的批量更新机制" class="headerlink" title="react setState是同步还是异步/react的批量更新机制"></a>react setState是同步还是异步/react的批量更新机制</h2><blockquote>
+<p>答：可能是同步也可能是异步，取决于执行环境</p>
+</blockquote>
+
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
     <link itemprop="mainEntityOfPage" href="http://example.com/2023/11/20/%E4%BA%BA%E7%94%9F%E8%AE%B0%E5%BD%95/blog%E6%9C%89%E5%85%B3/blog%E5%8D%87%E7%BA%A7%E8%AE%B0%E5%BD%9501/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -988,172 +1126,6 @@
     
     <div class="post-body" itemprop="articleBody">
           <h1 id="设计模式"><a href="#设计模式" class="headerlink" title="设计模式"></a>设计模式</h1>
-      
-    </div>
-
-    
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-</div>
-
-
-
-
-    
-
-
-<div class="post-block">
-  
-  
-
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2023/11/20/%E6%8A%80%E6%9C%AF/%E5%89%8D%E7%AB%AF/%E5%89%8D%E7%AB%AF%E5%B7%A5%E7%A8%8B%E5%8C%96/%E6%A8%A1%E5%9D%97%E5%8C%96%E7%BC%96%E7%A8%8B/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/uploads/cat.jpg">
-      <meta itemprop="name" content="zono">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="ZONO's World">
-      <meta itemprop="description" content="人生长度无法强求,但厚度可以靠努力">
-    </span>
-
-    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
-      <meta itemprop="name" content="undefined | ZONO's World">
-      <meta itemprop="description" content="">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/2023/11/20/%E6%8A%80%E6%9C%AF/%E5%89%8D%E7%AB%AF/%E5%89%8D%E7%AB%AF%E5%B7%A5%E7%A8%8B%E5%8C%96/%E6%A8%A1%E5%9D%97%E5%8C%96%E7%BC%96%E7%A8%8B/" class="post-title-link" itemprop="url">Untitled</a>
-        </h2>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">Posted on</span>
-
-      <time title="Created: 2023-11-20 18:32:26" itemprop="dateCreated datePublished" datetime="2023-11-20T18:32:26+08:00">2023-11-20</time>
-    </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar-check"></i>
-      </span>
-      <span class="post-meta-item-text">Edited on</span>
-      <time title="Modified: 2023-11-15 15:08:06" itemprop="dateModified" datetime="2023-11-15T15:08:06+08:00">2023-11-15</time>
-    </span>
-
-  
-</div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          <h1 id="模块化编程"><a href="#模块化编程" class="headerlink" title="模块化编程"></a>模块化编程</h1><p>拿到设计时，我们首先要把项目划分为一个个模块，或者组件</p>
-<blockquote>
-<p> 划分原则:</p>
-<ul>
-<li>按照功能和需求划分：普通业务模块/ 组件</li>
-<li>按照复用性划分：通用业务模块</li>
-<li>通用功能模块组件【UI组件库】</li>
-</ul>
-</blockquote>
-<h2 id="1-1-模块化演化进程"><a href="#1-1-模块化演化进程" class="headerlink" title="1.1 模块化演化进程"></a>1.1 模块化演化进程</h2><p>未来的项目一定是 模块化/组件化 开发！！</p>
-<blockquote>
-<p>模块化编程进化历史</p>
-<ul>
-<li><p>  单例设计模式</p>
-</li>
-<li><p>  AMD「require.js」</p>
-</li>
-<li><p>  CommonJS(node.js)</p>
-</li>
-<li><p>  CMD「sea.js」</p>
-</li>
-<li><p>  ES6Module</p>
-</li>
-</ul>
-</blockquote>
-<h2 id="1-2单例设计模式"><a href="#1-2单例设计模式" class="headerlink" title="1.2单例设计模式"></a>1.2<strong>单例设计模式</strong></h2><p>也就是原生js写法，用<code>&lt;script src&gt;</code>,调用文件，把各个功能写在不同的模块下，最后合并到页面中。</p>
-<p><strong>问题</strong>：</p>
-<ul>
-<li>会出现全局变量污染，也就是模块间会有相互冲突。</li>
-<li>模块间相互引用问题，用window方法多了后也会冲突</li>
-</ul>
-<p><strong>解决问题</strong>：</p>
-<ul>
-<li><p>模块间相互冲突的问题:</p>
-<ul>
-<li>「闭包」 ;</li>
-</ul>
-</li>
-<li><p>模块间相互引用的问题：</p>
-<ul>
-<li><p>使用windows.XXX = XXX 暴露方法到全局</p>
-</li>
-<li><p>解决windows多了后冲突：直接导出整个对象，就像react组件一样，对象中有所有对应的方法。</p>
-<blockquote>
-<p>详细解释：让每个模块有一个独有的模块名xxxModule，也叫命名空间（回想起来c不就是吗）。</p>
-<p>模块闭包时，直接return对象，别人要用时，直接模块名.方法（）调用就行。</p>
-</blockquote>
-</li>
-</ul>
-</li>
-</ul>
-<p>如此单例设计模式就完成了。</p>
-<p><strong>注意</strong>：包导入的顺序</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//单例格式</span></span><br><span class="line"><span class="keyword">let</span> xxxModule = (<span class="keyword">function</span> (<span class="params"></span>) &#123;</span><br><span class="line">   <span class="keyword">let</span> time = <span class="keyword">new</span> <span class="title class_">Date</span>();</span><br><span class="line">   <span class="keyword">const</span> query = <span class="keyword">function</span> <span class="title function_">query</span>(<span class="params"></span>) &#123;</span><br><span class="line">       <span class="comment">// ...</span></span><br><span class="line">   &#125;;</span><br><span class="line">   <span class="keyword">const</span> handle = <span class="keyword">function</span> <span class="title function_">handle</span>(<span class="params"></span>) &#123;</span><br><span class="line">       <span class="comment">// ...</span></span><br><span class="line">   &#125;;</span><br><span class="line"></span><br><span class="line">   <span class="comment">// 把供其它板块调用的方法，暴露到全局对象上</span></span><br><span class="line">   <span class="comment">//「局限：暴露的内容比较多，则还会引发全局变量冲突」</span></span><br><span class="line">   <span class="comment">// window.query = query;</span></span><br><span class="line"></span><br><span class="line">   <span class="keyword">return</span> &#123;</span><br><span class="line">       query,</span><br><span class="line">       handle</span><br><span class="line">   &#125;;</span><br><span class="line">&#125;)();</span><br></pre></td></tr></table></figure>
-
-<p>没看例子：p132    37:17~52:30</p>
-<p><strong>不足之处</strong>：需要手动分析模块之间的依赖关系，按顺序依次导入相关模块；所有模块都是基于script一个个导入的，这样页面HTTP请求变多！</p>
-<h2 id="1-3-AMD「require-js」"><a href="#1-3-AMD「require-js」" class="headerlink" title="1.3 AMD「require.js」"></a>1.3 <strong>AMD「require.js」</strong></h2><p> <a target="_blank" rel="noopener" href="https://requirejs.org/">https://requirejs.org</a>  </p>
-<p><strong>优势</strong>：在保证模块之间独立和可以相互访问的基础上，HTML中无需再导入各个模块了「<strong>不存在顺序问题</strong>」，也不需要自己去分析相互间的依赖关系！<br><strong>不足</strong>：依赖模块的导入是“前置导入”，只有把依赖模块动态导入完毕，才会触发回调函数执行「阻碍代码执行速度」；代码书写的顺序也不是很方便；可能存在重复导入；</p>
-<p><img src="C:\Users\27421\AppData\Roaming\Typora\typora-user-images\image-20231112133515879.png" alt="image-20231112133515879"></p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//main.js</span></span><br><span class="line"><span class="built_in">require</span>.<span class="title function_">config</span>(&#123;</span><br><span class="line">    <span class="comment">//全局配置</span></span><br><span class="line">    <span class="attr">baseUrl</span>: <span class="string">&#x27;js/lib&#x27;</span>,</span><br><span class="line">&#125;);</span><br><span class="line"></span><br><span class="line"><span class="built_in">require</span>([<span class="string">&#x27;moduleB&#x27;</span>, <span class="string">&#x27;moduleA&#x27;</span>], <span class="keyword">function</span> (<span class="params">moduleB, moduleA</span>) &#123;</span><br><span class="line">    <span class="variable language_">console</span>.<span class="title function_">log</span>(moduleB.<span class="title function_">average</span>(<span class="number">10</span>, <span class="number">20</span>, <span class="number">30</span>, <span class="number">40</span>, <span class="number">50</span>));</span><br><span class="line">&#125;);</span><br><span class="line"></span><br><span class="line"><span class="comment">//moduleA.js</span></span><br><span class="line"><span class="title function_">define</span>(<span class="keyword">function</span> (<span class="params"></span>) &#123;</span><br><span class="line">    <span class="keyword">return</span> &#123;</span><br><span class="line">        <span class="title function_">sum</span>(<span class="params">...args</span>) &#123;</span><br><span class="line">            <span class="keyword">let</span> len = args.<span class="property">length</span>,</span><br><span class="line">                firstItem = args[<span class="number">0</span>];</span><br><span class="line">            <span class="keyword">if</span> (len === <span class="number">0</span>) <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">            <span class="keyword">if</span> (len === <span class="number">1</span>) <span class="keyword">return</span> firstItem;</span><br><span class="line">            <span class="keyword">return</span> args.<span class="title function_">reduce</span>(<span class="function">(<span class="params">total, item</span>) =&gt;</span> &#123;</span><br><span class="line">                <span class="keyword">return</span> total + item;</span><br><span class="line">            &#125;);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;;</span><br><span class="line">&#125;);</span><br><span class="line"></span><br><span class="line"><span class="comment">//moduleB.js</span></span><br><span class="line"><span class="title function_">define</span>([<span class="string">&#x27;moduleA&#x27;</span>], <span class="keyword">function</span> (<span class="params">moudleA</span>) &#123;</span><br><span class="line">    <span class="keyword">return</span> &#123;</span><br><span class="line">        <span class="comment">// 求平均数（去掉最大最小值）</span></span><br><span class="line">        <span class="title function_">average</span>(<span class="params">...args</span>) &#123;</span><br><span class="line">            <span class="keyword">let</span> len = args.<span class="property">length</span>,</span><br><span class="line">                firstItem = args[<span class="number">0</span>];</span><br><span class="line">            <span class="keyword">if</span> (len === <span class="number">0</span>) <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">            <span class="keyword">if</span> (len === <span class="number">1</span>) <span class="keyword">return</span> firstItem;</span><br><span class="line">            args.<span class="title function_">sort</span>(<span class="function">(<span class="params">a, b</span>) =&gt;</span> a - b);</span><br><span class="line">            args.<span class="title function_">pop</span>();</span><br><span class="line">            args.<span class="title function_">shift</span>();</span><br><span class="line">            <span class="keyword">return</span> (moudleA.<span class="title function_">sum</span>(...args) / args.<span class="property">length</span>).<span class="title function_">toFixed</span>(<span class="number">2</span>);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;;</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
-
-<p>没看例子：p132    58:17~1:20:05</p>
-<h2 id="1-4-CommonJS模块化规范"><a href="#1-4-CommonJS模块化规范" class="headerlink" title="1.4 CommonJS模块化规范"></a>1.4 <strong>CommonJS模块化规范</strong></h2><blockquote>
-<p>node.js出现了,不用导入</p>
-</blockquote>
-<p>每创建一个js文件就创建了一个模块，里面的代码就是独立的。用<code>module.exports</code>导出对象。</p>
-<p>唯一的问题：<strong>浏览器端不支持CommonJS规范</strong><br>淘宝“玉伯”仿照CommonJS规范，研发了一款插件 sea.js ，旨在把CommonJS规范搬到浏览器端运行「这种模块思想被称之为CMD」</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/* ---A.js--- */</span></span><br><span class="line"><span class="keyword">const</span> sum = <span class="keyword">function</span> <span class="title function_">sum</span>(<span class="params">...params</span>) &#123;</span><br><span class="line">    <span class="keyword">return</span> params.<span class="title function_">reduce</span>(<span class="function">(<span class="params">result, item</span>) =&gt;</span> &#123;</span><br><span class="line">        <span class="keyword">return</span> result + item;</span><br><span class="line">    &#125;);</span><br><span class="line">&#125;;</span><br><span class="line"><span class="comment">// 暴露一些API</span></span><br><span class="line"><span class="variable language_">module</span>.<span class="property">exports</span> = &#123;</span><br><span class="line">    sum</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="comment">/* ---B.js--- */</span></span><br><span class="line"><span class="keyword">let</span> name = <span class="string">&#x27;哈哈&#x27;</span>;</span><br><span class="line"><span class="keyword">let</span> A = <span class="built_in">require</span>(<span class="string">&#x27;./A&#x27;</span>);</span><br><span class="line"><span class="keyword">const</span> average = <span class="keyword">function</span> <span class="title function_">average</span>(<span class="params">...params</span>) &#123;</span><br><span class="line">    <span class="keyword">return</span> (A.<span class="title function_">sum</span>(...params) / params.<span class="property">length</span>).<span class="title function_">toFixed</span>(<span class="number">2</span>);</span><br><span class="line">&#125;;</span><br><span class="line"><span class="variable language_">module</span>.<span class="property">exports</span> = &#123;</span><br><span class="line">    average</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="comment">/* ---main.js--- */</span></span><br><span class="line"><span class="keyword">let</span> A = <span class="built_in">require</span>(<span class="string">&#x27;./A&#x27;</span>);</span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(A.<span class="title function_">sum</span>(<span class="number">10</span>, <span class="number">20</span>, <span class="number">30</span>, <span class="number">40</span>));</span><br><span class="line"><span class="keyword">let</span> B = <span class="built_in">require</span>(<span class="string">&#x27;./B&#x27;</span>);</span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(B.<span class="title function_">average</span>(<span class="number">10</span>, <span class="number">20</span>, <span class="number">30</span>, <span class="number">40</span>));</span><br></pre></td></tr></table></figure>
-
-<p>缓存机制</p>
-<p>还是没有实战—27：35</p>
-<h2 id="1-5-ES6Module模块规范"><a href="#1-5-ES6Module模块规范" class="headerlink" title="1.5 ES6Module模块规范"></a>1.5 <strong>ES6Module模块规范</strong></h2><p><a target="_blank" rel="noopener" href="https://es6.ruanyifeng.com/#docs/module">https://es6.ruanyifeng.com/#docs/module</a>  </p>
-<p>可以直接运行在浏览器端；不支持IE；</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line">使用在html文件上时，导入文件前要加入type = <span class="variable language_">module</span>,预览要使用http协议（<span class="title class_">LiveServer</span>），不能使用<span class="title class_">File</span>协议。</span><br><span class="line">模块的导入导出:</span><br><span class="line">  整体来讲，每个模块导出的是一个<span class="title class_">Module</span>对象，我们可以基于 <span class="keyword">export</span>/<span class="keyword">export</span> <span class="keyword">default</span> 为对象中加入导出的内容</span><br><span class="line">    @导出方法<span class="number">1</span> <span class="keyword">export</span> <span class="keyword">default</span> xxx;</span><br><span class="line">      + xxx可以是任意类型值</span><br><span class="line">      + 给<span class="title class_">Module</span>对象新增一个 “<span class="keyword">default</span>” 属性，属性值就是导出的值</span><br><span class="line">      + 在一个模块中，<span class="keyword">export</span> <span class="keyword">default</span>只允许出现一次</span><br><span class="line">    @导出方法<span class="number">2</span> <span class="keyword">export</span> 创建值的表达式（声明变量 = 值）;</span><br><span class="line">      <span class="keyword">let</span> num = <span class="number">10</span>;</span><br><span class="line">      <span class="keyword">export</span> num; <span class="comment">//这样写是错误的</span></span><br><span class="line">      <span class="keyword">export</span> <span class="keyword">let</span> num = <span class="number">10</span>; <span class="comment">//这样写是正确的</span></span><br><span class="line">      ---</span><br><span class="line">      <span class="keyword">let</span> num = <span class="number">10</span>;</span><br><span class="line">      <span class="keyword">export</span> &#123;</span><br><span class="line">        num, <span class="comment">//这样写是可以的</span></span><br><span class="line">        <span class="attr">x</span>:<span class="number">100</span> <span class="comment">//这样写是错误的</span></span><br><span class="line">      &#125;;</span><br><span class="line">      ---</span><br><span class="line">      + <span class="keyword">export</span>可以出现多次，导出多个内容</span><br><span class="line">      + 声明的变量叫啥名字，最后给<span class="title class_">Module</span>对象加入的是同名的属性名，属性值就是变量的值</span><br></pre></td></tr></table></figure>
-
-<h3 id="1-5-2导入方法"><a href="#1-5-2导入方法" class="headerlink" title="1.5.2导入方法"></a>1.5.2导入方法</h3><p>我们会基于 import 方法导入模块「导入模块导出的内容」</p>
-<ul>
-<li>import N from ‘模块地址(在浏览器端不能忽略.js后缀名)’;</li>
-</ul>
-<p>N获取的不是整个导出的Module对象，仅仅获取的是Module中default这一项的值<br> 不能在import期间，直接对N解构赋值，因为涉及解构赋值就会变为另外一种情况</p>
-<ul>
-<li>解构赋值：import {x,y} from ‘模块地址’;</li>
-</ul>
-<p>直接对导出的Module对象中(排除default属性)，导出的内容进行解构赋值</p>
-<ul>
-<li>import * as M from ‘模块地址’;先导入所有导出的内容，赋值给M变量</li>
-</ul>
-<blockquote>
-<p>还是没有细看</p>
-</blockquote>
-
       
     </div>
 
