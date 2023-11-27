@@ -121,18 +121,18 @@
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
         <a href="/archives/">
-          <span class="site-state-item-count">85</span>
+          <span class="site-state-item-count">86</span>
           <span class="site-state-item-name">posts</span>
         </a>
       </div>
       <div class="site-state-item site-state-categories">
           <a href="/categories/">
-        <span class="site-state-item-count">31</span>
+        <span class="site-state-item-count">32</span>
         <span class="site-state-item-name">categories</span></a>
       </div>
       <div class="site-state-item site-state-tags">
           <a href="/tags/">
-        <span class="site-state-item-count">8</span>
+        <span class="site-state-item-count">9</span>
         <span class="site-state-item-name">tags</span></a>
       </div>
   </nav>
@@ -160,6 +160,108 @@
     </div>
 
     <div class="main-inner index posts-expand">
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2023/11/27/%E6%8A%80%E6%9C%AF/%E9%80%9A%E7%94%A8%E7%9F%A5%E8%AF%86/%E7%AE%97%E6%B3%95/Leecode27/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/uploads/cat.jpg">
+      <meta itemprop="name" content="zono">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="ZONO's World">
+      <meta itemprop="description" content="人生长度无法强求,但厚度可以靠努力">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="undefined | ZONO's World">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/2023/11/27/%E6%8A%80%E6%9C%AF/%E9%80%9A%E7%94%A8%E7%9F%A5%E8%AF%86/%E7%AE%97%E6%B3%95/Leecode27/" class="post-title-link" itemprop="url">Leecode27</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">Posted on</span>
+      
+
+      <time title="Created: 2023-11-27 15:43:10 / Modified: 15:52:23" itemprop="dateCreated datePublished" datetime="2023-11-27T15:43:10+08:00">2023-11-27</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">In</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/%E7%94%9F%E6%B4%BB/" itemprop="url" rel="index"><span itemprop="name">生活</span></a>
+        </span>
+          , 
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/%E7%94%9F%E6%B4%BB/%E6%8A%80%E6%9C%AF/" itemprop="url" rel="index"><span itemprop="name">技术</span></a>
+        </span>
+          , 
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/%E7%94%9F%E6%B4%BB/%E6%8A%80%E6%9C%AF/%E7%AE%97%E6%B3%95/" itemprop="url" rel="index"><span itemprop="name">算法</span></a>
+        </span>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <blockquote>
+<p><a target="_blank" rel="noopener" href="https://leetcode.cn/problems/remove-element/description/?envType=study-plan-v2&amp;envId=top-interview-150">https://leetcode.cn/problems/remove-element/description/?envType=study-plan-v2&amp;envId=top-interview-150</a></p>
+<h1 id="题目描述："><a href="#题目描述：" class="headerlink" title="题目描述："></a>题目描述：</h1><p>  给你一个数组 nums 和一个值 val，你需要 原地 移除所有数值等于 val 的元素，并返回移除后数组的新长度。<br>  不要使用额外的数组空间，你必须仅使用 O(1) 额外空间并 原地 修改输入数组。<br>  元素的顺序可以改变。你不需要考虑数组中超出新长度后面的元素。</p>
+<h2 id="说明"><a href="#说明" class="headerlink" title="说明:"></a>说明:</h2><p>  为什么返回数值是整数，但输出的答案是数组呢?</p>
+<p>  请注意，输入数组是以「引用」方式传递的，这意味着在函数里修改输入数组对于调用者是可见的。</p>
+<p>  你可以想象内部操作如下:</p>
+<p>  // nums 是以“引用”方式传递的。也就是说，不对实参作任何拷贝<br>  int len = removeElement(nums, val);</p>
+<p>  // 在函数里修改输入数组对于调用者是可见的。<br>  // 根据你的函数返回的长度, 它会打印出数组中 该长度范围内 的所有元素。<br>  for (int i = 0; i &lt; len; i++) {<br>      print(nums[i]);<br>  }</p>
+</blockquote>
+<p>总体而言，该题并不难,对于js来说，数组的操作足够快速解决该题。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@param</span> &#123;<span class="type">number[]</span>&#125; <span class="variable">nums</span></span></span><br><span class="line"><span class="comment"> * <span class="doctag">@param</span> &#123;<span class="type">number</span>&#125; <span class="variable">val</span></span></span><br><span class="line"><span class="comment"> * <span class="doctag">@return</span> &#123;<span class="type">number</span>&#125;</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">var</span> removeElement = <span class="keyword">function</span> (<span class="params">nums, val</span>) &#123;</span><br><span class="line">    <span class="keyword">while</span> (nums.<span class="title function_">indexOf</span>(val) !== -<span class="number">1</span>) &#123;</span><br><span class="line">        nums.<span class="title function_">splice</span>(nums.<span class="title function_">indexOf</span>(val), <span class="number">1</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+<p>这里用数组对象的两个方法就能快速秒杀，至于了解两个方法可以看<br><a target="_blank" rel="noopener" href="https://www.bookstack.cn/read/javascript-tutorial/docs-stdlib-array.md">https://www.bookstack.cn/read/javascript-tutorial/docs-stdlib-array.md</a><br>阮一峰大佬的文章一直是顶尖的。</p>
+<p>看了官网后知道原来可以用双指针的方法。<br>简单的理解就是一个指针用于处理数据，一个指针用于存储数据。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@param</span> &#123;<span class="type">number[]</span>&#125; <span class="variable">nums</span></span></span><br><span class="line"><span class="comment"> * <span class="doctag">@param</span> &#123;<span class="type">number</span>&#125; <span class="variable">val</span></span></span><br><span class="line"><span class="comment"> * <span class="doctag">@return</span> &#123;<span class="type">number</span>&#125;</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">var</span> removeElement = <span class="keyword">function</span>(<span class="params">nums, val</span>) &#123;</span><br><span class="line">    <span class="keyword">let</span> left = <span class="number">0</span>, right = nums.<span class="property">length</span>;</span><br><span class="line">    <span class="keyword">while</span> (left &lt; right) &#123;</span><br><span class="line">        <span class="keyword">if</span> (nums[left] === val) &#123;</span><br><span class="line">            nums[left] = nums[right - <span class="number">1</span>];</span><br><span class="line">            right--;</span><br><span class="line">        &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">            left++;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> left;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+<p>ps：感觉速度并没有快多少。</p>
+<p>总结：<br>关于数组字符串的问题，在通读完阮一峰的教程后，了解完两种对象的方法后，处理起来是比较迅速的。当然可能影响我考虑到双指针这种不用函数的办法。</p>
+
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
 
     
 
@@ -199,7 +301,7 @@
       <span class="post-meta-item-text">Posted on</span>
       
 
-      <time title="Created: 2023-11-26 11:21:26 / Modified: 16:17:20" itemprop="dateCreated datePublished" datetime="2023-11-26T11:21:26+08:00">2023-11-26</time>
+      <time title="Created: 2023-11-26 11:21:26 / Modified: 21:05:45" itemprop="dateCreated datePublished" datetime="2023-11-26T11:21:26+08:00">2023-11-26</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -232,7 +334,11 @@
           <p>阅读一篇文档时，按照：</p>
 <ul>
 <li>略读</li>
-<li>精度<br>先划分好，以确认精力分配</li>
+<li>精读<br>先划分好，以确认精力分配</li>
+</ul>
+<p>学习须知：</p>
+<ul>
+<li>不要妄想一次就记住，知识都需要重复，所以初学时，以通读理解为主。下次遇见了在细读记忆。</li>
 </ul>
 
       
@@ -1267,102 +1373,6 @@
 <p>深度更常使用</p>
 </blockquote>
 <p>LeeCode102</p>
-
-      
-    </div>
-
-    
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-</div>
-
-
-
-
-    
-
-
-<div class="post-block">
-  
-  
-
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2023/11/25/%E6%8A%80%E6%9C%AF/%E9%80%9A%E7%94%A8%E7%9F%A5%E8%AF%86/%E7%AE%97%E6%B3%95/JS%E7%AE%97%E6%B3%95%E6%80%BB%E7%BB%93/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/uploads/cat.jpg">
-      <meta itemprop="name" content="zono">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="ZONO's World">
-      <meta itemprop="description" content="人生长度无法强求,但厚度可以靠努力">
-    </span>
-
-    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
-      <meta itemprop="name" content="undefined | ZONO's World">
-      <meta itemprop="description" content="">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/2023/11/25/%E6%8A%80%E6%9C%AF/%E9%80%9A%E7%94%A8%E7%9F%A5%E8%AF%86/%E7%AE%97%E6%B3%95/JS%E7%AE%97%E6%B3%95%E6%80%BB%E7%BB%93/" class="post-title-link" itemprop="url">TCP和UDP</a>
-        </h2>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">Posted on</span>
-
-      <time title="Created: 2023-11-25 15:09:54" itemprop="dateCreated datePublished" datetime="2023-11-25T15:09:54+08:00">2023-11-25</time>
-    </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar-check"></i>
-      </span>
-      <span class="post-meta-item-text">Edited on</span>
-      <time title="Modified: 2023-11-24 16:45:38" itemprop="dateModified" datetime="2023-11-24T16:45:38+08:00">2023-11-24</time>
-    </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-folder"></i>
-      </span>
-      <span class="post-meta-item-text">In</span>
-        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/%E6%8A%80%E6%9C%AF/" itemprop="url" rel="index"><span itemprop="name">技术</span></a>
-        </span>
-          , 
-        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/%E6%8A%80%E6%9C%AF/%E7%AE%97%E6%B3%95/" itemprop="url" rel="index"><span itemprop="name">算法</span></a>
-        </span>
-    </span>
-
-  
-</div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          <h1 id="JS算法总结"><a href="#JS算法总结" class="headerlink" title="JS算法总结"></a>JS算法总结</h1><h2 id="链表题"><a href="#链表题" class="headerlink" title="链表题"></a>链表题</h2><ol>
-<li>链表转数组</li>
-</ol>
-<blockquote>
-<p>场景：要使用栈方法时</p>
-</blockquote>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> isPalindrome = <span class="keyword">function</span> (<span class="params">head</span>) &#123;</span><br><span class="line">    <span class="keyword">const</span> vals = [];</span><br><span class="line">    <span class="keyword">while</span> (head !== <span class="literal">null</span>) &#123;</span><br><span class="line">        vals.<span class="title function_">push</span>(head.<span class="property">val</span>)<span class="comment">//压入值,把链表转化为数组</span></span><br><span class="line">        head = head.<span class="property">next</span></span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure>
-
 
       
     </div>
