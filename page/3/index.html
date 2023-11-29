@@ -121,7 +121,7 @@
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
         <a href="/archives/">
-          <span class="site-state-item-count">92</span>
+          <span class="site-state-item-count">91</span>
           <span class="site-state-item-name">posts</span>
         </a>
       </div>
@@ -160,126 +160,6 @@
     </div>
 
     <div class="main-inner index posts-expand">
-
-    
-
-
-<div class="post-block">
-  
-  
-
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2023/11/25/%E4%BA%92%E8%81%94%E7%BD%91/%E5%89%8D%E7%AB%AF/%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/canvas/Canvas/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/uploads/cat.jpg">
-      <meta itemprop="name" content="zono">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="ZONO's World">
-      <meta itemprop="description" content="人生长度无法强求,但厚度可以靠努力">
-    </span>
-
-    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
-      <meta itemprop="name" content="undefined | ZONO's World">
-      <meta itemprop="description" content="">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/2023/11/25/%E4%BA%92%E8%81%94%E7%BD%91/%E5%89%8D%E7%AB%AF/%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/canvas/Canvas/" class="post-title-link" itemprop="url">Canvas</a>
-        </h2>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">Posted on</span>
-
-      <time title="Created: 2023-11-25 15:09:54" itemprop="dateCreated datePublished" datetime="2023-11-25T15:09:54+08:00">2023-11-25</time>
-    </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar-check"></i>
-      </span>
-      <span class="post-meta-item-text">Edited on</span>
-      <time title="Modified: 2023-11-24 16:33:04" itemprop="dateModified" datetime="2023-11-24T16:33:04+08:00">2023-11-24</time>
-    </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-folder"></i>
-      </span>
-      <span class="post-meta-item-text">In</span>
-        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/%E6%8A%80%E6%9C%AF/" itemprop="url" rel="index"><span itemprop="name">技术</span></a>
-        </span>
-          , 
-        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/%E6%8A%80%E6%9C%AF/%E5%89%8D%E7%AB%AF/" itemprop="url" rel="index"><span itemprop="name">前端</span></a>
-        </span>
-          , 
-        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/%E6%8A%80%E6%9C%AF/%E5%89%8D%E7%AB%AF/%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/" itemprop="url" rel="index"><span itemprop="name">基础知识</span></a>
-        </span>
-    </span>
-
-  
-</div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          <h1 id="Canvas"><a href="#Canvas" class="headerlink" title="Canvas"></a>Canvas</h1><ul>
-<li><input checked="" disabled="" type="checkbox"> 入门</li>
-<li><input disabled="" type="checkbox"> 看MDN <a target="_blank" rel="noopener" href="https://developer.mozilla.org/zh-CN/docs/Web/API/Canvas_API/Tutorial">Canvas 教程 - Web API 接口参考 | MDN (mozilla.org)</a></li>
-</ul>
-<blockquote>
-<p>只有两属性width和height，默认300*150</p>
-</blockquote>
-<p>接下来我们就可以利用js，获取渲染上下文，然后在它上面绘制。</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">&lt;script&gt;</span><br><span class="line">    ....</span><br><span class="line">    <span class="comment">// 获取canvas对象</span></span><br><span class="line">    <span class="keyword">const</span> canvas = <span class="variable language_">document</span>.<span class="title function_">getElementById</span>(<span class="string">&#x27;canvas&#x27;</span>)</span><br><span class="line">    <span class="comment">// 获取渲染上下文对象</span></span><br><span class="line">    <span class="keyword">const</span> ctx = canvas.<span class="title function_">getContext</span>(<span class="string">&#x27;2d&#x27;</span>)</span><br><span class="line">    ...</span><br><span class="line">&lt;/script&gt;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-
-<h2 id="Canvas-Api"><a href="#Canvas-Api" class="headerlink" title="Canvas Api"></a>Canvas Api</h2><h3 id="栅格"><a href="#栅格" class="headerlink" title="栅格"></a>栅格</h3><h3 id="绘制图形"><a href="#绘制图形" class="headerlink" title="绘制图形"></a>绘制图形</h3><h4 id="路径（Path）"><a href="#路径（Path）" class="headerlink" title="路径（Path）"></a>路径（Path）</h4><p>主要四个参数</p>
-<ol>
-<li>beginPath</li>
-<li>closePath</li>
-<li>stroke</li>
-<li>fill</li>
-</ol>
-<p>步骤</p>
-<pre><code> 1. 调用beginPath
- 2. 调用目标函数
- 3. 闭合（非必须）
-</code></pre>
-<h4 id="移动笔触（moveTo）"><a href="#移动笔触（moveTo）" class="headerlink" title="移动笔触（moveTo）"></a>移动笔触（moveTo）</h4><h4 id="直线（lineTo）"><a href="#直线（lineTo）" class="headerlink" title="直线（lineTo）"></a>直线（lineTo）</h4><h4 id="三角形（triangle）"><a href="#三角形（triangle）" class="headerlink" title="三角形（triangle）"></a>三角形（triangle）</h4><h4 id="矩形（rect）"><a href="#矩形（rect）" class="headerlink" title="矩形（rect）"></a>矩形（rect）</h4><h4 id="圆形（arc）"><a href="#圆形（arc）" class="headerlink" title="圆形（arc）"></a>圆形（arc）</h4><h3 id="样式、颜色"><a href="#样式、颜色" class="headerlink" title="样式、颜色"></a>样式、颜色</h3><h4 id="色彩（color）"><a href="#色彩（color）" class="headerlink" title="色彩（color）"></a>色彩（color）</h4><h3 id="绘制文本"><a href="#绘制文本" class="headerlink" title="绘制文本"></a>绘制文本</h3><h3 id="操作图片"><a href="#操作图片" class="headerlink" title="操作图片"></a>操作图片</h3><h3 id="动画"><a href="#动画" class="headerlink" title="动画"></a>动画</h3><h3 id="实现动画的步骤"><a href="#实现动画的步骤" class="headerlink" title="实现动画的步骤"></a>实现动画的步骤</h3><blockquote>
-<p><em>清理-&gt;绘制-&gt;清理-&gt;绘制…</em> </p>
-</blockquote>
-<h2 id="实战"><a href="#实战" class="headerlink" title="实战"></a>实战</h2><h3 id="画板"><a href="#画板" class="headerlink" title="画板"></a>画板</h3><h3 id="粒子效果"><a href="#粒子效果" class="headerlink" title="粒子效果"></a>粒子效果</h3><blockquote>
-<p><a target="_blank" rel="noopener" href="https://juejin.cn/post/7160491044222533639">【Canvas实战】仿明日方舟Logo粒子动画 vue3+ts - 掘金 (juejin.cn)</a></p>
-</blockquote>
-
-      
-    </div>
-
-    
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-</div>
-
-
-
 
     
 
@@ -1404,6 +1284,116 @@
 <p><strong>Babel 是一个 JavaScript 编译器。</strong>可以把使用ES6/ES7等“高级”语法编写的Javascript代码转换为ES5/ES3的“通俗”语法（也可以把JSX语法转为Javascript）。</p>
 </blockquote>
 
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2023/11/25/%E4%BA%92%E8%81%94%E7%BD%91/%E5%89%8D%E7%AB%AF/%E4%BC%98%E5%8C%96/%E5%89%8D%E7%AB%AF%E6%80%A7%E8%83%BD%E4%BC%98%E5%8C%96%E6%80%9D%E8%B7%AF/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/uploads/cat.jpg">
+      <meta itemprop="name" content="zono">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="ZONO's World">
+      <meta itemprop="description" content="人生长度无法强求,但厚度可以靠努力">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="undefined | ZONO's World">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/2023/11/25/%E4%BA%92%E8%81%94%E7%BD%91/%E5%89%8D%E7%AB%AF/%E4%BC%98%E5%8C%96/%E5%89%8D%E7%AB%AF%E6%80%A7%E8%83%BD%E4%BC%98%E5%8C%96%E6%80%9D%E8%B7%AF/" class="post-title-link" itemprop="url">前端性能优化思路</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">Posted on</span>
+
+      <time title="Created: 2023-11-25 15:09:54" itemprop="dateCreated datePublished" datetime="2023-11-25T15:09:54+08:00">2023-11-25</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar-check"></i>
+      </span>
+      <span class="post-meta-item-text">Edited on</span>
+      <time title="Modified: 2023-11-24 16:35:19" itemprop="dateModified" datetime="2023-11-24T16:35:19+08:00">2023-11-24</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">In</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/%E6%8A%80%E6%9C%AF/" itemprop="url" rel="index"><span itemprop="name">技术</span></a>
+        </span>
+          , 
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/%E6%8A%80%E6%9C%AF/%E5%89%8D%E7%AB%AF/" itemprop="url" rel="index"><span itemprop="name">前端</span></a>
+        </span>
+          , 
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/%E6%8A%80%E6%9C%AF/%E5%89%8D%E7%AB%AF/%E6%80%A7%E8%83%BD%E4%BC%98%E5%8C%96/" itemprop="url" rel="index"><span itemprop="name">性能优化</span></a>
+        </span>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <h1 id="前端性能优化思路"><a href="#前端性能优化思路" class="headerlink" title="前端性能优化思路"></a>前端性能优化思路</h1><p>浏览器→资源→图片→代码层面</p>
+<p><a target="_blank" rel="noopener" href="https://juejin.cn/post/7029973323475845150">web前端性能优化（全汇总） - 掘金 (juejin.cn)</a></p>
+<h2 id="优化模块"><a href="#优化模块" class="headerlink" title="优化模块"></a>优化模块</h2><h3 id="1-浏览器"><a href="#1-浏览器" class="headerlink" title="1. 浏览器"></a>1. 浏览器</h3><h4 id="1-1-减少HTTP请求"><a href="#1-1-减少HTTP请求" class="headerlink" title="1.1 减少HTTP请求"></a>1.1 减少HTTP请求</h4><blockquote>
+<p>如Chrome浏览器最多同时允许对同一个域名Host建立6个TCP连接，不同的浏览器有所区别，减少http请求也就是减少我们html里css/js等资源的数量</p>
+</blockquote>
+<h4 id="1-2-使用HTTP2-0"><a href="#1-2-使用HTTP2-0" class="headerlink" title="1.2 使用HTTP2.0"></a>1.2 使用HTTP2.0</h4><p>http2.0优势：</p>
+<ol>
+<li>采用二进制格式传输数据, 1.1是文本格式</li>
+<li>对消息头采用Hpack进行压缩传输，能够节省消息头占用的网络流量，1.1每次请求，都会携带大量冗余的头信息，浪费了很多宽带资源</li>
+<li>异步连接多路复用</li>
+<li>Server Push，服务器端能够更快的把资源推送到客户端</li>
+<li>保持与HTTP 1.1语义的向后兼容性也是该版本的一个关键</li>
+</ol>
+<h4 id="1-3-设置浏览器缓存策略"><a href="#1-3-设置浏览器缓存策略" class="headerlink" title="1.3 设置浏览器缓存策略"></a>1.3 设置浏览器缓存策略</h4><h4 id="1-4-白屏时间加载动画"><a href="#1-4-白屏时间加载动画" class="headerlink" title="1.4 白屏时间加载动画"></a>1.4 白屏时间加载动画</h4><p>用户体验</p>
+<h3 id="2-资源"><a href="#2-资源" class="headerlink" title="2. 资源"></a>2. 资源</h3><h4 id="2-1-静态资源CDN"><a href="#2-1-静态资源CDN" class="headerlink" title="2.1 静态资源CDN"></a>2.1 静态资源CDN</h4><h4 id="2-2-静态资源单独域名"><a href="#2-2-静态资源单独域名" class="headerlink" title="2.2 静态资源单独域名"></a>2.2 静态资源单独域名</h4><h4 id="2-3-gzip压缩"><a href="#2-3-gzip压缩" class="headerlink" title="2.3 gzip压缩"></a>2.3 gzip压缩</h4><h4 id="2-4-做服务端渲染（SSR）"><a href="#2-4-做服务端渲染（SSR）" class="headerlink" title="2.4 做服务端渲染（SSR）"></a>2.4 做服务端渲染（SSR）</h4><h4 id="2-5-将CSS放在文件头部，JavaScript文件放在底部"><a href="#2-5-将CSS放在文件头部，JavaScript文件放在底部" class="headerlink" title="2.5 将CSS放在文件头部，JavaScript文件放在底部"></a>2.5 将CSS放在文件头部，JavaScript文件放在底部</h4><blockquote>
+<p>涉及到了浏览器的运行流程了</p>
+</blockquote>
+<h3 id="3-图片"><a href="#3-图片" class="headerlink" title="3. 图片"></a>3. 图片</h3><h4 id="3-1-字体图标代替图片图标"><a href="#3-1-字体图标代替图片图标" class="headerlink" title="3.1 字体图标代替图片图标"></a>3.1 字体图标代替图片图标</h4><h4 id="3-2-精灵图"><a href="#3-2-精灵图" class="headerlink" title="3.2 精灵图"></a>3.2 精灵图</h4><h4 id="3-3-图片懒加载"><a href="#3-3-图片懒加载" class="headerlink" title="3.3 图片懒加载"></a>3.3 图片懒加载</h4><p>金字塔</p>
+<h4 id="3-4-图片预加载"><a href="#3-4-图片预加载" class="headerlink" title="3.4 图片预加载"></a>3.4 图片预加载</h4><h4 id="3-5-使用png格式的图片"><a href="#3-5-使用png格式的图片" class="headerlink" title="3.5 使用png格式的图片"></a>3.5 使用png格式的图片</h4><h4 id="3-6-小于10k的图片可以打包为base64格式"><a href="#3-6-小于10k的图片可以打包为base64格式" class="headerlink" title="3.6 小于10k的图片可以打包为base64格式"></a>3.6 小于10k的图片可以打包为base64格式</h4><h3 id="4-代码"><a href="#4-代码" class="headerlink" title="4. 代码"></a>4. 代码</h3><h4 id="4-1-慎用全局变量"><a href="#4-1-慎用全局变量" class="headerlink" title="4.1 慎用全局变量"></a>4.1 慎用全局变量</h4><h4 id="4-2-缓存全局变量"><a href="#4-2-缓存全局变量" class="headerlink" title="4.2 缓存全局变量"></a>4.2 缓存全局变量</h4><h4 id="4-3-减少重绘回流"><a href="#4-3-减少重绘回流" class="headerlink" title="4.3 减少重绘回流"></a>4.3 减少重绘回流</h4><h4 id="4-4-节流、防抖"><a href="#4-4-节流、防抖" class="headerlink" title="4.4 节流、防抖"></a>4.4 节流、防抖</h4><h4 id="4-5-少用闭包、减少内存泄漏"><a href="#4-5-少用闭包、减少内存泄漏" class="headerlink" title="4.5 少用闭包、减少内存泄漏"></a>4.5 少用闭包、减少内存泄漏</h4><h4 id="4-6-减少数据读取次数"><a href="#4-6-减少数据读取次数" class="headerlink" title="4.6 减少数据读取次数"></a>4.6 减少数据读取次数</h4><h4 id="4-7-文档碎片优化节点添加"><a href="#4-7-文档碎片优化节点添加" class="headerlink" title="4.7 文档碎片优化节点添加"></a>4.7 文档碎片优化节点添加</h4><h4 id="4-8-减少判断层级"><a href="#4-8-减少判断层级" class="headerlink" title="4.8 减少判断层级"></a>4.8 减少判断层级</h4><h4 id="4-9-字面量与构造式"><a href="#4-9-字面量与构造式" class="headerlink" title="4.9 字面量与构造式"></a>4.9 字面量与构造式</h4><h3 id="5-项目方案提议"><a href="#5-项目方案提议" class="headerlink" title="5. 项目方案提议"></a>5. 项目方案提议</h3><h4 id="5-1-长列表优化"><a href="#5-1-长列表优化" class="headerlink" title="5.1 长列表优化"></a>5.1 长列表优化</h4><h4 id="5-2-web-worker"><a href="#5-2-web-worker" class="headerlink" title="5.2 web worker"></a>5.2 web worker</h4><h4 id="5-3-避免-ifarme-嵌套网页"><a href="#5-3-避免-ifarme-嵌套网页" class="headerlink" title="5.3 避免 ifarme 嵌套网页"></a>5.3 避免 ifarme 嵌套网页</h4><h3 id="6-webpack优化"><a href="#6-webpack优化" class="headerlink" title="6.webpack优化"></a>6.webpack优化</h3><h4 id="6-1-减小代码体积"><a href="#6-1-减小代码体积" class="headerlink" title="6.1 减小代码体积"></a>6.1 减小代码体积</h4><h4 id="6-2-按需加载"><a href="#6-2-按需加载" class="headerlink" title="6.2 按需加载"></a>6.2 按需加载</h4><h4 id="6-3-提取第三库代码"><a href="#6-3-提取第三库代码" class="headerlink" title="6.3 提取第三库代码"></a>6.3 提取第三库代码</h4><h4 id="6-4-webpack-dll优化"><a href="#6-4-webpack-dll优化" class="headerlink" title="6.4 webpack dll优化"></a>6.4 webpack dll优化</h4>
       
     </div>
 
