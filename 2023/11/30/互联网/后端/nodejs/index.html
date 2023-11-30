@@ -23,10 +23,10 @@
 <meta property="og:description" content="Node.js概念1.  Nodejs概述一些概念 异步回调  适用场景（优缺点） 不适合用于大型后端要求的项目，图像处理、视频转换等、文件压缩（用Ruby、PHP、python）  使用0.模块导入一般有两种导入办法，commonjs和ESMoudle方法 1.repl2.file node:fs 模块能够以标准 POSIX 函数为模型的方式与文件系统进行交互。 人话：读写文档用的  同步办法同">
 <meta property="og:locale" content="en_US">
 <meta property="article:published_time" content="2023-11-30T06:18:46.000Z">
-<meta property="article:modified_time" content="2023-11-30T08:55:14.988Z">
+<meta property="article:modified_time" content="2023-11-30T09:05:53.210Z">
 <meta property="article:author" content="zono">
-<meta property="article:tag" content="技术">
 <meta property="article:tag" content="技能">
+<meta property="article:tag" content="技术">
 <meta name="twitter:card" content="summary">
 
 
@@ -110,7 +110,7 @@
       <div class="sidebar-panel-container">
         <!--noindex-->
         <div class="post-toc-wrap sidebar-panel">
-            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Node-js"><span class="nav-number">1.</span> <span class="nav-text">Node.js</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%A6%82%E5%BF%B5"><span class="nav-number">1.1.</span> <span class="nav-text">概念</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-Nodejs%E6%A6%82%E8%BF%B0"><span class="nav-number">1.1.1.</span> <span class="nav-text">1.  Nodejs概述</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E4%B8%80%E4%BA%9B%E6%A6%82%E5%BF%B5"><span class="nav-number">1.1.1.1.</span> <span class="nav-text">一些概念</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E9%80%82%E7%94%A8%E5%9C%BA%E6%99%AF%EF%BC%88%E4%BC%98%E7%BC%BA%E7%82%B9%EF%BC%89"><span class="nav-number">1.1.1.2.</span> <span class="nav-text">适用场景（优缺点）</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%BD%BF%E7%94%A8"><span class="nav-number">1.2.</span> <span class="nav-text">使用</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#0-%E6%A8%A1%E5%9D%97%E5%AF%BC%E5%85%A5"><span class="nav-number">1.2.1.</span> <span class="nav-text">0.模块导入</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#1-repl"><span class="nav-number">1.2.2.</span> <span class="nav-text">1.repl</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-file"><span class="nav-number">1.2.3.</span> <span class="nav-text">2.file</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%90%8C%E6%AD%A5%E5%8A%9E%E6%B3%95"><span class="nav-number">1.2.3.1.</span> <span class="nav-text">同步办法</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%BC%82%E6%AD%A5%E5%8A%9E%E6%B3%95"><span class="nav-number">1.2.3.2.</span> <span class="nav-text">异步办法</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-Server"><span class="nav-number">1.2.4.</span> <span class="nav-text">3.Server</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4-Url"><span class="nav-number">1.2.5.</span> <span class="nav-text">4.Url</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#5-%E7%AC%AC%E4%B8%80%E4%B8%AAAPi"><span class="nav-number">1.2.6.</span> <span class="nav-text">5.第一个APi</span></a></li></ol></li></ol></li></ol></div>
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Node-js"><span class="nav-number">1.</span> <span class="nav-text">Node.js</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%A6%82%E5%BF%B5"><span class="nav-number">1.1.</span> <span class="nav-text">概念</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-Nodejs%E6%A6%82%E8%BF%B0"><span class="nav-number">1.1.1.</span> <span class="nav-text">1.  Nodejs概述</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E4%B8%80%E4%BA%9B%E6%A6%82%E5%BF%B5"><span class="nav-number">1.1.1.1.</span> <span class="nav-text">一些概念</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E9%80%82%E7%94%A8%E5%9C%BA%E6%99%AF%EF%BC%88%E4%BC%98%E7%BC%BA%E7%82%B9%EF%BC%89"><span class="nav-number">1.1.1.2.</span> <span class="nav-text">适用场景（优缺点）</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%BD%BF%E7%94%A8"><span class="nav-number">1.2.</span> <span class="nav-text">使用</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#0-%E6%A8%A1%E5%9D%97%E5%AF%BC%E5%85%A5"><span class="nav-number">1.2.1.</span> <span class="nav-text">0.模块导入</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#1-repl"><span class="nav-number">1.2.2.</span> <span class="nav-text">1.repl</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-file"><span class="nav-number">1.2.3.</span> <span class="nav-text">2.file</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%90%8C%E6%AD%A5%E5%8A%9E%E6%B3%95"><span class="nav-number">1.2.3.1.</span> <span class="nav-text">同步办法</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%BC%82%E6%AD%A5%E5%8A%9E%E6%B3%95"><span class="nav-number">1.2.3.2.</span> <span class="nav-text">异步办法</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-Server"><span class="nav-number">1.2.4.</span> <span class="nav-text">3.Server</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4-Url"><span class="nav-number">1.2.5.</span> <span class="nav-text">4.Url</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#5-%E7%AC%AC%E4%B8%80%E4%B8%AAAPi"><span class="nav-number">1.2.6.</span> <span class="nav-text">5.第一个APi</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#6-path%E6%A8%A1%E5%9D%97"><span class="nav-number">1.2.7.</span> <span class="nav-text">6.path模块</span></a></li></ol></li></ol></li></ol></div>
         </div>
         <!--/noindex-->
 
@@ -204,7 +204,7 @@
       <span class="post-meta-item-text">Posted on</span>
       
 
-      <time title="Created: 2023-11-30 14:18:46 / Modified: 16:55:14" itemprop="dateCreated datePublished" datetime="2023-11-30T14:18:46+08:00">2023-11-30</time>
+      <time title="Created: 2023-11-30 14:18:46 / Modified: 17:05:53" itemprop="dateCreated datePublished" datetime="2023-11-30T14:18:46+08:00">2023-11-30</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -259,6 +259,10 @@
 <p>视频的013：9：56</p>
 <p>可以利用同步的缓存来优化文件输出，不用每次都得读一次文件，而是缓存后直接输出。 </p>
 </blockquote>
+<h3 id="6-path模块"><a href="#6-path模块" class="headerlink" title="6.path模块"></a>6.path模块</h3><blockquote>
+<p>对路径操作</p>
+</blockquote>
+<p>path.resolve()</p>
 
     </div>
 
@@ -268,8 +272,8 @@
 
     <footer class="post-footer">
           <div class="post-tags">
-              <a href="/tags/%E6%8A%80%E6%9C%AF/" rel="tag"># 技术</a>
               <a href="/tags/%E6%8A%80%E8%83%BD/" rel="tag"># 技能</a>
+              <a href="/tags/%E6%8A%80%E6%9C%AF/" rel="tag"># 技术</a>
           </div>
 
         
