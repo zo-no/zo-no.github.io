@@ -121,7 +121,7 @@
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
         <a href="/archives/">
-          <span class="site-state-item-count">91</span>
+          <span class="site-state-item-count">94</span>
           <span class="site-state-item-name">posts</span>
         </a>
       </div>
@@ -160,6 +160,418 @@
     </div>
 
     <div class="main-inner index posts-expand">
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2023/11/25/%E4%BA%92%E8%81%94%E7%BD%91/%E5%89%8D%E7%AB%AF/%E5%89%8D%E7%AB%AF%E5%B7%A5%E7%A8%8B%E5%8C%96/Webpack/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/uploads/cat.jpg">
+      <meta itemprop="name" content="zono">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="ZONO's World">
+      <meta itemprop="description" content="人生长度无法强求,但厚度可以靠努力">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="undefined | ZONO's World">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/2023/11/25/%E4%BA%92%E8%81%94%E7%BD%91/%E5%89%8D%E7%AB%AF/%E5%89%8D%E7%AB%AF%E5%B7%A5%E7%A8%8B%E5%8C%96/Webpack/" class="post-title-link" itemprop="url">Webpack「v5.0」</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">Posted on</span>
+
+      <time title="Created: 2023-11-25 15:09:54" itemprop="dateCreated datePublished" datetime="2023-11-25T15:09:54+08:00">2023-11-25</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar-check"></i>
+      </span>
+      <span class="post-meta-item-text">Edited on</span>
+      <time title="Modified: 2023-11-24 16:35:20" itemprop="dateModified" datetime="2023-11-24T16:35:20+08:00">2023-11-24</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">In</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/%E6%8A%80%E6%9C%AF/" itemprop="url" rel="index"><span itemprop="name">技术</span></a>
+        </span>
+          , 
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/%E6%8A%80%E6%9C%AF/%E5%89%8D%E7%AB%AF/" itemprop="url" rel="index"><span itemprop="name">前端</span></a>
+        </span>
+          , 
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/%E6%8A%80%E6%9C%AF/%E5%89%8D%E7%AB%AF/%E5%B7%A5%E7%A8%8B%E5%8C%96/" itemprop="url" rel="index"><span itemprop="name">工程化</span></a>
+        </span>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <h1 id="Webpack「v5-0」"><a href="#Webpack「v5-0」" class="headerlink" title="Webpack「v5.0」"></a>Webpack「v5.0」</h1><blockquote>
+<p><a target="_blank" rel="noopener" href="https://webpack.docschina.org/concepts/">概念 | webpack 中文文档 (docschina.org)</a><br>webpack是一个现代JavaScript应用程序的静态模块打包工具。当webpack处理应用程序时，它会在内部构建一个依赖图(dependency [/dɪˈpendənsi/] graph [/ɡræf/])，此依赖图会映射项目所需的每个模块，并生成一个或多个bundle /ˈbʌndl/ 包！</p>
+</blockquote>
+<h2 id="0-预备知识"><a href="#0-预备知识" class="headerlink" title="0. 预备知识"></a>0. 预备知识</h2><h3 id="0-1-为啥要学webpack？"><a href="#0-1-为啥要学webpack？" class="headerlink" title="0.1 为啥要学webpack？"></a>0.1 为啥要学webpack？</h3><h4 id="0-1-1-性能优化"><a href="#0-1-1-性能优化" class="headerlink" title="0.1.1 性能优化"></a>0.1.1 性能优化</h4><blockquote>
+<p>见性能优化</p>
+</blockquote>
+<p>之前我们在讲前端的时候，我们可以从以下几个方面，去提高页面第一次渲染的速度，以及运行时的性能：</p>
+<figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br></pre></td><td class="code"><pre><span class="line">/* </span><br><span class="line">第一类：明显改善页面第一次加载的速度，减少白屏等待的时间</span><br><span class="line"><span class="code">    @1 使用骨架屏技术</span></span><br><span class="line"><span class="code">     + 服务器骨架屏：页面首屏内容是基于服务器渲染的</span></span><br><span class="line"><span class="code">     + 前端骨架屏：在真实内容渲染出来之前，我们给予相关位置用“色框”占位！(知乎？)</span></span><br><span class="line"><span class="code">    @2 减少HTTP请求的次数和大小</span></span><br><span class="line"><span class="code">     + CSS/JS都要做合并压缩「尽可能合并为一个CSS和一个JS」</span></span><br><span class="line"><span class="code">     + 图片的合并压缩，例如：雪碧图(CSS Sprit)</span></span><br><span class="line"><span class="code">     + 使用图片BASE64来加快图片的渲染！</span></span><br><span class="line"><span class="code">     + 图片一定要做延迟加载</span></span><br><span class="line"><span class="code">     + 使用字体图片和矢量图，来代替位图！！</span></span><br><span class="line"><span class="code">     + 音视频资源也要设置延迟加载「preload=&#x27;none&#x27;」</span></span><br><span class="line"><span class="code">     + 数据的异步加载</span></span><br><span class="line"><span class="code">     + 开启服务器端的GZIP压缩，可以让访问的资源压缩60%+</span></span><br><span class="line"><span class="code">    @3 渲染页面中的优化</span></span><br><span class="line"><span class="code">     + 因为&lt;script&gt;会阻碍GUI渲染，所以：把其放在页面末尾，或者设置async/defer！</span></span><br><span class="line"><span class="code">     + 因为&lt;link&gt;是异步加载CSS资源，所以建议放在页面开始，尽快获取样式资源！！</span></span><br><span class="line"><span class="code">     + 不要使用import导入CSS，因为其会阻碍GUI的渲染！</span></span><br><span class="line"><span class="code">     + 样式代码较少的情况下，使用&lt;style&gt;内嵌式，尤其是移动端开发！</span></span><br><span class="line"><span class="code">    @4 在网络传输中的优化</span></span><br><span class="line"><span class="code">     + 减少cookie的内容大小「因为只要向服务器发送请求，不论服务器是否需要，总会在请求头中把cookie传递给服务器，如果cookie比较大，会让所有的请求都变慢」</span></span><br><span class="line"><span class="code">     + 资源分服务器部署「例如：web服务器、图片服务器、数据服务器」，这样可以降低服务器压力，提高服务器的并发，让资源能更加合理的被利用；但是也会导致DNS解析次数增加，此时可以基于DNS Prefetch来优化DNS解析！！</span></span><br><span class="line"><span class="code">     + 基于HTTP/2.0来代替HTTP/1.1</span></span><br><span class="line"><span class="code">       + 基于新的二进制格式，让传输的内容更加丰富健壮</span></span><br><span class="line"><span class="code">       + header压缩，让传输速度更快(没改就不传)</span></span><br><span class="line"><span class="code">       + 服务端自动推送，可以减少HTTP请求次数</span></span><br><span class="line"><span class="code">       + 多路复用，让传输速度更快，避免线头阻塞(UDP)</span></span><br><span class="line"><span class="code">     + 基于Connection:keep-alive保持TCP通道长链接「HTTP/1.1版本会自动开启」</span></span><br><span class="line"><span class="code">     + 开启CDN「地域分布式服务器部署」</span></span><br><span class="line"><span class="code">     + 对于静态资源文件采取“强缓存和协商缓存”，对于不经常更新的数据请求，设置数据缓存！</span></span><br><span class="line"><span class="code">     </span></span><br><span class="line"><span class="code">第二类：提高页面运行时候的性能</span></span><br><span class="line"><span class="code">    @1 减少循环嵌套，降低时间复杂度；避免出现死循环/死递归；</span></span><br><span class="line"><span class="code">    @2 使用事件委托来优化事件绑定，性能可以提高40%+</span></span><br><span class="line"><span class="code">    @3 减少DOM的回流(重排)和重绘</span></span><br><span class="line"><span class="code">     + 样式分离读写「渲染队列机制」</span></span><br><span class="line"><span class="code">     + 批量新增元素「字符串拼接、文档碎片」</span></span><br><span class="line"><span class="code">     + 基于transform/opacity等方式操作样式</span></span><br><span class="line"><span class="code">     + 把需要频繁修改样式的元素(例如：JS实现动画)脱离文档流</span></span><br><span class="line"><span class="code">     + ...</span></span><br><span class="line"><span class="code">    @4 使用函数的防抖和节流处理高频触发操作</span></span><br><span class="line"><span class="code">    @5 合理使用闭包，避免内存泄漏，以及手动释放无用的内存！</span></span><br><span class="line"><span class="code">    @6 减少页面冗余代码，提高代码的重复使用率「也就是尽可能的做封装处理」</span></span><br><span class="line"><span class="code">    @7 尽可能不要使用for/in循环，因为其消耗性能</span></span><br><span class="line"><span class="code">    @8 避免使用eval/with等消耗性能的代码</span></span><br><span class="line"><span class="code">    @9 能用CSS3处理的动画坚决不用JS「JS动画尽可能基于requestAnimationFrame来代替定时器」</span></span><br><span class="line"><span class="code">    @10 避免使用CSS表达式，因为其非常消耗性能</span></span><br><span class="line"><span class="code">    @11 CSS选择器的前缀不要过长「因为CSS选择器渲染是从右到左」</span></span><br><span class="line"><span class="code">    @12 减少table布局「table的渲染是比较消耗性能的」</span></span><br><span class="line"><span class="code">......</span></span><br><span class="line"><span class="code">*/</span></span><br></pre></td></tr></table></figure>
+
+<p>我们</p>
+<h4 id="0-1-2为了兼容、预编译、开发预览"><a href="#0-1-2为了兼容、预编译、开发预览" class="headerlink" title="0.1.2为了兼容、预编译、开发预览"></a>0.1.2为了兼容、预编译、开发预览</h4><ul>
+<li><p>平时开发的时候，一般会使用less/sass/stylus等CSS预编译器「需要基于vscode插件把其编译为CSS」；</p>
+</li>
+<li><p>会直接使用ES6的语法「需要基于babel把其转换为ES5，以此兼容IE」；</p>
+</li>
+<li><p>会给CSS3样式加很多的前缀，以此来处理兼容问题……  </p>
+</li>
+<li><p>我们还会基于vscode中的liveserver插件，创建一个本地web服务器，来预览我们的项目…..<br>我们还要基于各种方案，来解决跨域访问的问题……</p>
+</li>
+</ul>
+<h3 id="0-2-webpack可以帮我们干的事情"><a href="#0-2-webpack可以帮我们干的事情" class="headerlink" title="0.2 webpack可以帮我们干的事情"></a>0.2 webpack可以帮我们干的事情</h3><ul>
+<li>  代码转换：TypeScript编译成JavaScript、LESS/SCSS编译成CSS、ES6/7编译为ES5、虚拟DOM编译为真实的DOM等等…</li>
+<li>  文件优化：压缩JS、CSS、HTML代码，压缩合并图片，图片BASE64等</li>
+<li>  代码分割：提取多个页面的公共代码、提取首屏不需要执行部分的代码等</li>
+<li>  模块合并：把模块分类合并成一个文件</li>
+<li>  自动刷新：创建本地Web服务器，监听本地源代码的变化，自动重新构建，刷新浏览器</li>
+<li>  代码校验：Eslint代码规范校验和检测、单元测试等</li>
+<li>  自动发布：自动构建出线上发布代码并传输给发布系统</li>
+<li>  跨域处理</li>
+<li>……</li>
+</ul>
+<blockquote>
+<p><strong>除了webpack外的其他：</strong></p>
+<ul>
+<li>  grunt(淘汰)</li>
+<li>  gulp(少了、老了)</li>
+<li>  Parcel</li>
+<li>  vite(底层原理是rollup，比webpack快,但兼容不好)</li>
+<li>  rollup</li>
+<li>  Turbopack(据说比webpack快700倍，比vite快10倍)</li>
+<li>  ……</li>
+</ul>
+</blockquote>
+<h4 id="webpack问题"><a href="#webpack问题" class="headerlink" title="webpack问题"></a>webpack<strong>问题</strong></h4><ul>
+<li>项目“比较大”时，由于底层，打包速度比较慢。</li>
+</ul>
+<hr>
+<h2 id="1-webpack打包原理"><a href="#1-webpack打包原理" class="headerlink" title="1.webpack打包原理"></a>1.webpack打包原理</h2><h2 id="2-webpack的基础操作"><a href="#2-webpack的基础操作" class="headerlink" title="2.webpack的基础操作"></a>2.webpack的基础操作</h2><h3 id="安装"><a href="#安装" class="headerlink" title="安装"></a><strong>安装</strong></h3><blockquote>
+<p>为防止全局安装webpack导致版本冲突，真实项目中以本地安装为主<br>弊端：本地安装就需要配置webpack命令<br>npm比较慢建议使用yarn、pnmp</p>
+</blockquote>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">$ npm init -y</span><br><span class="line">$ npm install webpack webpack-cli --save-dev</span><br><span class="line">OR</span><br><span class="line">$ yarn add webpack webpack-cli -D</span><br></pre></td></tr></table></figure>
+
+<h3 id="零配置使用"><a href="#零配置使用" class="headerlink" title="零配置使用"></a><strong>零配置使用</strong></h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">/*</span><br><span class="line"> * 默认会打包SRC目录中的JS文件（入口默认index.js）</span><br><span class="line"> * 打包完成的目录默认是DIST/MAIN.JS</span><br><span class="line"> * webpack默认支持CommonJS和ES6 Module的模块规范，依此进行依赖打包</span><br><span class="line"> */</span><br><span class="line">$ npx webpack</span><br></pre></td></tr></table></figure>
+
+<h3 id="自定义基础配置"><a href="#自定义基础配置" class="headerlink" title="自定义基础配置"></a><strong>自定义基础配置</strong></h3><blockquote>
+<p>webpack.config.js</p>
+</blockquote>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// Node内置的路径处理模块</span></span><br><span class="line"><span class="keyword">const</span> path = <span class="built_in">require</span>(<span class="string">&#x27;path&#x27;</span>);</span><br><span class="line"></span><br><span class="line"><span class="comment">// 导出自定义配置项</span></span><br><span class="line"><span class="variable language_">module</span>.<span class="property">exports</span> = &#123;</span><br><span class="line">    <span class="comment">// 环境模式「生产环境：production   开发环境：development」</span></span><br><span class="line">    <span class="attr">mode</span>: <span class="string">&#x27;production&#x27;</span>,</span><br><span class="line">    <span class="comment">// 打包入口「相对路径」</span></span><br><span class="line">    <span class="attr">entry</span>: <span class="string">&#x27;./src/index.js&#x27;</span>,</span><br><span class="line">    <span class="comment">// 打包出口</span></span><br><span class="line">    <span class="attr">output</span>: &#123;</span><br><span class="line">        <span class="comment">// 生成的文件名. [hash]创建随机哈希值</span></span><br><span class="line">        <span class="attr">filename</span>: <span class="string">&#x27;bundle.[hash].js&#x27;</span>,</span><br><span class="line">        <span class="comment">// 打包地址「绝对路径」</span></span><br><span class="line">        <span class="attr">path</span>: path.<span class="title function_">resolve</span>(__dirname, <span class="string">&#x27;dist&#x27;</span>)</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+
+<h3 id="html-webpack-plugin"><a href="#html-webpack-plugin" class="headerlink" title="html-webpack-plugin"></a><strong>html-webpack-plugin</strong></h3><blockquote>
+<p><a target="_blank" rel="noopener" href="https://www.webpackjs.com/plugins/html-webpack-plugin/">https://www.webpackjs.com/plugins/html-webpack-plugin/</a><br>$ yarn add html-webpack-plugin -D</p>
+</blockquote>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> <span class="title class_">HtmlWebpackPlugin</span> = <span class="built_in">require</span>(<span class="string">&#x27;html-webpack-plugin&#x27;</span>);</span><br><span class="line"><span class="variable language_">module</span>.<span class="property">exports</span> = &#123;</span><br><span class="line">    ...</span><br><span class="line">    <span class="attr">plugins</span>: [</span><br><span class="line">        <span class="keyword">new</span> <span class="title class_">HtmlWebpackPlugin</span>(&#123;</span><br><span class="line">            <span class="comment">// 指定视图模板</span></span><br><span class="line">            <span class="attr">template</span>: <span class="string">&#x27;./public/index.html&#x27;</span>,</span><br><span class="line">            <span class="comment">// 编译后视图的名字</span></span><br><span class="line">            <span class="attr">filename</span>: <span class="string">&#x27;index.html&#x27;</span>,</span><br><span class="line">            <span class="comment">// 是否压缩</span></span><br><span class="line">            <span class="attr">minify</span>: <span class="literal">true</span></span><br><span class="line">        &#125;)</span><br><span class="line">    ]</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="多入口-amp-多出口"><a href="#多入口-amp-多出口" class="headerlink" title="多入口 &amp; 多出口"></a><strong>多入口 &amp; 多出口</strong></h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> <span class="title class_">HtmlWebpackPlugin</span> = <span class="built_in">require</span>(<span class="string">&#x27;html-webpack-plugin&#x27;</span>);</span><br><span class="line"><span class="comment">// HtmlWebpackPlugin需要配置多套</span></span><br><span class="line"><span class="keyword">const</span> htmlPlugins = [<span class="string">&#x27;index&#x27;</span>, <span class="string">&#x27;login&#x27;</span>].<span class="title function_">map</span>(<span class="function"><span class="params">chunk</span> =&gt;</span> &#123;</span><br><span class="line">    <span class="keyword">return</span> <span class="keyword">new</span> <span class="title class_">HtmlWebpackPlugin</span>(&#123;</span><br><span class="line">        <span class="attr">template</span>: <span class="string">`./public/<span class="subst">$&#123;chunk&#125;</span>.html`</span>,</span><br><span class="line">        <span class="attr">filename</span>: <span class="string">`<span class="subst">$&#123;chunk&#125;</span>.html`</span>,</span><br><span class="line">        <span class="comment">// 指定导入的JS</span></span><br><span class="line">        <span class="attr">chunks</span>: [chunk],</span><br><span class="line">        <span class="attr">minify</span>: <span class="literal">true</span></span><br><span class="line">    &#125;);</span><br><span class="line">&#125;);</span><br><span class="line"><span class="variable language_">module</span>.<span class="property">exports</span> = &#123;</span><br><span class="line">    <span class="attr">mode</span>: <span class="string">&#x27;production&#x27;</span>,</span><br><span class="line">    <span class="comment">// 配置多入口</span></span><br><span class="line">    <span class="attr">entry</span>: &#123;</span><br><span class="line">        <span class="attr">index</span>: <span class="string">&quot;./src/index.js&quot;</span>,</span><br><span class="line">        <span class="attr">login</span>: <span class="string">&quot;./src/login.js&quot;</span>,</span><br><span class="line">    &#125;,</span><br><span class="line">    <span class="comment">// 出口采用相同的规则</span></span><br><span class="line">    <span class="attr">output</span>: &#123;</span><br><span class="line">        <span class="attr">filename</span>: <span class="string">&quot;[name].[hash].js&quot;</span>,</span><br><span class="line">        <span class="attr">path</span>: path.<span class="title function_">resolve</span>(__dirname, <span class="string">&quot;dist&quot;</span>)</span><br><span class="line">    &#125;,</span><br><span class="line">    <span class="attr">plugins</span>: [</span><br><span class="line">        ...htmlPlugins</span><br><span class="line">    ]</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+
+<h3 id="clean-webpack-plugin"><a href="#clean-webpack-plugin" class="headerlink" title="clean-webpack-plugin"></a><strong>clean-webpack-plugin</strong></h3><blockquote>
+<p>$ yarn add clean-webpack-plugin -D</p>
+</blockquote>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> &#123; <span class="title class_">CleanWebpackPlugin</span> &#125; = <span class="built_in">require</span>(<span class="string">&#x27;clean-webpack-plugin&#x27;</span>);</span><br><span class="line"><span class="variable language_">module</span>.<span class="property">exports</span> = &#123;</span><br><span class="line">    ...</span><br><span class="line">    <span class="attr">plugins</span>: [</span><br><span class="line">        <span class="keyword">new</span> <span class="title class_">CleanWebpackPlugin</span>()</span><br><span class="line">    ]</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+
+<h3 id="webpack-dev-server"><a href="#webpack-dev-server" class="headerlink" title="webpack-dev-server"></a><strong>webpack-dev-server</strong></h3><blockquote>
+<p><a target="_blank" rel="noopener" href="https://webpack.js.org/configuration/dev-server/">https://webpack.js.org/configuration/dev-server/</a><br>$ yarn add webpack-dev-server -D</p>
+</blockquote>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/* paclage.json */</span></span><br><span class="line"><span class="string">&quot;scripts&quot;</span>: &#123;</span><br><span class="line">   <span class="string">&quot;start&quot;</span>: <span class="string">&quot;webpack server&quot;</span>,</span><br><span class="line">   <span class="string">&quot;build&quot;</span>: <span class="string">&quot;webpack&quot;</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">/* webpack.config.js */</span></span><br><span class="line"><span class="variable language_">module</span>.<span class="property">exports</span> = &#123;</span><br><span class="line">    ... </span><br><span class="line">    <span class="attr">devServer</span>: &#123;</span><br><span class="line">        <span class="comment">// 域名</span></span><br><span class="line">        <span class="attr">host</span>: <span class="string">&#x27;127.0.0.1&#x27;</span>,</span><br><span class="line">        <span class="comment">// 断口号</span></span><br><span class="line">        <span class="attr">port</span>: <span class="number">3000</span>,</span><br><span class="line">        <span class="comment">// GZIP压缩</span></span><br><span class="line">        <span class="attr">compress</span>: <span class="literal">true</span>,</span><br><span class="line">        <span class="comment">// 自动打开浏览器</span></span><br><span class="line">        <span class="attr">open</span>: <span class="literal">true</span>,</span><br><span class="line">        <span class="comment">// 热更新</span></span><br><span class="line">        <span class="attr">hot</span>: <span class="literal">true</span>,</span><br><span class="line">        <span class="comment">// 跨域代理</span></span><br><span class="line">        <span class="attr">proxy</span>: &#123;</span><br><span class="line">            <span class="string">&quot;/jian&quot;</span>: &#123;</span><br><span class="line">                <span class="attr">target</span>: <span class="string">&quot;https://www.jianshu.com/asimov&quot;</span>,</span><br><span class="line">                <span class="attr">changeOrigin</span>: <span class="literal">true</span>,</span><br><span class="line">                <span class="attr">ws</span>: <span class="literal">true</span>,</span><br><span class="line">                <span class="attr">pathRewrite</span>: &#123; <span class="string">&quot;^/jian&quot;</span>: <span class="string">&quot;&quot;</span> &#125;</span><br><span class="line">            &#125;,</span><br><span class="line">            <span class="string">&quot;/zhi&quot;</span>: &#123;</span><br><span class="line">                <span class="attr">target</span>: <span class="string">&quot;https://news-at.zhihu.com/api/4&quot;</span>,</span><br><span class="line">                <span class="attr">changeOrigin</span>: <span class="literal">true</span>,</span><br><span class="line">                <span class="attr">ws</span>: <span class="literal">true</span>,</span><br><span class="line">                <span class="attr">pathRewrite</span>: &#123; <span class="string">&quot;^/zhi&quot;</span>: <span class="string">&quot;&quot;</span> &#125;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br><span class="line"><span class="comment">/* </span></span><br><span class="line"><span class="comment">测试接口 </span></span><br><span class="line"><span class="comment">  简书：</span></span><br><span class="line"><span class="comment">  https://www.jianshu.com/asimov/subscriptions/recommended_collections</span></span><br><span class="line"><span class="comment">  知乎：</span></span><br><span class="line"><span class="comment">  https://news-at.zhihu.com/api/4/news/latest</span></span><br><span class="line"><span class="comment">*/</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="处理样式的loader「加载器」"><a href="#处理样式的loader「加载器」" class="headerlink" title="处理样式的loader「加载器」"></a><strong>处理样式的loader「加载器」</strong></h3><blockquote>
+<p>$ yarn add css-loader style-loader less less-loader autoprefixer postcss-loader -D</p>
+</blockquote>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="variable language_">module</span>.<span class="property">exports</span> = &#123;</span><br><span class="line">    ...</span><br><span class="line">    <span class="comment">/* 配置模块加载器LOADER，执行顺序：从右向左、从下向上 */</span></span><br><span class="line">    <span class="attr">module</span>: &#123;</span><br><span class="line">        <span class="attr">rules</span>: [&#123;</span><br><span class="line">            <span class="attr">test</span>: <span class="regexp">/\.(css|less)$/</span>, <span class="comment">// 基于正则匹配哪些模块需要处理</span></span><br><span class="line">            <span class="attr">use</span>: [</span><br><span class="line">                <span class="string">&quot;style-loader&quot;</span>, <span class="comment">// 把CSS插入到HEAD中</span></span><br><span class="line">                <span class="string">&quot;css-loader&quot;</span>, <span class="comment">// 编译解析@import/URL()这种语法</span></span><br><span class="line">                <span class="string">&quot;postcss-loader&quot;</span>, <span class="comment">// 设置前缀</span></span><br><span class="line">                <span class="string">&quot;less-loader&quot;</span> <span class="comment">// 把LESS编译为CSS</span></span><br><span class="line">            ]</span><br><span class="line">        &#125;]</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+
+<p>postcss.config.js</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="variable language_">module</span>.<span class="property">exports</span> = &#123;</span><br><span class="line">    <span class="attr">plugins</span>: [</span><br><span class="line">        <span class="built_in">require</span>(<span class="string">&#x27;autoprefixer&#x27;</span>)</span><br><span class="line">    ]</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 或者在配置项中直接处理</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="attr">loader</span>: <span class="string">&quot;postcss-loader&quot;</span>,</span><br><span class="line">    <span class="attr">options</span>: &#123;</span><br><span class="line">        <span class="attr">postcssOptions</span>: &#123;</span><br><span class="line">            <span class="attr">plugins</span>: [</span><br><span class="line">                <span class="built_in">require</span>(<span class="string">&#x27;autoprefixer&#x27;</span>)</span><br><span class="line">            ]</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;,</span><br></pre></td></tr></table></figure>
+
+<p>package.json OR .browserslistrc</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// https://github.com/browserslist/browserslist</span></span><br><span class="line"><span class="string">&quot;browserslist&quot;</span>: [</span><br><span class="line">  <span class="string">&quot;&gt; 1%&quot;</span>,</span><br><span class="line">  <span class="string">&quot;last 2 versions&quot;</span>,</span><br><span class="line">  <span class="string">&quot;not dead&quot;</span></span><br><span class="line">]</span><br></pre></td></tr></table></figure>
+
+<h3 id="mini-css-extract-plugin-抽离CSS样式-ˈekstraekt"><a href="#mini-css-extract-plugin-抽离CSS样式-ˈekstraekt" class="headerlink" title="mini-css-extract-plugin 抽离CSS样式 /ˈekstrækt/"></a><strong>mini-css-extract-plugin 抽离CSS样式</strong> /ˈekstrækt/</h3><blockquote>
+<p><a target="_blank" rel="noopener" href="https://www.npmjs.com/package/mini-css-extract-plugin">https://www.npmjs.com/package/mini-css-extract-plugin</a><br>$ yarn add mini-css-extract-plugin -D</p>
+</blockquote>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> <span class="title class_">MiniCssExtractPlugin</span> = <span class="built_in">require</span>(<span class="string">&#x27;mini-css-extract-plugin&#x27;</span>);</span><br><span class="line"><span class="variable language_">module</span>.<span class="property">exports</span> = &#123;</span><br><span class="line">    ...</span><br><span class="line">    <span class="attr">plugins</span>: [</span><br><span class="line">        ...</span><br><span class="line">        <span class="keyword">new</span> <span class="title class_">MiniCssExtractPlugin</span>(&#123;</span><br><span class="line">            <span class="comment">// 设置编译后的文件名字</span></span><br><span class="line">            <span class="attr">filename</span>: <span class="string">&#x27;main.[hash].css&#x27;</span></span><br><span class="line">        &#125;)</span><br><span class="line">    ],</span><br><span class="line">    ...</span><br><span class="line">    <span class="attr">module</span>: &#123;</span><br><span class="line">        <span class="attr">rules</span>: [&#123;</span><br><span class="line">            <span class="attr">test</span>: <span class="regexp">/\.(css|less)$/</span>,</span><br><span class="line">            <span class="attr">use</span>: [</span><br><span class="line">                <span class="comment">// 使用插件中的LOADER代替STYLE方式</span></span><br><span class="line">                <span class="title class_">MiniCssExtractPlugin</span>.<span class="property">loader</span>,</span><br><span class="line">                ...</span><br><span class="line">            ]</span><br><span class="line">        &#125;]</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+
+<h3 id="基于babel实现ES6的转换"><a href="#基于babel实现ES6的转换" class="headerlink" title="基于babel实现ES6的转换"></a><strong>基于babel实现ES6的转换</strong></h3><blockquote>
+<p>$ yarn add babel babel-loader @babel/preset-env @babel/core -D</p>
+<p>$ yarn add @babel/polyfill</p>
+</blockquote>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="variable language_">module</span>.<span class="property">exports</span> = &#123;</span><br><span class="line">    ...</span><br><span class="line">    <span class="attr">module</span>: &#123;</span><br><span class="line">        <span class="attr">rules</span>: [&#123;</span><br><span class="line">            <span class="attr">test</span>: <span class="regexp">/\.js$/</span>,</span><br><span class="line">            <span class="attr">use</span>: [<span class="string">&#x27;babel-loader&#x27;</span>],</span><br><span class="line">            <span class="comment">// 设置编译时忽略的文件和指定编译目录</span></span><br><span class="line">            <span class="attr">include</span>: path.<span class="title function_">resolve</span>(__dirname, <span class="string">&#x27;src&#x27;</span>),</span><br><span class="line">            <span class="attr">exclude</span>: <span class="regexp">/node_modules/</span></span><br><span class="line">        &#125;]</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+
+<p>babel.config.js</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="variable language_">module</span>.<span class="property">exports</span> = &#123;</span><br><span class="line">    <span class="attr">presets</span>: [</span><br><span class="line">        <span class="string">&quot;@babel/preset-env&quot;</span></span><br><span class="line">    ]</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+
+<p>index.js</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> <span class="string">&#x27;@babel/polyfill&#x27;</span>;</span><br></pre></td></tr></table></figure>
+
+<h3 id="设置优化项：压缩CSS-JS"><a href="#设置优化项：压缩CSS-JS" class="headerlink" title="设置优化项：压缩CSS/JS"></a><strong>设置优化项：压缩CSS/JS</strong></h3><blockquote>
+<p>$ yarn add css-minimizer-webpack-plugin terser-webpack-plugin -D</p>
+</blockquote>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> <span class="title class_">TerserPlugin</span> = <span class="built_in">require</span>(<span class="string">&#x27;terser-webpack-plugin&#x27;</span>);</span><br><span class="line"><span class="keyword">const</span> <span class="title class_">CssMinimizerWebpackPlugin</span> = <span class="built_in">require</span>(<span class="string">&#x27;css-minimizer-webpack-plugin&#x27;</span>);</span><br><span class="line"><span class="variable language_">module</span>.<span class="property">exports</span> = &#123;</span><br><span class="line">    <span class="attr">optimization</span>: &#123;</span><br><span class="line">        <span class="comment">// 设置压缩方式</span></span><br><span class="line">        <span class="attr">minimizer</span>: [</span><br><span class="line">            <span class="keyword">new</span> <span class="title class_">CssMinimizerWebpackPlugin</span>(),</span><br><span class="line">            <span class="keyword">new</span> <span class="title class_">TerserPlugin</span>()</span><br><span class="line">        ]</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+
+<h3 id="设置解析器：配置别名"><a href="#设置解析器：配置别名" class="headerlink" title="设置解析器：配置别名"></a><strong>设置解析器：配置别名</strong></h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="variable language_">module</span>.<span class="property">exports</span> = &#123;</span><br><span class="line">    <span class="attr">resolve</span>: &#123;</span><br><span class="line">        <span class="attr">alias</span>: &#123;</span><br><span class="line">            <span class="string">&#x27;@&#x27;</span>: path.<span class="title function_">resolve</span>(__dirname, <span class="string">&#x27;./src&#x27;</span>)</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+
+<h3 id="图片的处理"><a href="#图片的处理" class="headerlink" title="图片的处理"></a><strong>图片的处理</strong></h3><blockquote>
+<p>$ yarn add file-loader url-loader -D</p>
+</blockquote>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line"><span class="variable language_">module</span>.<span class="property">exports</span> = &#123;</span><br><span class="line">    ...</span><br><span class="line">    <span class="attr">module</span>: &#123;</span><br><span class="line">        <span class="attr">rules</span>: [</span><br><span class="line">        ...</span><br><span class="line">        &#123;</span><br><span class="line">            <span class="attr">test</span>: <span class="regexp">/\.(png|jpe?g|gif)$/i</span>,</span><br><span class="line">            <span class="attr">type</span>: <span class="string">&#x27;javascript/auto&#x27;</span>,</span><br><span class="line">            <span class="attr">use</span>: [&#123;</span><br><span class="line">                <span class="comment">// 把指定大小内的图片BASE64</span></span><br><span class="line">                <span class="attr">loader</span>: <span class="string">&#x27;url-loader&#x27;</span>,</span><br><span class="line">                <span class="attr">options</span>: &#123;</span><br><span class="line">                    <span class="attr">limit</span>: <span class="number">200</span> * <span class="number">1024</span>,</span><br><span class="line">                    <span class="attr">esModule</span>: <span class="literal">false</span>,</span><br><span class="line">                    <span class="attr">name</span>: <span class="string">&#x27;images/[name].[hash].[ext]&#x27;</span></span><br><span class="line">                &#125;</span><br><span class="line">            &#125;]</span><br><span class="line">        &#125;]</span><br><span class="line">    &#125;,</span><br><span class="line">    <span class="comment">// 设置打包的最大资源大小</span></span><br><span class="line">    <span class="attr">performance</span>: &#123;</span><br><span class="line">        <span class="attr">maxAssetSize</span>: <span class="number">100</span> * <span class="number">1024</span> * <span class="number">1024</span> * <span class="number">1024</span>,</span><br><span class="line">        <span class="attr">maxEntrypointSize</span>: <span class="number">100</span> * <span class="number">1024</span> * <span class="number">1024</span> * <span class="number">1024</span></span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2023/11/25/%E4%BA%92%E8%81%94%E7%BD%91/%E5%89%8D%E7%AB%AF/%E5%89%8D%E7%AB%AF%E5%B7%A5%E7%A8%8B%E5%8C%96/Babel/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/uploads/cat.jpg">
+      <meta itemprop="name" content="zono">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="ZONO's World">
+      <meta itemprop="description" content="人生长度无法强求,但厚度可以靠努力">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="undefined | ZONO's World">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/2023/11/25/%E4%BA%92%E8%81%94%E7%BD%91/%E5%89%8D%E7%AB%AF/%E5%89%8D%E7%AB%AF%E5%B7%A5%E7%A8%8B%E5%8C%96/Babel/" class="post-title-link" itemprop="url">Babel</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">Posted on</span>
+
+      <time title="Created: 2023-11-25 15:09:54" itemprop="dateCreated datePublished" datetime="2023-11-25T15:09:54+08:00">2023-11-25</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar-check"></i>
+      </span>
+      <span class="post-meta-item-text">Edited on</span>
+      <time title="Modified: 2023-11-24 16:35:21" itemprop="dateModified" datetime="2023-11-24T16:35:21+08:00">2023-11-24</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">In</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/%E6%8A%80%E6%9C%AF/" itemprop="url" rel="index"><span itemprop="name">技术</span></a>
+        </span>
+          , 
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/%E6%8A%80%E6%9C%AF/%E5%89%8D%E7%AB%AF/" itemprop="url" rel="index"><span itemprop="name">前端</span></a>
+        </span>
+          , 
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/%E6%8A%80%E6%9C%AF/%E5%89%8D%E7%AB%AF/%E5%B7%A5%E7%A8%8B%E5%8C%96/" itemprop="url" rel="index"><span itemprop="name">工程化</span></a>
+        </span>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <h1 id=""><a href="#" class="headerlink" title=""></a></h1><blockquote>
+<p><strong>Babel 是一个 JavaScript 编译器。</strong>可以把使用ES6/ES7等“高级”语法编写的Javascript代码转换为ES5/ES3的“通俗”语法（也可以把JSX语法转为Javascript）。</p>
+</blockquote>
+
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2023/11/25/%E4%BA%92%E8%81%94%E7%BD%91/%E5%89%8D%E7%AB%AF/%E4%BC%98%E5%8C%96/%E5%89%8D%E7%AB%AF%E6%80%A7%E8%83%BD%E4%BC%98%E5%8C%96%E6%80%9D%E8%B7%AF/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/uploads/cat.jpg">
+      <meta itemprop="name" content="zono">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="ZONO's World">
+      <meta itemprop="description" content="人生长度无法强求,但厚度可以靠努力">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="undefined | ZONO's World">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/2023/11/25/%E4%BA%92%E8%81%94%E7%BD%91/%E5%89%8D%E7%AB%AF/%E4%BC%98%E5%8C%96/%E5%89%8D%E7%AB%AF%E6%80%A7%E8%83%BD%E4%BC%98%E5%8C%96%E6%80%9D%E8%B7%AF/" class="post-title-link" itemprop="url">前端性能优化思路</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">Posted on</span>
+
+      <time title="Created: 2023-11-25 15:09:54" itemprop="dateCreated datePublished" datetime="2023-11-25T15:09:54+08:00">2023-11-25</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar-check"></i>
+      </span>
+      <span class="post-meta-item-text">Edited on</span>
+      <time title="Modified: 2023-11-24 16:35:19" itemprop="dateModified" datetime="2023-11-24T16:35:19+08:00">2023-11-24</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">In</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/%E6%8A%80%E6%9C%AF/" itemprop="url" rel="index"><span itemprop="name">技术</span></a>
+        </span>
+          , 
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/%E6%8A%80%E6%9C%AF/%E5%89%8D%E7%AB%AF/" itemprop="url" rel="index"><span itemprop="name">前端</span></a>
+        </span>
+          , 
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/%E6%8A%80%E6%9C%AF/%E5%89%8D%E7%AB%AF/%E6%80%A7%E8%83%BD%E4%BC%98%E5%8C%96/" itemprop="url" rel="index"><span itemprop="name">性能优化</span></a>
+        </span>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <h1 id="前端性能优化思路"><a href="#前端性能优化思路" class="headerlink" title="前端性能优化思路"></a>前端性能优化思路</h1><p>浏览器→资源→图片→代码层面</p>
+<p><a target="_blank" rel="noopener" href="https://juejin.cn/post/7029973323475845150">web前端性能优化（全汇总） - 掘金 (juejin.cn)</a></p>
+<h2 id="优化模块"><a href="#优化模块" class="headerlink" title="优化模块"></a>优化模块</h2><h3 id="1-浏览器"><a href="#1-浏览器" class="headerlink" title="1. 浏览器"></a>1. 浏览器</h3><h4 id="1-1-减少HTTP请求"><a href="#1-1-减少HTTP请求" class="headerlink" title="1.1 减少HTTP请求"></a>1.1 减少HTTP请求</h4><blockquote>
+<p>如Chrome浏览器最多同时允许对同一个域名Host建立6个TCP连接，不同的浏览器有所区别，减少http请求也就是减少我们html里css/js等资源的数量</p>
+</blockquote>
+<h4 id="1-2-使用HTTP2-0"><a href="#1-2-使用HTTP2-0" class="headerlink" title="1.2 使用HTTP2.0"></a>1.2 使用HTTP2.0</h4><p>http2.0优势：</p>
+<ol>
+<li>采用二进制格式传输数据, 1.1是文本格式</li>
+<li>对消息头采用Hpack进行压缩传输，能够节省消息头占用的网络流量，1.1每次请求，都会携带大量冗余的头信息，浪费了很多宽带资源</li>
+<li>异步连接多路复用</li>
+<li>Server Push，服务器端能够更快的把资源推送到客户端</li>
+<li>保持与HTTP 1.1语义的向后兼容性也是该版本的一个关键</li>
+</ol>
+<h4 id="1-3-设置浏览器缓存策略"><a href="#1-3-设置浏览器缓存策略" class="headerlink" title="1.3 设置浏览器缓存策略"></a>1.3 设置浏览器缓存策略</h4><h4 id="1-4-白屏时间加载动画"><a href="#1-4-白屏时间加载动画" class="headerlink" title="1.4 白屏时间加载动画"></a>1.4 白屏时间加载动画</h4><p>用户体验</p>
+<h3 id="2-资源"><a href="#2-资源" class="headerlink" title="2. 资源"></a>2. 资源</h3><h4 id="2-1-静态资源CDN"><a href="#2-1-静态资源CDN" class="headerlink" title="2.1 静态资源CDN"></a>2.1 静态资源CDN</h4><h4 id="2-2-静态资源单独域名"><a href="#2-2-静态资源单独域名" class="headerlink" title="2.2 静态资源单独域名"></a>2.2 静态资源单独域名</h4><h4 id="2-3-gzip压缩"><a href="#2-3-gzip压缩" class="headerlink" title="2.3 gzip压缩"></a>2.3 gzip压缩</h4><h4 id="2-4-做服务端渲染（SSR）"><a href="#2-4-做服务端渲染（SSR）" class="headerlink" title="2.4 做服务端渲染（SSR）"></a>2.4 做服务端渲染（SSR）</h4><h4 id="2-5-将CSS放在文件头部，JavaScript文件放在底部"><a href="#2-5-将CSS放在文件头部，JavaScript文件放在底部" class="headerlink" title="2.5 将CSS放在文件头部，JavaScript文件放在底部"></a>2.5 将CSS放在文件头部，JavaScript文件放在底部</h4><blockquote>
+<p>涉及到了浏览器的运行流程了</p>
+</blockquote>
+<h3 id="3-图片"><a href="#3-图片" class="headerlink" title="3. 图片"></a>3. 图片</h3><h4 id="3-1-字体图标代替图片图标"><a href="#3-1-字体图标代替图片图标" class="headerlink" title="3.1 字体图标代替图片图标"></a>3.1 字体图标代替图片图标</h4><h4 id="3-2-精灵图"><a href="#3-2-精灵图" class="headerlink" title="3.2 精灵图"></a>3.2 精灵图</h4><h4 id="3-3-图片懒加载"><a href="#3-3-图片懒加载" class="headerlink" title="3.3 图片懒加载"></a>3.3 图片懒加载</h4><p>金字塔</p>
+<h4 id="3-4-图片预加载"><a href="#3-4-图片预加载" class="headerlink" title="3.4 图片预加载"></a>3.4 图片预加载</h4><h4 id="3-5-使用png格式的图片"><a href="#3-5-使用png格式的图片" class="headerlink" title="3.5 使用png格式的图片"></a>3.5 使用png格式的图片</h4><h4 id="3-6-小于10k的图片可以打包为base64格式"><a href="#3-6-小于10k的图片可以打包为base64格式" class="headerlink" title="3.6 小于10k的图片可以打包为base64格式"></a>3.6 小于10k的图片可以打包为base64格式</h4><h3 id="4-代码"><a href="#4-代码" class="headerlink" title="4. 代码"></a>4. 代码</h3><h4 id="4-1-慎用全局变量"><a href="#4-1-慎用全局变量" class="headerlink" title="4.1 慎用全局变量"></a>4.1 慎用全局变量</h4><h4 id="4-2-缓存全局变量"><a href="#4-2-缓存全局变量" class="headerlink" title="4.2 缓存全局变量"></a>4.2 缓存全局变量</h4><h4 id="4-3-减少重绘回流"><a href="#4-3-减少重绘回流" class="headerlink" title="4.3 减少重绘回流"></a>4.3 减少重绘回流</h4><h4 id="4-4-节流、防抖"><a href="#4-4-节流、防抖" class="headerlink" title="4.4 节流、防抖"></a>4.4 节流、防抖</h4><h4 id="4-5-少用闭包、减少内存泄漏"><a href="#4-5-少用闭包、减少内存泄漏" class="headerlink" title="4.5 少用闭包、减少内存泄漏"></a>4.5 少用闭包、减少内存泄漏</h4><h4 id="4-6-减少数据读取次数"><a href="#4-6-减少数据读取次数" class="headerlink" title="4.6 减少数据读取次数"></a>4.6 减少数据读取次数</h4><h4 id="4-7-文档碎片优化节点添加"><a href="#4-7-文档碎片优化节点添加" class="headerlink" title="4.7 文档碎片优化节点添加"></a>4.7 文档碎片优化节点添加</h4><h4 id="4-8-减少判断层级"><a href="#4-8-减少判断层级" class="headerlink" title="4.8 减少判断层级"></a>4.8 减少判断层级</h4><h4 id="4-9-字面量与构造式"><a href="#4-9-字面量与构造式" class="headerlink" title="4.9 字面量与构造式"></a>4.9 字面量与构造式</h4><h3 id="5-项目方案提议"><a href="#5-项目方案提议" class="headerlink" title="5. 项目方案提议"></a>5. 项目方案提议</h3><h4 id="5-1-长列表优化"><a href="#5-1-长列表优化" class="headerlink" title="5.1 长列表优化"></a>5.1 长列表优化</h4><h4 id="5-2-web-worker"><a href="#5-2-web-worker" class="headerlink" title="5.2 web worker"></a>5.2 web worker</h4><h4 id="5-3-避免-ifarme-嵌套网页"><a href="#5-3-避免-ifarme-嵌套网页" class="headerlink" title="5.3 避免 ifarme 嵌套网页"></a>5.3 避免 ifarme 嵌套网页</h4><h3 id="6-webpack优化"><a href="#6-webpack优化" class="headerlink" title="6.webpack优化"></a>6.webpack优化</h3><h4 id="6-1-减小代码体积"><a href="#6-1-减小代码体积" class="headerlink" title="6.1 减小代码体积"></a>6.1 减小代码体积</h4><h4 id="6-2-按需加载"><a href="#6-2-按需加载" class="headerlink" title="6.2 按需加载"></a>6.2 按需加载</h4><h4 id="6-3-提取第三库代码"><a href="#6-3-提取第三库代码" class="headerlink" title="6.3 提取第三库代码"></a>6.3 提取第三库代码</h4><h4 id="6-4-webpack-dll优化"><a href="#6-4-webpack-dll优化" class="headerlink" title="6.4 webpack dll优化"></a>6.4 webpack dll优化</h4>
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
 
     
 
@@ -996,323 +1408,6 @@
 <p>**setInterval()**在播放动画的时，每隔一定时间就调用函数，方法或对象</p>
 <p>用处：节流、防抖</p>
 <h2 id="回调函数"><a href="#回调函数" class="headerlink" title="回调函数"></a>回调函数</h2><h2 id="promise"><a href="#promise" class="headerlink" title="promise"></a>promise</h2>
-      
-    </div>
-
-    
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-</div>
-
-
-
-
-    
-
-
-<div class="post-block">
-  
-  
-
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2023/11/24/%E7%94%9F%E6%B4%BB/%E4%B8%AA%E4%BA%BA%E6%8F%90%E5%8D%87/blog%E4%BC%98%E5%8C%96%E8%AE%B0%E5%BD%9502/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/uploads/cat.jpg">
-      <meta itemprop="name" content="zono">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="ZONO's World">
-      <meta itemprop="description" content="人生长度无法强求,但厚度可以靠努力">
-    </span>
-
-    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
-      <meta itemprop="name" content="undefined | ZONO's World">
-      <meta itemprop="description" content="">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/2023/11/24/%E7%94%9F%E6%B4%BB/%E4%B8%AA%E4%BA%BA%E6%8F%90%E5%8D%87/blog%E4%BC%98%E5%8C%96%E8%AE%B0%E5%BD%9502/" class="post-title-link" itemprop="url">blog优化记录02</a>
-        </h2>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">Posted on</span>
-      
-
-      <time title="Created: 2023-11-24 15:31:05 / Modified: 16:05:49" itemprop="dateCreated datePublished" datetime="2023-11-24T15:31:05+08:00">2023-11-24</time>
-    </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-folder"></i>
-      </span>
-      <span class="post-meta-item-text">In</span>
-        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/%E7%94%9F%E6%B4%BB/" itemprop="url" rel="index"><span itemprop="name">生活</span></a>
-        </span>
-          , 
-        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/%E7%94%9F%E6%B4%BB/%E4%B8%AA%E4%BA%BA%E6%8F%90%E5%8D%87/" itemprop="url" rel="index"><span itemprop="name">个人提升</span></a>
-        </span>
-    </span>
-
-  
-</div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          <p>又花了不少时间优化了blog。下面是优化的几个点。</p>
-<ul>
-<li>优化了分类</li>
-</ul>
-<blockquote>
-<p>你可能会疑惑，我为什么把blog优化当成个人提升，因为我认为blog分类等过程就是把自己的人生进行解构的过程</p>
-</blockquote>
-<ul>
-<li>把已有文章简单的分类</li>
-</ul>
-<p>一些遗憾：</p>
-<p>blog模板本身有些交互有些差强人意，以后动一下底层吧</p>
-<ul>
-<li>把以前的文章整合了一下</li>
-</ul>
-
-      
-    </div>
-
-    
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-</div>
-
-
-
-
-    
-
-
-<div class="post-block">
-  
-  
-
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2023/11/24/%E4%BA%92%E8%81%94%E7%BD%91/%E5%89%8D%E7%AB%AF/%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/JavaScript%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E7%9F%A5%E8%AF%86%E7%82%B9%E4%B8%B2%E8%81%94/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/uploads/cat.jpg">
-      <meta itemprop="name" content="zono">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="ZONO's World">
-      <meta itemprop="description" content="人生长度无法强求,但厚度可以靠努力">
-    </span>
-
-    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
-      <meta itemprop="name" content="undefined | ZONO's World">
-      <meta itemprop="description" content="">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/2023/11/24/%E4%BA%92%E8%81%94%E7%BD%91/%E5%89%8D%E7%AB%AF/%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/JavaScript%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E7%9F%A5%E8%AF%86%E7%82%B9%E4%B8%B2%E8%81%94/" class="post-title-link" itemprop="url">JavaScript面向对象知识点串联</a>
-        </h2>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">Posted on</span>
-      
-
-      <time title="Created: 2023-11-24 13:17:08 / Modified: 16:33:50" itemprop="dateCreated datePublished" datetime="2023-11-24T13:17:08+08:00">2023-11-24</time>
-    </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-folder"></i>
-      </span>
-      <span class="post-meta-item-text">In</span>
-        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/%E6%8A%80%E6%9C%AF/" itemprop="url" rel="index"><span itemprop="name">技术</span></a>
-        </span>
-          , 
-        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/%E6%8A%80%E6%9C%AF/%E5%89%8D%E7%AB%AF/" itemprop="url" rel="index"><span itemprop="name">前端</span></a>
-        </span>
-          , 
-        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/%E6%8A%80%E6%9C%AF/%E5%89%8D%E7%AB%AF/JavaScript%E5%9F%BA%E7%A1%80/" itemprop="url" rel="index"><span itemprop="name">JavaScript基础</span></a>
-        </span>
-    </span>
-
-  
-</div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          <h1 id="JavaScript面向对象知识点串联"><a href="#JavaScript面向对象知识点串联" class="headerlink" title="JavaScript面向对象知识点串联"></a>JavaScript面向对象知识点串联</h1><blockquote>
-<p>本文我会尽可能的把面试有关的问题都加入进来，并把之前刚开始理解这个概念不懂的踩坑的地方告诉大家。</p>
-</blockquote>
-<h4 id="面试问题"><a href="#面试问题" class="headerlink" title="面试问题"></a>面试问题</h4><ol>
-<li>解释一下原型链</li>
-<li>instanceof的原理</li>
-<li>typeof的相关问题</li>
-<li>new的原理</li>
-<li>this指向问题</li>
-<li>任何有关bind、call、apply的问题</li>
-</ol>
-<h4 id="前置知识"><a href="#前置知识" class="headerlink" title="前置知识"></a>前置知识</h4><p>要理解原型链，那我们就得先理解<a target="_blank" rel="noopener" href="https://blog.csdn.net/weixin_51201930/article/details/122652397">什么是面向对象，它的三个基本特征：封装、继承、多态_</a></p>
-<p>而原型链便是JavaScript实现面向对象的一种方式。</p>
-<h2 id="原型和原型链的理解"><a href="#原型和原型链的理解" class="headerlink" title="原型和原型链的理解"></a>原型和原型链的理解</h2><h3 id="原型和面向编程"><a href="#原型和面向编程" class="headerlink" title="原型和面向编程"></a>原型和面向编程</h3><p>相信很多同学都或多或少的接触过一定面向对象编程，也清楚的知道面向对象对于编程开发的重要性，那为什么到了JavaScript，我们说到面向对象就得说到原型呢？</p>
-<p>这要从JavaScript的源头说起。JavaScript是一种动态类型语言，区别于c++和Java，它实现继承的方法并不是靠类，而是靠原型。</p>
-<blockquote>
-<p>你可能会说ES6中不是有类吗？</p>
-<p>其实不然，ES6中的类并不是原生支持的类，而是一个语法糖，这也是为什么再使用ES6时，我们需要一些工具来将ES6转换为ES5，其实，底层逻辑是不一样的（你可能吐槽为什么JavaScript要去模仿那些静态语言，额，我也喜欢吐槽typescript，哈哈哈）</p>
-</blockquote>
-<h3 id="话归原题，那到底什么是原型和原型链呢？"><a href="#话归原题，那到底什么是原型和原型链呢？" class="headerlink" title="话归原题，那到底什么是原型和原型链呢？"></a>话归原题，那到底什么是原型和原型链呢？</h3><p>其实理解时，我们便可以把原型认为是类，但JavaScript是一种动态类型语言，所以原型的使用比类灵活许多。</p>
-<p>这样说可能不太容易理解，让我们先把原型和类的模型构建出来。</p>
-<p>这里得先提到JavaScript是如何创建对象的，先提出几个名词 <code>构造函数</code>、<code>__proto__</code>和<code>prototype</code>。</p>
-<p>pass</p>
-<p>（日后完善）</p>
-<p>让我们打开浏览器，按一下<code>f12</code>，再控制台中输入<code>Object()</code>,回车。我们就能看见一个空的对象。</p>
-<p><img src="D:\workspace\blog\myblog\source-img\技术\前端\image-20231124134648166.png" alt="image-20231124134648166"></p>
-<p>这就是JavaScript对象的结构了。</p>
-<p>我们先看一下重点，第一个<code>prototype</code>就是我们一直提到的原型，那为什么又要提到原型链呢？我们又来点开<code>__proto__</code>，我们可以看见</p>
-<p><img src="C:\Users\27421\AppData\Roaming\Typora\typora-user-images\image-20231124135440074.png" alt="image-20231124135440074"></p>
-<blockquote>
-<p><strong>原型链</strong>中就是<strong>实例对象</strong>和<strong>原型对象</strong>之间的链接</p>
-</blockquote>
-<p>原型（prototype，《高达00》曲</p>
-<p>array原型，</p>
-<p>基于原型和基于类</p>
-
-      
-    </div>
-
-    
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-</div>
-
-
-
-
-    
-
-
-<div class="post-block">
-  
-  
-
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2023/11/23/%E7%94%9F%E6%B4%BB/%E6%80%9D%E8%80%83/%E7%BE%8E%E5%B0%B1%E6%98%AF%E7%A7%A9%E5%BA%8F%E5%92%8C%E6%B7%B7%E4%B9%B1%E7%9A%84%E8%A7%92%E9%80%90/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/uploads/cat.jpg">
-      <meta itemprop="name" content="zono">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="ZONO's World">
-      <meta itemprop="description" content="人生长度无法强求,但厚度可以靠努力">
-    </span>
-
-    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
-      <meta itemprop="name" content="undefined | ZONO's World">
-      <meta itemprop="description" content="">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/2023/11/23/%E7%94%9F%E6%B4%BB/%E6%80%9D%E8%80%83/%E7%BE%8E%E5%B0%B1%E6%98%AF%E7%A7%A9%E5%BA%8F%E5%92%8C%E6%B7%B7%E4%B9%B1%E7%9A%84%E8%A7%92%E9%80%90/" class="post-title-link" itemprop="url">美就是秩序和混乱的角逐</a>
-        </h2>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">Posted on</span>
-
-      <time title="Created: 2023-11-23 23:01:22" itemprop="dateCreated datePublished" datetime="2023-11-23T23:01:22+08:00">2023-11-23</time>
-    </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar-check"></i>
-      </span>
-      <span class="post-meta-item-text">Edited on</span>
-      <time title="Modified: 2023-11-24 16:11:57" itemprop="dateModified" datetime="2023-11-24T16:11:57+08:00">2023-11-24</time>
-    </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-folder"></i>
-      </span>
-      <span class="post-meta-item-text">In</span>
-        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/%E7%94%9F%E6%B4%BB/" itemprop="url" rel="index"><span itemprop="name">生活</span></a>
-        </span>
-          , 
-        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/%E7%94%9F%E6%B4%BB/%E6%80%9D%E8%80%83/" itemprop="url" rel="index"><span itemprop="name">思考</span></a>
-        </span>
-          , 
-        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/%E7%94%9F%E6%B4%BB/%E6%80%9D%E8%80%83/%E5%85%B3%E4%BA%8E%E7%BE%8E/" itemprop="url" rel="index"><span itemprop="name">关于美</span></a>
-        </span>
-    </span>
-
-  
-</div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          <p>自从我对名叫”意义“的问题有了答案后，便更多的思考起了关于美的定义的问题。</p>
-<p>最近有一点小感悟，我觉得美的存在就在于混乱和秩序的守恒。</p>
-<p>拿照片举例子，拍摄时我们要寻找构图，从眼前混乱的景物中寻找一些规律，那些常说的三分法构图、人物要处于照片的什么位置比较好等待，这便是秩序；不过过分注重构图反而会丢失一些东西——暂且叫做信息，比如你看见单纯没有什么特别组合的色块，就会感觉乏味。</p>
-<p>不过这个世界上大部分情况都是熵增的，我们更多是面临混乱的问题，所以人们更多的做的是寻找秩序。其实这点不难理解，人类的生存机制便决定了这一点，创造终究是单线程，所以可以靠秩序把尽可能多的机械化的行为内化交给非创造用的管理系统，就可以帮我们节约很多时间。就像，到点就饿、到时就醒一样。</p>
-<p>同时秩序也会给人安定感。比如：这个社会上不确定因素太多，而又有部分确定的东西，简单举一些例子，机遇与努力、自由和法律·····我们再黑暗的可能有野兽的树林会因为陌生而恐惧，但再钢筋混凝土的灯光下，有着秩序守护就无需过多担心这些。</p>
-<p>越来越发现很多东西都是可以抽象出来的。就比如这个“美就是秩序和混乱的角逐”。回头抽时间好好写一篇关于抽象的想法，把如今对于美的体悟总结一番。</p>
-<p>（不知道这篇算不算通顺）</p>
-
       
     </div>
 
