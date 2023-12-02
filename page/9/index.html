@@ -121,7 +121,7 @@
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
         <a href="/archives/">
-          <span class="site-state-item-count">96</span>
+          <span class="site-state-item-count">97</span>
           <span class="site-state-item-name">posts</span>
         </a>
       </div>
@@ -160,6 +160,147 @@
     </div>
 
     <div class="main-inner index posts-expand">
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2023/04/08/%E4%BA%92%E8%81%94%E7%BD%91/%E9%80%9A%E7%94%A8%E6%8A%80%E6%9C%AF/%E8%BF%90%E7%BB%B4/Linux%E7%9A%84%E5%AD%A6%E4%B9%A0/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/uploads/cat.jpg">
+      <meta itemprop="name" content="zono">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="ZONO's World">
+      <meta itemprop="description" content="人生长度无法强求,但厚度可以靠努力">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="undefined | ZONO's World">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/2023/04/08/%E4%BA%92%E8%81%94%E7%BD%91/%E9%80%9A%E7%94%A8%E6%8A%80%E6%9C%AF/%E8%BF%90%E7%BB%B4/Linux%E7%9A%84%E5%AD%A6%E4%B9%A0/" class="post-title-link" itemprop="url">Linux的学习</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">Posted on</span>
+
+      <time title="Created: 2023-04-08 20:07:02" itemprop="dateCreated datePublished" datetime="2023-04-08T20:07:02+08:00">2023-04-08</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar-check"></i>
+      </span>
+      <span class="post-meta-item-text">Edited on</span>
+      <time title="Modified: 2023-11-24 16:52:34" itemprop="dateModified" datetime="2023-11-24T16:52:34+08:00">2023-11-24</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">In</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/%E6%8A%80%E6%9C%AF/" itemprop="url" rel="index"><span itemprop="name">技术</span></a>
+        </span>
+          , 
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/%E6%8A%80%E6%9C%AF/%E8%BF%90%E7%BB%B4/" itemprop="url" rel="index"><span itemprop="name">运维</span></a>
+        </span>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <ul>
+<li>技术</li>
+</ul>
+<hr>
+<h1 id="作业"><a href="#作业" class="headerlink" title="作业"></a>作业</h1><h2 id="输入三个数然后排序"><a href="#输入三个数然后排序" class="headerlink" title="输入三个数然后排序"></a>输入三个数然后排序</h2><p>使用的是三个if..else模拟冒泡排序法</p>
+<pre>#!/bin/bash
+# read -p "PROMPT MWSSAGE"VARIABLE:PROMPT MWSSAGE是提示用户的信息
+read -p "输入：" a1 a2 a3
+
+# 模拟冒泡循环
+# 排序if[condition-is-true]
+if [ $a1 -gt $a2 ]; then
+# -gt是大于的意思
+        temp=$a1
+        a1=$a2
+        a2=$temp
+fi
+if [ $a2 -gt $a3 ]; then
+        tamp=$a2
+        a2=$a3
+        a3=$temp
+fi
+if [ $a1 -gt $a2 ]; then
+        temp=$a1
+        a1=$a2
+        a2=$temp
+fi
+        echo "升序：$a1 $a2 $a3"
+        echo "降序：$a3 $a2 $a1"                        
+</pre>
+
+<h2 id="100以内奇数偶数分类"><a href="#100以内奇数偶数分类" class="headerlink" title="100以内奇数偶数分类"></a>100以内奇数偶数分类</h2><pre>
+#!/bin/bash
+
+echo "奇数  偶数"
+sum=0
+for i in {1..100}
+do
+    if [ $((i%2)) -eq 0 ]
+    then
+        echo "  $i"
+    else
+        echo -e "$i \c "
+        if [ $i -le 10 ]
+        then
+            sum=$((sum+i))
+        fi
+    fi
+done
+echo "前10行数字的和为: $sum"
+</pre>
+
+<h3 id="awk版"><a href="#awk版" class="headerlink" title="awk版"></a>awk版</h3><h1 id="awk学习"><a href="#awk学习" class="headerlink" title="awk学习"></a>awk学习</h1><h1 id="问答区"><a href="#问答区" class="headerlink" title="问答区"></a>问答区</h1><h2 id="一、vim命令的个别按键的区别"><a href="#一、vim命令的个别按键的区别" class="headerlink" title="一、vim命令的个别按键的区别"></a>一、vim命令的个别按键的区别</h2><p>1.i命令用于在光标所在位置插入文本。(常用)<br>2.c命令用于删除一段文本并进入插入模式(是修改文本)</p>
+
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
 
     
 
@@ -1009,97 +1150,6 @@ finally:
 <h2 id="2、课外"><a href="#2、课外" class="headerlink" title="2、课外"></a>2、课外</h2><p>1、爬虫的尝试</p>
 <p>2、阅读最顶尖的12给IT行业技能<a target="_blank" rel="noopener" href="https://blog.csdn.net/lch614730/article/details/12572553">https://blog.csdn.net/lch614730/article/details/12572553</a></p>
 <h1 id="生活流水账"><a href="#生活流水账" class="headerlink" title="生活流水账"></a>生活流水账</h1><p>上午常规的上课，下午去参加了和平精英的开发者沙龙，第一次知道国内也有在研究开发引擎，不过作为一个纯小白，顶多只能在大佬间浑水摸鱼了。<br>活动后的自由交流，居然发现上台分享的大佬是我们学长，缘妙不可言。<br>再就是认识了同为游戏爱好者的人大研究生学长和与好久不见的兄弟聚餐。</p>
-
-      
-    </div>
-
-    
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-</div>
-
-
-
-
-    
-
-
-<div class="post-block">
-  
-  
-
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2023/03/29/%E7%94%9F%E6%B4%BB/%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%95/%E5%AD%A6%E4%B9%A0006/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/uploads/cat.jpg">
-      <meta itemprop="name" content="zono">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="ZONO's World">
-      <meta itemprop="description" content="人生长度无法强求,但厚度可以靠努力">
-    </span>
-
-    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
-      <meta itemprop="name" content="undefined | ZONO's World">
-      <meta itemprop="description" content="">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/2023/03/29/%E7%94%9F%E6%B4%BB/%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%95/%E5%AD%A6%E4%B9%A0006/" class="post-title-link" itemprop="url">zono的学习日志006</a>
-        </h2>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">Posted on</span>
-
-      <time title="Created: 2023-03-29 19:42:19" itemprop="dateCreated datePublished" datetime="2023-03-29T19:42:19+08:00">2023-03-29</time>
-    </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar-check"></i>
-      </span>
-      <span class="post-meta-item-text">Edited on</span>
-      <time title="Modified: 2023-11-24 15:49:45" itemprop="dateModified" datetime="2023-11-24T15:49:45+08:00">2023-11-24</time>
-    </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-folder"></i>
-      </span>
-      <span class="post-meta-item-text">In</span>
-        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/%E7%94%9F%E6%B4%BB/" itemprop="url" rel="index"><span itemprop="name">生活</span></a>
-        </span>
-          , 
-        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/%E7%94%9F%E6%B4%BB/%E7%94%9F%E6%B4%BB%E8%AE%B0%E5%BD%95/" itemprop="url" rel="index"><span itemprop="name">生活记录</span></a>
-        </span>
-    </span>
-
-  
-</div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          <h1 id="阅读"><a href="#阅读" class="headerlink" title="阅读"></a>阅读</h1><p>1、心理学导论阅读到104.（共765）。</p>
-<h1 id="学习"><a href="#学习" class="headerlink" title="学习"></a>学习</h1><p>1、初次接触6级阅读，没太读懂，好在我勾画的生词都是答案上记录了的。（正确率感人）</p>
-<h1 id="生活"><a href="#生活" class="headerlink" title="生活"></a>生活</h1><p>1、体能恢复计划。</p>
 
       
     </div>

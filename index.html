@@ -121,7 +121,7 @@
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
         <a href="/archives/">
-          <span class="site-state-item-count">96</span>
+          <span class="site-state-item-count">97</span>
           <span class="site-state-item-name">posts</span>
         </a>
       </div>
@@ -160,6 +160,113 @@
     </div>
 
     <div class="main-inner index posts-expand">
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2023/12/02/%E9%83%A8%E7%BD%B2/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/uploads/cat.jpg">
+      <meta itemprop="name" content="zono">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="ZONO's World">
+      <meta itemprop="description" content="人生长度无法强求,但厚度可以靠努力">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="undefined | ZONO's World">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/2023/12/02/%E9%83%A8%E7%BD%B2/" class="post-title-link" itemprop="url">部署</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">Posted on</span>
+      
+
+      <time title="Created: 2023-12-02 11:05:35 / Modified: 17:38:55" itemprop="dateCreated datePublished" datetime="2023-12-02T11:05:35+08:00">2023-12-02</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">In</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/%E6%8A%80%E6%9C%AF/" itemprop="url" rel="index"><span itemprop="name">技术</span></a>
+        </span>
+          , 
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/%E6%8A%80%E6%9C%AF/%E8%BF%90%E7%BB%B4/" itemprop="url" rel="index"><span itemprop="name">运维</span></a>
+        </span>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <h1 id="前端"><a href="#前端" class="headerlink" title="前端"></a>前端</h1><blockquote>
+<p>nginx、apache、tomcat</p>
+</blockquote>
+<p>这里使用nginx</p>
+<h2 id="NGINX"><a href="#NGINX" class="headerlink" title="NGINX"></a>NGINX</h2><h3 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h3><p>这里安装还是比较简单的（直接用包管理器安装）</p>
+<p><code>ubantu</code>:使用</p>
+<p><code>centos</code>:使用</p>
+<h3 id="配置"><a href="#配置" class="headerlink" title="配置"></a>配置</h3><p>找到nginx配置文件<code>nginx.config</code></p>
+<p>配置前先备份一次<code>sudo cp nginx.conf  nginx.default.conf </code></p>
+<h3 id="配置解释"><a href="#配置解释" class="headerlink" title="配置解释"></a>配置解释</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br><span class="line">111</span><br><span class="line">112</span><br><span class="line">113</span><br><span class="line">114</span><br><span class="line">115</span><br><span class="line">116</span><br><span class="line">117</span><br><span class="line">118</span><br><span class="line">119</span><br><span class="line">120</span><br><span class="line">121</span><br><span class="line">122</span><br><span class="line">123</span><br><span class="line">124</span><br><span class="line">125</span><br><span class="line">126</span><br><span class="line">127</span><br></pre></td><td class="code"><pre><span class="line">########### 每个指令必须有分号结束。#################</span><br><span class="line">##</span><br><span class="line">#全局块配置nginx全局命令，</span><br><span class="line">#一般有运行nginx服务器的用户组，nginx进程pid存放路径，日志存放路径，配置文件引入，允许生成worker process数等。</span><br><span class="line">##</span><br><span class="line">user www-data;#配置用户或者组，默认为nobody nobody。</span><br><span class="line">worker_processes auto;#允许生成的进程数，默认为1</span><br><span class="line">pid /run/nginx.pid;#指定nginx进程运行文件存放地址</span><br><span class="line"></span><br><span class="line">#制定日志路径，级别。</span><br><span class="line">#这个设置可以放入全局块，http块，server块，级别以此为：</span><br><span class="line">#debug|info|notice|warn|error|crit|alert|emerg</span><br><span class="line">include /etc/nginx/modules-enabled/*.conf; </span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">events &#123;</span><br><span class="line">	##</span><br><span class="line">	#配置影响nginx服务器或与用户的网络连接。</span><br><span class="line">	#有每个进程的最大连接数，选取哪种事件驱动模型处理连接请求，是否允许同时接受多个网路连接，开启多个网络连接序列化等。</span><br><span class="line">	##</span><br><span class="line">	worker_connections 768; #最大连接数，默认为512</span><br><span class="line">	# multi_accept on; #设置一个进程是否同时接受多个网络连接，默认为off</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">http &#123;</span><br><span class="line">	##</span><br><span class="line">	#可以嵌套多个server，配置代理，缓存，日志定义等绝大多数功能和第三方模块的配置。</span><br><span class="line">	#如文件引入，mime-type定义，日志自定义，是否使用sendfile传输文件，连接超时时间，单连接请求数等。</span><br><span class="line">	##</span><br><span class="line"></span><br><span class="line">	##</span><br><span class="line">	# Basic Settings</span><br><span class="line">	##</span><br><span class="line"></span><br><span class="line">	sendfile on;  #允许sendfile方式传输文件，默认为off，可以在http块，server块，location块。</span><br><span class="line">	tcp_nopush on;</span><br><span class="line">	types_hash_max_size 2048;</span><br><span class="line">	# server_tokens off;</span><br><span class="line"></span><br><span class="line">	# server_names_hash_bucket_size 64;</span><br><span class="line">	# server_name_in_redirect off;</span><br><span class="line"></span><br><span class="line">	include /etc/nginx/mime.types;  #文件扩展名与文件类型映射表</span><br><span class="line">	default_type application/octet-stream; #默认文件类型，默认为text/plain</span><br><span class="line"></span><br><span class="line">	##</span><br><span class="line">	# SSL Settings</span><br><span class="line">	##</span><br><span class="line"></span><br><span class="line">	ssl_protocols TLSv1 TLSv1.1 TLSv1.2 TLSv1.3; # Dropping SSLv3, ref: POODLE</span><br><span class="line">	ssl_prefer_server_ciphers on;</span><br><span class="line"></span><br><span class="line">	##</span><br><span class="line">	# Logging Settings</span><br><span class="line">	##</span><br><span class="line"></span><br><span class="line">	access_log /var/log/nginx/access.log;</span><br><span class="line">	error_log /var/log/nginx/error.log;</span><br><span class="line"></span><br><span class="line">	##</span><br><span class="line">	# Gzip Settings</span><br><span class="line">	##</span><br><span class="line"></span><br><span class="line">	gzip on;</span><br><span class="line"></span><br><span class="line">	# gzip_vary on;</span><br><span class="line">	# gzip_proxied any;</span><br><span class="line">	# gzip_comp_level 6;</span><br><span class="line">	# gzip_buffers 16 8k;</span><br><span class="line">	# gzip_http_version 1.1;</span><br><span class="line">	# gzip_types text/plain text/css application/json application/javascript text/xml application/xml application/xml+rss text/javascript;</span><br><span class="line"></span><br><span class="line">	server &#123;</span><br><span class="line">		##</span><br><span class="line">		#配置虚拟主机的相关参数，一个http中可以有多个server。</span><br><span class="line">		##</span><br><span class="line"></span><br><span class="line">		# keepalive_requests 120; #单连接请求上限次数。</span><br><span class="line">		listen 80; #监听80端口</span><br><span class="line">		server_name localhost; #监听地址  </span><br><span class="line"></span><br><span class="line">		location / &#123;  #请求的url过滤，正则匹配，~为区分大小写，~*为不区分大小写。</span><br><span class="line">			##</span><br><span class="line">			#配置请求的路由，以及各种页面的处理情况。</span><br><span class="line">			##</span><br><span class="line">			root html;  #根目录</span><br><span class="line">			index index.html index.htm; #设置默认页</span><br><span class="line">			# proxy_pass  http://mysvr;  #请求转向mysvr 定义的服务器列表</span><br><span class="line">           	# deny 127.0.0.1;  #拒绝的ip</span><br><span class="line">           	# allow 172.18.5.54; #允许的ip   </span><br><span class="line">		&#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	##</span><br><span class="line">	# Virtual Host Configs</span><br><span class="line">	##</span><br><span class="line"></span><br><span class="line">	include /etc/nginx/conf.d/*.conf;</span><br><span class="line">	include /etc/nginx/sites-enabled/*;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">#mail &#123;</span><br><span class="line">#	# See sample authentication script at:</span><br><span class="line">#	# http://wiki.nginx.org/ImapAuthenticateWithApachePhpScript</span><br><span class="line">#</span><br><span class="line">#	# auth_http localhost/auth.php;</span><br><span class="line">#	# pop3_capabilities &quot;TOP&quot; &quot;USER&quot;;</span><br><span class="line">#	# imap_capabilities &quot;IMAP4rev1&quot; &quot;UIDPLUS&quot;;</span><br><span class="line">#</span><br><span class="line">#	server &#123;</span><br><span class="line">#		listen     localhost:110;</span><br><span class="line">#		protocol   pop3;</span><br><span class="line">#		proxy      on;</span><br><span class="line">#	&#125;</span><br><span class="line">#</span><br><span class="line">#	server &#123;</span><br><span class="line">#		listen     localhost:143;</span><br><span class="line">#		protocol   imap;</span><br><span class="line">#		proxy      on;</span><br><span class="line">#	&#125;</span><br><span class="line">#&#125;</span><br></pre></td></tr></table></figure>
+
+<p>操作：把<code>server</code>块中的root（文件根目录）改为打包好的前端代码。<br>然后<code>nginx -s reload</code>更改配置</p>
+<h1 id="踩坑"><a href="#踩坑" class="headerlink" title="踩坑"></a>踩坑</h1><p><code>nginx -s reload</code>后没有生效？</p>
+<!-- TODO为什么原本的80端口无法使用 -->
+<p>解决办法：换了一个端口使用(这里换端口时也要设置用户名，用户要有对应的权限,一般为root)</p>
+<blockquote>
+<p><a target="_blank" rel="noopener" href="https://blog.csdn.net/qq_29695701/article/details/110150823">nginx命令行基础使用</a></p>
+</blockquote>
+<h1 id="后端"><a href="#后端" class="headerlink" title="后端"></a>后端</h1><p>这里用到了apache<br><a target="_blank" rel="noopener" href="https://www.cnblogs.com/cunkouzh/p/5410154.html">nginx与Apache的对比以及优缺点</a></p>
+<p>fastapi部署<br><code>pip install gunicorn</code></p>
+<p><a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/580791329">配置办法</a></p>
+<h1 id="使用宝塔Linux"><a href="#使用宝塔Linux" class="headerlink" title="使用宝塔Linux"></a>使用宝塔Linux</h1><blockquote>
+<p>被降维打击了</p>
+</blockquote>
+<p>总而言之，部署成功了，就是没钱得用没钱的办法，后面找朋友把另一个端口开了。</p>
+
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
 
     
 
@@ -1019,92 +1126,6 @@ console.log(findMaxAverage([1, 12, -5, -6, 50, 3], 4));
 <blockquote>
 <p>好了，休息结束。😫</p>
 </blockquote>
-
-      
-    </div>
-
-    
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-</div>
-
-
-
-
-    
-
-
-<div class="post-block">
-  
-  
-
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2023/11/27/%E4%BA%92%E8%81%94%E7%BD%91/%E9%80%9A%E7%94%A8%E6%8A%80%E6%9C%AF/%E7%AE%97%E6%B3%95/Leecode127/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/uploads/cat.jpg">
-      <meta itemprop="name" content="zono">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="ZONO's World">
-      <meta itemprop="description" content="人生长度无法强求,但厚度可以靠努力">
-    </span>
-
-    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
-      <meta itemprop="name" content="undefined | ZONO's World">
-      <meta itemprop="description" content="">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/2023/11/27/%E4%BA%92%E8%81%94%E7%BD%91/%E9%80%9A%E7%94%A8%E6%8A%80%E6%9C%AF/%E7%AE%97%E6%B3%95/Leecode127/" class="post-title-link" itemprop="url">Leecode127</a>
-        </h2>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">Posted on</span>
-      
-
-      <time title="Created: 2023-11-27 17:27:16 / Modified: 17:32:38" itemprop="dateCreated datePublished" datetime="2023-11-27T17:27:16+08:00">2023-11-27</time>
-    </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-folder"></i>
-      </span>
-      <span class="post-meta-item-text">In</span>
-        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/%E6%8A%80%E6%9C%AF/" itemprop="url" rel="index"><span itemprop="name">技术</span></a>
-        </span>
-          , 
-        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/%E6%8A%80%E6%9C%AF/%E7%AE%97%E6%B3%95/" itemprop="url" rel="index"><span itemprop="name">算法</span></a>
-        </span>
-    </span>
-
-  
-</div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          <p><a target="_blank" rel="noopener" href="https://leetcode.cn/problems/valid-palindrome/?envType=study-plan-v2&amp;envId=top-interview-150">https://leetcode.cn/problems/valid-palindrome/?envType=study-plan-v2&amp;envId=top-interview-150</a><br>这一题还是使用到来JavaScript的字符串对象操作。<br>可以看看阮一峰大佬对replace的描述（这里用到了replace和正则匹配）<br><a target="_blank" rel="noopener" href="https://www.bookstack.cn/read/javascript-tutorial/docs-stdlib-string.md#adal1j">https://www.bookstack.cn/read/javascript-tutorial/docs-stdlib-string.md#adal1j</a></p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@param</span> &#123;<span class="type">string</span>&#125; <span class="variable">s</span></span></span><br><span class="line"><span class="comment"> * <span class="doctag">@return</span> &#123;<span class="type">boolean</span>&#125;</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">var</span> isPalindrome = <span class="keyword">function</span> (<span class="params">s</span>) &#123;</span><br><span class="line">    s = s.<span class="title function_">replace</span>(<span class="regexp">/[^a-zA-Z0-9]/g</span>, <span class="string">&quot;&quot;</span>).<span class="title function_">replace</span>(<span class="regexp">/\s/g</span>, <span class="string">&quot;&quot;</span>).<span class="title function_">toLowerCase</span>();</span><br><span class="line">    <span class="keyword">return</span> s === [...s].<span class="title function_">reverse</span>().<span class="title function_">join</span>(<span class="string">&quot;&quot;</span>)</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
-
-<p>javascript可以算比较奇葩的语言了，但我喜欢😂</p>
 
       
     </div>
