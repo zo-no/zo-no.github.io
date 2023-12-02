@@ -121,7 +121,7 @@
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
         <a href="/archives/">
-          <span class="site-state-item-count">97</span>
+          <span class="site-state-item-count">98</span>
           <span class="site-state-item-name">posts</span>
         </a>
       </div>
@@ -160,6 +160,119 @@
     </div>
 
     <div class="main-inner index posts-expand">
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2023/11/25/%E4%BA%92%E8%81%94%E7%BD%91/%E9%80%9A%E7%94%A8%E6%8A%80%E6%9C%AF/%E7%AE%97%E6%B3%95/%E7%AC%AC%E4%B8%80%E9%A2%98%20leecode318/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/uploads/cat.jpg">
+      <meta itemprop="name" content="zono">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="ZONO's World">
+      <meta itemprop="description" content="人生长度无法强求,但厚度可以靠努力">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="undefined | ZONO's World">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/2023/11/25/%E4%BA%92%E8%81%94%E7%BD%91/%E9%80%9A%E7%94%A8%E6%8A%80%E6%9C%AF/%E7%AE%97%E6%B3%95/%E7%AC%AC%E4%B8%80%E9%A2%98%20leecode318/" class="post-title-link" itemprop="url">leecode318</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">Posted on</span>
+
+      <time title="Created: 2023-11-25 15:09:54" itemprop="dateCreated datePublished" datetime="2023-11-25T15:09:54+08:00">2023-11-25</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar-check"></i>
+      </span>
+      <span class="post-meta-item-text">Edited on</span>
+      <time title="Modified: 2023-11-27 17:36:16" itemprop="dateModified" datetime="2023-11-27T17:36:16+08:00">2023-11-27</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">In</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/%E6%8A%80%E6%9C%AF/" itemprop="url" rel="index"><span itemprop="name">技术</span></a>
+        </span>
+          , 
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/%E6%8A%80%E6%9C%AF/%E7%AE%97%E6%B3%95/" itemprop="url" rel="index"><span itemprop="name">算法</span></a>
+        </span>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <h1 id="第一题-leecode318"><a href="#第一题-leecode318" class="headerlink" title="第一题 leecode318"></a>第一题 leecode318</h1><p>先想写一个比较字符串</p>
+<blockquote>
+<p>不知所谓的一些写法问题很大</p>
+</blockquote>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> comWords = <span class="keyword">function</span> (<span class="params">words1, words2</span>) &#123;</span><br><span class="line">    <span class="keyword">let</span> len = <span class="number">0</span>, tag1 = <span class="number">0</span>, tag2 = <span class="number">0</span>;</span><br><span class="line">    <span class="keyword">if</span> (words1.<span class="property">length</span> &gt; words2.<span class="property">length</span>) &#123;</span><br><span class="line">        len = words1.<span class="property">length</span></span><br><span class="line">        tag1 = words1<span class="comment">//大</span></span><br><span class="line">        tag2 = words2</span><br><span class="line">    &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">        len = words2.<span class="property">length</span></span><br><span class="line">        tag2 = words1</span><br><span class="line">        tag1 = words2 <span class="comment">// 大</span></span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">const</span> set = <span class="keyword">new</span> <span class="title class_">Set</span>()</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">let</span> i = <span class="number">0</span>; i &lt; tag1.<span class="property">len</span>; i++) &#123;</span><br><span class="line">        set.<span class="title function_">add</span>(tag1[i])</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">let</span> j = <span class="number">0</span>; j &lt; tag2.<span class="property">len</span>; j++)</span><br><span class="line">        <span class="keyword">if</span> (set.<span class="title function_">has</span>(tag2[j]))&#123;</span><br><span class="line">            <span class="keyword">return</span> <span class="number">0</span></span><br><span class="line">        &#125;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">1</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>修改后</p>
+ <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> comWords = <span class="keyword">function</span> (<span class="params">words1, words2</span>) &#123;</span><br><span class="line">    <span class="keyword">const</span> set = <span class="keyword">new</span> <span class="title class_">Set</span>(words1);</span><br><span class="line"></span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">let</span> i = <span class="number">0</span>; i &lt; words2.<span class="property">length</span>; i++) &#123;</span><br><span class="line">        <span class="keyword">if</span> (set.<span class="title function_">has</span>(words2[i])) &#123;</span><br><span class="line">            <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">return</span> <span class="number">1</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>然后写一个暴力的两两组合</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> maxProduct = <span class="keyword">function</span> (<span class="params">words</span>) &#123;</span><br><span class="line">    max = <span class="number">0</span></span><br><span class="line">  <span class="keyword">for</span> (<span class="keyword">let</span> i = <span class="number">0</span>; i &lt; words.<span class="property">length</span>; i++) &#123;</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">let</span> j = i + <span class="number">1</span>; j &lt; words.<span class="property">length</span>; j++) &#123;</span><br><span class="line">      <span class="keyword">if</span> (<span class="title function_">comWords</span>(words[i], words[j])) &#123;<span class="comment">//以后看见这种写法,都应该优化掉</span></span><br><span class="line">        <span class="keyword">break</span>;</span><br><span class="line">      &#125;<span class="keyword">else</span> &#123;</span><br><span class="line">        <span class="keyword">if</span>(words[i].<span class="property">length</span> * words[j].<span class="property">length</span> &gt; max)&#123;</span><br><span class="line">          max = words[i].<span class="property">length</span> * words[j].<span class="property">length</span>;</span><br><span class="line">        &#125;</span><br><span class="line">      &#125;</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="keyword">return</span> max;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<p>出问题了，输出答案有问题</p>
+<p>1、原因：break会直接结束循环，所以输出的都是连着一起的两个值</p>
+<p>修改后：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@param</span> &#123;<span class="type">string[]</span>&#125; <span class="variable">words</span></span></span><br><span class="line"><span class="comment"> * <span class="doctag">@return</span> &#123;<span class="type">number</span>&#125;</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">var</span> comWords = <span class="keyword">function</span> (<span class="params">words1, words2</span>) &#123;</span><br><span class="line">    <span class="comment">/*</span></span><br><span class="line"><span class="comment">      @Description: 不相同返回1</span></span><br><span class="line"><span class="comment">      */</span></span><br><span class="line">    <span class="keyword">const</span> set = <span class="keyword">new</span> <span class="title class_">Set</span>(words1);</span><br><span class="line">    <span class="comment">// console.log(set);</span></span><br><span class="line">  </span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">let</span> j = <span class="number">0</span>; j &lt; words2.<span class="property">length</span>; j++) &#123;</span><br><span class="line">      <span class="keyword">if</span> (set.<span class="title function_">has</span>(words2[j])) &#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">      &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">1</span>;</span><br><span class="line">  &#125;;  </span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> maxProduct = <span class="keyword">function</span> (<span class="params">words</span>) &#123;</span><br><span class="line">    max = <span class="number">0</span></span><br><span class="line">  <span class="keyword">for</span> (<span class="keyword">let</span> i = <span class="number">0</span>; i &lt; words.<span class="property">length</span>; i++) &#123;</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">let</span> j = i + <span class="number">1</span>; j &lt; words.<span class="property">length</span>; j++) &#123;</span><br><span class="line">      <span class="keyword">if</span> (<span class="title function_">comWords</span>(words[i], words[j])) &#123;<span class="comment">//不相同再进行运算比较</span></span><br><span class="line">        <span class="keyword">if</span>(words[i].<span class="property">length</span> * words[j].<span class="property">length</span> &gt; max)&#123;</span><br><span class="line">          max = words[i].<span class="property">length</span> * words[j].<span class="property">length</span>;</span><br><span class="line">          <span class="variable language_">console</span>.<span class="title function_">log</span>(words[i], words[j]);</span><br><span class="line">        &#125;</span><br><span class="line">      &#125;</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="keyword">return</span> max;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+
+<p>这样执行是通过了，但提交后说超出时间限制（暴力过头了😓）</p>
+<p>看题解有位运算</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> maxProduct = <span class="keyword">function</span>(<span class="params">words</span>) &#123;</span><br><span class="line">    <span class="keyword">const</span> map = <span class="keyword">new</span> <span class="title class_">Map</span>();</span><br><span class="line">    <span class="keyword">const</span> length = words.<span class="property">length</span>;</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">let</span> i = <span class="number">0</span>; i &lt; length; i++) &#123;</span><br><span class="line">        <span class="keyword">let</span> mask = <span class="number">0</span>;</span><br><span class="line">        <span class="keyword">const</span> word = words[i];</span><br><span class="line">        <span class="keyword">const</span> wordLength = word.<span class="property">length</span>;</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">let</span> j = <span class="number">0</span>; j &lt; wordLength; j++) &#123;</span><br><span class="line">            mask |= <span class="number">1</span> &lt;&lt; (word[j].<span class="title function_">charCodeAt</span>() - <span class="string">&#x27;a&#x27;</span>.<span class="title function_">charCodeAt</span>());</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">if</span> (wordLength &gt; (map.<span class="title function_">get</span>(mask) || <span class="number">0</span>)) &#123;</span><br><span class="line">            map.<span class="title function_">set</span>(mask, wordLength);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">let</span> maxProd = <span class="number">0</span>;</span><br><span class="line">    <span class="keyword">const</span> maskSet = <span class="title class_">Array</span>.<span class="title function_">from</span>(map.<span class="title function_">keys</span>());</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">const</span> mask1 <span class="keyword">of</span> maskSet) &#123;</span><br><span class="line">        <span class="keyword">const</span> wordLength1 = map.<span class="title function_">get</span>(mask1);</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">const</span> mask2 <span class="keyword">of</span> maskSet) &#123;</span><br><span class="line">            <span class="keyword">if</span> ((mask1 &amp; mask2) === <span class="number">0</span>) &#123;</span><br><span class="line">                <span class="keyword">const</span> wordLength2 = map.<span class="title function_">get</span>(mask2);</span><br><span class="line">                maxProd = <span class="title class_">Math</span>.<span class="title function_">max</span>(maxProd, wordLength1 * wordLength2);</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> maxProd;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+
+
+
+
+
+
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
 
     
 
@@ -694,7 +807,7 @@
   
 
   <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2023/11/25/%E4%BA%92%E8%81%94%E7%BD%91/%E5%89%8D%E7%AB%AF/%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/canvas/Canvas/">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2023/11/25/%E4%BA%92%E8%81%94%E7%BD%91/%E5%89%8D%E7%AB%AF/%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/%E5%8A%A8%E7%94%BB/Canvas/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/uploads/cat.jpg">
@@ -712,7 +825,7 @@
     </span>
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
-          <a href="/2023/11/25/%E4%BA%92%E8%81%94%E7%BD%91/%E5%89%8D%E7%AB%AF/%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/canvas/Canvas/" class="post-title-link" itemprop="url">Canvas</a>
+          <a href="/2023/11/25/%E4%BA%92%E8%81%94%E7%BD%91/%E5%89%8D%E7%AB%AF/%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/%E5%8A%A8%E7%94%BB/Canvas/" class="post-title-link" itemprop="url">Canvas</a>
         </h2>
 
         <div class="post-meta-container">
@@ -1147,105 +1260,6 @@
 </blockquote>
 <p><strong>概念</strong>：函数接收不同数量、类型的值时，使用通用函数。</p>
 <h2 id="实现1-jQuery"><a href="#实现1-jQuery" class="headerlink" title="实现1 jQuery"></a>实现1 jQuery</h2>
-      
-    </div>
-
-    
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-</div>
-
-
-
-
-    
-
-
-<div class="post-block">
-  
-  
-
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2023/11/25/%E4%BA%92%E8%81%94%E7%BD%91/%E5%89%8D%E7%AB%AF/%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/26%E3%80%81%E6%93%8D%E4%BD%9C%E6%95%B0%E7%BB%84%E7%9A%84%E5%8A%9E%E6%B3%95/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/uploads/cat.jpg">
-      <meta itemprop="name" content="zono">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="ZONO's World">
-      <meta itemprop="description" content="人生长度无法强求,但厚度可以靠努力">
-    </span>
-
-    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
-      <meta itemprop="name" content="undefined | ZONO's World">
-      <meta itemprop="description" content="">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/2023/11/25/%E4%BA%92%E8%81%94%E7%BD%91/%E5%89%8D%E7%AB%AF/%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/26%E3%80%81%E6%93%8D%E4%BD%9C%E6%95%B0%E7%BB%84%E7%9A%84%E5%8A%9E%E6%B3%95/" class="post-title-link" itemprop="url">操作数组的办法</a>
-        </h2>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">Posted on</span>
-
-      <time title="Created: 2023-11-25 15:09:54" itemprop="dateCreated datePublished" datetime="2023-11-25T15:09:54+08:00">2023-11-25</time>
-    </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar-check"></i>
-      </span>
-      <span class="post-meta-item-text">Edited on</span>
-      <time title="Modified: 2023-11-24 16:33:54" itemprop="dateModified" datetime="2023-11-24T16:33:54+08:00">2023-11-24</time>
-    </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-folder"></i>
-      </span>
-      <span class="post-meta-item-text">In</span>
-        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/%E6%8A%80%E6%9C%AF/" itemprop="url" rel="index"><span itemprop="name">技术</span></a>
-        </span>
-          , 
-        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/%E6%8A%80%E6%9C%AF/%E5%89%8D%E7%AB%AF/" itemprop="url" rel="index"><span itemprop="name">前端</span></a>
-        </span>
-          , 
-        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/%E6%8A%80%E6%9C%AF/%E5%89%8D%E7%AB%AF/JavaScript%E5%9F%BA%E7%A1%80/" itemprop="url" rel="index"><span itemprop="name">JavaScript基础</span></a>
-        </span>
-    </span>
-
-  
-</div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          <h1 id="操作数组的办法"><a href="#操作数组的办法" class="headerlink" title="操作数组的办法"></a>操作数组的办法</h1><blockquote>
-<p>因为内容蛮多的于是遇见一个记录一个</p>
-</blockquote>
-<ol>
-<li><h2 id="push-用于栈操作"><a href="#push-用于栈操作" class="headerlink" title="push()用于栈操作"></a><code>push()</code>用于栈操作</h2><p>在遇见栈的算法题会用到</p>
-</li>
-</ol>
-
       
     </div>
 
