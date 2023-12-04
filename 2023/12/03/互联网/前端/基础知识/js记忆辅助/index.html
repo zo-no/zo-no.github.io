@@ -15,15 +15,15 @@
 
 <script class="next-config" data-name="main" type="application/json">{"hostname":"example.com","root":"/","images":"/images","scheme":"Gemini","darkmode":false,"version":"8.18.2","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":{"enable":false,"style":null},"fold":{"enable":false,"height":500},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"Searching...","empty":"We didn't find any results for the search: ${query}","hits_time":"${hits} results found in ${time} ms","hits":"${hits} results found"}}</script><script src="/js/config.js"></script>
 
-    <meta name="description" content="基于阮一峰教程的目录，把常用内容只写结构，方便记忆  DOMdocument节点属性方法2、获取Element Node（x4）document.getElementsByTagName() document.getElementsByClassName() document.getElementsByName() document.getElementById()   REACT篇 React">
+    <meta name="description" content="基于阮一峰教程的目录，把常用内容只写结构，方便记忆(遇见就写)  标准库属性描述对象DOMdocument节点属性方法2、获取Element Node（x4）document.getElementsByTagName() document.getElementsByClassName() document.getElementsByName() document.getElementById()">
 <meta property="og:type" content="article">
 <meta property="og:title" content="js记忆辅助">
 <meta property="og:url" content="http://example.com/2023/12/03/%E4%BA%92%E8%81%94%E7%BD%91/%E5%89%8D%E7%AB%AF/%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/js%E8%AE%B0%E5%BF%86%E8%BE%85%E5%8A%A9/index.html">
 <meta property="og:site_name" content="ZONO&#39;s World">
-<meta property="og:description" content="基于阮一峰教程的目录，把常用内容只写结构，方便记忆  DOMdocument节点属性方法2、获取Element Node（x4）document.getElementsByTagName() document.getElementsByClassName() document.getElementsByName() document.getElementById()   REACT篇 React">
+<meta property="og:description" content="基于阮一峰教程的目录，把常用内容只写结构，方便记忆(遇见就写)  标准库属性描述对象DOMdocument节点属性方法2、获取Element Node（x4）document.getElementsByTagName() document.getElementsByClassName() document.getElementsByName() document.getElementById()">
 <meta property="og:locale" content="en_US">
 <meta property="article:published_time" content="2023-12-03T12:49:21.000Z">
-<meta property="article:modified_time" content="2023-12-03T14:43:51.967Z">
+<meta property="article:modified_time" content="2023-12-04T11:26:25.938Z">
 <meta property="article:author" content="zono">
 <meta property="article:tag" content="技术">
 <meta name="twitter:card" content="summary">
@@ -109,7 +109,7 @@
       <div class="sidebar-panel-container">
         <!--noindex-->
         <div class="post-toc-wrap sidebar-panel">
-            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#DOM"><span class="nav-number">1.</span> <span class="nav-text">DOM</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#document%E8%8A%82%E7%82%B9"><span class="nav-number">1.1.</span> <span class="nav-text">document节点</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%B1%9E%E6%80%A7"><span class="nav-number">1.1.1.</span> <span class="nav-text">属性</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%96%B9%E6%B3%95"><span class="nav-number">1.1.2.</span> <span class="nav-text">方法</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#2%E3%80%81%E8%8E%B7%E5%8F%96Element-Node%EF%BC%88x4%EF%BC%89"><span class="nav-number">1.1.2.1.</span> <span class="nav-text">2、获取Element Node（x4）</span></a></li></ol></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E8%99%9A%E6%8B%9FDOM"><span class="nav-number">2.</span> <span class="nav-text">虚拟DOM</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#DIFFing"><span class="nav-number">2.0.1.</span> <span class="nav-text">DIFFing</span></a></li></ol></li></ol></li></ol></div>
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E6%A0%87%E5%87%86%E5%BA%93"><span class="nav-number">1.</span> <span class="nav-text">标准库</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%B1%9E%E6%80%A7%E6%8F%8F%E8%BF%B0%E5%AF%B9%E8%B1%A1"><span class="nav-number">1.1.</span> <span class="nav-text">属性描述对象</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#DOM"><span class="nav-number">2.</span> <span class="nav-text">DOM</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#document%E8%8A%82%E7%82%B9"><span class="nav-number">2.1.</span> <span class="nav-text">document节点</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%B1%9E%E6%80%A7"><span class="nav-number">2.1.1.</span> <span class="nav-text">属性</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%96%B9%E6%B3%95"><span class="nav-number">2.1.2.</span> <span class="nav-text">方法</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#2%E3%80%81%E8%8E%B7%E5%8F%96Element-Node%EF%BC%88x4%EF%BC%89"><span class="nav-number">2.1.2.1.</span> <span class="nav-text">2、获取Element Node（x4）</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#ES6"><span class="nav-number">2.1.3.</span> <span class="nav-text">ES6</span></a></li></ol></li></ol></li></ol></div>
         </div>
         <!--/noindex-->
 
@@ -201,9 +201,15 @@
         <i class="far fa-calendar"></i>
       </span>
       <span class="post-meta-item-text">Posted on</span>
-      
 
-      <time title="Created: 2023-12-03 20:49:21 / Modified: 22:43:51" itemprop="dateCreated datePublished" datetime="2023-12-03T20:49:21+08:00">2023-12-03</time>
+      <time title="Created: 2023-12-03 20:49:21" itemprop="dateCreated datePublished" datetime="2023-12-03T20:49:21+08:00">2023-12-03</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar-check"></i>
+      </span>
+      <span class="post-meta-item-text">Edited on</span>
+      <time title="Modified: 2023-12-04 19:26:25" itemprop="dateModified" datetime="2023-12-04T19:26:25+08:00">2023-12-04</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -233,17 +239,15 @@
     
     
     <div class="post-body" itemprop="articleBody"><blockquote>
-<p>基于阮一峰教程的目录，把常用内容只写结构，方便记忆</p>
+<p>基于阮一峰教程的目录，把常用内容只写结构，方便记忆(遇见就写)</p>
 </blockquote>
-<h1 id="DOM"><a href="#DOM" class="headerlink" title="DOM"></a>DOM</h1><h2 id="document节点"><a href="#document节点" class="headerlink" title="document节点"></a>document节点</h2><h3 id="属性"><a href="#属性" class="headerlink" title="属性"></a>属性</h3><h3 id="方法"><a href="#方法" class="headerlink" title="方法"></a>方法</h3><h4 id="2、获取Element-Node（x4）"><a href="#2、获取Element-Node（x4）" class="headerlink" title="2、获取Element Node（x4）"></a>2、获取Element Node（x4）</h4><p><code>document.getElementsByTagName()</code></p>
+<h1 id="标准库"><a href="#标准库" class="headerlink" title="标准库"></a>标准库</h1><h2 id="属性描述对象"><a href="#属性描述对象" class="headerlink" title="属性描述对象"></a>属性描述对象</h2><h1 id="DOM"><a href="#DOM" class="headerlink" title="DOM"></a>DOM</h1><h2 id="document节点"><a href="#document节点" class="headerlink" title="document节点"></a>document节点</h2><h3 id="属性"><a href="#属性" class="headerlink" title="属性"></a>属性</h3><h3 id="方法"><a href="#方法" class="headerlink" title="方法"></a>方法</h3><h4 id="2、获取Element-Node（x4）"><a href="#2、获取Element-Node（x4）" class="headerlink" title="2、获取Element Node（x4）"></a>2、获取Element Node（x4）</h4><p><code>document.getElementsByTagName()</code></p>
 <p><code>document.getElementsByClassName()</code></p>
 <p><code>document.getElementsByName()</code></p>
 <p><code>document.getElementById()</code></p>
 <hr>
 <hr>
-<p>REACT篇</p>
-<p><a target="_blank" rel="noopener" href="https://juejin.cn/post/6987197729046790175">React核心原理浅析 - 掘金 (juejin.cn)</a></p>
-<h1 id="虚拟DOM"><a href="#虚拟DOM" class="headerlink" title="虚拟DOM"></a>虚拟DOM</h1><h3 id="DIFFing"><a href="#DIFFing" class="headerlink" title="DIFFing"></a>DIFFing</h3>
+<h3 id="ES6"><a href="#ES6" class="headerlink" title="ES6"></a>ES6</h3>
     </div>
 
     
