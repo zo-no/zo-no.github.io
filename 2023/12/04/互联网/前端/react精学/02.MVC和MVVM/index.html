@@ -15,17 +15,17 @@
 
 <script class="next-config" data-name="main" type="application/json">{"hostname":"example.com","root":"/","images":"/images","scheme":"Gemini","darkmode":false,"version":"8.18.2","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":{"enable":false,"style":null},"fold":{"enable":false,"height":500},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"Searching...","empty":"We didn't find any results for the search: ${query}","hits_time":"${hits} results found in ${time} ms","hits":"${hits} results found"}}</script><script src="/js/config.js"></script>
 
-    <meta name="description" content="React知识点串联虚拟DOM主流的思想：不在直接去操作DOM，而是改为“数据驱动思想” 操作DOM思想：  操作DOM比较消耗性能「主要原因就是：可能会导致DOM重排(回流)&#x2F;重绘」 操作起来也相对来讲麻烦一些  驱动思想：  我们不会在直接操作DOM 我们去操作数据「当我们修改了数据，框架会按照相关的数据，让页面重新渲染」 框架底层实现视图的渲染，也是基于操作DOM完成的 构建了一套 虚拟DO">
+    <meta name="description" content="02.MVC和MVVM虚拟DOM主流的思想：不在直接去操作DOM，而是改为“数据驱动思想” 操作DOM思想：  操作DOM比较消耗性能「主要原因就是：可能会导致DOM重排(回流)&#x2F;重绘」 操作起来也相对来讲麻烦一些  驱动思想：  我们不会在直接操作DOM 我们去操作数据「当我们修改了数据，框架会按照相关的数据，让页面重新渲染」 框架底层实现视图的渲染，也是基于操作DOM完成的 构建了一套 虚拟D">
 <meta property="og:type" content="article">
 <meta property="og:title" content="02.MVC和MVVM">
 <meta property="og:url" content="http://example.com/2023/12/04/%E4%BA%92%E8%81%94%E7%BD%91/%E5%89%8D%E7%AB%AF/react%E7%B2%BE%E5%AD%A6/02.MVC%E5%92%8CMVVM/index.html">
 <meta property="og:site_name" content="ZONO&#39;s World">
-<meta property="og:description" content="React知识点串联虚拟DOM主流的思想：不在直接去操作DOM，而是改为“数据驱动思想” 操作DOM思想：  操作DOM比较消耗性能「主要原因就是：可能会导致DOM重排(回流)&#x2F;重绘」 操作起来也相对来讲麻烦一些  驱动思想：  我们不会在直接操作DOM 我们去操作数据「当我们修改了数据，框架会按照相关的数据，让页面重新渲染」 框架底层实现视图的渲染，也是基于操作DOM完成的 构建了一套 虚拟DO">
+<meta property="og:description" content="02.MVC和MVVM虚拟DOM主流的思想：不在直接去操作DOM，而是改为“数据驱动思想” 操作DOM思想：  操作DOM比较消耗性能「主要原因就是：可能会导致DOM重排(回流)&#x2F;重绘」 操作起来也相对来讲麻烦一些  驱动思想：  我们不会在直接操作DOM 我们去操作数据「当我们修改了数据，框架会按照相关的数据，让页面重新渲染」 框架底层实现视图的渲染，也是基于操作DOM完成的 构建了一套 虚拟D">
 <meta property="og:locale" content="en_US">
 <meta property="og:image" content="http://example.com/2023/12/04/-img/%E6%8A%80%E6%9C%AF/%E5%89%8D%E7%AB%AF/%E6%A1%86%E6%9E%B6/2.png">
 <meta property="og:image" content="http://example.com/2023/12/04/-img/技术/前端/框架/1.png">
 <meta property="article:published_time" content="2023-12-03T16:03:50.000Z">
-<meta property="article:modified_time" content="2023-12-03T17:14:07.787Z">
+<meta property="article:modified_time" content="2023-12-04T08:48:42.075Z">
 <meta property="article:author" content="zono">
 <meta property="article:tag" content="技能">
 <meta property="article:tag" content="技术">
@@ -113,7 +113,7 @@
       <div class="sidebar-panel-container">
         <!--noindex-->
         <div class="post-toc-wrap sidebar-panel">
-            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#React%E7%9F%A5%E8%AF%86%E7%82%B9%E4%B8%B2%E8%81%94"><span class="nav-number">1.</span> <span class="nav-text">React知识点串联</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%99%9A%E6%8B%9FDOM"><span class="nav-number">1.1.</span> <span class="nav-text">虚拟DOM</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%8A%B6%E6%80%81%E7%AE%A1%E7%90%86"><span class="nav-number">1.2.</span> <span class="nav-text">状态管理</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#MVC%E5%92%8CMVVM"><span class="nav-number">1.3.</span> <span class="nav-text">MVC和MVVM</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#MVC"><span class="nav-number">1.3.1.</span> <span class="nav-text">MVC</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#MVVM"><span class="nav-number">1.3.2.</span> <span class="nav-text">MVVM</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%AF%B9%E6%AF%94"><span class="nav-number">1.3.3.</span> <span class="nav-text">对比</span></a></li></ol></li></ol></li></ol></div>
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#02-MVC%E5%92%8CMVVM"><span class="nav-number">1.</span> <span class="nav-text">02.MVC和MVVM</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%99%9A%E6%8B%9FDOM"><span class="nav-number">1.1.</span> <span class="nav-text">虚拟DOM</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%8A%B6%E6%80%81%E7%AE%A1%E7%90%86"><span class="nav-number">1.2.</span> <span class="nav-text">状态管理</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#MVC%E5%92%8CMVVM"><span class="nav-number">1.3.</span> <span class="nav-text">MVC和MVVM</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#MVC"><span class="nav-number">1.3.1.</span> <span class="nav-text">MVC</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#MVVM"><span class="nav-number">1.3.2.</span> <span class="nav-text">MVVM</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%AF%B9%E6%AF%94"><span class="nav-number">1.3.3.</span> <span class="nav-text">对比</span></a></li></ol></li></ol></li></ol></div>
         </div>
         <!--/noindex-->
 
@@ -152,7 +152,7 @@
         <a href="/2742160682@qq.com" title="E-Mail → 2742160682@qq.com" rel="noopener me"><i class="fa fa-envelope fa-fw"></i>E-Mail</a>
       </span>
       <span class="links-of-author-item">
-        <a href="weixin://contacts/profile/x27421" title="WeChat → weixin:&#x2F;&#x2F;contacts&#x2F;profile&#x2F;x27421" rel="noopener me" target="_blank"><i class="fab fa-weixin fa-fw"></i>WeChat</a>
+        <a href="https://u.wechat.com/MN4YZFpcB_z1o0o1c8Tsjkg" title="WeChat → https:&#x2F;&#x2F;u.wechat.com&#x2F;MN4YZFpcB_z1o0o1c8Tsjkg" rel="noopener me" target="_blank"><i class="fab fa-weixin fa-fw"></i>WeChat</a>
       </span>
   </div>
 
@@ -207,7 +207,7 @@
       <span class="post-meta-item-text">Posted on</span>
       
 
-      <time title="Created: 2023-12-04 00:03:50 / Modified: 01:14:07" itemprop="dateCreated datePublished" datetime="2023-12-04T00:03:50+08:00">2023-12-04</time>
+      <time title="Created: 2023-12-04 00:03:50 / Modified: 16:48:42" itemprop="dateCreated datePublished" datetime="2023-12-04T00:03:50+08:00">2023-12-04</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -236,7 +236,7 @@
     
     
     
-    <div class="post-body" itemprop="articleBody"><h1 id="React知识点串联"><a href="#React知识点串联" class="headerlink" title="React知识点串联"></a>React知识点串联</h1><h2 id="虚拟DOM"><a href="#虚拟DOM" class="headerlink" title="虚拟DOM"></a>虚拟DOM</h2><p>主流的思想：不在直接去操作DOM，而是改为“数据驱动思想”</p>
+    <div class="post-body" itemprop="articleBody"><h1 id="02-MVC和MVVM"><a href="#02-MVC和MVVM" class="headerlink" title="02.MVC和MVVM"></a>02.MVC和MVVM</h1><h2 id="虚拟DOM"><a href="#虚拟DOM" class="headerlink" title="虚拟DOM"></a>虚拟DOM</h2><p>主流的思想：不在直接去操作DOM，而是改为“数据驱动思想”</p>
 <p>操作DOM思想：</p>
 <ul>
 <li>操作DOM比较消耗性能「主要原因就是：可能会导致DOM重排(回流)/重绘」</li>
