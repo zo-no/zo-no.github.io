@@ -121,7 +121,7 @@
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
         <a href="/archives/">
-          <span class="site-state-item-count">98</span>
+          <span class="site-state-item-count">102</span>
           <span class="site-state-item-name">posts</span>
         </a>
       </div>
@@ -160,6 +160,600 @@
     </div>
 
     <div class="main-inner index posts-expand">
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2023/11/25/%E4%BA%92%E8%81%94%E7%BD%91/%E5%89%8D%E7%AB%AF/%E6%B5%8F%E8%A7%88%E5%99%A8/V8%E5%9E%83%E5%9C%BE%E5%9B%9E%E6%94%B6%E6%9C%BA%E5%88%B6/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/uploads/cat.jpg">
+      <meta itemprop="name" content="zono">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="ZONO's World">
+      <meta itemprop="description" content="人生长度无法强求,但厚度可以靠努力">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="undefined | ZONO's World">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/2023/11/25/%E4%BA%92%E8%81%94%E7%BD%91/%E5%89%8D%E7%AB%AF/%E6%B5%8F%E8%A7%88%E5%99%A8/V8%E5%9E%83%E5%9C%BE%E5%9B%9E%E6%94%B6%E6%9C%BA%E5%88%B6/" class="post-title-link" itemprop="url">浏览器缓存策略、状态码见@AJAX到http</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">Posted on</span>
+
+      <time title="Created: 2023-11-25 15:09:54" itemprop="dateCreated datePublished" datetime="2023-11-25T15:09:54+08:00">2023-11-25</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar-check"></i>
+      </span>
+      <span class="post-meta-item-text">Edited on</span>
+      <time title="Modified: 2023-11-24 16:35:25" itemprop="dateModified" datetime="2023-11-24T16:35:25+08:00">2023-11-24</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">In</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/%E6%8A%80%E6%9C%AF/" itemprop="url" rel="index"><span itemprop="name">技术</span></a>
+        </span>
+          , 
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/%E6%8A%80%E6%9C%AF/%E5%89%8D%E7%AB%AF/" itemprop="url" rel="index"><span itemprop="name">前端</span></a>
+        </span>
+          , 
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/%E6%8A%80%E6%9C%AF/%E5%89%8D%E7%AB%AF/%E6%B5%8F%E8%A7%88%E5%99%A8/" itemprop="url" rel="index"><span itemprop="name">浏览器</span></a>
+        </span>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <p>浏览器的垃圾回收机制</p>
+<h1 id="V8垃圾回收机制"><a href="#V8垃圾回收机制" class="headerlink" title="V8垃圾回收机制"></a>V8垃圾回收机制</h1><blockquote>
+<p>用于管理代码运行过程中使用的内存</p>
+</blockquote>
+<h2 id="存在原因"><a href="#存在原因" class="headerlink" title="存在原因"></a>存在原因</h2><p>垃圾收集器会按固定时间周期性的执行，去找出那些不继续使用的变量，然后释放其内存，如果内存开销比较大，GC就会停止响应其他操作，它会阻塞其他应用程序的执行。</p>
+<h2 id="方法"><a href="#方法" class="headerlink" title="方法"></a>方法</h2><blockquote>
+<p>当不再被引用时，就会被垃圾回收，联系闭包。通常两种方式。</p>
+</blockquote>
+<h3 id="标记清除法（常用）"><a href="#标记清除法（常用）" class="headerlink" title="标记清除法（常用）"></a>标记清除法（常用）</h3><p>从对象开始递归遍历所有可以访问的对象，把它们标记为活动对象，然后清除未被标记的对象。</p>
+<p>然后清除标记，等待下一次标记，也就是下一次清理</p>
+<h3 id="引用计数法-IE"><a href="#引用计数法-IE" class="headerlink" title="引用计数法(IE)"></a>引用计数法(IE)</h3><p>跟踪对象的引用次数，每当对象被引用时，引用次数加一，取消引用就减一。计数为0时，说明不再被引用，于是回收。</p>
+<p>问题：循环引用时，两对象相互引用时，永远不为零。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">function</span> <span class="title function_">fun</span>(<span class="params"></span>)&#123;</span><br><span class="line">	<span class="keyword">var</span> f =&#123;&#125;;</span><br><span class="line">	<span class="keyword">var</span> g =&#123;&#125;;</span><br><span class="line">	f.<span class="property">userName</span>=g;</span><br><span class="line">	g.<span class="property">userName</span>=f</span><br><span class="line">	<span class="comment">//循环引用无法为零</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+
+<h4 id="改进："><a href="#改进：" class="headerlink" title="改进："></a>改进：</h4><p>分代收集（根据存活时间，将内存分为四代）、增量收集（将垃圾回收拆分为多个小步骤，避免js被阻塞）</p>
+<h2 id="缺陷"><a href="#缺陷" class="headerlink" title="缺陷"></a>缺陷</h2><p>GC时会停止响应其他操作，为了安全</p>
+<p>耗时一般在100ms以上，当遇见动画、js游戏连贯性、操作性要求比较高时，GC就需要被优化，避免停止响应。</p>
+<h2 id="三色标记"><a href="#三色标记" class="headerlink" title="三色标记"></a>三色标记</h2><h2 id="v8策略"><a href="#v8策略" class="headerlink" title="v8策略"></a>v8策略</h2><p>新生代、老生代区域</p>
+<h2 id="增量标记"><a href="#增量标记" class="headerlink" title="增量标记"></a>增量标记</h2><p>并发回收</p>
+<blockquote>
+<p>具体的算法是什么，GC的优化策略是什么，包括分代回收，增量GC</p>
+</blockquote>
+
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2023/11/25/%E4%BA%92%E8%81%94%E7%BD%91/%E5%89%8D%E7%AB%AF/%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/%E5%8A%A8%E7%94%BB/Canvas/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/uploads/cat.jpg">
+      <meta itemprop="name" content="zono">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="ZONO's World">
+      <meta itemprop="description" content="人生长度无法强求,但厚度可以靠努力">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="undefined | ZONO's World">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/2023/11/25/%E4%BA%92%E8%81%94%E7%BD%91/%E5%89%8D%E7%AB%AF/%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/%E5%8A%A8%E7%94%BB/Canvas/" class="post-title-link" itemprop="url">Canvas</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">Posted on</span>
+
+      <time title="Created: 2023-11-25 15:09:54" itemprop="dateCreated datePublished" datetime="2023-11-25T15:09:54+08:00">2023-11-25</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar-check"></i>
+      </span>
+      <span class="post-meta-item-text">Edited on</span>
+      <time title="Modified: 2023-11-24 16:33:04" itemprop="dateModified" datetime="2023-11-24T16:33:04+08:00">2023-11-24</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">In</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/%E6%8A%80%E6%9C%AF/" itemprop="url" rel="index"><span itemprop="name">技术</span></a>
+        </span>
+          , 
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/%E6%8A%80%E6%9C%AF/%E5%89%8D%E7%AB%AF/" itemprop="url" rel="index"><span itemprop="name">前端</span></a>
+        </span>
+          , 
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/%E6%8A%80%E6%9C%AF/%E5%89%8D%E7%AB%AF/%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/" itemprop="url" rel="index"><span itemprop="name">基础知识</span></a>
+        </span>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <h1 id="Canvas"><a href="#Canvas" class="headerlink" title="Canvas"></a>Canvas</h1><ul>
+<li><input checked="" disabled="" type="checkbox"> 入门</li>
+<li><input disabled="" type="checkbox"> 看MDN <a target="_blank" rel="noopener" href="https://developer.mozilla.org/zh-CN/docs/Web/API/Canvas_API/Tutorial">Canvas 教程 - Web API 接口参考 | MDN (mozilla.org)</a></li>
+</ul>
+<blockquote>
+<p>只有两属性width和height，默认300*150</p>
+</blockquote>
+<p>接下来我们就可以利用js，获取渲染上下文，然后在它上面绘制。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">&lt;script&gt;</span><br><span class="line">    ....</span><br><span class="line">    <span class="comment">// 获取canvas对象</span></span><br><span class="line">    <span class="keyword">const</span> canvas = <span class="variable language_">document</span>.<span class="title function_">getElementById</span>(<span class="string">&#x27;canvas&#x27;</span>)</span><br><span class="line">    <span class="comment">// 获取渲染上下文对象</span></span><br><span class="line">    <span class="keyword">const</span> ctx = canvas.<span class="title function_">getContext</span>(<span class="string">&#x27;2d&#x27;</span>)</span><br><span class="line">    ...</span><br><span class="line">&lt;/script&gt;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<h2 id="Canvas-Api"><a href="#Canvas-Api" class="headerlink" title="Canvas Api"></a>Canvas Api</h2><h3 id="栅格"><a href="#栅格" class="headerlink" title="栅格"></a>栅格</h3><h3 id="绘制图形"><a href="#绘制图形" class="headerlink" title="绘制图形"></a>绘制图形</h3><h4 id="路径（Path）"><a href="#路径（Path）" class="headerlink" title="路径（Path）"></a>路径（Path）</h4><p>主要四个参数</p>
+<ol>
+<li>beginPath</li>
+<li>closePath</li>
+<li>stroke</li>
+<li>fill</li>
+</ol>
+<p>步骤</p>
+<pre><code> 1. 调用beginPath
+ 2. 调用目标函数
+ 3. 闭合（非必须）
+</code></pre>
+<h4 id="移动笔触（moveTo）"><a href="#移动笔触（moveTo）" class="headerlink" title="移动笔触（moveTo）"></a>移动笔触（moveTo）</h4><h4 id="直线（lineTo）"><a href="#直线（lineTo）" class="headerlink" title="直线（lineTo）"></a>直线（lineTo）</h4><h4 id="三角形（triangle）"><a href="#三角形（triangle）" class="headerlink" title="三角形（triangle）"></a>三角形（triangle）</h4><h4 id="矩形（rect）"><a href="#矩形（rect）" class="headerlink" title="矩形（rect）"></a>矩形（rect）</h4><h4 id="圆形（arc）"><a href="#圆形（arc）" class="headerlink" title="圆形（arc）"></a>圆形（arc）</h4><h3 id="样式、颜色"><a href="#样式、颜色" class="headerlink" title="样式、颜色"></a>样式、颜色</h3><h4 id="色彩（color）"><a href="#色彩（color）" class="headerlink" title="色彩（color）"></a>色彩（color）</h4><h3 id="绘制文本"><a href="#绘制文本" class="headerlink" title="绘制文本"></a>绘制文本</h3><h3 id="操作图片"><a href="#操作图片" class="headerlink" title="操作图片"></a>操作图片</h3><h3 id="动画"><a href="#动画" class="headerlink" title="动画"></a>动画</h3><h3 id="实现动画的步骤"><a href="#实现动画的步骤" class="headerlink" title="实现动画的步骤"></a>实现动画的步骤</h3><blockquote>
+<p><em>清理-&gt;绘制-&gt;清理-&gt;绘制…</em> </p>
+</blockquote>
+<h2 id="实战"><a href="#实战" class="headerlink" title="实战"></a>实战</h2><h3 id="画板"><a href="#画板" class="headerlink" title="画板"></a>画板</h3><h3 id="粒子效果"><a href="#粒子效果" class="headerlink" title="粒子效果"></a>粒子效果</h3><blockquote>
+<p><a target="_blank" rel="noopener" href="https://juejin.cn/post/7160491044222533639">【Canvas实战】仿明日方舟Logo粒子动画 vue3+ts - 掘金 (juejin.cn)</a></p>
+</blockquote>
+
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2023/11/25/%E4%BA%92%E8%81%94%E7%BD%91/%E5%89%8D%E7%AB%AF/%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/%E6%B7%B1%E6%B5%85%E6%8B%B7%E8%B4%9D/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/uploads/cat.jpg">
+      <meta itemprop="name" content="zono">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="ZONO's World">
+      <meta itemprop="description" content="人生长度无法强求,但厚度可以靠努力">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="undefined | ZONO's World">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/2023/11/25/%E4%BA%92%E8%81%94%E7%BD%91/%E5%89%8D%E7%AB%AF/%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/%E6%B7%B1%E6%B5%85%E6%8B%B7%E8%B4%9D/" class="post-title-link" itemprop="url">深浅拷贝</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">Posted on</span>
+
+      <time title="Created: 2023-11-25 15:09:54" itemprop="dateCreated datePublished" datetime="2023-11-25T15:09:54+08:00">2023-11-25</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar-check"></i>
+      </span>
+      <span class="post-meta-item-text">Edited on</span>
+      <time title="Modified: 2023-11-24 16:33:52" itemprop="dateModified" datetime="2023-11-24T16:33:52+08:00">2023-11-24</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">In</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/%E6%8A%80%E6%9C%AF/" itemprop="url" rel="index"><span itemprop="name">技术</span></a>
+        </span>
+          , 
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/%E6%8A%80%E6%9C%AF/%E5%89%8D%E7%AB%AF/" itemprop="url" rel="index"><span itemprop="name">前端</span></a>
+        </span>
+          , 
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/%E6%8A%80%E6%9C%AF/%E5%89%8D%E7%AB%AF/JavaScript%E5%9F%BA%E7%A1%80/" itemprop="url" rel="index"><span itemprop="name">JavaScript基础</span></a>
+        </span>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <h1 id="深浅拷贝"><a href="#深浅拷贝" class="headerlink" title="深浅拷贝"></a>深浅拷贝</h1><blockquote>
+<p>之前写Leecode24题的迭代算法时，一直以为是深拷贝，不断断点测试才知道，这是浅拷贝，这才知道底层设计时，拷贝都是浅拷贝。果然算法前还是得把语言特性理解了。</p>
+<p><a target="_blank" rel="noopener" href="https://juejin.cn/post/7013603488315736072">深拷贝的实现方式（超全） - 掘金 (juejin.cn)</a></p>
+</blockquote>
+<p>让我们先定义一个对象</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> oldObj = &#123;</span><br><span class="line">    <span class="attr">name</span>:<span class="string">&#x27;zono&#x27;</span>,</span><br><span class="line">    <span class="attr">colors</span>:[<span class="string">&#x27;orange&#x27;</span>,<span class="string">&#x27;green&#x27;</span>,<span class="string">&#x27;blue&#x27;</span>],</span><br><span class="line">    <span class="attr">friend</span>:&#123;</span><br><span class="line">        <span class="attr">name</span>:<span class="string">&#x27;童馨&#x27;</span></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="浅拷贝"><a href="#浅拷贝" class="headerlink" title="浅拷贝"></a>浅拷贝</h2><p>让我们进行一次拷贝</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> newObj = oldObj;</span><br><span class="line">newObj.<span class="property">name</span> = <span class="string">&#x27;xiao&#x27;</span>;</span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">&#x27;oldObj&#x27;</span>,oldObj);</span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">&#x27;newObj&#x27;</span>,newObj);<span class="comment">//输出相同都是xiao</span></span><br></pre></td></tr></table></figure>
+
+<p>可见浅拷贝，会让原本被拷贝的源对象的属性也一起改了。</p>
+<p>可见浅拷贝就只是换一下指向的对象，只简简单单地把栈当中的<strong>引用地址拷贝了一份</strong></p>
+<p>排除上文的算法题用到浅拷贝，有时我们可能想用到深拷贝</p>
+<h2 id="深拷贝"><a href="#深拷贝" class="headerlink" title="深拷贝"></a>深拷贝</h2><blockquote>
+<p>概念：深拷贝就是创建一个新对象，对象改变不影响原来的对象</p>
+<p>方法：调用库或者使用第三方库</p>
+</blockquote>
+<h3 id="法一-递归"><a href="#法一-递归" class="headerlink" title="法一 递归"></a>法一 递归</h3><p>为了不只最外层被拷贝</p>
+<h4 id="一般"><a href="#一般" class="headerlink" title="一般"></a>一般</h4><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">function</span> <span class="title function_">deepClone</span>(<span class="params">obj</span>)&#123;</span><br><span class="line">  <span class="keyword">const</span> newObj = &#123;&#125;;</span><br><span class="line">  <span class="keyword">let</span> keys = <span class="title class_">Object</span>.<span class="title function_">keys</span>(obj);</span><br><span class="line">  <span class="keyword">let</span> key = <span class="literal">null</span>;</span><br><span class="line">  <span class="keyword">let</span> data = <span class="literal">null</span>;</span><br><span class="line">  <span class="keyword">for</span>(<span class="keyword">let</span> i = <span class="number">0</span>; i&lt;keys.<span class="property">length</span>;i++)&#123;</span><br><span class="line">    key = keys[i];</span><br><span class="line">    data = obj[key];</span><br><span class="line">    <span class="keyword">if</span>(data &amp;&amp; <span class="keyword">typeof</span> data === <span class="string">&#x27;object&#x27;</span>)&#123;</span><br><span class="line">      newObj[key] = <span class="title function_">cloneDeepDi</span>(data)</span><br><span class="line">    &#125;<span class="keyword">else</span>&#123;</span><br><span class="line">      newObj[key] = data;</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="keyword">return</span> newObj</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h4 id="循环引用"><a href="#循环引用" class="headerlink" title="循环引用"></a>循环引用</h4><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">function</span> <span class="title function_">deepCopy</span>(<span class="params">obj, parent = <span class="literal">null</span></span>) &#123;</span><br><span class="line">    <span class="comment">// 创建一个新对象</span></span><br><span class="line">    <span class="keyword">let</span> result = &#123;&#125;;</span><br><span class="line">    <span class="keyword">let</span> keys = <span class="title class_">Object</span>.<span class="title function_">keys</span>(obj),</span><br><span class="line">        key = <span class="literal">null</span>,</span><br><span class="line">        temp = <span class="literal">null</span>,</span><br><span class="line">        _parent = parent;</span><br><span class="line">    <span class="comment">// 该字段有父级则需要追溯该字段的父级</span></span><br><span class="line">    <span class="keyword">while</span> (_parent) &#123;</span><br><span class="line">        <span class="comment">// 如果该字段引用了它的父级则为循环引用</span></span><br><span class="line">        <span class="keyword">if</span> (_parent.<span class="property">originalParent</span> === obj) &#123;</span><br><span class="line">            <span class="comment">// 循环引用直接返回同级的新对象</span></span><br><span class="line">            <span class="keyword">return</span> _parent.<span class="property">currentParent</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        _parent = _parent.<span class="property">parent</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">let</span> i = <span class="number">0</span>; i &lt; keys.<span class="property">length</span>; i++) &#123;</span><br><span class="line">        key = keys[i];</span><br><span class="line">        temp = obj[key];</span><br><span class="line">        <span class="comment">// 如果字段的值也是一个对象</span></span><br><span class="line">        <span class="keyword">if</span> (temp &amp;&amp; <span class="keyword">typeof</span> temp === <span class="string">&#x27;object&#x27;</span>) &#123;</span><br><span class="line">            <span class="comment">// 递归执行深拷贝 将同级的待拷贝对象与新对象传递给 parent 方便追溯循环引用</span></span><br><span class="line">            result[key] = <span class="title class_">DeepCopy</span>(temp, &#123;</span><br><span class="line">                <span class="attr">originalParent</span>: obj,</span><br><span class="line">                <span class="attr">currentParent</span>: result,</span><br><span class="line">                <span class="attr">parent</span>: parent</span><br><span class="line">            &#125;);</span><br><span class="line"></span><br><span class="line">        &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">            result[key] = temp;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> result;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+
+
+
+<h3 id="法二Object-assign"><a href="#法二Object-assign" class="headerlink" title="法二Object.assign"></a>法二<code>Object.assign</code></h3><blockquote>
+<p>也只对最外层拷贝</p>
+</blockquote>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">function</span> <span class="title function_">cloneDeepAssign</span>(<span class="params">obj</span>)&#123;</span><br><span class="line">  <span class="keyword">return</span> <span class="title class_">Object</span>.<span class="title function_">assign</span>(&#123;&#125;,obj)</span><br><span class="line">  <span class="comment">//Object.assign(&#123;&#125;,obj)</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>(温馨提示：数组拷贝方法当中，使用<code>...</code>、<code>slice</code>、<code>concat</code>等进行拷贝也是一样的效果，只深拷贝最外层）</p>
+<h3 id="法三json"><a href="#法三json" class="headerlink" title="法三json"></a>法三json</h3><h2 id="复盘联系"><a href="#复盘联系" class="headerlink" title="复盘联系"></a>复盘联系</h2><h3 id="深浅拷贝和原型链的关系"><a href="#深浅拷贝和原型链的关系" class="headerlink" title="深浅拷贝和原型链的关系"></a>深浅拷贝和原型链的关系</h3>
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2023/11/25/%E4%BA%92%E8%81%94%E7%BD%91/%E5%89%8D%E7%AB%AF/%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/Var%E3%80%81Let%E3%80%81Const/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/uploads/cat.jpg">
+      <meta itemprop="name" content="zono">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="ZONO's World">
+      <meta itemprop="description" content="人生长度无法强求,但厚度可以靠努力">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="undefined | ZONO's World">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/2023/11/25/%E4%BA%92%E8%81%94%E7%BD%91/%E5%89%8D%E7%AB%AF/%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/Var%E3%80%81Let%E3%80%81Const/" class="post-title-link" itemprop="url">Var、Let、Const</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">Posted on</span>
+
+      <time title="Created: 2023-11-25 15:09:54" itemprop="dateCreated datePublished" datetime="2023-11-25T15:09:54+08:00">2023-11-25</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar-check"></i>
+      </span>
+      <span class="post-meta-item-text">Edited on</span>
+      <time title="Modified: 2023-11-24 16:35:28" itemprop="dateModified" datetime="2023-11-24T16:35:28+08:00">2023-11-24</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">In</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/%E6%8A%80%E6%9C%AF/" itemprop="url" rel="index"><span itemprop="name">技术</span></a>
+        </span>
+          , 
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/%E6%8A%80%E6%9C%AF/%E5%89%8D%E7%AB%AF/" itemprop="url" rel="index"><span itemprop="name">前端</span></a>
+        </span>
+          , 
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/%E6%8A%80%E6%9C%AF/%E5%89%8D%E7%AB%AF/JavaScript%E5%9F%BA%E7%A1%80/" itemprop="url" rel="index"><span itemprop="name">JavaScript基础</span></a>
+        </span>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <h2 id=""><a href="#" class="headerlink" title=""></a></h2><p>在写算法时遇见了一些基础问题，于是写一个博客记录一下。</p>
+<h3 id="Var（ES5）特点（也可以说问题）"><a href="#Var（ES5）特点（也可以说问题）" class="headerlink" title="Var（ES5）特点（也可以说问题）"></a>Var（ES5）特点（也可以说问题）</h3><ul>
+<li><p>存在变量提升</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(a); </span><br><span class="line"><span class="keyword">var</span> a = <span class="number">10</span>;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 编译过程会转变为，就是声明的a提升到前面了</span></span><br><span class="line"><span class="keyword">var</span> a;</span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(a); <span class="comment">// undefined但可以调用，离谱不？</span></span><br><span class="line">a = <span class="number">10</span>;</span><br></pre></td></tr></table></figure></li>
+<li><p>一个变量可多次声明，后面的声明会覆盖前面的声明</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> a = <span class="number">10</span>;</span><br><span class="line"><span class="keyword">var</span> a = <span class="number">20</span>;</span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(a); <span class="comment">// 20，是的var又用了一次，但还是没报错</span></span><br></pre></td></tr></table></figure></li>
+<li><p>在函数中使用var声明变量的时候，该变量是局部的</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> a = <span class="number">10</span>;</span><br><span class="line"><span class="keyword">function</span> <span class="title function_">change</span>(<span class="params"></span>)&#123;</span><br><span class="line">    <span class="keyword">var</span> a = <span class="number">20</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="title function_">change</span>();</span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(a); <span class="comment">// 10</span></span><br></pre></td></tr></table></figure>
+
+<p>而如果在函数内不使用var，该变量是全局的</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> a = <span class="number">10</span>;</span><br><span class="line"><span class="keyword">function</span> <span class="title function_">change</span>(<span class="params"></span>)&#123;</span><br><span class="line">    a = <span class="number">20</span></span><br><span class="line">&#125;;</span><br><span class="line"><span class="title function_">change</span>();</span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(a); <span class="comment">// 20</span></span><br></pre></td></tr></table></figure>
+
+<p>大家觉得这些问题，有点匪夷所思，于是ES6就改进了</p>
+</li>
+</ul>
+<h3 id="Let"><a href="#Let" class="headerlink" title="Let"></a>Let</h3><ul>
+<li><p>解决了变量提升</p>
+</li>
+<li><p>不能重复声明</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> a = <span class="number">10</span></span><br><span class="line"><span class="keyword">let</span> a = <span class="number">20</span></span><br></pre></td></tr></table></figure>
+
+<p>会报错</p>
+</li>
+<li><p>局部变量，只能在代码块中使用</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">	<span class="keyword">let</span> a = <span class="number">10</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(a);</span><br></pre></td></tr></table></figure>
+
+<p>但在不同定义域就可以</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> a = <span class="number">10</span>;</span><br><span class="line">&#123;</span><br><span class="line">	<span class="keyword">let</span> a = <span class="number">20</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(a);<span class="comment">//10，如果是var的话就是20</span></span><br></pre></td></tr></table></figure></li>
+</ul>
+<h3 id="Const（翻译是”常量“）"><a href="#Const（翻译是”常量“）" class="headerlink" title="Const（翻译是”常量“）"></a>Const（翻译是”常量“）</h3><ul>
+<li><p>Let的所有特性</p>
+</li>
+<li><p>只能声明一个只读变量</p>
+<blockquote>
+<p>实际项目中一般都是用这个，后面有改动才考虑let，var基本上淘汰了</p>
+</blockquote>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> a = <span class="number">10</span>；</span><br><span class="line">a = <span class="number">20</span> <span class="comment">//会报错</span></span><br></pre></td></tr></table></figure></li>
+<li><p>必须初始化</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> a;<span class="comment">//会报错</span></span><br><span class="line"><span class="keyword">const</span> a = <span class="number">10</span>;<span class="comment">//正确</span></span><br></pre></td></tr></table></figure></li>
+<li><p>const 可以通过变量指向改动（const是指向的地址，对应的那个数据不能改动）</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> obj = &#123;</span><br><span class="line">	<span class="attr">age</span>: <span class="number">17</span></span><br><span class="line">&#125;</span><br><span class="line">obj.<span class="property">age</span> = <span class="number">18</span>;  <span class="comment">// ok</span></span><br><span class="line"></span><br><span class="line">obj = &#123;</span><br><span class="line">	<span class="attr">age</span>: <span class="number">18</span></span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">//  SyntaxError: Identifier &#x27;obj&#x27; has already been declared</span></span><br></pre></td></tr></table></figure>
+
+<p>如上，obj是被指向的地址中的数据，我们无法改动{}，但可以改动{}中的age</p>
+</li>
+</ul>
+<p>let一般应用于基本数据类型；const 一般应用于引用数据类型，也就是函数对象等。</p>
+
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2023/11/25/%E4%BA%92%E8%81%94%E7%BD%91/%E5%89%8D%E7%AB%AF/%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/js%E5%87%BD%E6%95%B0%E9%87%8D%E8%BD%BD/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/uploads/cat.jpg">
+      <meta itemprop="name" content="zono">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="ZONO's World">
+      <meta itemprop="description" content="人生长度无法强求,但厚度可以靠努力">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="undefined | ZONO's World">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/2023/11/25/%E4%BA%92%E8%81%94%E7%BD%91/%E5%89%8D%E7%AB%AF/%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/js%E5%87%BD%E6%95%B0%E9%87%8D%E8%BD%BD/" class="post-title-link" itemprop="url">js函数重载</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">Posted on</span>
+
+      <time title="Created: 2023-11-25 15:09:54" itemprop="dateCreated datePublished" datetime="2023-11-25T15:09:54+08:00">2023-11-25</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar-check"></i>
+      </span>
+      <span class="post-meta-item-text">Edited on</span>
+      <time title="Modified: 2023-11-24 16:34:09" itemprop="dateModified" datetime="2023-11-24T16:34:09+08:00">2023-11-24</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">In</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/%E6%8A%80%E6%9C%AF/" itemprop="url" rel="index"><span itemprop="name">技术</span></a>
+        </span>
+          , 
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/%E6%8A%80%E6%9C%AF/%E5%89%8D%E7%AB%AF/" itemprop="url" rel="index"><span itemprop="name">前端</span></a>
+        </span>
+          , 
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/%E6%8A%80%E6%9C%AF/%E5%89%8D%E7%AB%AF/JavaScript%E5%9F%BA%E7%A1%80/" itemprop="url" rel="index"><span itemprop="name">JavaScript基础</span></a>
+        </span>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <blockquote>
+<p>编写通用库时</p>
+</blockquote>
+<p><strong>概念</strong>：函数接收不同数量、类型的值时，使用通用函数。</p>
+<h2 id="实现1-jQuery"><a href="#实现1-jQuery" class="headerlink" title="实现1 jQuery"></a>实现1 jQuery</h2>
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
 
     
 
@@ -850,610 +1444,8 @@
 
 
 
-    
-
-
-<div class="post-block">
-  
-  
-
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2023/11/25/%E4%BA%92%E8%81%94%E7%BD%91/%E5%89%8D%E7%AB%AF/%E5%89%8D%E7%AB%AF%E5%B7%A5%E7%A8%8B%E5%8C%96/Babel/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/uploads/cat.jpg">
-      <meta itemprop="name" content="zono">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="ZONO's World">
-      <meta itemprop="description" content="人生长度无法强求,但厚度可以靠努力">
-    </span>
-
-    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
-      <meta itemprop="name" content="undefined | ZONO's World">
-      <meta itemprop="description" content="">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/2023/11/25/%E4%BA%92%E8%81%94%E7%BD%91/%E5%89%8D%E7%AB%AF/%E5%89%8D%E7%AB%AF%E5%B7%A5%E7%A8%8B%E5%8C%96/Babel/" class="post-title-link" itemprop="url">Babel</a>
-        </h2>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">Posted on</span>
-
-      <time title="Created: 2023-11-25 15:09:54" itemprop="dateCreated datePublished" datetime="2023-11-25T15:09:54+08:00">2023-11-25</time>
-    </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar-check"></i>
-      </span>
-      <span class="post-meta-item-text">Edited on</span>
-      <time title="Modified: 2023-11-24 16:35:21" itemprop="dateModified" datetime="2023-11-24T16:35:21+08:00">2023-11-24</time>
-    </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-folder"></i>
-      </span>
-      <span class="post-meta-item-text">In</span>
-        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/%E6%8A%80%E6%9C%AF/" itemprop="url" rel="index"><span itemprop="name">技术</span></a>
-        </span>
-          , 
-        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/%E6%8A%80%E6%9C%AF/%E5%89%8D%E7%AB%AF/" itemprop="url" rel="index"><span itemprop="name">前端</span></a>
-        </span>
-          , 
-        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/%E6%8A%80%E6%9C%AF/%E5%89%8D%E7%AB%AF/%E5%B7%A5%E7%A8%8B%E5%8C%96/" itemprop="url" rel="index"><span itemprop="name">工程化</span></a>
-        </span>
-    </span>
-
-  
-</div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          <h1 id=""><a href="#" class="headerlink" title=""></a></h1><blockquote>
-<p><strong>Babel 是一个 JavaScript 编译器。</strong>可以把使用ES6/ES7等“高级”语法编写的Javascript代码转换为ES5/ES3的“通俗”语法（也可以把JSX语法转为Javascript）。</p>
-</blockquote>
-
-      
-    </div>
-
-    
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-</div>
-
-
-
-
-    
-
-
-<div class="post-block">
-  
-  
-
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2023/11/25/%E4%BA%92%E8%81%94%E7%BD%91/%E5%89%8D%E7%AB%AF/%E4%BC%98%E5%8C%96/%E5%89%8D%E7%AB%AF%E6%80%A7%E8%83%BD%E4%BC%98%E5%8C%96%E6%80%9D%E8%B7%AF/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/uploads/cat.jpg">
-      <meta itemprop="name" content="zono">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="ZONO's World">
-      <meta itemprop="description" content="人生长度无法强求,但厚度可以靠努力">
-    </span>
-
-    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
-      <meta itemprop="name" content="undefined | ZONO's World">
-      <meta itemprop="description" content="">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/2023/11/25/%E4%BA%92%E8%81%94%E7%BD%91/%E5%89%8D%E7%AB%AF/%E4%BC%98%E5%8C%96/%E5%89%8D%E7%AB%AF%E6%80%A7%E8%83%BD%E4%BC%98%E5%8C%96%E6%80%9D%E8%B7%AF/" class="post-title-link" itemprop="url">前端性能优化思路</a>
-        </h2>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">Posted on</span>
-
-      <time title="Created: 2023-11-25 15:09:54" itemprop="dateCreated datePublished" datetime="2023-11-25T15:09:54+08:00">2023-11-25</time>
-    </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar-check"></i>
-      </span>
-      <span class="post-meta-item-text">Edited on</span>
-      <time title="Modified: 2023-11-24 16:35:19" itemprop="dateModified" datetime="2023-11-24T16:35:19+08:00">2023-11-24</time>
-    </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-folder"></i>
-      </span>
-      <span class="post-meta-item-text">In</span>
-        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/%E6%8A%80%E6%9C%AF/" itemprop="url" rel="index"><span itemprop="name">技术</span></a>
-        </span>
-          , 
-        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/%E6%8A%80%E6%9C%AF/%E5%89%8D%E7%AB%AF/" itemprop="url" rel="index"><span itemprop="name">前端</span></a>
-        </span>
-          , 
-        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/%E6%8A%80%E6%9C%AF/%E5%89%8D%E7%AB%AF/%E6%80%A7%E8%83%BD%E4%BC%98%E5%8C%96/" itemprop="url" rel="index"><span itemprop="name">性能优化</span></a>
-        </span>
-    </span>
-
-  
-</div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          <h1 id="前端性能优化思路"><a href="#前端性能优化思路" class="headerlink" title="前端性能优化思路"></a>前端性能优化思路</h1><p>浏览器→资源→图片→代码层面</p>
-<p><a target="_blank" rel="noopener" href="https://juejin.cn/post/7029973323475845150">web前端性能优化（全汇总） - 掘金 (juejin.cn)</a></p>
-<h2 id="优化模块"><a href="#优化模块" class="headerlink" title="优化模块"></a>优化模块</h2><h3 id="1-浏览器"><a href="#1-浏览器" class="headerlink" title="1. 浏览器"></a>1. 浏览器</h3><h4 id="1-1-减少HTTP请求"><a href="#1-1-减少HTTP请求" class="headerlink" title="1.1 减少HTTP请求"></a>1.1 减少HTTP请求</h4><blockquote>
-<p>如Chrome浏览器最多同时允许对同一个域名Host建立6个TCP连接，不同的浏览器有所区别，减少http请求也就是减少我们html里css/js等资源的数量</p>
-</blockquote>
-<h4 id="1-2-使用HTTP2-0"><a href="#1-2-使用HTTP2-0" class="headerlink" title="1.2 使用HTTP2.0"></a>1.2 使用HTTP2.0</h4><p>http2.0优势：</p>
-<ol>
-<li>采用二进制格式传输数据, 1.1是文本格式</li>
-<li>对消息头采用Hpack进行压缩传输，能够节省消息头占用的网络流量，1.1每次请求，都会携带大量冗余的头信息，浪费了很多宽带资源</li>
-<li>异步连接多路复用</li>
-<li>Server Push，服务器端能够更快的把资源推送到客户端</li>
-<li>保持与HTTP 1.1语义的向后兼容性也是该版本的一个关键</li>
-</ol>
-<h4 id="1-3-设置浏览器缓存策略"><a href="#1-3-设置浏览器缓存策略" class="headerlink" title="1.3 设置浏览器缓存策略"></a>1.3 设置浏览器缓存策略</h4><h4 id="1-4-白屏时间加载动画"><a href="#1-4-白屏时间加载动画" class="headerlink" title="1.4 白屏时间加载动画"></a>1.4 白屏时间加载动画</h4><p>用户体验</p>
-<h3 id="2-资源"><a href="#2-资源" class="headerlink" title="2. 资源"></a>2. 资源</h3><h4 id="2-1-静态资源CDN"><a href="#2-1-静态资源CDN" class="headerlink" title="2.1 静态资源CDN"></a>2.1 静态资源CDN</h4><h4 id="2-2-静态资源单独域名"><a href="#2-2-静态资源单独域名" class="headerlink" title="2.2 静态资源单独域名"></a>2.2 静态资源单独域名</h4><h4 id="2-3-gzip压缩"><a href="#2-3-gzip压缩" class="headerlink" title="2.3 gzip压缩"></a>2.3 gzip压缩</h4><h4 id="2-4-做服务端渲染（SSR）"><a href="#2-4-做服务端渲染（SSR）" class="headerlink" title="2.4 做服务端渲染（SSR）"></a>2.4 做服务端渲染（SSR）</h4><h4 id="2-5-将CSS放在文件头部，JavaScript文件放在底部"><a href="#2-5-将CSS放在文件头部，JavaScript文件放在底部" class="headerlink" title="2.5 将CSS放在文件头部，JavaScript文件放在底部"></a>2.5 将CSS放在文件头部，JavaScript文件放在底部</h4><blockquote>
-<p>涉及到了浏览器的运行流程了</p>
-</blockquote>
-<h3 id="3-图片"><a href="#3-图片" class="headerlink" title="3. 图片"></a>3. 图片</h3><h4 id="3-1-字体图标代替图片图标"><a href="#3-1-字体图标代替图片图标" class="headerlink" title="3.1 字体图标代替图片图标"></a>3.1 字体图标代替图片图标</h4><h4 id="3-2-精灵图"><a href="#3-2-精灵图" class="headerlink" title="3.2 精灵图"></a>3.2 精灵图</h4><h4 id="3-3-图片懒加载"><a href="#3-3-图片懒加载" class="headerlink" title="3.3 图片懒加载"></a>3.3 图片懒加载</h4><p>金字塔</p>
-<h4 id="3-4-图片预加载"><a href="#3-4-图片预加载" class="headerlink" title="3.4 图片预加载"></a>3.4 图片预加载</h4><h4 id="3-5-使用png格式的图片"><a href="#3-5-使用png格式的图片" class="headerlink" title="3.5 使用png格式的图片"></a>3.5 使用png格式的图片</h4><h4 id="3-6-小于10k的图片可以打包为base64格式"><a href="#3-6-小于10k的图片可以打包为base64格式" class="headerlink" title="3.6 小于10k的图片可以打包为base64格式"></a>3.6 小于10k的图片可以打包为base64格式</h4><h3 id="4-代码"><a href="#4-代码" class="headerlink" title="4. 代码"></a>4. 代码</h3><h4 id="4-1-慎用全局变量"><a href="#4-1-慎用全局变量" class="headerlink" title="4.1 慎用全局变量"></a>4.1 慎用全局变量</h4><h4 id="4-2-缓存全局变量"><a href="#4-2-缓存全局变量" class="headerlink" title="4.2 缓存全局变量"></a>4.2 缓存全局变量</h4><h4 id="4-3-减少重绘回流"><a href="#4-3-减少重绘回流" class="headerlink" title="4.3 减少重绘回流"></a>4.3 减少重绘回流</h4><h4 id="4-4-节流、防抖"><a href="#4-4-节流、防抖" class="headerlink" title="4.4 节流、防抖"></a>4.4 节流、防抖</h4><h4 id="4-5-少用闭包、减少内存泄漏"><a href="#4-5-少用闭包、减少内存泄漏" class="headerlink" title="4.5 少用闭包、减少内存泄漏"></a>4.5 少用闭包、减少内存泄漏</h4><h4 id="4-6-减少数据读取次数"><a href="#4-6-减少数据读取次数" class="headerlink" title="4.6 减少数据读取次数"></a>4.6 减少数据读取次数</h4><h4 id="4-7-文档碎片优化节点添加"><a href="#4-7-文档碎片优化节点添加" class="headerlink" title="4.7 文档碎片优化节点添加"></a>4.7 文档碎片优化节点添加</h4><h4 id="4-8-减少判断层级"><a href="#4-8-减少判断层级" class="headerlink" title="4.8 减少判断层级"></a>4.8 减少判断层级</h4><h4 id="4-9-字面量与构造式"><a href="#4-9-字面量与构造式" class="headerlink" title="4.9 字面量与构造式"></a>4.9 字面量与构造式</h4><h3 id="5-项目方案提议"><a href="#5-项目方案提议" class="headerlink" title="5. 项目方案提议"></a>5. 项目方案提议</h3><h4 id="5-1-长列表优化"><a href="#5-1-长列表优化" class="headerlink" title="5.1 长列表优化"></a>5.1 长列表优化</h4><h4 id="5-2-web-worker"><a href="#5-2-web-worker" class="headerlink" title="5.2 web worker"></a>5.2 web worker</h4><h4 id="5-3-避免-ifarme-嵌套网页"><a href="#5-3-避免-ifarme-嵌套网页" class="headerlink" title="5.3 避免 ifarme 嵌套网页"></a>5.3 避免 ifarme 嵌套网页</h4><h3 id="6-webpack优化"><a href="#6-webpack优化" class="headerlink" title="6.webpack优化"></a>6.webpack优化</h3><h4 id="6-1-减小代码体积"><a href="#6-1-减小代码体积" class="headerlink" title="6.1 减小代码体积"></a>6.1 减小代码体积</h4><h4 id="6-2-按需加载"><a href="#6-2-按需加载" class="headerlink" title="6.2 按需加载"></a>6.2 按需加载</h4><h4 id="6-3-提取第三库代码"><a href="#6-3-提取第三库代码" class="headerlink" title="6.3 提取第三库代码"></a>6.3 提取第三库代码</h4><h4 id="6-4-webpack-dll优化"><a href="#6-4-webpack-dll优化" class="headerlink" title="6.4 webpack dll优化"></a>6.4 webpack dll优化</h4>
-      
-    </div>
-
-    
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-</div>
-
-
-
-
-    
-
-
-<div class="post-block">
-  
-  
-
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2023/11/25/%E4%BA%92%E8%81%94%E7%BD%91/%E5%89%8D%E7%AB%AF/%E4%BC%98%E5%8C%96/%E5%89%8D%E7%AB%AF%E6%80%A7%E8%83%BD%E4%BC%98%E5%8C%96/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/uploads/cat.jpg">
-      <meta itemprop="name" content="zono">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="ZONO's World">
-      <meta itemprop="description" content="人生长度无法强求,但厚度可以靠努力">
-    </span>
-
-    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
-      <meta itemprop="name" content="undefined | ZONO's World">
-      <meta itemprop="description" content="">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/2023/11/25/%E4%BA%92%E8%81%94%E7%BD%91/%E5%89%8D%E7%AB%AF/%E4%BC%98%E5%8C%96/%E5%89%8D%E7%AB%AF%E6%80%A7%E8%83%BD%E4%BC%98%E5%8C%96/" class="post-title-link" itemprop="url">前端性能优化</a>
-        </h2>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">Posted on</span>
-
-      <time title="Created: 2023-11-25 15:09:54" itemprop="dateCreated datePublished" datetime="2023-11-25T15:09:54+08:00">2023-11-25</time>
-    </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar-check"></i>
-      </span>
-      <span class="post-meta-item-text">Edited on</span>
-      <time title="Modified: 2023-11-24 16:35:19" itemprop="dateModified" datetime="2023-11-24T16:35:19+08:00">2023-11-24</time>
-    </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-folder"></i>
-      </span>
-      <span class="post-meta-item-text">In</span>
-        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/%E6%8A%80%E6%9C%AF/" itemprop="url" rel="index"><span itemprop="name">技术</span></a>
-        </span>
-          , 
-        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/%E6%8A%80%E6%9C%AF/%E5%89%8D%E7%AB%AF/" itemprop="url" rel="index"><span itemprop="name">前端</span></a>
-        </span>
-          , 
-        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/%E6%8A%80%E6%9C%AF/%E5%89%8D%E7%AB%AF/%E6%80%A7%E8%83%BD%E4%BC%98%E5%8C%96/" itemprop="url" rel="index"><span itemprop="name">性能优化</span></a>
-        </span>
-    </span>
-
-  
-</div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          <h1 id="前端性能优化"><a href="#前端性能优化" class="headerlink" title="前端性能优化"></a>前端性能优化</h1><h2 id="优化目标"><a href="#优化目标" class="headerlink" title="优化目标"></a>优化目标</h2><p>pass</p>
-<h2 id="前端性能评估"><a href="#前端性能评估" class="headerlink" title="前端性能评估"></a>前端性能评估</h2><h3 id="2-5-8原则"><a href="#2-5-8原则" class="headerlink" title="2-5-8原则"></a>2-5-8原则</h3><h3 id="GOOGLE建议"><a href="#GOOGLE建议" class="headerlink" title="GOOGLE建议"></a><strong>GOOGLE</strong>建议</h3><ul>
-<li>页面加载时间(Page Load Time)</li>
-<li>首屏加载时间(First Contentful Paint)：FCP</li>
-</ul>
-<blockquote>
-<p>FCP&gt;=FP</p>
-</blockquote>
-<ul>
-<li>用户可交互时间：</li>
-<li>白屏时间：FP，首次绘制时间</li>
-</ul>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">whidow.<span class="property">performance</span>.<span class="title function_">getEntriesByType</span>(<span class="string">&#x27;paint&#x27;</span>)[<span class="number">0</span>].<span class="property">startTime</span></span><br></pre></td></tr></table></figure>
-
-<ul>
-<li>资源文件大小</li>
-</ul>
-<h3 id="性能指标计算方法（RATL）"><a href="#性能指标计算方法（RATL）" class="headerlink" title="性能指标计算方法（RATL）"></a>性能指标计算方法（RATL）</h3><p><code>RAIL</code> 是 <code>Response</code>、<code>Animation</code>、<code>Idle</code> 和 <code>Load</code> 的首字母缩写</p>
-<h3 id="具体细节"><a href="#具体细节" class="headerlink" title="具体细节"></a>具体细节</h3><p><a target="_blank" rel="noopener" href="https://juejin.cn/post/7104310605091176456">浅谈前端性能指标</a></p>
-<h4 id="加载性能"><a href="#加载性能" class="headerlink" title="加载性能"></a>加载性能</h4><ul>
-<li>First Meaning Paint(FMP):首次关键内容绘制,指浏览器渲染出第一个关键内容的时间。</li>
-<li>Largest Contentful Paint(LCP):最大内容绘制</li>
-<li>Time to Interactive：（TTI）：可交互时间</li>
-</ul>
-<h4 id="渲染性能"><a href="#渲染性能" class="headerlink" title="渲染性能"></a>渲染性能</h4><h2 id="前端性能检测工具"><a href="#前端性能检测工具" class="headerlink" title="前端性能检测工具"></a>前端性能检测工具</h2><h3 id="performance"><a href="#performance" class="headerlink" title="performance"></a>performance</h3>
-      
-    </div>
-
-    
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-</div>
-
-
-
-
-    
-
-
-<div class="post-block">
-  
-  
-
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2023/11/25/%E4%BA%92%E8%81%94%E7%BD%91/%E5%89%8D%E7%AB%AF/react%E7%B2%BE%E5%AD%A6/%E6%B7%B1%E5%85%A5react/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/uploads/cat.jpg">
-      <meta itemprop="name" content="zono">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="ZONO's World">
-      <meta itemprop="description" content="人生长度无法强求,但厚度可以靠努力">
-    </span>
-
-    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
-      <meta itemprop="name" content="undefined | ZONO's World">
-      <meta itemprop="description" content="">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/2023/11/25/%E4%BA%92%E8%81%94%E7%BD%91/%E5%89%8D%E7%AB%AF/react%E7%B2%BE%E5%AD%A6/%E6%B7%B1%E5%85%A5react/" class="post-title-link" itemprop="url">深入react</a>
-        </h2>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">Posted on</span>
-
-      <time title="Created: 2023-11-25 15:09:54" itemprop="dateCreated datePublished" datetime="2023-11-25T15:09:54+08:00">2023-11-25</time>
-    </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar-check"></i>
-      </span>
-      <span class="post-meta-item-text">Edited on</span>
-      <time title="Modified: 2023-11-24 16:35:16" itemprop="dateModified" datetime="2023-11-24T16:35:16+08:00">2023-11-24</time>
-    </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-folder"></i>
-      </span>
-      <span class="post-meta-item-text">In</span>
-        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/%E6%8A%80%E6%9C%AF/" itemprop="url" rel="index"><span itemprop="name">技术</span></a>
-        </span>
-          , 
-        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/%E6%8A%80%E6%9C%AF/%E5%89%8D%E7%AB%AF/" itemprop="url" rel="index"><span itemprop="name">前端</span></a>
-        </span>
-          , 
-        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/%E6%8A%80%E6%9C%AF/%E5%89%8D%E7%AB%AF/%E6%A1%86%E6%9E%B6/" itemprop="url" rel="index"><span itemprop="name">框架</span></a>
-        </span>
-          , 
-        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/%E6%8A%80%E6%9C%AF/%E5%89%8D%E7%AB%AF/%E6%A1%86%E6%9E%B6/React/" itemprop="url" rel="index"><span itemprop="name">React</span></a>
-        </span>
-    </span>
-
-  
-</div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          <h1 id="深入react"><a href="#深入react" class="headerlink" title="深入react"></a>深入react</h1><h2 id="1-react合成事件（react18中不再使用）"><a href="#1-react合成事件（react18中不再使用）" class="headerlink" title="1. react合成事件（react18中不再使用）"></a>1. react合成事件（react18中不再使用）</h2><blockquote>
-<p><a target="_blank" rel="noopener" href="https://segmentfault.com/a/1190000038251163">javascript - 探索 React 合成事件 - 前端自习课 - SegmentFault 思否</a></p>
-</blockquote>
-<p>存在原因：兼容、垃圾回收</p>
-<p>前置知识树</p>
-<ol>
-<li><p>事件池：是浏览器事件处理中，为了节省内存和提高性能，对事件对象的重复利用。</p>
-<blockquote>
-<p>(待细看)<a target="_blank" rel="noopener" href="https://juejin.cn/post/6844903862285893639">React 合成事件系统之事件池 - 掘金 (juejin.cn)</a></p>
-</blockquote>
-</li>
-<li><p>生命周期（待看）</p>
-<blockquote>
-<p><a target="_blank" rel="noopener" href="https://juejin.cn/post/7285540804734468150">一看就懂的React生命周期 - 掘金 (juejin.cn)</a></p>
-<p>看样子react生命周期已经被取代了<a target="_blank" rel="noopener" href="https://blog.csdn.net/qq_44906900/article/details/111214531">【精选】【React全解4】useEffect–在函数组件中使用生命周期函数_react useeffect 生命周期-CSDN博客</a></p>
-</blockquote>
-</li>
-</ol>
-<h2 id="2-理解fiber"><a href="#2-理解fiber" class="headerlink" title="2. 理解fiber"></a>2. 理解fiber</h2><blockquote>
-<p><a target="_blank" rel="noopener" href="https://juejin.cn/post/7010263907008937997#heading-2">React 的 Fiber 树是什么？ - 掘金 (juejin.cn)</a></p>
-<p><a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/26027085">React Fiber是什么 - 知乎 (zhihu.com)</a></p>
-</blockquote>
-<p>前置知识树</p>
-<ol>
-<li><p><a target="_blank" rel="noopener" href="https://www.ruanyifeng.com/blog/2020/09/react-hooks-useeffect-tutorial.html">轻松学会 React 钩子：以 useEffect() 为例 - 阮一峰的网络日志 (ruanyifeng.com)</a></p>
-</li>
-<li><p><a target="_blank" rel="noopener" href="https://blog.csdn.net/wei1273356078/article/details/106543967">什么是DOM?你了解DOM树吗？-CSDN博客</a></p>
-</li>
-<li><p>虚拟dom：React 的虚拟 DOM 使用以 JavaScript 对象为基础的结构，而 Vue 的虚拟 DOM 使用以 VNode 对象为基础的结构。</p>
-<blockquote>
-<p> <a target="_blank" rel="noopener" href="https://juejin.cn/post/6997579802215448606">Vue 虚拟 DOM 搞不懂？这篇文章帮你彻底搞定虚拟 DOM - 掘金 (juejin.cn)</a></p>
-</blockquote>
-</li>
-</ol>
-<h2 id="3-React-hook"><a href="#3-React-hook" class="headerlink" title="3. React hook"></a>3. React hook</h2><blockquote>
-<p><a target="_blank" rel="noopener" href="https://www.ruanyifeng.com/blog/2019/09/react-hooks.html">React Hooks 入门教程 - 阮一峰的网络日志 (ruanyifeng.com)</a></p>
-</blockquote>
-<h3 id="3-2-useState"><a href="#3-2-useState" class="headerlink" title="3.2 useState"></a>3.2 useState</h3><blockquote>
-<p>一些理解：快照</p>
-</blockquote>
-<h3 id="3-1memo"><a href="#3-1memo" class="headerlink" title="3.1memo"></a>3.1memo</h3><blockquote>
-<p><a target="_blank" rel="noopener" href="https://b23.tv/aTsXvrQ">用代码实验的方式，让你彻底理解React.memo-哔哩哔哩</a></p>
-</blockquote>
-<p>用于优化，避免因为别的组件被渲染了，它就渲染</p>
-<p>​        useMemo和memo的区别</p>
-<h3 id="3-2-实现原理"><a href="#3-2-实现原理" class="headerlink" title="3.2 实现原理"></a>3.2 实现原理</h3><h3 id="4-redux"><a href="#4-redux" class="headerlink" title="4. redux"></a>4. redux</h3>
-      
-    </div>
-
-    
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-</div>
-
-
-
-
-    
-
-
-<div class="post-block">
-  
-  
-
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2023/11/25/%E4%BA%92%E8%81%94%E7%BD%91/%E5%89%8D%E7%AB%AF/react%E7%B2%BE%E5%AD%A6/%E4%BD%BF%E7%94%A8%20create-react-app%20%E6%9E%84%E5%BB%BAReact%E5%B7%A5%E7%A8%8B%E5%8C%96%E9%A1%B9%E7%9B%AE/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/uploads/cat.jpg">
-      <meta itemprop="name" content="zono">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="ZONO's World">
-      <meta itemprop="description" content="人生长度无法强求,但厚度可以靠努力">
-    </span>
-
-    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
-      <meta itemprop="name" content="undefined | ZONO's World">
-      <meta itemprop="description" content="">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/2023/11/25/%E4%BA%92%E8%81%94%E7%BD%91/%E5%89%8D%E7%AB%AF/react%E7%B2%BE%E5%AD%A6/%E4%BD%BF%E7%94%A8%20create-react-app%20%E6%9E%84%E5%BB%BAReact%E5%B7%A5%E7%A8%8B%E5%8C%96%E9%A1%B9%E7%9B%AE/" class="post-title-link" itemprop="url">深入react2</a>
-        </h2>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">Posted on</span>
-
-      <time title="Created: 2023-11-25 15:09:54" itemprop="dateCreated datePublished" datetime="2023-11-25T15:09:54+08:00">2023-11-25</time>
-    </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar-check"></i>
-      </span>
-      <span class="post-meta-item-text">Edited on</span>
-      <time title="Modified: 2023-11-24 16:35:16" itemprop="dateModified" datetime="2023-11-24T16:35:16+08:00">2023-11-24</time>
-    </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-folder"></i>
-      </span>
-      <span class="post-meta-item-text">In</span>
-        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/%E6%8A%80%E6%9C%AF/" itemprop="url" rel="index"><span itemprop="name">技术</span></a>
-        </span>
-          , 
-        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/%E6%8A%80%E6%9C%AF/%E5%89%8D%E7%AB%AF/" itemprop="url" rel="index"><span itemprop="name">前端</span></a>
-        </span>
-          , 
-        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/%E6%8A%80%E6%9C%AF/%E5%89%8D%E7%AB%AF/%E6%A1%86%E6%9E%B6/" itemprop="url" rel="index"><span itemprop="name">框架</span></a>
-        </span>
-          , 
-        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/%E6%8A%80%E6%9C%AF/%E5%89%8D%E7%AB%AF/%E6%A1%86%E6%9E%B6/React/" itemprop="url" rel="index"><span itemprop="name">React</span></a>
-        </span>
-    </span>
-
-  
-</div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          <h1 id="使用-create-react-app-构建React工程化项目"><a href="#使用-create-react-app-构建React工程化项目" class="headerlink" title="使用 create-react-app 构建React工程化项目"></a>使用 create-react-app 构建React工程化项目</h1><h2 id="现代开发理念——react的工程化、组件化"><a href="#现代开发理念——react的工程化、组件化" class="headerlink" title="现代开发理念——react的工程化、组件化"></a>现代开发理念——react的工程化、组件化</h2><blockquote>
-<p>工程化</p>
-<ul>
-<li>基于webpack自己搭建一套脚手架<ul>
-<li>脚手架：默认把webpack打包规则处理好了，基础项目结构也创建好了</li>
-</ul>
-</li>
-<li>使用create-react-app：一个脚手架</li>
-</ul>
-</blockquote>
-<h4 id="react的版本"><a href="#react的版本" class="headerlink" title="react的版本"></a>react的版本</h4><p>16：用的多</p>
-<p>17：应该是底层升级</p>
-<p>18：新版本、机制语法都升级了（默认安装）</p>
-<h2 id="使用cra"><a href="#使用cra" class="headerlink" title="使用cra"></a>使用cra</h2><h3 id="安装create-react-app"><a href="#安装create-react-app" class="headerlink" title="安装create-react-app"></a>安装create-react-app</h3><p><code>$ npm i create-react-app -g 「mac需要加sudo」</code></p>
-<p>基于脚手架创建项目「项目名称需要符合npm包规范」：使用“数字、小写、_”<br><code>$ create-react-app xxx</code></p>
-<h3 id="安装后的文件目录"><a href="#安装后的文件目录" class="headerlink" title="安装后的文件目录"></a>安装后的文件目录</h3><figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">|- node<span class="emphasis">_modules  包含安装的模块</span></span><br><span class="line"><span class="emphasis">|- public  页面模板和IconLogo</span></span><br><span class="line"><span class="emphasis">    |- favicon.ico</span></span><br><span class="line"><span class="emphasis">    |- index.html</span></span><br><span class="line"><span class="emphasis">|- src  我们编写的程序</span></span><br><span class="line"><span class="emphasis">    |- index.jsx  程序入口「jsx后缀名可以让文件支持jsx语法」</span></span><br><span class="line"><span class="emphasis">|- package.json</span></span><br><span class="line"><span class="emphasis">|- ...</span></span><br></pre></td></tr></table></figure>
-
-<h3 id="从package-json认识基本结构"><a href="#从package-json认识基本结构" class="headerlink" title="从package.json认识基本结构"></a>从package.json认识基本结构</h3><figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//package.json</span></span><br><span class="line"><span class="punctuation">&#123;</span></span><br><span class="line">  ...</span><br><span class="line">  <span class="attr">&quot;dependencies&quot;</span><span class="punctuation">:</span> <span class="punctuation">&#123;</span></span><br><span class="line">    ...</span><br><span class="line">    <span class="attr">&quot;react&quot;</span><span class="punctuation">:</span> <span class="string">&quot;^18.2.0&quot;</span><span class="punctuation">,</span>  <span class="comment">//核心（语法状态处理）</span></span><br><span class="line">    <span class="attr">&quot;react-dom&quot;</span><span class="punctuation">:</span> <span class="string">&quot;^18.2.0&quot;</span><span class="punctuation">,</span>  <span class="comment">//视图渲染核心</span></span><br><span class="line">    <span class="attr">&quot;react-scripts&quot;</span><span class="punctuation">:</span> <span class="string">&quot;5.0.1&quot;</span><span class="punctuation">,</span> <span class="comment">//对打包命令的集成，会调用webpack</span></span><br><span class="line">    <span class="attr">&quot;web-vitals&quot;</span><span class="punctuation">:</span> <span class="string">&quot;^2.1.4&quot;</span>  <span class="comment">//性能检测工具</span></span><br><span class="line">  <span class="punctuation">&#125;</span><span class="punctuation">,</span></span><br><span class="line">  <span class="attr">&quot;scripts&quot;</span><span class="punctuation">:</span> <span class="punctuation">&#123;</span></span><br><span class="line">    <span class="attr">&quot;start&quot;</span><span class="punctuation">:</span> <span class="string">&quot;react-scripts start&quot;</span><span class="punctuation">,</span> <span class="comment">//开发环境启动web服务进行预览</span></span><br><span class="line">    <span class="attr">&quot;build&quot;</span><span class="punctuation">:</span> <span class="string">&quot;react-scripts build&quot;</span><span class="punctuation">,</span> <span class="comment">//生产环境打包部署</span></span><br><span class="line">    <span class="attr">&quot;test&quot;</span><span class="punctuation">:</span> <span class="string">&quot;react-scripts test&quot;</span><span class="punctuation">,</span>   <span class="comment">//单元测试</span></span><br><span class="line">    <span class="attr">&quot;eject&quot;</span><span class="punctuation">:</span> <span class="string">&quot;react-scripts eject&quot;</span>  <span class="comment">//暴露配置项</span></span><br><span class="line">  <span class="punctuation">&#125;</span><span class="punctuation">,</span></span><br><span class="line">  <span class="attr">&quot;eslintConfig&quot;</span><span class="punctuation">:</span> <span class="punctuation">&#123;</span>  <span class="comment">//对webpack中ESLint词法检测的配置：包括检测词法错误、要求满足指定的规范等内容</span></span><br><span class="line">    <span class="attr">&quot;extends&quot;</span><span class="punctuation">:</span> <span class="punctuation">[</span></span><br><span class="line">      <span class="string">&quot;react-app&quot;</span><span class="punctuation">,</span></span><br><span class="line">      <span class="string">&quot;react-app/jest&quot;</span></span><br><span class="line">    <span class="punctuation">]</span></span><br><span class="line">  <span class="punctuation">&#125;</span><span class="punctuation">,</span></span><br><span class="line">  <span class="attr">&quot;browserslist&quot;</span><span class="punctuation">:</span> <span class="punctuation">&#123;</span>  <span class="comment">//基于browserslist规范，设置浏览器的兼容情况：例如</span></span><br><span class="line">      					<span class="comment">//1、postcss-loader + autoprefixer 给css3设置相关前缀</span></span><br><span class="line">      					<span class="comment">//2、babel-loader 把ES6编译为ES5</span></span><br><span class="line">    <span class="attr">&quot;production&quot;</span><span class="punctuation">:</span> <span class="punctuation">[</span></span><br><span class="line">      <span class="string">&quot;&gt;0.2%&quot;</span><span class="punctuation">,</span><span class="comment">//忽略使用率小于0.2%的浏览器</span></span><br><span class="line">      <span class="string">&quot;not dead&quot;</span><span class="punctuation">,</span><span class="comment">//忽略IE</span></span><br><span class="line">      <span class="string">&quot;not op_mini all&quot;</span><span class="comment">//不考虑欧朋浏览器</span></span><br><span class="line">    <span class="punctuation">]</span><span class="punctuation">,</span></span><br><span class="line">    <span class="attr">&quot;development&quot;</span><span class="punctuation">:</span> <span class="punctuation">[</span><span class="comment">//不兼容低版本浏览器</span></span><br><span class="line">      <span class="string">&quot;last 1 chrome version&quot;</span><span class="punctuation">,</span></span><br><span class="line">      <span class="string">&quot;last 1 firefox version&quot;</span><span class="punctuation">,</span></span><br><span class="line">      <span class="string">&quot;last 1 safari version&quot;</span></span><br><span class="line">    <span class="punctuation">]</span></span><br><span class="line">  <span class="punctuation">&#125;</span></span><br><span class="line"><span class="punctuation">&#125;</span></span><br></pre></td></tr></table></figure>
-
-<h3 id="暴露webpack配置项"><a href="#暴露webpack配置项" class="headerlink" title="暴露webpack配置项"></a>暴露webpack配置项</h3><p>默认情况下，会把webpack配置项隐藏到node_modules中，如果想修改，则需要暴露配置项<code>$ yarn eject</code></p>
-<blockquote>
-<p>注意事项</p>
-<p>1、一旦暴漏后，无法还原</p>
-<p>2、 会提醒你先把代码提交到git区，避免暴露后覆盖原始代码（必须上传代码）</p>
-</blockquote>
-<p>暴露后多了config文件夹（webpack配置）、scripts文件夹（对应下文scripts中的内容，执行相关命令的入口文件）</p>
-<figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/* 暴露后package.json中的变化 */</span></span><br><span class="line"><span class="punctuation">&#123;</span></span><br><span class="line">  <span class="attr">&quot;dependencies&quot;</span><span class="punctuation">:</span><span class="punctuation">&#123;</span>  <span class="comment">//暴露后，把webpack打包需要的所有模块都会安装一次，这里简写了</span></span><br><span class="line">  	<span class="comment">//有例如babel、单元测试、postcss、sass-loader等等</span></span><br><span class="line">    <span class="comment">//一些记录：</span></span><br><span class="line">    <span class="comment">//babel-preset-react-app:是对@babel/preset-env的重写，为了react</span></span><br><span class="line">     ...</span><br><span class="line">  <span class="punctuation">&#125;</span><span class="punctuation">,</span></span><br><span class="line">  <span class="attr">&quot;scripts&quot;</span><span class="punctuation">:</span> <span class="punctuation">&#123;</span></span><br><span class="line">    <span class="attr">&quot;start&quot;</span><span class="punctuation">:</span> <span class="string">&quot;node scripts/start.js&quot;</span><span class="punctuation">,</span>  </span><br><span class="line">    <span class="attr">&quot;build&quot;</span><span class="punctuation">:</span> <span class="string">&quot;node scripts/build.js&quot;</span><span class="punctuation">,</span></span><br><span class="line">    <span class="attr">&quot;test&quot;</span><span class="punctuation">:</span> <span class="string">&quot;node scripts/test.js&quot;</span></span><br><span class="line">    <span class="comment">//不在基于react-scripts处理命令，而是直接基于node去执行对应的文件</span></span><br><span class="line">    <span class="comment">//已经没有eject命令了</span></span><br><span class="line">  <span class="punctuation">&#125;</span><span class="punctuation">,</span></span><br><span class="line">   <span class="comment">//没变</span></span><br><span class="line">  <span class="attr">&quot;jest&quot;</span><span class="punctuation">:</span> <span class="punctuation">&#123;</span></span><br><span class="line">    <span class="comment">//单元测试配置</span></span><br><span class="line">  <span class="punctuation">&#125;</span><span class="punctuation">,</span></span><br><span class="line">  <span class="attr">&quot;babel&quot;</span><span class="punctuation">:</span> <span class="punctuation">&#123;</span>  <span class="comment">//关于babel-loader的额外配置，类似babel.config.js对bebal-loader的额外配置</span></span><br><span class="line">    <span class="attr">&quot;presets&quot;</span><span class="punctuation">:</span> <span class="punctuation">[</span></span><br><span class="line">      <span class="string">&quot;react-app&quot;</span></span><br><span class="line">    <span class="punctuation">]</span></span><br><span class="line">  <span class="punctuation">&#125;</span></span><br><span class="line"><span class="punctuation">&#125;</span></span><br><span class="line"></span><br><span class="line"><span class="comment">/* 新增的内容 */</span></span><br><span class="line">|- scripts</span><br><span class="line">    |- start.js</span><br><span class="line">    |- build.js</span><br><span class="line">    |- ...</span><br><span class="line">|- config</span><br><span class="line">    |- webpack.config.js</span><br><span class="line">    |- paths.js</span><br><span class="line">    |- ...</span><br></pre></td></tr></table></figure>
-
-<p><strong>真实项目中常用的一些修改操作</strong><br><code>配置less</code></p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/* </span></span><br><span class="line"><span class="comment">默认安装和配置的是sass，如果需要使用less，则需要：</span></span><br><span class="line"><span class="comment">1. 安装</span></span><br><span class="line"><span class="comment">  $ yarn add less less-loader@8</span></span><br><span class="line"><span class="comment">  $ yarn remove sass-loader</span></span><br><span class="line"><span class="comment">2. 修改webpack.config.js</span></span><br><span class="line"><span class="comment">*/</span></span><br><span class="line"><span class="comment">// 72~73</span></span><br><span class="line"><span class="keyword">const</span> lessRegex = <span class="regexp">/\.less$/</span>;</span><br><span class="line"><span class="keyword">const</span> lessModuleRegex = <span class="regexp">/\.module\.less$/</span>;</span><br><span class="line"></span><br><span class="line"><span class="comment">//507~545</span></span><br><span class="line">&#123;</span><br><span class="line">  <span class="attr">test</span>: lessRegex,</span><br><span class="line">  <span class="attr">exclude</span>: lessModuleRegex,</span><br><span class="line">  <span class="attr">use</span>: <span class="title function_">getStyleLoaders</span>(</span><br><span class="line">    ...</span><br><span class="line">    <span class="string">&#x27;less-loader&#x27;</span></span><br><span class="line">  )</span><br><span class="line">&#125;,</span><br><span class="line">&#123;</span><br><span class="line">  <span class="attr">test</span>: lessModuleRegex,</span><br><span class="line">  <span class="attr">use</span>: <span class="title function_">getStyleLoaders</span>(</span><br><span class="line">    ...</span><br><span class="line">    <span class="string">&#x27;less-loader&#x27;</span></span><br><span class="line">  ),</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<p><code>配置别名</code></p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//313</span></span><br><span class="line"><span class="attr">resolve</span>: &#123;</span><br><span class="line">  ...</span><br><span class="line">  <span class="attr">alias</span>: &#123;</span><br><span class="line">    <span class="string">&#x27;@&#x27;</span>: path.<span class="property">appSrc</span>,</span><br><span class="line">    ...</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<p><code>配置预览域名</code></p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// scripts/start.js</span></span><br><span class="line"><span class="comment">// 48</span></span><br><span class="line"><span class="keyword">const</span> <span class="variable constant_">HOST</span> = process.<span class="property">env</span>.<span class="property">HOST</span> || <span class="string">&#x27;127.0.0.1&#x27;</span>;</span><br><span class="line"><span class="comment">// 也可以基于 cross-env 设置环境变量</span></span><br></pre></td></tr></table></figure>
-
-<p><code>配置跨域代理</code></p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/*</span></span><br><span class="line"><span class="comment">安装 http-proxy-middleware</span></span><br><span class="line"><span class="comment">$ yarn add http-proxy-middleware</span></span><br><span class="line"><span class="comment"></span></span><br><span class="line"><span class="comment">src/setupProxy.js</span></span><br><span class="line"><span class="comment">*/</span></span><br><span class="line"><span class="keyword">const</span> &#123; createProxyMiddleware &#125; = <span class="built_in">require</span>(<span class="string">&#x27;http-proxy-middleware&#x27;</span>);</span><br><span class="line"><span class="variable language_">module</span>.<span class="property">exports</span> = <span class="keyword">function</span> (<span class="params">app</span>) &#123;</span><br><span class="line">    app.<span class="title function_">use</span>(</span><br><span class="line">        <span class="title function_">createProxyMiddleware</span>(<span class="string">&quot;/api&quot;</span>, &#123;</span><br><span class="line">            <span class="attr">target</span>: <span class="string">&quot;http://127.0.0.1:7100&quot;</span>,</span><br><span class="line">            <span class="attr">changeOrigin</span>: <span class="literal">true</span>,</span><br><span class="line">            <span class="attr">ws</span>: <span class="literal">true</span>,</span><br><span class="line">            <span class="attr">pathRewrite</span>: &#123; <span class="string">&quot;^/api&quot;</span>: <span class="string">&quot;&quot;</span> &#125;</span><br><span class="line">        &#125;)</span><br><span class="line">    );</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="comment">//测试地址：</span></span><br><span class="line"><span class="comment">//https://www.jianshu.com/asimov/subscriptions/recommended_collections</span></span><br><span class="line"><span class="comment">//https://news-at.zhihu.com/api/4/news/latest</span></span><br></pre></td></tr></table></figure>
-
-<p><code>配置浏览器兼容</code></p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//package.json</span></span><br><span class="line"><span class="comment">//https://github.com/browserslist/browserslist</span></span><br><span class="line"><span class="string">&quot;browserslist&quot;</span>: &#123;</span><br><span class="line">  <span class="string">&quot;production&quot;</span>: [</span><br><span class="line">    <span class="string">&quot;&gt;0.2%&quot;</span>,</span><br><span class="line">    <span class="string">&quot;not dead&quot;</span>,</span><br><span class="line">    <span class="string">&quot;not op_mini all&quot;</span></span><br><span class="line">  ],</span><br><span class="line">  <span class="string">&quot;development&quot;</span>: [</span><br><span class="line">    <span class="string">&quot;last 1 chrome version&quot;</span>,</span><br><span class="line">    <span class="string">&quot;last 1 firefox version&quot;</span>,</span><br><span class="line">    <span class="string">&quot;last 1 safari version&quot;</span></span><br><span class="line">  ]</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">/*</span></span><br><span class="line"><span class="comment">CSS兼容处理：设置前缀</span></span><br><span class="line"><span class="comment">autoprefixer + postcss-loader + browserslist</span></span><br><span class="line"><span class="comment"></span></span><br><span class="line"><span class="comment">JS兼容处理：ES6语法转换为ES5语法</span></span><br><span class="line"><span class="comment">babel-loader + babel-preset-react-app(@babel/preset-env) + browserslist</span></span><br><span class="line"><span class="comment"></span></span><br><span class="line"><span class="comment">JS兼容处理：内置API</span></span><br><span class="line"><span class="comment">入口配置react-app-polyfill</span></span><br><span class="line"><span class="comment">*/</span></span><br><span class="line"><span class="keyword">import</span> <span class="string">&#x27;react-app-polyfill/ie9&#x27;</span>;</span><br><span class="line"><span class="keyword">import</span> <span class="string">&#x27;react-app-polyfill/ie11&#x27;</span>;</span><br><span class="line"><span class="keyword">import</span> <span class="string">&#x27;react-app-polyfill/stable&#x27;</span>;</span><br></pre></td></tr></table></figure>
-
-<p>其余的一些优化配置、响应式布局的配置等，实战中再去处理！！</p>
-
-      
-    </div>
-
-    
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-</div>
-
-
-
-
   <nav class="pagination">
-    <a class="extend prev" rel="prev" title="Previous page" aria-label="Previous page" href="/page/3/"><i class="fa fa-angle-left"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/3/">3</a><span class="page-number current">4</span><a class="page-number" href="/page/5/">5</a><span class="space">&hellip;</span><a class="page-number" href="/page/10/">10</a><a class="extend next" rel="next" title="Next page" aria-label="Next page" href="/page/5/"><i class="fa fa-angle-right"></i></a>
+    <a class="extend prev" rel="prev" title="Previous page" aria-label="Previous page" href="/page/3/"><i class="fa fa-angle-left"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/3/">3</a><span class="page-number current">4</span><a class="page-number" href="/page/5/">5</a><span class="space">&hellip;</span><a class="page-number" href="/page/11/">11</a><a class="extend next" rel="next" title="Next page" aria-label="Next page" href="/page/5/"><i class="fa fa-angle-right"></i></a>
   </nav>
 
 </div>

@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width">
+<meta name="theme-color" content="#222"><meta name="generator" content="Hexo 5.4.2">
+
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha256-CTSx/A06dm1B063156EVh15m6Y67pAjZZaQc89LLSrU=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.1.1/animate.min.css" integrity="sha256-PR7ttpcvz8qrF57fur/yAx1qXMFJeJFiA6pSzWi0OIE=" crossorigin="anonymous">
+
+<script class="next-config" data-name="main" type="application/json">{"hostname":"example.com","root":"/","images":"/images","scheme":"Gemini","darkmode":false,"version":"8.18.2","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":{"enable":false,"style":null},"fold":{"enable":false,"height":500},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"Searching...","empty":"We didn't find any results for the search: ${query}","hits_time":"${hits} results found in ${time} ms","hits":"${hits} results found"}}</script><script src="/js/config.js"></script>
+
+    <meta name="description" content="Part 1 jsx→viscalDOM 这里可以参看我的开源库  123456789101112131415161718192021222324252627282930313233343536373839404142434445464748495051525354555657&#x2F;*@Date		:2023&#x2F;12&#x2F;04 15:56:37@Author		:zono@Description:一个简单的">
+<meta property="og:type" content="article">
+<meta property="og:title" content="04.JSX底层实操">
+<meta property="og:url" content="http://example.com/2023/12/04/%E4%BA%92%E8%81%94%E7%BD%91/%E5%89%8D%E7%AB%AF/react%E7%B2%BE%E5%AD%A6/04-JSX%E5%BA%95%E5%B1%82%E5%AE%9E%E6%93%8D/index.html">
+<meta property="og:site_name" content="ZONO&#39;s World">
+<meta property="og:description" content="Part 1 jsx→viscalDOM 这里可以参看我的开源库  123456789101112131415161718192021222324252627282930313233343536373839404142434445464748495051525354555657&#x2F;*@Date		:2023&#x2F;12&#x2F;04 15:56:37@Author		:zono@Description:一个简单的">
+<meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="2023-12-04T07:46:46.000Z">
+<meta property="article:modified_time" content="2023-12-04T08:30:03.269Z">
+<meta property="article:author" content="zono">
+<meta property="article:tag" content="技术">
+<meta name="twitter:card" content="summary">
+
+
+<link rel="canonical" href="http://example.com/2023/12/04/%E4%BA%92%E8%81%94%E7%BD%91/%E5%89%8D%E7%AB%AF/react%E7%B2%BE%E5%AD%A6/04-JSX%E5%BA%95%E5%B1%82%E5%AE%9E%E6%93%8D/">
+
+
+
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"en","comments":true,"permalink":"http://example.com/2023/12/04/%E4%BA%92%E8%81%94%E7%BD%91/%E5%89%8D%E7%AB%AF/react%E7%B2%BE%E5%AD%A6/04-JSX%E5%BA%95%E5%B1%82%E5%AE%9E%E6%93%8D/","path":"2023/12/04/互联网/前端/react精学/04-JSX底层实操/","title":"04.JSX底层实操"}</script>
+
+<script class="next-config" data-name="calendar" type="application/json">""</script>
+<title>04.JSX底层实操 | ZONO's World</title>
+  
+
+
+
+
+
+
+
+
+  <noscript>
+    <link rel="stylesheet" href="/css/noscript.css">
+  </noscript>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" class="use-motion">
+  <div class="headband"></div>
+
+  <main class="main">
+    <div class="column">
+      <header class="header" itemscope itemtype="http://schema.org/WPHeader"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="Toggle navigation bar" role="button">
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <i class="logo-line"></i>
+      <p class="site-title">ZONO's World</p>
+      <i class="logo-line"></i>
+    </a>
+      <p class="site-subtitle" itemprop="description">welcome to my world</p>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger" aria-label="Search" role="button">
+    </div>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  <ul class="main-menu menu"><li class="menu-item menu-item-home"><a href="/" rel="section"><i class="fa fa-home fa-fw"></i>Home</a></li><li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>Archives</a></li><li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>Tags</a></li><li class="menu-item menu-item-categories"><a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>Categories</a></li><li class="menu-item menu-item-生活"><a href="/%E7%94%9F%E6%B4%BB/" rel="section"><i class="fa fa-book fa-fw"></i>生活</a></li><li class="menu-item menu-item-兴趣"><a href="/%E5%85%B4%E8%B6%A3/" rel="section"><i class="fa fa-book fa-fw"></i>兴趣</a></li><li class="menu-item menu-item-技术汇总"><a href="/../categories/%E6%8A%80%E6%9C%AF/" rel="section"><i class="fa fa-book fa-fw"></i>技术汇总</a></li><li class="menu-item menu-item-前端"><a href="/%E5%89%8D%E7%AB%AF/" rel="section"><i class="fa fa-book fa-fw"></i>前端</a></li><li class="menu-item menu-item-后端"><a href="/%E5%90%8E%E7%AB%AF/" rel="section"><i class="fa fa-book fa-fw"></i>后端</a></li><li class="menu-item menu-item-互联网通用"><a href="/%E9%80%9A%E7%94%A8%E7%9F%A5%E8%AF%86/" rel="section"><i class="fa fa-book fa-fw"></i>互联网通用</a></li><li class="menu-item menu-item-关于我"><a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>关于我</a></li>
+  </ul>
+</nav>
+
+
+
+
+</header>
+        
+  
+  <aside class="sidebar">
+
+    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
+      <ul class="sidebar-nav">
+        <li class="sidebar-nav-toc">
+          Table of Contents
+        </li>
+        <li class="sidebar-nav-overview">
+          Overview
+        </li>
+      </ul>
+
+      <div class="sidebar-panel-container">
+        <!--noindex-->
+        <div class="post-toc-wrap sidebar-panel">
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Part-1-jsx%E2%86%92viscalDOM"><span class="nav-number">1.</span> <span class="nav-text">Part 1 jsx→viscalDOM</span></a></li></ol></div>
+        </div>
+        <!--/noindex-->
+
+        <div class="site-overview-wrap sidebar-panel">
+          <div class="site-author animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="zono"
+      src="/uploads/cat.jpg">
+  <p class="site-author-name" itemprop="name">zono</p>
+  <div class="site-description" itemprop="description">人生长度无法强求,但厚度可以靠努力</div>
+</div>
+<div class="site-state-wrap animated">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+        <a href="/archives/">
+          <span class="site-state-item-count">102</span>
+          <span class="site-state-item-name">posts</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+          <a href="/categories/">
+        <span class="site-state-item-count">33</span>
+        <span class="site-state-item-name">categories</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+          <a href="/tags/">
+        <span class="site-state-item-count">8</span>
+        <span class="site-state-item-name">tags</span></a>
+      </div>
+  </nav>
+</div>
+  <div class="links-of-author animated">
+      <span class="links-of-author-item">
+        <a href="https://github.com/zo-no" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;zo-no" rel="noopener me" target="_blank"><i class="fab fa-github fa-fw"></i>GitHub</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="/2742160682@qq.com" title="E-Mail → 2742160682@qq.com" rel="noopener me"><i class="fa fa-envelope fa-fw"></i>E-Mail</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="weixin://contacts/profile/x27421" title="WeChat → weixin:&#x2F;&#x2F;contacts&#x2F;profile&#x2F;x27421" rel="noopener me" target="_blank"><i class="fab fa-weixin fa-fw"></i>WeChat</a>
+      </span>
+  </div>
+
+        </div>
+      </div>
+    </div>
+
+    
+  </aside>
+
+
+    </div>
+
+    <div class="main-inner post posts-expand">
+
+
+  
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="en">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2023/12/04/%E4%BA%92%E8%81%94%E7%BD%91/%E5%89%8D%E7%AB%AF/react%E7%B2%BE%E5%AD%A6/04-JSX%E5%BA%95%E5%B1%82%E5%AE%9E%E6%93%8D/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/uploads/cat.jpg">
+      <meta itemprop="name" content="zono">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="ZONO's World">
+      <meta itemprop="description" content="人生长度无法强求,但厚度可以靠努力">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="04.JSX底层实操 | ZONO's World">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          04.JSX底层实操
+        </h1>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">Posted on</span>
+      
+
+      <time title="Created: 2023-12-04 15:46:46 / Modified: 16:30:03" itemprop="dateCreated datePublished" datetime="2023-12-04T15:46:46+08:00">2023-12-04</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">In</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/%E6%8A%80%E6%9C%AF/" itemprop="url" rel="index"><span itemprop="name">技术</span></a>
+        </span>
+          , 
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/%E6%8A%80%E6%9C%AF/%E5%89%8D%E7%AB%AF/" itemprop="url" rel="index"><span itemprop="name">前端</span></a>
+        </span>
+          , 
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/%E6%8A%80%E6%9C%AF/%E5%89%8D%E7%AB%AF/%E6%A1%86%E6%9E%B6/" itemprop="url" rel="index"><span itemprop="name">框架</span></a>
+        </span>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody"><h1 id="Part-1-jsx→viscalDOM"><a href="#Part-1-jsx→viscalDOM" class="headerlink" title="Part 1 jsx→viscalDOM"></a>Part 1 jsx→viscalDOM</h1><blockquote>
+<p>这里可以参看我的开源库</p>
+</blockquote>
+<figure class="highlight jsx"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/*</span></span><br><span class="line"><span class="comment">@Date		:2023/12/04 15:56:37</span></span><br><span class="line"><span class="comment">@Author		:zono</span></span><br><span class="line"><span class="comment">@Description:一个简单的JSX处理器</span></span><br><span class="line"><span class="comment">*/</span></span><br><span class="line"></span><br><span class="line"><span class="comment">/*createElement函数:用于构建虚拟DOM</span></span><br><span class="line"><span class="comment">----------------------------------------</span></span><br><span class="line"><span class="comment">1.参考react的createElement函数：</span></span><br><span class="line"><span class="comment">React.createElement(ele,props,...children)</span></span><br><span class="line"><span class="comment">- ele：元素标签名\组件名</span></span><br><span class="line"><span class="comment">- props：元素的属性集合(对象)（无属性，则此值为null）</span></span><br><span class="line"><span class="comment">- children：当前元素的子节点，第三个及以后的参数都是</span></span><br><span class="line"><span class="comment">- 返回虚拟DOM，可以看下文虚拟DOM结构</span></span><br><span class="line"><span class="comment">----------------------------------------</span></span><br><span class="line"><span class="comment">2. 参考react输出的虚拟DOM： </span></span><br><span class="line"><span class="comment">virtualDOM = &#123;</span></span><br><span class="line"><span class="comment">    $$typeof: Symbol(react.element), //react元素的标识</span></span><br><span class="line"><span class="comment">    ref: null,</span></span><br><span class="line"><span class="comment">    key: null,</span></span><br><span class="line"><span class="comment">    type: 标签名「或组件」, //h1、h2...</span></span><br><span class="line"><span class="comment">    // 存储了元素的相关属性 &amp;&amp; 子节点信息</span></span><br><span class="line"><span class="comment">    props: &#123;</span></span><br><span class="line"><span class="comment">        ..., // 元素的相关属性,如：className、style,</span></span><br><span class="line"><span class="comment">        children // 子节点信息（没有子节点则没有这个属性、属性值可能是一个值、也可能是一个数组）</span></span><br><span class="line"><span class="comment">    &#125;//必定存在，至少是个空对象</span></span><br><span class="line"><span class="comment">  &#125;</span></span><br><span class="line"><span class="comment">----------------------------------------</span></span><br><span class="line"><span class="comment">*/</span></span><br><span class="line"><span class="keyword">export</span> <span class="keyword">function</span> <span class="title function_">createElement</span>(<span class="params">ele, props, ...children</span>) &#123;</span><br><span class="line">  <span class="keyword">let</span> virtualDOM = &#123;</span><br><span class="line">    <span class="attr">$$typeof</span>: <span class="title class_">Symbol</span>.<span class="title function_">for</span>(<span class="string">&quot;react.element&quot;</span>),</span><br><span class="line">    <span class="attr">ref</span>: <span class="literal">null</span>,</span><br><span class="line">    <span class="attr">key</span>: <span class="literal">null</span>,</span><br><span class="line">    <span class="attr">type</span>: <span class="literal">null</span>,</span><br><span class="line">    <span class="attr">props</span>: &#123;&#125;,</span><br><span class="line">  &#125;;</span><br><span class="line">  <span class="keyword">let</span> len = children.<span class="property">length</span>;</span><br><span class="line"></span><br><span class="line">  <span class="comment">// 1.处理type</span></span><br><span class="line">  virtualDOM.<span class="property">type</span> = ele;</span><br><span class="line"></span><br><span class="line">  <span class="comment">// 2.处理props</span></span><br><span class="line">  <span class="keyword">if</span> (props) &#123;</span><br><span class="line">    virtualDOM.<span class="property">props</span> = &#123;</span><br><span class="line">      ...props,</span><br><span class="line">      children,</span><br><span class="line">    &#125;;</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  <span class="comment">// 3.处理children</span></span><br><span class="line">  <span class="keyword">if</span> (len === <span class="number">1</span>) virtualDOM.<span class="property">props</span>.<span class="property">children</span> = children[<span class="number">0</span>];</span><br><span class="line">  <span class="keyword">else</span> <span class="keyword">if</span> (len &gt; <span class="number">1</span>) virtualDOM.<span class="property">props</span>.<span class="property">children</span> = children;</span><br><span class="line">  <span class="keyword">else</span> virtualDOM.<span class="property">props</span>.<span class="property">children</span> = <span class="literal">null</span>;</span><br><span class="line"></span><br><span class="line">  <span class="keyword">return</span> virtualDOM;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>对应的index.js，这里我们用<code>03</code>的对象。</p>
+<figure class="highlight jsx"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// import React from &quot;react&quot;;</span></span><br><span class="line"><span class="keyword">import</span> <span class="title class_">ReactDOM</span> <span class="keyword">from</span> <span class="string">&quot;react-dom/client&quot;</span>;</span><br><span class="line"><span class="keyword">import</span> <span class="string">&quot;./index.less&quot;</span>;</span><br><span class="line"><span class="keyword">import</span> &#123; createElement,  &#125; <span class="keyword">from</span> <span class="string">&#x27;./myJSXhandle&#x27;</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> root = <span class="title class_">ReactDOM</span>.<span class="title function_">createRoot</span>(<span class="variable language_">document</span>.<span class="title function_">getElementById</span>(<span class="string">&quot;root&quot;</span>));</span><br><span class="line"></span><br><span class="line"><span class="keyword">let</span> styObj = &#123;</span><br><span class="line">    <span class="attr">color</span>: <span class="string">&#x27;red&#x27;</span>,</span><br><span class="line">    <span class="attr">fontSize</span>: <span class="string">&#x27;16px&#x27;</span></span><br><span class="line">&#125;;</span><br><span class="line"><span class="keyword">let</span> x = <span class="number">10</span>;</span><br><span class="line"><span class="keyword">let</span> y = <span class="number">20</span>;</span><br><span class="line"></span><br><span class="line"><span class="comment">//把react.createElement方法改成自己的方法</span></span><br><span class="line"><span class="comment">//把react.Fragment改为直接填写</span></span><br><span class="line"><span class="comment">//可以见到react已经没有被调用了</span></span><br><span class="line"><span class="keyword">let</span> jsxObj = <span class="title function_">createElement</span>(</span><br><span class="line">    <span class="comment">//   React.Fragment,</span></span><br><span class="line">    <span class="string">&quot;div&quot;</span>,</span><br><span class="line">  <span class="literal">null</span>,</span><br><span class="line">  <span class="title function_">createElement</span>(</span><br><span class="line">      <span class="string">&quot;h2&quot;</span>,</span><br><span class="line">    &#123;<span class="attr">className</span>: <span class="string">&quot;title&quot;</span>,</span><br><span class="line">     <span class="attr">style</span>: styObj,&#125;,</span><br><span class="line">    <span class="string">&quot;zono&quot;</span></span><br><span class="line">  ),</span><br><span class="line">  <span class="title function_">createElement</span>(</span><br><span class="line">    <span class="string">&quot;div&quot;</span>,</span><br><span class="line">    &#123;<span class="attr">className</span>: <span class="string">&quot;box&quot;</span>,&#125;,</span><br><span class="line">    <span class="string">&quot;牛&quot;</span>,</span><br><span class="line">    <span class="title function_">createElement</span>(<span class="string">&quot;span&quot;</span>, <span class="literal">null</span>, x),</span><br><span class="line">    <span class="title function_">createElement</span>(<span class="string">&quot;span&quot;</span>, <span class="literal">null</span>, y)</span><br><span class="line">  )</span><br><span class="line">);</span><br><span class="line"></span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(jsxObj);</span><br><span class="line"></span><br><span class="line">root.<span class="title function_">render</span>(jsxObj);</span><br><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<p>如此完成createElement的覆盖</p>
+
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+          <div class="post-tags">
+              <a href="/tags/%E6%8A%80%E6%9C%AF/" rel="tag"># 技术</a>
+          </div>
+
+        
+
+          <div class="post-nav">
+            <div class="post-nav-item">
+                <a href="/2023/12/04/%E4%BA%92%E8%81%94%E7%BD%91/%E5%89%8D%E7%AB%AF/react%E7%B2%BE%E5%AD%A6/03-jsx%E8%AF%AD%E6%B3%95/" rel="prev" title="04.jsx语法">
+                  <i class="fa fa-angle-left"></i> 04.jsx语法
+                </a>
+            </div>
+            <div class="post-nav-item">
+            </div>
+          </div>
+    </footer>
+  </article>
+</div>
+
+
+
+
+
+
+</div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+
+  <div class="copyright">
+    &copy; 
+    <span itemprop="copyrightYear">2023</span>
+    <span class="with-love">
+      <i class="fa fa-heart"></i>
+    </span>
+    <span class="author" itemprop="copyrightHolder">zono</span>
+  </div>
+  <div class="powered-by">Powered by <a href="https://hexo.io/" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.js.org/" rel="noopener" target="_blank">NexT.Gemini</a>
+  </div>
+
+    </div>
+  </footer>
+
+  
+  <div class="back-to-top" role="button" aria-label="Back to top">
+    <i class="fa fa-arrow-up fa-lg"></i>
+    <span>0%</span>
+  </div>
+
+<noscript>
+  <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
+</noscript>
+
+
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js" integrity="sha256-XL2inqUJaslATFnHdJOi9GfQ60on8Wx1C2H8DYiN1xY=" crossorigin="anonymous"></script>
+<script src="/js/comments.js"></script><script src="/js/utils.js"></script><script src="/js/motion.js"></script><script src="/js/next-boot.js"></script>
+
+  
+
+
+
+
+
+
+  
+
+
+
+
+
+</body>
+</html>
