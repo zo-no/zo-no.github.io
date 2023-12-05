@@ -18,7 +18,7 @@
     <meta name="description" content="02.MVC和MVVM虚拟DOM主流的思想：不在直接去操作DOM，而是改为“数据驱动思想” 操作DOM思想：  操作DOM比较消耗性能「主要原因就是：可能会导致DOM重排(回流)&#x2F;重绘」 操作起来也相对来讲麻烦一些  驱动思想：  我们不会在直接操作DOM 我们去操作数据「当我们修改了数据，框架会按照相关的数据，让页面重新渲染」 框架底层实现视图的渲染，也是基于操作DOM完成的 构建了一套 虚拟D">
 <meta property="og:type" content="article">
 <meta property="og:title" content="02.MVC和MVVM">
-<meta property="og:url" content="http://example.com/2023/12/04/%E4%BA%92%E8%81%94%E7%BD%91/%E5%89%8D%E7%AB%AF/react%E7%B2%BE%E5%AD%A6/02.MVC%E5%92%8CMVVM/index.html">
+<meta property="og:url" content="http://example.com/2023/12/04/%E4%BA%92%E8%81%94%E7%BD%91/%E5%89%8D%E7%AB%AF/react%E7%B2%BE%E5%AD%A6/02-MVC%E5%92%8CMVVM/index.html">
 <meta property="og:site_name" content="ZONO&#39;s World">
 <meta property="og:description" content="02.MVC和MVVM虚拟DOM主流的思想：不在直接去操作DOM，而是改为“数据驱动思想” 操作DOM思想：  操作DOM比较消耗性能「主要原因就是：可能会导致DOM重排(回流)&#x2F;重绘」 操作起来也相对来讲麻烦一些  驱动思想：  我们不会在直接操作DOM 我们去操作数据「当我们修改了数据，框架会按照相关的数据，让页面重新渲染」 框架底层实现视图的渲染，也是基于操作DOM完成的 构建了一套 虚拟D">
 <meta property="og:locale" content="en_US">
@@ -33,11 +33,11 @@
 <meta name="twitter:image" content="http://example.com/2023/12/04/-img/%E6%8A%80%E6%9C%AF/%E5%89%8D%E7%AB%AF/%E6%A1%86%E6%9E%B6/2.png">
 
 
-<link rel="canonical" href="http://example.com/2023/12/04/%E4%BA%92%E8%81%94%E7%BD%91/%E5%89%8D%E7%AB%AF/react%E7%B2%BE%E5%AD%A6/02.MVC%E5%92%8CMVVM/">
+<link rel="canonical" href="http://example.com/2023/12/04/%E4%BA%92%E8%81%94%E7%BD%91/%E5%89%8D%E7%AB%AF/react%E7%B2%BE%E5%AD%A6/02-MVC%E5%92%8CMVVM/">
 
 
 
-<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"en","comments":true,"permalink":"http://example.com/2023/12/04/%E4%BA%92%E8%81%94%E7%BD%91/%E5%89%8D%E7%AB%AF/react%E7%B2%BE%E5%AD%A6/02.MVC%E5%92%8CMVVM/","path":"2023/12/04/互联网/前端/react精学/02.MVC和MVVM/","title":"02.MVC和MVVM"}</script>
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"en","comments":true,"permalink":"http://example.com/2023/12/04/%E4%BA%92%E8%81%94%E7%BD%91/%E5%89%8D%E7%AB%AF/react%E7%B2%BE%E5%AD%A6/02-MVC%E5%92%8CMVVM/","path":"2023/12/04/互联网/前端/react精学/02-MVC和MVVM/","title":"02.MVC和MVVM"}</script>
 
 <script class="next-config" data-name="calendar" type="application/json">""</script>
 <title>02.MVC和MVVM | ZONO's World</title>
@@ -128,13 +128,13 @@
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
         <a href="/archives/">
-          <span class="site-state-item-count">102</span>
+          <span class="site-state-item-count">104</span>
           <span class="site-state-item-name">posts</span>
         </a>
       </div>
       <div class="site-state-item site-state-categories">
           <a href="/categories/">
-        <span class="site-state-item-count">33</span>
+        <span class="site-state-item-count">34</span>
         <span class="site-state-item-name">categories</span></a>
       </div>
       <div class="site-state-item site-state-tags">
@@ -177,7 +177,7 @@
   
 
   <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="en">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2023/12/04/%E4%BA%92%E8%81%94%E7%BD%91/%E5%89%8D%E7%AB%AF/react%E7%B2%BE%E5%AD%A6/02.MVC%E5%92%8CMVVM/">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2023/12/04/%E4%BA%92%E8%81%94%E7%BD%91/%E5%89%8D%E7%AB%AF/react%E7%B2%BE%E5%AD%A6/02-MVC%E5%92%8CMVVM/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/uploads/cat.jpg">

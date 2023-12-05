@@ -15,17 +15,17 @@
 
 <script class="next-config" data-name="main" type="application/json">{"hostname":"example.com","root":"/","images":"/images","scheme":"Gemini","darkmode":false,"version":"8.18.2","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":{"enable":false,"style":null},"fold":{"enable":false,"height":500},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"Searching...","empty":"We didn't find any results for the search: ${query}","hits_time":"${hits} results found in ${time} ms","hits":"${hits} results found"}}</script><script src="/js/config.js"></script>
 
-    <meta name="description" content="巨量注释笔记😊  Part 1 jsx→viscalDOM 这里可以参看我的开源库  123456789101112131415161718192021222324252627282930313233343536373839404142434445464748495051525354555657&#x2F;*@Date		:2023&#x2F;12&#x2F;04 15:56:37@Author		:zono@Descri">
+    <meta name="description" content="巨量注释笔记😊因为自己写的处理jsx还是不够完善，后面的代码还是用会React官方的方法。所以可以先跳过本章  Part 1 jsx→viscalDOM 这里可以参看我的开源库  123456789101112131415161718192021222324252627282930313233343536373839404142434445464748495051525354555657&#x2F;*@">
 <meta property="og:type" content="article">
 <meta property="og:title" content="04.JSX底层实操">
 <meta property="og:url" content="http://example.com/2023/12/04/%E4%BA%92%E8%81%94%E7%BD%91/%E5%89%8D%E7%AB%AF/react%E7%B2%BE%E5%AD%A6/04-JSX%E5%BA%95%E5%B1%82%E5%AE%9E%E6%93%8D/index.html">
 <meta property="og:site_name" content="ZONO&#39;s World">
-<meta property="og:description" content="巨量注释笔记😊  Part 1 jsx→viscalDOM 这里可以参看我的开源库  123456789101112131415161718192021222324252627282930313233343536373839404142434445464748495051525354555657&#x2F;*@Date		:2023&#x2F;12&#x2F;04 15:56:37@Author		:zono@Descri">
+<meta property="og:description" content="巨量注释笔记😊因为自己写的处理jsx还是不够完善，后面的代码还是用会React官方的方法。所以可以先跳过本章  Part 1 jsx→viscalDOM 这里可以参看我的开源库  123456789101112131415161718192021222324252627282930313233343536373839404142434445464748495051525354555657&#x2F;*@">
 <meta property="og:locale" content="en_US">
 <meta property="og:image" content="c:/Users/27421/AppData/Roaming/Typora/typora-user-images/image-20231204193150139.png">
 <meta property="og:image" content="c:/Users/27421/AppData/Roaming/Typora/typora-user-images/image-20231204193911032.png">
 <meta property="article:published_time" content="2023-12-04T07:46:46.000Z">
-<meta property="article:modified_time" content="2023-12-04T11:39:49.033Z">
+<meta property="article:modified_time" content="2023-12-05T06:50:12.804Z">
 <meta property="article:author" content="zono">
 <meta property="article:tag" content="技术">
 <meta name="twitter:card" content="summary">
@@ -127,13 +127,13 @@
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
         <a href="/archives/">
-          <span class="site-state-item-count">102</span>
+          <span class="site-state-item-count">104</span>
           <span class="site-state-item-name">posts</span>
         </a>
       </div>
       <div class="site-state-item site-state-categories">
           <a href="/categories/">
-        <span class="site-state-item-count">33</span>
+        <span class="site-state-item-count">34</span>
         <span class="site-state-item-name">categories</span></a>
       </div>
       <div class="site-state-item site-state-tags">
@@ -204,9 +204,15 @@
         <i class="far fa-calendar"></i>
       </span>
       <span class="post-meta-item-text">Posted on</span>
-      
 
-      <time title="Created: 2023-12-04 15:46:46 / Modified: 19:39:49" itemprop="dateCreated datePublished" datetime="2023-12-04T15:46:46+08:00">2023-12-04</time>
+      <time title="Created: 2023-12-04 15:46:46" itemprop="dateCreated datePublished" datetime="2023-12-04T15:46:46+08:00">2023-12-04</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar-check"></i>
+      </span>
+      <span class="post-meta-item-text">Edited on</span>
+      <time title="Modified: 2023-12-05 14:50:12" itemprop="dateModified" datetime="2023-12-05T14:50:12+08:00">2023-12-05</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -236,7 +242,7 @@
     
     
     <div class="post-body" itemprop="articleBody"><blockquote>
-<p>巨量注释笔记😊</p>
+<p>巨量注释笔记😊因为自己写的处理jsx还是不够完善，后面的代码还是用会React官方的方法。所以可以先跳过本章</p>
 </blockquote>
 <h1 id="Part-1-jsx→viscalDOM"><a href="#Part-1-jsx→viscalDOM" class="headerlink" title="Part 1 jsx→viscalDOM"></a>Part 1 jsx→viscalDOM</h1><blockquote>
 <p>这里可以参看我的开源库</p>
@@ -291,6 +297,9 @@
 <li>底层真的用了很多js基础的内容</li>
 <li>数据结构的运用很重要</li>
 </ul>
+<blockquote>
+<p>因为自己写的处理jsx还是不够完善，后面的代码还是用会React官方的方法</p>
+</blockquote>
 
     </div>
 
@@ -312,6 +321,9 @@
                 </a>
             </div>
             <div class="post-nav-item">
+                <a href="/2023/12/04/%E4%BA%92%E8%81%94%E7%BD%91/%E5%89%8D%E7%AB%AF/react%E7%B2%BE%E5%AD%A6/05-%E7%BB%84%E4%BB%B6%E5%8C%96/" rel="next" title="05.组件化">
+                  05.组件化 <i class="fa fa-angle-right"></i>
+                </a>
             </div>
           </div>
     </footer>
