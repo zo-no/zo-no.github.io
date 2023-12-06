@@ -121,7 +121,7 @@
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
         <a href="/archives/">
-          <span class="site-state-item-count">104</span>
+          <span class="site-state-item-count">108</span>
           <span class="site-state-item-name">posts</span>
         </a>
       </div>
@@ -160,6 +160,422 @@
     </div>
 
     <div class="main-inner index posts-expand">
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2023/11/25/%E4%BA%92%E8%81%94%E7%BD%91/%E9%80%9A%E7%94%A8%E6%8A%80%E6%9C%AF/%E7%AE%97%E6%B3%95/%E7%AE%97%E6%B3%95%E9%80%9A%E5%85%B3%E6%9D%91%E7%AC%AC%E4%B8%80%E5%85%B3%E2%80%94%E2%80%94%E2%80%94%E2%80%94%E9%93%BE%E8%A1%A8%E7%BB%8F%E5%85%B8%E9%97%AE%E9%A2%98/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/uploads/cat.jpg">
+      <meta itemprop="name" content="zono">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="ZONO's World">
+      <meta itemprop="description" content="人生长度无法强求,但厚度可以靠努力">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="undefined | ZONO's World">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/2023/11/25/%E4%BA%92%E8%81%94%E7%BD%91/%E9%80%9A%E7%94%A8%E6%8A%80%E6%9C%AF/%E7%AE%97%E6%B3%95/%E7%AE%97%E6%B3%95%E9%80%9A%E5%85%B3%E6%9D%91%E7%AC%AC%E4%B8%80%E5%85%B3%E2%80%94%E2%80%94%E2%80%94%E2%80%94%E9%93%BE%E8%A1%A8%E7%BB%8F%E5%85%B8%E9%97%AE%E9%A2%98/" class="post-title-link" itemprop="url">链表</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">Posted on</span>
+
+      <time title="Created: 2023-11-25 15:09:54" itemprop="dateCreated datePublished" datetime="2023-11-25T15:09:54+08:00">2023-11-25</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar-check"></i>
+      </span>
+      <span class="post-meta-item-text">Edited on</span>
+      <time title="Modified: 2023-11-27 17:36:28" itemprop="dateModified" datetime="2023-11-27T17:36:28+08:00">2023-11-27</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">In</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/%E6%8A%80%E6%9C%AF/" itemprop="url" rel="index"><span itemprop="name">技术</span></a>
+        </span>
+          , 
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/%E6%8A%80%E6%9C%AF/%E7%AE%97%E6%B3%95/" itemprop="url" rel="index"><span itemprop="name">算法</span></a>
+        </span>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <h1 id="算法通关村第一关————链表经典问题"><a href="#算法通关村第一关————链表经典问题" class="headerlink" title="算法通关村第一关————链表经典问题"></a>算法通关村第一关————链表经典问题</h1><h2 id="1、五种办法解决两个链表的第一个公共子节点问题"><a href="#1、五种办法解决两个链表的第一个公共子节点问题" class="headerlink" title="1、五种办法解决两个链表的第一个公共子节点问题"></a>1、五种办法解决两个链表的第一个公共子节点问题</h2><p>问题描述：输入两个链表，找出它们的第一个公共结点。</p>
+<p>我的思路：（之前没练过算法，所以会有些笨，也叫暴力解法？），先检测链表是否符合链表要求，然后进行遍历对比，找到一个相同节点（值和存储的next都相同），返回该节点。这里应该用两个for循环，一个遍历链表1，另嵌套进去遍历链表2，然后逐个进行对比，找到相同的节点，返回该节点。</p>
+<h3 id="1-1、暴力解法"><a href="#1-1、暴力解法" class="headerlink" title="1.1、暴力解法"></a>1.1、暴力解法</h3><blockquote>
+<p>这个就是我想出来的办法了</p>
+</blockquote>
+<p>像冒泡排序一样，两个for循环，一个遍历链表1，另嵌套进去遍历链表2，然后逐个进行对比，找到相同的节点，返回该节点。但时间复杂度太高，不建议使用。</p>
+<h3 id="1-2、hash表法"><a href="#1-2、hash表法" class="headerlink" title="1.2、hash表法"></a>1.2、hash表法</h3><p>这里得对hash进行初步的理解，我们可以这样想，hash可以认为是一个用于查找的参考书，我们把一个链表加入参考书后，只需循环另一个链表，查看参考书是否有该节点，如果有，那就找到了该节点。<br>这里用了pythons的set集合，set集合是哈希表的实现，所以查找速度非常快。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># hash集合版</span></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">getIntersectionNodebyHash</span>(<span class="params"> self, pHead1, pHead2</span>):</span><br><span class="line">    s = <span class="built_in">set</span>()<span class="comment">#创建一个集合</span></span><br><span class="line">    p,q = pHead1,pHead2</span><br><span class="line">    <span class="keyword">while</span> p:<span class="comment">#遍历p</span></span><br><span class="line">        s.add(p)<span class="comment">#把p全部都加入集合中</span></span><br><span class="line">        p = p.<span class="built_in">next</span></span><br><span class="line">    <span class="keyword">while</span> q:<span class="comment">#遍历q</span></span><br><span class="line">        <span class="keyword">if</span> q <span class="keyword">in</span> s:<span class="comment">#把q中的内容对s一一比对，看是否有相同节点</span></span><br><span class="line">            <span class="keyword">return</span> q</span><br><span class="line">        q = q.<span class="built_in">next</span></span><br><span class="line">    <span class="keyword">return</span> <span class="literal">None</span></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<h3 id="1-3、栈法"><a href="#1-3、栈法" class="headerlink" title="1.3、栈法"></a>1.3、栈法</h3><p>这里我们得先理解栈的概念，这里的栈，可以理解为一个存储数据的容器，先进后出，后进先出。</p>
+<p>可以知道的是，无论两个链表前面有多不同，它们最后都会到达一个相同的节点，所以我们可以把两个链表的节点都存入栈中，然后一一比对，找到相同的节点，返回该节点</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 栈版</span></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">getIntersectionNode</span>(<span class="params"> self, pHead1, pHead2</span>):</span><br><span class="line">    s1,s2 = [],[]<span class="comment">#创建两个数组</span></span><br><span class="line">    p,q = pHead1,pHead2</span><br><span class="line">    <span class="keyword">while</span> p:</span><br><span class="line">        s1.append(p)<span class="comment">#把p全部压入s1中</span></span><br><span class="line">        p = p.<span class="built_in">next</span><span class="comment">#更新“指针”</span></span><br><span class="line">    <span class="keyword">while</span> q:</span><br><span class="line">        s2.append(q)</span><br><span class="line">        q = q.<span class="built_in">next</span></span><br><span class="line">    p,q = s1.pop(),s2.pop()<span class="comment">#把p和q用s1代替</span></span><br><span class="line">    <span class="keyword">while</span> p <span class="keyword">and</span> q:<span class="comment">#从栈顶取数</span></span><br><span class="line">        <span class="keyword">if</span> p == q:</span><br><span class="line">            <span class="keyword">return</span> p</span><br><span class="line">        p,q = s1.pop(),s2.pop()</span><br><span class="line">    <span class="keyword">return</span> <span class="literal">None</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="1-4、双指针"><a href="#1-4、双指针" class="headerlink" title="1.4、双指针"></a>1.4、双指针</h3><h2 id="2、判断链表是否为回文序列"><a href="#2、判断链表是否为回文序列" class="headerlink" title="2、判断链表是否为回文序列"></a>2、判断链表是否为回文序列</h2><blockquote>
+<p>问题描述</p>
+</blockquote>
+<h2 id="3-合并有序链表"><a href="#3-合并有序链表" class="headerlink" title="3. 合并有序链表"></a>3. 合并有序链表</h2><blockquote>
+<p>问题描述</p>
+</blockquote>
+
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2023/11/25/%E4%BA%92%E8%81%94%E7%BD%91/%E9%80%9A%E7%94%A8%E6%8A%80%E6%9C%AF/%E7%AE%97%E6%B3%95/%E7%AC%AC%E4%B8%80%E9%A2%98%20leecode318/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/uploads/cat.jpg">
+      <meta itemprop="name" content="zono">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="ZONO's World">
+      <meta itemprop="description" content="人生长度无法强求,但厚度可以靠努力">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="undefined | ZONO's World">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/2023/11/25/%E4%BA%92%E8%81%94%E7%BD%91/%E9%80%9A%E7%94%A8%E6%8A%80%E6%9C%AF/%E7%AE%97%E6%B3%95/%E7%AC%AC%E4%B8%80%E9%A2%98%20leecode318/" class="post-title-link" itemprop="url">leecode318</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">Posted on</span>
+
+      <time title="Created: 2023-11-25 15:09:54" itemprop="dateCreated datePublished" datetime="2023-11-25T15:09:54+08:00">2023-11-25</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar-check"></i>
+      </span>
+      <span class="post-meta-item-text">Edited on</span>
+      <time title="Modified: 2023-11-27 17:36:16" itemprop="dateModified" datetime="2023-11-27T17:36:16+08:00">2023-11-27</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">In</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/%E6%8A%80%E6%9C%AF/" itemprop="url" rel="index"><span itemprop="name">技术</span></a>
+        </span>
+          , 
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/%E6%8A%80%E6%9C%AF/%E7%AE%97%E6%B3%95/" itemprop="url" rel="index"><span itemprop="name">算法</span></a>
+        </span>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <h1 id="第一题-leecode318"><a href="#第一题-leecode318" class="headerlink" title="第一题 leecode318"></a>第一题 leecode318</h1><p>先想写一个比较字符串</p>
+<blockquote>
+<p>不知所谓的一些写法问题很大</p>
+</blockquote>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> comWords = <span class="keyword">function</span> (<span class="params">words1, words2</span>) &#123;</span><br><span class="line">    <span class="keyword">let</span> len = <span class="number">0</span>, tag1 = <span class="number">0</span>, tag2 = <span class="number">0</span>;</span><br><span class="line">    <span class="keyword">if</span> (words1.<span class="property">length</span> &gt; words2.<span class="property">length</span>) &#123;</span><br><span class="line">        len = words1.<span class="property">length</span></span><br><span class="line">        tag1 = words1<span class="comment">//大</span></span><br><span class="line">        tag2 = words2</span><br><span class="line">    &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">        len = words2.<span class="property">length</span></span><br><span class="line">        tag2 = words1</span><br><span class="line">        tag1 = words2 <span class="comment">// 大</span></span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">const</span> set = <span class="keyword">new</span> <span class="title class_">Set</span>()</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">let</span> i = <span class="number">0</span>; i &lt; tag1.<span class="property">len</span>; i++) &#123;</span><br><span class="line">        set.<span class="title function_">add</span>(tag1[i])</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">let</span> j = <span class="number">0</span>; j &lt; tag2.<span class="property">len</span>; j++)</span><br><span class="line">        <span class="keyword">if</span> (set.<span class="title function_">has</span>(tag2[j]))&#123;</span><br><span class="line">            <span class="keyword">return</span> <span class="number">0</span></span><br><span class="line">        &#125;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">1</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>修改后</p>
+ <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> comWords = <span class="keyword">function</span> (<span class="params">words1, words2</span>) &#123;</span><br><span class="line">    <span class="keyword">const</span> set = <span class="keyword">new</span> <span class="title class_">Set</span>(words1);</span><br><span class="line"></span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">let</span> i = <span class="number">0</span>; i &lt; words2.<span class="property">length</span>; i++) &#123;</span><br><span class="line">        <span class="keyword">if</span> (set.<span class="title function_">has</span>(words2[i])) &#123;</span><br><span class="line">            <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">return</span> <span class="number">1</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>然后写一个暴力的两两组合</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> maxProduct = <span class="keyword">function</span> (<span class="params">words</span>) &#123;</span><br><span class="line">    max = <span class="number">0</span></span><br><span class="line">  <span class="keyword">for</span> (<span class="keyword">let</span> i = <span class="number">0</span>; i &lt; words.<span class="property">length</span>; i++) &#123;</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">let</span> j = i + <span class="number">1</span>; j &lt; words.<span class="property">length</span>; j++) &#123;</span><br><span class="line">      <span class="keyword">if</span> (<span class="title function_">comWords</span>(words[i], words[j])) &#123;<span class="comment">//以后看见这种写法,都应该优化掉</span></span><br><span class="line">        <span class="keyword">break</span>;</span><br><span class="line">      &#125;<span class="keyword">else</span> &#123;</span><br><span class="line">        <span class="keyword">if</span>(words[i].<span class="property">length</span> * words[j].<span class="property">length</span> &gt; max)&#123;</span><br><span class="line">          max = words[i].<span class="property">length</span> * words[j].<span class="property">length</span>;</span><br><span class="line">        &#125;</span><br><span class="line">      &#125;</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="keyword">return</span> max;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<p>出问题了，输出答案有问题</p>
+<p>1、原因：break会直接结束循环，所以输出的都是连着一起的两个值</p>
+<p>修改后：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@param</span> &#123;<span class="type">string[]</span>&#125; <span class="variable">words</span></span></span><br><span class="line"><span class="comment"> * <span class="doctag">@return</span> &#123;<span class="type">number</span>&#125;</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">var</span> comWords = <span class="keyword">function</span> (<span class="params">words1, words2</span>) &#123;</span><br><span class="line">    <span class="comment">/*</span></span><br><span class="line"><span class="comment">      @Description: 不相同返回1</span></span><br><span class="line"><span class="comment">      */</span></span><br><span class="line">    <span class="keyword">const</span> set = <span class="keyword">new</span> <span class="title class_">Set</span>(words1);</span><br><span class="line">    <span class="comment">// console.log(set);</span></span><br><span class="line">  </span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">let</span> j = <span class="number">0</span>; j &lt; words2.<span class="property">length</span>; j++) &#123;</span><br><span class="line">      <span class="keyword">if</span> (set.<span class="title function_">has</span>(words2[j])) &#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">      &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">1</span>;</span><br><span class="line">  &#125;;  </span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> maxProduct = <span class="keyword">function</span> (<span class="params">words</span>) &#123;</span><br><span class="line">    max = <span class="number">0</span></span><br><span class="line">  <span class="keyword">for</span> (<span class="keyword">let</span> i = <span class="number">0</span>; i &lt; words.<span class="property">length</span>; i++) &#123;</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">let</span> j = i + <span class="number">1</span>; j &lt; words.<span class="property">length</span>; j++) &#123;</span><br><span class="line">      <span class="keyword">if</span> (<span class="title function_">comWords</span>(words[i], words[j])) &#123;<span class="comment">//不相同再进行运算比较</span></span><br><span class="line">        <span class="keyword">if</span>(words[i].<span class="property">length</span> * words[j].<span class="property">length</span> &gt; max)&#123;</span><br><span class="line">          max = words[i].<span class="property">length</span> * words[j].<span class="property">length</span>;</span><br><span class="line">          <span class="variable language_">console</span>.<span class="title function_">log</span>(words[i], words[j]);</span><br><span class="line">        &#125;</span><br><span class="line">      &#125;</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="keyword">return</span> max;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+
+<p>这样执行是通过了，但提交后说超出时间限制（暴力过头了😓）</p>
+<p>看题解有位运算</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> maxProduct = <span class="keyword">function</span>(<span class="params">words</span>) &#123;</span><br><span class="line">    <span class="keyword">const</span> map = <span class="keyword">new</span> <span class="title class_">Map</span>();</span><br><span class="line">    <span class="keyword">const</span> length = words.<span class="property">length</span>;</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">let</span> i = <span class="number">0</span>; i &lt; length; i++) &#123;</span><br><span class="line">        <span class="keyword">let</span> mask = <span class="number">0</span>;</span><br><span class="line">        <span class="keyword">const</span> word = words[i];</span><br><span class="line">        <span class="keyword">const</span> wordLength = word.<span class="property">length</span>;</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">let</span> j = <span class="number">0</span>; j &lt; wordLength; j++) &#123;</span><br><span class="line">            mask |= <span class="number">1</span> &lt;&lt; (word[j].<span class="title function_">charCodeAt</span>() - <span class="string">&#x27;a&#x27;</span>.<span class="title function_">charCodeAt</span>());</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">if</span> (wordLength &gt; (map.<span class="title function_">get</span>(mask) || <span class="number">0</span>)) &#123;</span><br><span class="line">            map.<span class="title function_">set</span>(mask, wordLength);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">let</span> maxProd = <span class="number">0</span>;</span><br><span class="line">    <span class="keyword">const</span> maskSet = <span class="title class_">Array</span>.<span class="title function_">from</span>(map.<span class="title function_">keys</span>());</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">const</span> mask1 <span class="keyword">of</span> maskSet) &#123;</span><br><span class="line">        <span class="keyword">const</span> wordLength1 = map.<span class="title function_">get</span>(mask1);</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">const</span> mask2 <span class="keyword">of</span> maskSet) &#123;</span><br><span class="line">            <span class="keyword">if</span> ((mask1 &amp; mask2) === <span class="number">0</span>) &#123;</span><br><span class="line">                <span class="keyword">const</span> wordLength2 = map.<span class="title function_">get</span>(mask2);</span><br><span class="line">                maxProd = <span class="title class_">Math</span>.<span class="title function_">max</span>(maxProd, wordLength1 * wordLength2);</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> maxProd;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+
+
+
+
+
+
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2023/11/25/%E4%BA%92%E8%81%94%E7%BD%91/%E9%80%9A%E7%94%A8%E6%8A%80%E6%9C%AF/%E7%AE%97%E6%B3%95/%E6%A0%91/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/uploads/cat.jpg">
+      <meta itemprop="name" content="zono">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="ZONO's World">
+      <meta itemprop="description" content="人生长度无法强求,但厚度可以靠努力">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="undefined | ZONO's World">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/2023/11/25/%E4%BA%92%E8%81%94%E7%BD%91/%E9%80%9A%E7%94%A8%E6%8A%80%E6%9C%AF/%E7%AE%97%E6%B3%95/%E6%A0%91/" class="post-title-link" itemprop="url">树</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">Posted on</span>
+
+      <time title="Created: 2023-11-25 15:09:54" itemprop="dateCreated datePublished" datetime="2023-11-25T15:09:54+08:00">2023-11-25</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar-check"></i>
+      </span>
+      <span class="post-meta-item-text">Edited on</span>
+      <time title="Modified: 2023-11-27 17:36:22" itemprop="dateModified" datetime="2023-11-27T17:36:22+08:00">2023-11-27</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">In</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/%E6%8A%80%E6%9C%AF/" itemprop="url" rel="index"><span itemprop="name">技术</span></a>
+        </span>
+          , 
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/%E6%8A%80%E6%9C%AF/%E7%AE%97%E6%B3%95/" itemprop="url" rel="index"><span itemprop="name">算法</span></a>
+        </span>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <h1 id="算法总结——树"><a href="#算法总结——树" class="headerlink" title="算法总结——树"></a>算法总结——树</h1><h2 id="概念"><a href="#概念" class="headerlink" title="概念"></a>概念</h2><h3 id="定义"><a href="#定义" class="headerlink" title="定义"></a>定义</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">TreeNode</span>&#123;</span><br><span class="line">	val,</span><br><span class="line">	TreeNode left,</span><br><span class="line">	TreeNode right</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="遍历"><a href="#遍历" class="headerlink" title="遍历"></a>遍历</h3><p>前中后序</p>
+<h3 id="构造"><a href="#构造" class="headerlink" title="构造"></a>构造</h3><h4 id="复原二叉树"><a href="#复原二叉树" class="headerlink" title="复原二叉树"></a>复原二叉树</h4><ol>
+<li><h5 id="前"><a href="#前" class="headerlink" title="前"></a>前</h5></li>
+<li><h5 id="中"><a href="#中" class="headerlink" title="中"></a>中</h5></li>
+<li><h5 id="后"><a href="#后" class="headerlink" title="后"></a>后</h5></li>
+</ol>
+<h2 id="实战"><a href="#实战" class="headerlink" title="实战"></a>实战</h2><h3 id="BFS广度优先（层次遍历）和DFS深度优先"><a href="#BFS广度优先（层次遍历）和DFS深度优先" class="headerlink" title="BFS广度优先（层次遍历）和DFS深度优先"></a>BFS广度优先（层次遍历）和DFS深度优先</h3><blockquote>
+<p>深度更常使用</p>
+</blockquote>
+<p>LeeCode102</p>
+
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2023/11/25/%E4%BA%92%E8%81%94%E7%BD%91/%E9%80%9A%E7%94%A8%E6%8A%80%E6%9C%AF/%E7%AE%97%E6%B3%95/JS%E7%AE%97%E6%B3%95%E6%80%BB%E7%BB%93/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/uploads/cat.jpg">
+      <meta itemprop="name" content="zono">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="ZONO's World">
+      <meta itemprop="description" content="人生长度无法强求,但厚度可以靠努力">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="undefined | ZONO's World">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/2023/11/25/%E4%BA%92%E8%81%94%E7%BD%91/%E9%80%9A%E7%94%A8%E6%8A%80%E6%9C%AF/%E7%AE%97%E6%B3%95/JS%E7%AE%97%E6%B3%95%E6%80%BB%E7%BB%93/" class="post-title-link" itemprop="url">JS算法总结</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">Posted on</span>
+
+      <time title="Created: 2023-11-25 15:09:54" itemprop="dateCreated datePublished" datetime="2023-11-25T15:09:54+08:00">2023-11-25</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar-check"></i>
+      </span>
+      <span class="post-meta-item-text">Edited on</span>
+      <time title="Modified: 2023-11-27 17:36:42" itemprop="dateModified" datetime="2023-11-27T17:36:42+08:00">2023-11-27</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">In</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/%E6%8A%80%E6%9C%AF/" itemprop="url" rel="index"><span itemprop="name">技术</span></a>
+        </span>
+          , 
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/%E6%8A%80%E6%9C%AF/%E7%AE%97%E6%B3%95/" itemprop="url" rel="index"><span itemprop="name">算法</span></a>
+        </span>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <h1 id="JS算法总结"><a href="#JS算法总结" class="headerlink" title="JS算法总结"></a>JS算法总结</h1><h2 id="链表题"><a href="#链表题" class="headerlink" title="链表题"></a>链表题</h2><ol>
+<li>链表转数组</li>
+</ol>
+<blockquote>
+<p>场景：要使用栈方法时</p>
+</blockquote>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> isPalindrome = <span class="keyword">function</span> (<span class="params">head</span>) &#123;</span><br><span class="line">    <span class="keyword">const</span> vals = [];</span><br><span class="line">    <span class="keyword">while</span> (head !== <span class="literal">null</span>) &#123;</span><br><span class="line">        vals.<span class="title function_">push</span>(head.<span class="property">val</span>)<span class="comment">//压入值,把链表转化为数组</span></span><br><span class="line">        head = head.<span class="property">next</span></span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure>
+
+
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
 
     
 
@@ -854,476 +1270,6 @@
 </li>
 </ul>
 <p>let一般应用于基本数据类型；const 一般应用于引用数据类型，也就是函数对象等。</p>
-
-      
-    </div>
-
-    
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-</div>
-
-
-
-
-    
-
-
-<div class="post-block">
-  
-  
-
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2023/11/25/%E4%BA%92%E8%81%94%E7%BD%91/%E5%89%8D%E7%AB%AF/%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/js%E5%87%BD%E6%95%B0%E9%87%8D%E8%BD%BD/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/uploads/cat.jpg">
-      <meta itemprop="name" content="zono">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="ZONO's World">
-      <meta itemprop="description" content="人生长度无法强求,但厚度可以靠努力">
-    </span>
-
-    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
-      <meta itemprop="name" content="undefined | ZONO's World">
-      <meta itemprop="description" content="">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/2023/11/25/%E4%BA%92%E8%81%94%E7%BD%91/%E5%89%8D%E7%AB%AF/%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/js%E5%87%BD%E6%95%B0%E9%87%8D%E8%BD%BD/" class="post-title-link" itemprop="url">js函数重载</a>
-        </h2>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">Posted on</span>
-
-      <time title="Created: 2023-11-25 15:09:54" itemprop="dateCreated datePublished" datetime="2023-11-25T15:09:54+08:00">2023-11-25</time>
-    </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar-check"></i>
-      </span>
-      <span class="post-meta-item-text">Edited on</span>
-      <time title="Modified: 2023-11-24 16:34:09" itemprop="dateModified" datetime="2023-11-24T16:34:09+08:00">2023-11-24</time>
-    </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-folder"></i>
-      </span>
-      <span class="post-meta-item-text">In</span>
-        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/%E6%8A%80%E6%9C%AF/" itemprop="url" rel="index"><span itemprop="name">技术</span></a>
-        </span>
-          , 
-        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/%E6%8A%80%E6%9C%AF/%E5%89%8D%E7%AB%AF/" itemprop="url" rel="index"><span itemprop="name">前端</span></a>
-        </span>
-          , 
-        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/%E6%8A%80%E6%9C%AF/%E5%89%8D%E7%AB%AF/JavaScript%E5%9F%BA%E7%A1%80/" itemprop="url" rel="index"><span itemprop="name">JavaScript基础</span></a>
-        </span>
-    </span>
-
-  
-</div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          <blockquote>
-<p>编写通用库时</p>
-</blockquote>
-<p><strong>概念</strong>：函数接收不同数量、类型的值时，使用通用函数。</p>
-<h2 id="实现1-jQuery"><a href="#实现1-jQuery" class="headerlink" title="实现1 jQuery"></a>实现1 jQuery</h2>
-      
-    </div>
-
-    
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-</div>
-
-
-
-
-    
-
-
-<div class="post-block">
-  
-  
-
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2023/11/25/%E4%BA%92%E8%81%94%E7%BD%91/%E5%89%8D%E7%AB%AF/%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/26%E3%80%81%E6%93%8D%E4%BD%9C%E6%95%B0%E7%BB%84%E7%9A%84%E5%8A%9E%E6%B3%95/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/uploads/cat.jpg">
-      <meta itemprop="name" content="zono">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="ZONO's World">
-      <meta itemprop="description" content="人生长度无法强求,但厚度可以靠努力">
-    </span>
-
-    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
-      <meta itemprop="name" content="undefined | ZONO's World">
-      <meta itemprop="description" content="">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/2023/11/25/%E4%BA%92%E8%81%94%E7%BD%91/%E5%89%8D%E7%AB%AF/%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/26%E3%80%81%E6%93%8D%E4%BD%9C%E6%95%B0%E7%BB%84%E7%9A%84%E5%8A%9E%E6%B3%95/" class="post-title-link" itemprop="url">操作数组的办法</a>
-        </h2>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">Posted on</span>
-
-      <time title="Created: 2023-11-25 15:09:54" itemprop="dateCreated datePublished" datetime="2023-11-25T15:09:54+08:00">2023-11-25</time>
-    </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar-check"></i>
-      </span>
-      <span class="post-meta-item-text">Edited on</span>
-      <time title="Modified: 2023-11-24 16:33:54" itemprop="dateModified" datetime="2023-11-24T16:33:54+08:00">2023-11-24</time>
-    </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-folder"></i>
-      </span>
-      <span class="post-meta-item-text">In</span>
-        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/%E6%8A%80%E6%9C%AF/" itemprop="url" rel="index"><span itemprop="name">技术</span></a>
-        </span>
-          , 
-        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/%E6%8A%80%E6%9C%AF/%E5%89%8D%E7%AB%AF/" itemprop="url" rel="index"><span itemprop="name">前端</span></a>
-        </span>
-          , 
-        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/%E6%8A%80%E6%9C%AF/%E5%89%8D%E7%AB%AF/JavaScript%E5%9F%BA%E7%A1%80/" itemprop="url" rel="index"><span itemprop="name">JavaScript基础</span></a>
-        </span>
-    </span>
-
-  
-</div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          <h1 id="操作数组的办法"><a href="#操作数组的办法" class="headerlink" title="操作数组的办法"></a>操作数组的办法</h1><blockquote>
-<p>因为内容蛮多的于是遇见一个记录一个</p>
-</blockquote>
-<ol>
-<li><h2 id="push-用于栈操作"><a href="#push-用于栈操作" class="headerlink" title="push()用于栈操作"></a><code>push()</code>用于栈操作</h2><p>在遇见栈的算法题会用到</p>
-</li>
-</ol>
-
-      
-    </div>
-
-    
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-</div>
-
-
-
-
-    
-
-
-<div class="post-block">
-  
-  
-
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2023/11/25/%E4%BA%92%E8%81%94%E7%BD%91/%E5%89%8D%E7%AB%AF/%E5%89%8D%E7%AB%AF%E5%B7%A5%E7%A8%8B%E5%8C%96/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/uploads/cat.jpg">
-      <meta itemprop="name" content="zono">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="ZONO's World">
-      <meta itemprop="description" content="人生长度无法强求,但厚度可以靠努力">
-    </span>
-
-    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
-      <meta itemprop="name" content="undefined | ZONO's World">
-      <meta itemprop="description" content="">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/2023/11/25/%E4%BA%92%E8%81%94%E7%BD%91/%E5%89%8D%E7%AB%AF/%E5%89%8D%E7%AB%AF%E5%B7%A5%E7%A8%8B%E5%8C%96/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/" class="post-title-link" itemprop="url">设计模式</a>
-        </h2>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">Posted on</span>
-
-      <time title="Created: 2023-11-25 15:09:54" itemprop="dateCreated datePublished" datetime="2023-11-25T15:09:54+08:00">2023-11-25</time>
-    </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar-check"></i>
-      </span>
-      <span class="post-meta-item-text">Edited on</span>
-      <time title="Modified: 2023-11-24 16:35:22" itemprop="dateModified" datetime="2023-11-24T16:35:22+08:00">2023-11-24</time>
-    </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-folder"></i>
-      </span>
-      <span class="post-meta-item-text">In</span>
-        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/%E6%8A%80%E6%9C%AF/" itemprop="url" rel="index"><span itemprop="name">技术</span></a>
-        </span>
-          , 
-        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/%E6%8A%80%E6%9C%AF/%E5%89%8D%E7%AB%AF/" itemprop="url" rel="index"><span itemprop="name">前端</span></a>
-        </span>
-          , 
-        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/%E6%8A%80%E6%9C%AF/%E5%89%8D%E7%AB%AF/%E5%B7%A5%E7%A8%8B%E5%8C%96/" itemprop="url" rel="index"><span itemprop="name">工程化</span></a>
-        </span>
-    </span>
-
-  
-</div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          <h1 id=""><a href="#" class="headerlink" title=""></a></h1>
-      
-    </div>
-
-    
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-</div>
-
-
-
-
-    
-
-
-<div class="post-block">
-  
-  
-
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2023/11/25/%E4%BA%92%E8%81%94%E7%BD%91/%E5%89%8D%E7%AB%AF/%E5%89%8D%E7%AB%AF%E5%B7%A5%E7%A8%8B%E5%8C%96/%E6%A8%A1%E5%9D%97%E5%8C%96%E7%BC%96%E7%A8%8B/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/uploads/cat.jpg">
-      <meta itemprop="name" content="zono">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="ZONO's World">
-      <meta itemprop="description" content="人生长度无法强求,但厚度可以靠努力">
-    </span>
-
-    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
-      <meta itemprop="name" content="undefined | ZONO's World">
-      <meta itemprop="description" content="">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/2023/11/25/%E4%BA%92%E8%81%94%E7%BD%91/%E5%89%8D%E7%AB%AF/%E5%89%8D%E7%AB%AF%E5%B7%A5%E7%A8%8B%E5%8C%96/%E6%A8%A1%E5%9D%97%E5%8C%96%E7%BC%96%E7%A8%8B/" class="post-title-link" itemprop="url">模块化编程</a>
-        </h2>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">Posted on</span>
-
-      <time title="Created: 2023-11-25 15:09:54" itemprop="dateCreated datePublished" datetime="2023-11-25T15:09:54+08:00">2023-11-25</time>
-    </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar-check"></i>
-      </span>
-      <span class="post-meta-item-text">Edited on</span>
-      <time title="Modified: 2023-11-24 16:35:23" itemprop="dateModified" datetime="2023-11-24T16:35:23+08:00">2023-11-24</time>
-    </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-folder"></i>
-      </span>
-      <span class="post-meta-item-text">In</span>
-        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/%E6%8A%80%E6%9C%AF/" itemprop="url" rel="index"><span itemprop="name">技术</span></a>
-        </span>
-          , 
-        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/%E6%8A%80%E6%9C%AF/%E5%89%8D%E7%AB%AF/" itemprop="url" rel="index"><span itemprop="name">前端</span></a>
-        </span>
-          , 
-        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/%E6%8A%80%E6%9C%AF/%E5%89%8D%E7%AB%AF/%E5%B7%A5%E7%A8%8B%E5%8C%96/" itemprop="url" rel="index"><span itemprop="name">工程化</span></a>
-        </span>
-    </span>
-
-  
-</div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          <h1 id=""><a href="#" class="headerlink" title=""></a></h1><p>拿到设计时，我们首先要把项目划分为一个个模块，或者组件</p>
-<blockquote>
-<p> 划分原则:</p>
-<ul>
-<li>按照功能和需求划分：普通业务模块/ 组件</li>
-<li>按照复用性划分：通用业务模块</li>
-<li>通用功能模块组件【UI组件库】</li>
-</ul>
-</blockquote>
-<h2 id="1-1-模块化演化进程"><a href="#1-1-模块化演化进程" class="headerlink" title="1.1 模块化演化进程"></a>1.1 模块化演化进程</h2><p>未来的项目一定是 模块化/组件化 开发！！</p>
-<blockquote>
-<p>模块化编程进化历史</p>
-<ul>
-<li><p>  单例设计模式</p>
-</li>
-<li><p>  AMD「require.js」</p>
-</li>
-<li><p>  CommonJS(node.js)</p>
-</li>
-<li><p>  CMD「sea.js」</p>
-</li>
-<li><p>  ES6Module</p>
-</li>
-</ul>
-</blockquote>
-<h2 id="1-2单例设计模式"><a href="#1-2单例设计模式" class="headerlink" title="1.2单例设计模式"></a>1.2<strong>单例设计模式</strong></h2><p>也就是原生js写法，用<code>&lt;script src&gt;</code>,调用文件，把各个功能写在不同的模块下，最后合并到页面中。</p>
-<p><strong>问题</strong>：</p>
-<ul>
-<li>会出现全局变量污染，也就是模块间会有相互冲突。</li>
-<li>模块间相互引用问题，用window方法多了后也会冲突</li>
-</ul>
-<p><strong>解决问题</strong>：</p>
-<ul>
-<li><p>模块间相互冲突的问题:</p>
-<ul>
-<li>「闭包」 ;</li>
-</ul>
-</li>
-<li><p>模块间相互引用的问题：</p>
-<ul>
-<li><p>使用windows.XXX = XXX 暴露方法到全局</p>
-</li>
-<li><p>解决windows多了后冲突：直接导出整个对象，就像react组件一样，对象中有所有对应的方法。</p>
-<blockquote>
-<p>详细解释：让每个模块有一个独有的模块名xxxModule，也叫命名空间（回想起来c不就是吗）。</p>
-<p>模块闭包时，直接return对象，别人要用时，直接模块名.方法（）调用就行。</p>
-</blockquote>
-</li>
-</ul>
-</li>
-</ul>
-<p>如此单例设计模式就完成了。</p>
-<p><strong>注意</strong>：包导入的顺序</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//单例格式</span></span><br><span class="line"><span class="keyword">let</span> xxxModule = (<span class="keyword">function</span> (<span class="params"></span>) &#123;</span><br><span class="line">   <span class="keyword">let</span> time = <span class="keyword">new</span> <span class="title class_">Date</span>();</span><br><span class="line">   <span class="keyword">const</span> query = <span class="keyword">function</span> <span class="title function_">query</span>(<span class="params"></span>) &#123;</span><br><span class="line">       <span class="comment">// ...</span></span><br><span class="line">   &#125;;</span><br><span class="line">   <span class="keyword">const</span> handle = <span class="keyword">function</span> <span class="title function_">handle</span>(<span class="params"></span>) &#123;</span><br><span class="line">       <span class="comment">// ...</span></span><br><span class="line">   &#125;;</span><br><span class="line"></span><br><span class="line">   <span class="comment">// 把供其它板块调用的方法，暴露到全局对象上</span></span><br><span class="line">   <span class="comment">//「局限：暴露的内容比较多，则还会引发全局变量冲突」</span></span><br><span class="line">   <span class="comment">// window.query = query;</span></span><br><span class="line"></span><br><span class="line">   <span class="keyword">return</span> &#123;</span><br><span class="line">       query,</span><br><span class="line">       handle</span><br><span class="line">   &#125;;</span><br><span class="line">&#125;)();</span><br></pre></td></tr></table></figure>
-
-<p>没看例子：p132    37:17~52:30</p>
-<p><strong>不足之处</strong>：需要手动分析模块之间的依赖关系，按顺序依次导入相关模块；所有模块都是基于script一个个导入的，这样页面HTTP请求变多！</p>
-<h2 id="1-3-AMD「require-js」"><a href="#1-3-AMD「require-js」" class="headerlink" title="1.3 AMD「require.js」"></a>1.3 <strong>AMD「require.js」</strong></h2><p> <a target="_blank" rel="noopener" href="https://requirejs.org/">https://requirejs.org</a>  </p>
-<p><strong>优势</strong>：在保证模块之间独立和可以相互访问的基础上，HTML中无需再导入各个模块了「<strong>不存在顺序问题</strong>」，也不需要自己去分析相互间的依赖关系！<br><strong>不足</strong>：依赖模块的导入是“前置导入”，只有把依赖模块动态导入完毕，才会触发回调函数执行「阻碍代码执行速度」；代码书写的顺序也不是很方便；可能存在重复导入；</p>
-<p><img src="C:\Users\27421\AppData\Roaming\Typora\typora-user-images\image-20231112133515879.png" alt="image-20231112133515879"></p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//main.js</span></span><br><span class="line"><span class="built_in">require</span>.<span class="title function_">config</span>(&#123;</span><br><span class="line">    <span class="comment">//全局配置</span></span><br><span class="line">    <span class="attr">baseUrl</span>: <span class="string">&#x27;js/lib&#x27;</span>,</span><br><span class="line">&#125;);</span><br><span class="line"></span><br><span class="line"><span class="built_in">require</span>([<span class="string">&#x27;moduleB&#x27;</span>, <span class="string">&#x27;moduleA&#x27;</span>], <span class="keyword">function</span> (<span class="params">moduleB, moduleA</span>) &#123;</span><br><span class="line">    <span class="variable language_">console</span>.<span class="title function_">log</span>(moduleB.<span class="title function_">average</span>(<span class="number">10</span>, <span class="number">20</span>, <span class="number">30</span>, <span class="number">40</span>, <span class="number">50</span>));</span><br><span class="line">&#125;);</span><br><span class="line"></span><br><span class="line"><span class="comment">//moduleA.js</span></span><br><span class="line"><span class="title function_">define</span>(<span class="keyword">function</span> (<span class="params"></span>) &#123;</span><br><span class="line">    <span class="keyword">return</span> &#123;</span><br><span class="line">        <span class="title function_">sum</span>(<span class="params">...args</span>) &#123;</span><br><span class="line">            <span class="keyword">let</span> len = args.<span class="property">length</span>,</span><br><span class="line">                firstItem = args[<span class="number">0</span>];</span><br><span class="line">            <span class="keyword">if</span> (len === <span class="number">0</span>) <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">            <span class="keyword">if</span> (len === <span class="number">1</span>) <span class="keyword">return</span> firstItem;</span><br><span class="line">            <span class="keyword">return</span> args.<span class="title function_">reduce</span>(<span class="function">(<span class="params">total, item</span>) =&gt;</span> &#123;</span><br><span class="line">                <span class="keyword">return</span> total + item;</span><br><span class="line">            &#125;);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;;</span><br><span class="line">&#125;);</span><br><span class="line"></span><br><span class="line"><span class="comment">//moduleB.js</span></span><br><span class="line"><span class="title function_">define</span>([<span class="string">&#x27;moduleA&#x27;</span>], <span class="keyword">function</span> (<span class="params">moudleA</span>) &#123;</span><br><span class="line">    <span class="keyword">return</span> &#123;</span><br><span class="line">        <span class="comment">// 求平均数（去掉最大最小值）</span></span><br><span class="line">        <span class="title function_">average</span>(<span class="params">...args</span>) &#123;</span><br><span class="line">            <span class="keyword">let</span> len = args.<span class="property">length</span>,</span><br><span class="line">                firstItem = args[<span class="number">0</span>];</span><br><span class="line">            <span class="keyword">if</span> (len === <span class="number">0</span>) <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">            <span class="keyword">if</span> (len === <span class="number">1</span>) <span class="keyword">return</span> firstItem;</span><br><span class="line">            args.<span class="title function_">sort</span>(<span class="function">(<span class="params">a, b</span>) =&gt;</span> a - b);</span><br><span class="line">            args.<span class="title function_">pop</span>();</span><br><span class="line">            args.<span class="title function_">shift</span>();</span><br><span class="line">            <span class="keyword">return</span> (moudleA.<span class="title function_">sum</span>(...args) / args.<span class="property">length</span>).<span class="title function_">toFixed</span>(<span class="number">2</span>);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;;</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
-
-<p>没看例子：p132    58:17~1:20:05</p>
-<h2 id="1-4-CommonJS模块化规范"><a href="#1-4-CommonJS模块化规范" class="headerlink" title="1.4 CommonJS模块化规范"></a>1.4 <strong>CommonJS模块化规范</strong></h2><blockquote>
-<p>node.js出现了,不用导入</p>
-</blockquote>
-<p>每创建一个js文件就创建了一个模块，里面的代码就是独立的。用<code>module.exports</code>导出对象。</p>
-<p>唯一的问题：<strong>浏览器端不支持CommonJS规范</strong><br>淘宝“玉伯”仿照CommonJS规范，研发了一款插件 sea.js ，旨在把CommonJS规范搬到浏览器端运行「这种模块思想被称之为CMD」</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/* ---A.js--- */</span></span><br><span class="line"><span class="keyword">const</span> sum = <span class="keyword">function</span> <span class="title function_">sum</span>(<span class="params">...params</span>) &#123;</span><br><span class="line">    <span class="keyword">return</span> params.<span class="title function_">reduce</span>(<span class="function">(<span class="params">result, item</span>) =&gt;</span> &#123;</span><br><span class="line">        <span class="keyword">return</span> result + item;</span><br><span class="line">    &#125;);</span><br><span class="line">&#125;;</span><br><span class="line"><span class="comment">// 暴露一些API</span></span><br><span class="line"><span class="variable language_">module</span>.<span class="property">exports</span> = &#123;</span><br><span class="line">    sum</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="comment">/* ---B.js--- */</span></span><br><span class="line"><span class="keyword">let</span> name = <span class="string">&#x27;哈哈&#x27;</span>;</span><br><span class="line"><span class="keyword">let</span> A = <span class="built_in">require</span>(<span class="string">&#x27;./A&#x27;</span>);</span><br><span class="line"><span class="keyword">const</span> average = <span class="keyword">function</span> <span class="title function_">average</span>(<span class="params">...params</span>) &#123;</span><br><span class="line">    <span class="keyword">return</span> (A.<span class="title function_">sum</span>(...params) / params.<span class="property">length</span>).<span class="title function_">toFixed</span>(<span class="number">2</span>);</span><br><span class="line">&#125;;</span><br><span class="line"><span class="variable language_">module</span>.<span class="property">exports</span> = &#123;</span><br><span class="line">    average</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="comment">/* ---main.js--- */</span></span><br><span class="line"><span class="keyword">let</span> A = <span class="built_in">require</span>(<span class="string">&#x27;./A&#x27;</span>);</span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(A.<span class="title function_">sum</span>(<span class="number">10</span>, <span class="number">20</span>, <span class="number">30</span>, <span class="number">40</span>));</span><br><span class="line"><span class="keyword">let</span> B = <span class="built_in">require</span>(<span class="string">&#x27;./B&#x27;</span>);</span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(B.<span class="title function_">average</span>(<span class="number">10</span>, <span class="number">20</span>, <span class="number">30</span>, <span class="number">40</span>));</span><br></pre></td></tr></table></figure>
-
-<p>缓存机制</p>
-<p>还是没有实战—27：35</p>
-<h2 id="1-5-ES6Module模块规范"><a href="#1-5-ES6Module模块规范" class="headerlink" title="1.5 ES6Module模块规范"></a>1.5 <strong>ES6Module模块规范</strong></h2><p><a target="_blank" rel="noopener" href="https://es6.ruanyifeng.com/#docs/module">https://es6.ruanyifeng.com/#docs/module</a>  </p>
-<p>可以直接运行在浏览器端；不支持IE；</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line">使用在html文件上时，导入文件前要加入type = <span class="variable language_">module</span>,预览要使用http协议（<span class="title class_">LiveServer</span>），不能使用<span class="title class_">File</span>协议。</span><br><span class="line">模块的导入导出:</span><br><span class="line">  整体来讲，每个模块导出的是一个<span class="title class_">Module</span>对象，我们可以基于 <span class="keyword">export</span>/<span class="keyword">export</span> <span class="keyword">default</span> 为对象中加入导出的内容</span><br><span class="line">    @导出方法<span class="number">1</span> <span class="keyword">export</span> <span class="keyword">default</span> xxx;</span><br><span class="line">      + xxx可以是任意类型值</span><br><span class="line">      + 给<span class="title class_">Module</span>对象新增一个 “<span class="keyword">default</span>” 属性，属性值就是导出的值</span><br><span class="line">      + 在一个模块中，<span class="keyword">export</span> <span class="keyword">default</span>只允许出现一次</span><br><span class="line">    @导出方法<span class="number">2</span> <span class="keyword">export</span> 创建值的表达式（声明变量 = 值）;</span><br><span class="line">      <span class="keyword">let</span> num = <span class="number">10</span>;</span><br><span class="line">      <span class="keyword">export</span> num; <span class="comment">//这样写是错误的</span></span><br><span class="line">      <span class="keyword">export</span> <span class="keyword">let</span> num = <span class="number">10</span>; <span class="comment">//这样写是正确的</span></span><br><span class="line">      ---</span><br><span class="line">      <span class="keyword">let</span> num = <span class="number">10</span>;</span><br><span class="line">      <span class="keyword">export</span> &#123;</span><br><span class="line">        num, <span class="comment">//这样写是可以的</span></span><br><span class="line">        <span class="attr">x</span>:<span class="number">100</span> <span class="comment">//这样写是错误的</span></span><br><span class="line">      &#125;;</span><br><span class="line">      ---</span><br><span class="line">      + <span class="keyword">export</span>可以出现多次，导出多个内容</span><br><span class="line">      + 声明的变量叫啥名字，最后给<span class="title class_">Module</span>对象加入的是同名的属性名，属性值就是变量的值</span><br></pre></td></tr></table></figure>
-
-<h3 id="1-5-2导入方法"><a href="#1-5-2导入方法" class="headerlink" title="1.5.2导入方法"></a>1.5.2导入方法</h3><p>我们会基于 import 方法导入模块「导入模块导出的内容」</p>
-<ul>
-<li>import N from ‘模块地址(在浏览器端不能忽略.js后缀名)’;</li>
-</ul>
-<p>N获取的不是整个导出的Module对象，仅仅获取的是Module中default这一项的值<br> 不能在import期间，直接对N解构赋值，因为涉及解构赋值就会变为另外一种情况</p>
-<ul>
-<li>解构赋值：import {x,y} from ‘模块地址’;</li>
-</ul>
-<p>直接对导出的Module对象中(排除default属性)，导出的内容进行解构赋值</p>
-<ul>
-<li>import * as M from ‘模块地址’;先导入所有导出的内容，赋值给M变量</li>
-</ul>
-<blockquote>
-<p>还是没有细看</p>
-</blockquote>
 
       
     </div>
