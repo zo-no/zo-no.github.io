@@ -15,28 +15,27 @@
 
 <script class="next-config" data-name="main" type="application/json">{"hostname":"example.com","root":"/","images":"/images","scheme":"Gemini","darkmode":false,"version":"8.18.2","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":{"enable":false,"style":null},"fold":{"enable":false,"height":500},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"Searching...","empty":"We didn't find any results for the search: ${query}","hits_time":"${hits} results found in ${time} ms","hits":"${hits} results found"}}</script><script src="/js/config.js"></script>
 
-    <meta name="description" content="JavaScript面向对象知识点串联 本文我会尽可能的把面试有关的问题都加入进来，并把之前刚开始理解这个概念不懂的踩坑的地方告诉大家。  面试问题 解释一下原型链 instanceof的原理 typeof的相关问题 new的原理 this指向问题 任何有关bind、call、apply的问题  前置知识要理解原型链，那我们就得先理解什么是面向对象，它的三个基本特征：封装、继承、多态_ 而原型链便">
+    <meta name="description" content="JavaScript面向对象知识点串联 本文我会尽可能的把面试有关的问题都加入进来，并把学习踩坑的地方告诉大家。（知识点可以点击我给的连接）  面试问题 解释一下原型链 instanceof的原理 typeof的相关问题 new的原理 this指向问题 任何有关bind、call、apply的问题 ES5继承的方法  前置知识要理解原型链，那我们就得先理解什么是面向对象，它的三个基本特征：封装、继">
 <meta property="og:type" content="article">
 <meta property="og:title" content="JavaScript面向对象知识点串联">
-<meta property="og:url" content="http://example.com/2023/11/24/%E4%BA%92%E8%81%94%E7%BD%91/%E5%89%8D%E7%AB%AF/%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/JavaScript%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E7%9F%A5%E8%AF%86%E7%82%B9%E4%B8%B2%E8%81%94/index.html">
+<meta property="og:url" content="http://example.com/2023/11/24/%E4%BA%92%E8%81%94%E7%BD%91/%E5%89%8D%E7%AB%AF/%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1/JavaScript%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E7%9F%A5%E8%AF%86%E7%82%B9%E4%B8%B2%E8%81%94/index.html">
 <meta property="og:site_name" content="ZONO&#39;s World">
-<meta property="og:description" content="JavaScript面向对象知识点串联 本文我会尽可能的把面试有关的问题都加入进来，并把之前刚开始理解这个概念不懂的踩坑的地方告诉大家。  面试问题 解释一下原型链 instanceof的原理 typeof的相关问题 new的原理 this指向问题 任何有关bind、call、apply的问题  前置知识要理解原型链，那我们就得先理解什么是面向对象，它的三个基本特征：封装、继承、多态_ 而原型链便">
+<meta property="og:description" content="JavaScript面向对象知识点串联 本文我会尽可能的把面试有关的问题都加入进来，并把学习踩坑的地方告诉大家。（知识点可以点击我给的连接）  面试问题 解释一下原型链 instanceof的原理 typeof的相关问题 new的原理 this指向问题 任何有关bind、call、apply的问题 ES5继承的方法  前置知识要理解原型链，那我们就得先理解什么是面向对象，它的三个基本特征：封装、继">
 <meta property="og:locale" content="en_US">
 <meta property="og:image" content="d:/workspace/blog/myblog/source-img/技术/前端/image-20231124134648166.png">
-<meta property="og:image" content="c:/Users/27421/AppData/Roaming/Typora/typora-user-images/image-20231124135440074.png">
 <meta property="article:published_time" content="2023-11-24T05:17:08.000Z">
-<meta property="article:modified_time" content="2023-11-24T08:33:50.974Z">
+<meta property="article:modified_time" content="2023-12-08T06:54:51.308Z">
 <meta property="article:author" content="zono">
 <meta property="article:tag" content="技术">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="d:/workspace/blog/myblog/source-img/技术/前端/image-20231124134648166.png">
 
 
-<link rel="canonical" href="http://example.com/2023/11/24/%E4%BA%92%E8%81%94%E7%BD%91/%E5%89%8D%E7%AB%AF/%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/JavaScript%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E7%9F%A5%E8%AF%86%E7%82%B9%E4%B8%B2%E8%81%94/">
+<link rel="canonical" href="http://example.com/2023/11/24/%E4%BA%92%E8%81%94%E7%BD%91/%E5%89%8D%E7%AB%AF/%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1/JavaScript%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E7%9F%A5%E8%AF%86%E7%82%B9%E4%B8%B2%E8%81%94/">
 
 
 
-<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"en","comments":true,"permalink":"http://example.com/2023/11/24/%E4%BA%92%E8%81%94%E7%BD%91/%E5%89%8D%E7%AB%AF/%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/JavaScript%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E7%9F%A5%E8%AF%86%E7%82%B9%E4%B8%B2%E8%81%94/","path":"2023/11/24/互联网/前端/基础知识/JavaScript面向对象知识点串联/","title":"JavaScript面向对象知识点串联"}</script>
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"en","comments":true,"permalink":"http://example.com/2023/11/24/%E4%BA%92%E8%81%94%E7%BD%91/%E5%89%8D%E7%AB%AF/%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1/JavaScript%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E7%9F%A5%E8%AF%86%E7%82%B9%E4%B8%B2%E8%81%94/","path":"2023/11/24/互联网/前端/基础知识/面向对象/JavaScript面向对象知识点串联/","title":"JavaScript面向对象知识点串联"}</script>
 
 <script class="next-config" data-name="calendar" type="application/json">""</script>
 <title>JavaScript面向对象知识点串联 | ZONO's World</title>
@@ -112,7 +111,7 @@
       <div class="sidebar-panel-container">
         <!--noindex-->
         <div class="post-toc-wrap sidebar-panel">
-            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#JavaScript%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E7%9F%A5%E8%AF%86%E7%82%B9%E4%B8%B2%E8%81%94"><span class="nav-number">1.</span> <span class="nav-text">JavaScript面向对象知识点串联</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E9%9D%A2%E8%AF%95%E9%97%AE%E9%A2%98"><span class="nav-number">1.0.0.1.</span> <span class="nav-text">面试问题</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%89%8D%E7%BD%AE%E7%9F%A5%E8%AF%86"><span class="nav-number">1.0.0.2.</span> <span class="nav-text">前置知识</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%8E%9F%E5%9E%8B%E5%92%8C%E5%8E%9F%E5%9E%8B%E9%93%BE%E7%9A%84%E7%90%86%E8%A7%A3"><span class="nav-number">1.1.</span> <span class="nav-text">原型和原型链的理解</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%8E%9F%E5%9E%8B%E5%92%8C%E9%9D%A2%E5%90%91%E7%BC%96%E7%A8%8B"><span class="nav-number">1.1.1.</span> <span class="nav-text">原型和面向编程</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%AF%9D%E5%BD%92%E5%8E%9F%E9%A2%98%EF%BC%8C%E9%82%A3%E5%88%B0%E5%BA%95%E4%BB%80%E4%B9%88%E6%98%AF%E5%8E%9F%E5%9E%8B%E5%92%8C%E5%8E%9F%E5%9E%8B%E9%93%BE%E5%91%A2%EF%BC%9F"><span class="nav-number">1.1.2.</span> <span class="nav-text">话归原题，那到底什么是原型和原型链呢？</span></a></li></ol></li></ol></li></ol></div>
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#JavaScript%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E7%9F%A5%E8%AF%86%E7%82%B9%E4%B8%B2%E8%81%94"><span class="nav-number">1.</span> <span class="nav-text">JavaScript面向对象知识点串联</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E9%9D%A2%E8%AF%95%E9%97%AE%E9%A2%98"><span class="nav-number">1.0.0.1.</span> <span class="nav-text">面试问题</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%89%8D%E7%BD%AE%E7%9F%A5%E8%AF%86"><span class="nav-number">1.0.0.2.</span> <span class="nav-text">前置知识</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%8E%9F%E5%9E%8B%E5%92%8C%E5%8E%9F%E5%9E%8B%E9%93%BE%E7%9A%84%E7%90%86%E8%A7%A3"><span class="nav-number">1.1.</span> <span class="nav-text">原型和原型链的理解</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%8E%9F%E5%9E%8B%E5%92%8C%E9%9D%A2%E5%90%91%E7%BC%96%E7%A8%8B"><span class="nav-number">1.1.1.</span> <span class="nav-text">原型和面向编程</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%8E%9F%E5%9E%8B%E5%92%8C%E5%8E%9F%E5%9E%8B%E9%93%BE"><span class="nav-number">1.1.2.</span> <span class="nav-text">原型和原型链</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%BB%A7%E6%89%BF"><span class="nav-number">1.2.</span> <span class="nav-text">继承</span></a></li></ol></li></ol></div>
         </div>
         <!--/noindex-->
 
@@ -127,7 +126,7 @@
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
         <a href="/archives/">
-          <span class="site-state-item-count">108</span>
+          <span class="site-state-item-count">110</span>
           <span class="site-state-item-name">posts</span>
         </a>
       </div>
@@ -176,7 +175,7 @@
   
 
   <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="en">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2023/11/24/%E4%BA%92%E8%81%94%E7%BD%91/%E5%89%8D%E7%AB%AF/%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/JavaScript%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E7%9F%A5%E8%AF%86%E7%82%B9%E4%B8%B2%E8%81%94/">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2023/11/24/%E4%BA%92%E8%81%94%E7%BD%91/%E5%89%8D%E7%AB%AF/%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1/JavaScript%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E7%9F%A5%E8%AF%86%E7%82%B9%E4%B8%B2%E8%81%94/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/uploads/cat.jpg">
@@ -204,9 +203,15 @@
         <i class="far fa-calendar"></i>
       </span>
       <span class="post-meta-item-text">Posted on</span>
-      
 
-      <time title="Created: 2023-11-24 13:17:08 / Modified: 16:33:50" itemprop="dateCreated datePublished" datetime="2023-11-24T13:17:08+08:00">2023-11-24</time>
+      <time title="Created: 2023-11-24 13:17:08" itemprop="dateCreated datePublished" datetime="2023-11-24T13:17:08+08:00">2023-11-24</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar-check"></i>
+      </span>
+      <span class="post-meta-item-text">Edited on</span>
+      <time title="Modified: 2023-12-08 14:54:51" itemprop="dateModified" datetime="2023-12-08T14:54:51+08:00">2023-12-08</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -236,40 +241,71 @@
     
     
     <div class="post-body" itemprop="articleBody"><h1 id="JavaScript面向对象知识点串联"><a href="#JavaScript面向对象知识点串联" class="headerlink" title="JavaScript面向对象知识点串联"></a>JavaScript面向对象知识点串联</h1><blockquote>
-<p>本文我会尽可能的把面试有关的问题都加入进来，并把之前刚开始理解这个概念不懂的踩坑的地方告诉大家。</p>
+<p>本文我会尽可能的把面试有关的问题都加入进来，并把学习踩坑的地方告诉大家。（知识点可以点击我给的连接）</p>
 </blockquote>
 <h4 id="面试问题"><a href="#面试问题" class="headerlink" title="面试问题"></a>面试问题</h4><ol>
 <li>解释一下原型链</li>
-<li>instanceof的原理</li>
-<li>typeof的相关问题</li>
+<li><code>instanceof</code>的原理</li>
+<li><code>typeof</code>的相关问题</li>
 <li>new的原理</li>
 <li>this指向问题</li>
 <li>任何有关bind、call、apply的问题</li>
+<li>ES5继承的方法</li>
 </ol>
 <h4 id="前置知识"><a href="#前置知识" class="headerlink" title="前置知识"></a>前置知识</h4><p>要理解原型链，那我们就得先理解<a target="_blank" rel="noopener" href="https://blog.csdn.net/weixin_51201930/article/details/122652397">什么是面向对象，它的三个基本特征：封装、继承、多态_</a></p>
-<p>而原型链便是JavaScript实现面向对象的一种方式。</p>
+<blockquote>
+<p>❗❗❗巨坑注意：一定要区分好继承和实例化的区别，特别是像js这样的基于原型继承的语言，我就踩过😫，导致开始学时特别痛苦。</p>
+</blockquote>
 <h2 id="原型和原型链的理解"><a href="#原型和原型链的理解" class="headerlink" title="原型和原型链的理解"></a>原型和原型链的理解</h2><h3 id="原型和面向编程"><a href="#原型和面向编程" class="headerlink" title="原型和面向编程"></a>原型和面向编程</h3><p>相信很多同学都或多或少的接触过一定面向对象编程，也清楚的知道面向对象对于编程开发的重要性，那为什么到了JavaScript，我们说到面向对象就得说到原型呢？</p>
 <p>这要从JavaScript的源头说起。JavaScript是一种动态类型语言，区别于c++和Java，它实现继承的方法并不是靠类，而是靠原型。</p>
 <blockquote>
-<p>你可能会说ES6中不是有类吗？</p>
-<p>其实不然，ES6中的类并不是原生支持的类，而是一个语法糖，这也是为什么再使用ES6时，我们需要一些工具来将ES6转换为ES5，其实，底层逻辑是不一样的（你可能吐槽为什么JavaScript要去模仿那些静态语言，额，我也喜欢吐槽typescript，哈哈哈）</p>
+<p>又一个坑：你可能会说ES6中不是有类吗？</p>
+<p>其实不然，ES6中的类并不是原生支持的类，而是一个语法糖(底层并不是像c++那样，而是对JS（ES6之前的语法，以下都是这个意思）模拟继承的一种封装，这也是为什么再使用ES6时，我们需要一些工具（babel）来将ES6转换为ES5。</p>
 </blockquote>
-<h3 id="话归原题，那到底什么是原型和原型链呢？"><a href="#话归原题，那到底什么是原型和原型链呢？" class="headerlink" title="话归原题，那到底什么是原型和原型链呢？"></a>话归原题，那到底什么是原型和原型链呢？</h3><p>其实理解时，我们便可以把原型认为是类，但JavaScript是一种动态类型语言，所以原型的使用比类灵活许多。</p>
-<p>这样说可能不太容易理解，让我们先把原型和类的模型构建出来。</p>
-<p>这里得先提到JavaScript是如何创建对象的，先提出几个名词 <code>构造函数</code>、<code>__proto__</code>和<code>prototype</code>。</p>
+<h3 id="原型和原型链"><a href="#原型和原型链" class="headerlink" title="原型和原型链"></a>原型和原型链</h3><p>话归原题，那到底什么是原型和原型链呢？这就应该从实例化开始谈起。</p>
+<blockquote>
+<p>这里我就不细说了，可以看阮一峰的教程：<a target="_blank" rel="noopener" href="https://www.bookstack.cn/read/javascript-tutorial/docs-oop-new.md">面向对象编程 - 实例对象与 new 命令 - 《阮一峰 JavaScript 教程》 - 书栈网 · BookStack</a></p>
+</blockquote>
+<p> 到这里我可以认为你已经知道了构造函数和new的使用，也知道了prototype</p>
+<p>理解时，我们可以把原型认为是类。</p>
+<blockquote>
+<p>之前我迷惑的地方</p>
+</blockquote>
+<blockquote>
+<p>函数为什么是把原型传给对象，而不是本身传给对象？</p>
+<p>或者问为什么老是遇见构造函数里有原型，而原型里面又有构造函数</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">function</span> <span class="title function_">Person</span>(<span class="params">name, age</span>) &#123;</span><br><span class="line">  <span class="variable language_">this</span>.<span class="property">name</span> = name;</span><br><span class="line">  <span class="variable language_">this</span>.<span class="property">age</span> = age;</span><br><span class="line">&#125;</span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="title class_">Person</span>.<span class="property"><span class="keyword">prototype</span></span>.<span class="property">constructor</span> === <span class="title class_">Person</span>); <span class="comment">// true</span></span><br></pre></td></tr></table></figure>
+
+<p>答：函数本身就是一种数据类型，它有自己的任务。它来当构造函数相当于就是为了建立一个原型和对象的桥梁，相当于它生产了一个<code>类</code>（不严谨）,然后把这个<code>类</code>交给了新的实例。这也就解释了为什么构造函数的原型里面还要加一个构造函数，因为这个构造函数是给新生成的对象用的。</p>
+</blockquote>
 <p>pass</p>
 <p>（日后完善）</p>
 <p>让我们打开浏览器，按一下<code>f12</code>，再控制台中输入<code>Object()</code>,回车。我们就能看见一个空的对象。</p>
 <p><img src="D:\workspace\blog\myblog\source-img\技术\前端\image-20231124134648166.png" alt="image-20231124134648166"></p>
 <p>这就是JavaScript对象的结构了。</p>
 <p>我们先看一下重点，第一个<code>prototype</code>就是我们一直提到的原型，那为什么又要提到原型链呢？我们又来点开<code>__proto__</code>，我们可以看见</p>
-<p><img src="C:\Users\27421\AppData\Roaming\Typora\typora-user-images\image-20231124135440074.png" alt="image-20231124135440074"></p>
+<p>!(C:\Users\27421\AppData\Roaming\Typora\typora-user-images\image-20231124135440074.png)</p>
 <blockquote>
 <p><strong>原型链</strong>中就是<strong>实例对象</strong>和<strong>原型对象</strong>之间的链接</p>
 </blockquote>
 <p>原型（prototype，《高达00》曲</p>
 <p>array原型，</p>
 <p>基于原型和基于类</p>
+<h2 id="继承"><a href="#继承" class="headerlink" title="继承"></a>继承</h2><blockquote>
+<p>原本不难的继承，放到js里面居然变成了一个大关。</p>
+<p>js里面有很多办法实现继承，去翻翻js的教材，可以看到很多方法可以模拟继承。</p>
+<p>其实反过来想，如果没有静态语言给的继承这个概念，js是不是会灵活的多？</p>
+<p>所以我们要做自己（😊，反讽ing）</p>
+</blockquote>
+<p>ES6提供了很好用的class语法糖。</p>
+<blockquote>
+<p>这里就不谈js实现继承了，感觉这玩意就是为了考而考。</p>
+</blockquote>
+<p>那么继续开始踩坑。</p>
+<p>首先是对super的理解，第一次遇见super是在react的类组件里，class里面的constructor里面突兀出现一个super()，我是一点都无法理解这个取名的意义的。这里还是推荐看阮一峰的ES6教程</p>
+<blockquote>
+<p>PS:每次遇见新的语句，特别是在开发时遇见，不要去猜这个怎么用，而是马上去修补这块知识点，你这次猜对了，后面八成还有其他问题，跟谎言一样，应该杜绝第一次欺骗</p>
+</blockquote>
 
     </div>
 

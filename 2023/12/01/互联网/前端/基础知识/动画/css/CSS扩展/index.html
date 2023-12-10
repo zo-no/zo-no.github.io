@@ -15,31 +15,29 @@
 
 <script class="next-config" data-name="main" type="application/json">{"hostname":"example.com","root":"/","images":"/images","scheme":"Gemini","darkmode":false,"version":"8.18.2","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":{"enable":false,"style":null},"fold":{"enable":false,"height":500},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"Searching...","empty":"We didn't find any results for the search: ${query}","hits_time":"${hits} results found in ${time} ms","hits":"${hits} results found"}}</script><script src="/js/config.js"></script>
 
-    <meta name="description" content="面试问题 事件轮询机制？   异步   要说异步我们先来讲讲为什么要异步？单线程是JavaScript的核心，js本身速度很快，但它的输入输出慢（也就是Ajax网络请求等），因为js是单线程如果有什么地方卡住了，那对于整个浏览器就会出现“卡死的情况”。于是为了解决这个问题就出现了“事件循环（Event Loop）”机制。 异步的概念要理解异步，我们就得把同步拿过来。同步就是按顺序一个一个做，异步就">
+    <meta name="description" content="SASS">
 <meta property="og:type" content="article">
-<meta property="og:title" content="异步系列问题">
-<meta property="og:url" content="http://example.com/2023/11/24/%E4%BA%92%E8%81%94%E7%BD%91/%E5%89%8D%E7%AB%AF/%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/%E4%BA%8B%E4%BB%B6%E8%BD%AE%E8%AF%A2%E7%B3%BB%E5%88%97/index.html">
+<meta property="og:title" content="CSS扩展">
+<meta property="og:url" content="http://example.com/2023/12/01/%E4%BA%92%E8%81%94%E7%BD%91/%E5%89%8D%E7%AB%AF/%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/%E5%8A%A8%E7%94%BB/css/CSS%E6%89%A9%E5%B1%95/index.html">
 <meta property="og:site_name" content="ZONO&#39;s World">
-<meta property="og:description" content="面试问题 事件轮询机制？   异步   要说异步我们先来讲讲为什么要异步？单线程是JavaScript的核心，js本身速度很快，但它的输入输出慢（也就是Ajax网络请求等），因为js是单线程如果有什么地方卡住了，那对于整个浏览器就会出现“卡死的情况”。于是为了解决这个问题就出现了“事件循环（Event Loop）”机制。 异步的概念要理解异步，我们就得把同步拿过来。同步就是按顺序一个一个做，异步就">
+<meta property="og:description" content="SASS">
 <meta property="og:locale" content="en_US">
-<meta property="og:image" content="https://wangdoc.com/javascript/async/general">
-<meta property="og:image" content="https://wangdoc.com/javascript/async/timer">
-<meta property="article:published_time" content="2023-11-24T13:03:37.000Z">
-<meta property="article:modified_time" content="2023-11-26T08:18:36.420Z">
+<meta property="article:published_time" content="2023-12-01T04:16:35.000Z">
+<meta property="article:modified_time" content="2023-12-10T02:22:41.252Z">
 <meta property="article:author" content="zono">
 <meta property="article:tag" content="技术">
+<meta property="article:tag" content="技能">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="https://wangdoc.com/javascript/async/general">
 
 
-<link rel="canonical" href="http://example.com/2023/11/24/%E4%BA%92%E8%81%94%E7%BD%91/%E5%89%8D%E7%AB%AF/%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/%E4%BA%8B%E4%BB%B6%E8%BD%AE%E8%AF%A2%E7%B3%BB%E5%88%97/">
+<link rel="canonical" href="http://example.com/2023/12/01/%E4%BA%92%E8%81%94%E7%BD%91/%E5%89%8D%E7%AB%AF/%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/%E5%8A%A8%E7%94%BB/css/CSS%E6%89%A9%E5%B1%95/">
 
 
 
-<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"en","comments":true,"permalink":"http://example.com/2023/11/24/%E4%BA%92%E8%81%94%E7%BD%91/%E5%89%8D%E7%AB%AF/%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/%E4%BA%8B%E4%BB%B6%E8%BD%AE%E8%AF%A2%E7%B3%BB%E5%88%97/","path":"2023/11/24/互联网/前端/基础知识/事件轮询系列/","title":"异步系列问题"}</script>
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"en","comments":true,"permalink":"http://example.com/2023/12/01/%E4%BA%92%E8%81%94%E7%BD%91/%E5%89%8D%E7%AB%AF/%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/%E5%8A%A8%E7%94%BB/css/CSS%E6%89%A9%E5%B1%95/","path":"2023/12/01/互联网/前端/基础知识/动画/css/CSS扩展/","title":"CSS扩展"}</script>
 
 <script class="next-config" data-name="calendar" type="application/json">""</script>
-<title>异步系列问题 | ZONO's World</title>
+<title>CSS扩展 | ZONO's World</title>
   
 
 
@@ -112,7 +110,7 @@
       <div class="sidebar-panel-container">
         <!--noindex-->
         <div class="post-toc-wrap sidebar-panel">
-            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%9D%A2%E8%AF%95%E9%97%AE%E9%A2%98"><span class="nav-number">1.</span> <span class="nav-text">面试问题</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%BC%82%E6%AD%A5"><span class="nav-number"></span> <span class="nav-text">异步</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%BC%82%E6%AD%A5%E7%9A%84%E6%A6%82%E5%BF%B5"><span class="nav-number">1.</span> <span class="nav-text">异步的概念</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%BC%82%E6%AD%A5%E7%9A%84%E5%AE%9E%E7%8E%B0%E2%80%94%E2%80%94%E4%BA%8B%E4%BB%B6%E8%BD%AE%E8%AF%A2"><span class="nav-number">2.</span> <span class="nav-text">异步的实现——事件轮询</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%AE%9A%E6%97%B6%E5%99%A8setTimeout-%E3%80%81setInterval-%E8%AF%A6%E8%A7%A3"><span class="nav-number">3.</span> <span class="nav-text">定时器setTimeout()、setInterval()详解</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%9B%9E%E8%B0%83%E5%87%BD%E6%95%B0"><span class="nav-number">4.</span> <span class="nav-text">回调函数</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#promise"><span class="nav-number">5.</span> <span class="nav-text">promise</span></a></li></ol></div>
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#SASS"><span class="nav-number">1.</span> <span class="nav-text">SASS</span></a></li></ol></div>
         </div>
         <!--/noindex-->
 
@@ -127,7 +125,7 @@
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
         <a href="/archives/">
-          <span class="site-state-item-count">108</span>
+          <span class="site-state-item-count">110</span>
           <span class="site-state-item-name">posts</span>
         </a>
       </div>
@@ -176,7 +174,7 @@
   
 
   <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="en">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2023/11/24/%E4%BA%92%E8%81%94%E7%BD%91/%E5%89%8D%E7%AB%AF/%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/%E4%BA%8B%E4%BB%B6%E8%BD%AE%E8%AF%A2%E7%B3%BB%E5%88%97/">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2023/12/01/%E4%BA%92%E8%81%94%E7%BD%91/%E5%89%8D%E7%AB%AF/%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/%E5%8A%A8%E7%94%BB/css/CSS%E6%89%A9%E5%B1%95/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/uploads/cat.jpg">
@@ -189,12 +187,12 @@
     </span>
 
     <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
-      <meta itemprop="name" content="异步系列问题 | ZONO's World">
+      <meta itemprop="name" content="CSS扩展 | ZONO's World">
       <meta itemprop="description" content="">
     </span>
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
-          异步系列问题
+          CSS扩展
         </h1>
 
         <div class="post-meta-container">
@@ -205,14 +203,14 @@
       </span>
       <span class="post-meta-item-text">Posted on</span>
 
-      <time title="Created: 2023-11-24 21:03:37" itemprop="dateCreated datePublished" datetime="2023-11-24T21:03:37+08:00">2023-11-24</time>
+      <time title="Created: 2023-12-01 12:16:35" itemprop="dateCreated datePublished" datetime="2023-12-01T12:16:35+08:00">2023-12-01</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">Edited on</span>
-      <time title="Modified: 2023-11-26 16:18:36" itemprop="dateModified" datetime="2023-11-26T16:18:36+08:00">2023-11-26</time>
+      <time title="Modified: 2023-12-10 10:22:41" itemprop="dateModified" datetime="2023-12-10T10:22:41+08:00">2023-12-10</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -220,19 +218,15 @@
       </span>
       <span class="post-meta-item-text">In</span>
         <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/%E7%94%9F%E6%B4%BB/" itemprop="url" rel="index"><span itemprop="name">生活</span></a>
+          <a href="/categories/%E6%8A%80%E6%9C%AF/" itemprop="url" rel="index"><span itemprop="name">技术</span></a>
         </span>
           , 
         <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/%E7%94%9F%E6%B4%BB/%E6%8A%80%E6%9C%AF/" itemprop="url" rel="index"><span itemprop="name">技术</span></a>
+          <a href="/categories/%E6%8A%80%E6%9C%AF/%E5%89%8D%E7%AB%AF/" itemprop="url" rel="index"><span itemprop="name">前端</span></a>
         </span>
           , 
         <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/%E7%94%9F%E6%B4%BB/%E6%8A%80%E6%9C%AF/%E5%89%8D%E7%AB%AF/" itemprop="url" rel="index"><span itemprop="name">前端</span></a>
-        </span>
-          , 
-        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/%E7%94%9F%E6%B4%BB/%E6%8A%80%E6%9C%AF/%E5%89%8D%E7%AB%AF/JavaScript%E5%9F%BA%E7%A1%80/" itemprop="url" rel="index"><span itemprop="name">JavaScript基础</span></a>
+          <a href="/categories/%E6%8A%80%E6%9C%AF/%E5%89%8D%E7%AB%AF/%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/" itemprop="url" rel="index"><span itemprop="name">基础知识</span></a>
         </span>
     </span>
 
@@ -245,21 +239,7 @@
     
     
     
-    <div class="post-body" itemprop="articleBody"><h2 id="面试问题"><a href="#面试问题" class="headerlink" title="面试问题"></a>面试问题</h2><ol>
-<li>事件轮询机制？</li>
-<li></li>
-</ol>
-<h1 id="异步"><a href="#异步" class="headerlink" title="异步"></a>异步</h1><blockquote>
-<p><img src="https://wangdoc.com/javascript/async/general" alt="阮一峰大佬写的异步操作"></p>
-</blockquote>
-<p>要说异步我们先来讲讲为什么要异步？<br>单线程是JavaScript的核心，js本身速度很快，但它的输入输出慢（也就是Ajax网络请求等），因为js是单线程如果有什么地方卡住了，那对于整个浏览器就会出现“卡死的情况”。于是为了解决这个问题就出现了“事件循环（Event Loop）”机制。</p>
-<h2 id="异步的概念"><a href="#异步的概念" class="headerlink" title="异步的概念"></a>异步的概念</h2><p>要理解异步，我们就得把同步拿过来。同步就是按顺序一个一个做，异步就是同时做。（简单理解咯）</p>
-<h2 id="异步的实现——事件轮询"><a href="#异步的实现——事件轮询" class="headerlink" title="异步的实现——事件轮询"></a>异步的实现——事件轮询</h2><h2 id="定时器setTimeout-、setInterval-详解"><a href="#定时器setTimeout-、setInterval-详解" class="headerlink" title="定时器setTimeout()、setInterval()详解"></a>定时器setTimeout()、setInterval()详解</h2><blockquote>
-<p><img src="https://wangdoc.com/javascript/async/timer" alt="定时器"><br>**setTimeout()**用于在指定的毫秒数后调用函数或计算表达式</p>
-</blockquote>
-<p>**setInterval()**在播放动画的时，每隔一定时间就调用函数，方法或对象</p>
-<p>用处：节流、防抖</p>
-<h2 id="回调函数"><a href="#回调函数" class="headerlink" title="回调函数"></a>回调函数</h2><h2 id="promise"><a href="#promise" class="headerlink" title="promise"></a>promise</h2>
+    <div class="post-body" itemprop="articleBody"><h1 id="SASS"><a href="#SASS" class="headerlink" title="SASS"></a>SASS</h1>
     </div>
 
     
@@ -269,19 +249,20 @@
     <footer class="post-footer">
           <div class="post-tags">
               <a href="/tags/%E6%8A%80%E6%9C%AF/" rel="tag"># 技术</a>
+              <a href="/tags/%E6%8A%80%E8%83%BD/" rel="tag"># 技能</a>
           </div>
 
         
 
           <div class="post-nav">
             <div class="post-nav-item">
-                <a href="/2023/11/24/%E7%94%9F%E6%B4%BB/%E4%B8%AA%E4%BA%BA%E6%8F%90%E5%8D%87/blog%E4%BC%98%E5%8C%96%E8%AE%B0%E5%BD%9502/" rel="prev" title="blog优化记录02">
-                  <i class="fa fa-angle-left"></i> blog优化记录02
+                <a href="/2023/11/30/%E4%BA%92%E8%81%94%E7%BD%91/%E5%90%8E%E7%AB%AF/nodejs/nodejs%E5%89%8D%E7%BD%AE/" rel="prev" title="nodejs前置学习">
+                  <i class="fa fa-angle-left"></i> nodejs前置学习
                 </a>
             </div>
             <div class="post-nav-item">
-                <a href="/2023/11/25/%E4%BA%92%E8%81%94%E7%BD%91/%E5%89%8D%E7%AB%AF/react%E7%B2%BE%E5%AD%A6/Next.js/" rel="next" title="nextjs">
-                  nextjs <i class="fa fa-angle-right"></i>
+                <a href="/2023/12/01/%E4%BA%92%E8%81%94%E7%BD%91/%E5%90%8E%E7%AB%AF/nodejs/nodejs/" rel="next" title="nodejs">
+                  nodejs <i class="fa fa-angle-right"></i>
                 </a>
             </div>
           </div>

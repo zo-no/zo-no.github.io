@@ -121,7 +121,7 @@
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
         <a href="/archives/">
-          <span class="site-state-item-count">108</span>
+          <span class="site-state-item-count">110</span>
           <span class="site-state-item-name">posts</span>
         </a>
       </div>
@@ -160,6 +160,252 @@
     </div>
 
     <div class="main-inner index posts-expand">
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2023/12/10/%E4%BA%92%E8%81%94%E7%BD%91/%E5%89%8D%E7%AB%AF/%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/js%E7%9A%84%E9%81%8D%E5%8E%86%E9%97%AE%E9%A2%98/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/uploads/cat.jpg">
+      <meta itemprop="name" content="zono">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="ZONO's World">
+      <meta itemprop="description" content="人生长度无法强求,但厚度可以靠努力">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="undefined | ZONO's World">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/2023/12/10/%E4%BA%92%E8%81%94%E7%BD%91/%E5%89%8D%E7%AB%AF/%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/js%E7%9A%84%E9%81%8D%E5%8E%86%E9%97%AE%E9%A2%98/" class="post-title-link" itemprop="url">js的遍历问题</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">Posted on</span>
+      
+
+      <time title="Created: 2023-12-10 10:09:39 / Modified: 17:00:33" itemprop="dateCreated datePublished" datetime="2023-12-10T10:09:39+08:00">2023-12-10</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">In</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/%E6%8A%80%E6%9C%AF/" itemprop="url" rel="index"><span itemprop="name">技术</span></a>
+        </span>
+          , 
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/%E6%8A%80%E6%9C%AF/%E5%89%8D%E7%AB%AF/" itemprop="url" rel="index"><span itemprop="name">前端</span></a>
+        </span>
+          , 
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/%E6%8A%80%E6%9C%AF/%E5%89%8D%E7%AB%AF/JavaScript%E5%9F%BA%E7%A1%80/" itemprop="url" rel="index"><span itemprop="name">JavaScript基础</span></a>
+        </span>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <h1 id="for-in和for-of区别"><a href="#for-in和for-of区别" class="headerlink" title="for in和for of区别"></a><code>for in</code>和<code>for of</code>区别</h1><blockquote>
+<p>js的遍历真的让人迷迷糊糊的，单纯的for、while循环不够，map、forEach还能理解，居然还多几个for…in，for…of。着实让人摸不到头脑</p>
+</blockquote>
+<p>相信大家在学习遍历时，一定碰见了两个名词，<code>enumerable</code>和<code>iterator</code></p>
+<p>要区别它们首先得理解这两者的差异。</p>
+<h2 id="enumerable和iterator"><a href="#enumerable和iterator" class="headerlink" title="enumerable和iterator"></a><code>enumerable</code>和<code>iterator</code></h2><h3 id="enumerable"><a href="#enumerable" class="headerlink" title="enumerable"></a>enumerable</h3><p>对象的属性对象，让我们打印出来看看</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> obj = &#123; <span class="attr">p</span>: <span class="string">&quot;a&quot;</span> &#125;;</span><br><span class="line"><span class="keyword">let</span> prop = <span class="title class_">Object</span>.<span class="title function_">getOwnPropertyDescriptor</span>(obj, <span class="string">&quot;p&quot;</span>); <span class="comment">//查看属性p的属性对象</span></span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(prop);</span><br><span class="line"><span class="comment">// &#123;</span></span><br><span class="line"><span class="comment">//   value: a,</span></span><br><span class="line"><span class="comment">//   writable: true,</span></span><br><span class="line"><span class="comment">//   enumerable: true,</span></span><br><span class="line"><span class="comment">//   configurable: true,</span></span><br><span class="line"><span class="comment">//   get: undefined,</span></span><br><span class="line"><span class="comment">//   set: undefined</span></span><br><span class="line"><span class="comment">// &#125;</span></span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>回顾：之前关于属性的三种状态<code>Extensible</code>（不可加）、<code>seal()</code>（不可加减）、<code>freeze()</code>（不可加减改）</p>
+</blockquote>
+<h3 id="iterator"><a href="#iterator" class="headerlink" title="iterator"></a><code>iterator</code></h3><h2 id="区别"><a href="#区别" class="headerlink" title="区别"></a>区别</h2><p>其实更多的要区分的是<code>for in</code>和<code>Object.keys</code></p>
+<p>for in可以遍历所有可枚举项，包括原型中的内容</p>
+<p>浅显的理解，我们可以把</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="keyword">const</span> array1 = [<span class="string">&quot;a&quot;</span>, <span class="string">&quot;b&quot;</span>, <span class="string">&quot;c&quot;</span>];</span><br><span class="line"><span class="comment">//for in</span></span><br><span class="line"><span class="keyword">for</span> (<span class="keyword">const</span> val <span class="keyword">in</span> array1) &#123;</span><br><span class="line">  <span class="variable language_">console</span>.<span class="title function_">log</span>(val);</span><br><span class="line">&#125;<span class="comment">//打印索引</span></span><br><span class="line"><span class="comment">//0</span></span><br><span class="line"><span class="comment">//1</span></span><br><span class="line"><span class="comment">//2</span></span><br><span class="line"></span><br><span class="line"><span class="comment">//for of</span></span><br><span class="line"><span class="keyword">for</span> (<span class="keyword">const</span> val <span class="keyword">of</span> array1) &#123;</span><br><span class="line">  <span class="variable language_">console</span>.<span class="title function_">log</span>(val);</span><br><span class="line">&#125;<span class="comment">//打印值</span></span><br><span class="line"><span class="comment">//a</span></span><br><span class="line"><span class="comment">//b</span></span><br><span class="line"><span class="comment">//c</span></span><br></pre></td></tr></table></figure>
+
+<p>由上文可知对象不可迭代但可以被枚举</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="keyword">for</span> (<span class="keyword">let</span> i <span class="keyword">in</span> obj) &#123;</span><br><span class="line">  <span class="variable language_">console</span>.<span class="title function_">log</span>(i);</span><br><span class="line">  <span class="variable language_">console</span>.<span class="title function_">log</span>(obj[i]);</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">for</span> (<span class="keyword">let</span> i <span class="keyword">of</span> obj) &#123;</span><br><span class="line">  <span class="variable language_">console</span>.<span class="title function_">log</span>(i);</span><br><span class="line">  <span class="variable language_">console</span>.<span class="title function_">log</span>(obj[i]);</span><br><span class="line">&#125; <span class="comment">//err:obj is not iterable</span></span><br><span class="line"><span class="comment">//效果可以自己打印一下</span></span><br></pre></td></tr></table></figure>
+
+<h1 id="对象的维度"><a href="#对象的维度" class="headerlink" title="对象的维度"></a>对象的维度</h1><p>属性</p>
+<p>继承</p>
+<p>方法</p>
+<ul>
+<li>首先遍历所有数值键，按照数值升序排列。</li>
+<li>其次遍历所有字符串键，按照加入时间升序排列。</li>
+<li>最后遍历所有 Symbol 键，按照加入时间升序排列。</li>
+<li>//pass</li>
+</ul>
+<p>以后完善</p>
+
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2023/12/07/%E4%BA%92%E8%81%94%E7%BD%91/%E5%89%8D%E7%AB%AF/%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/%E4%B8%89%E5%89%91%E5%AE%A2%E7%9A%84%E8%AE%A9%E4%BA%BA%E8%BF%B7%E6%83%91%E7%9A%84%E4%B8%80%E4%BA%9B%E5%8E%86%E5%8F%B2%E9%81%97%E7%95%99%E9%97%AE%E9%A2%98/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/uploads/cat.jpg">
+      <meta itemprop="name" content="zono">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="ZONO's World">
+      <meta itemprop="description" content="人生长度无法强求,但厚度可以靠努力">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="undefined | ZONO's World">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/2023/12/07/%E4%BA%92%E8%81%94%E7%BD%91/%E5%89%8D%E7%AB%AF/%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/%E4%B8%89%E5%89%91%E5%AE%A2%E7%9A%84%E8%AE%A9%E4%BA%BA%E8%BF%B7%E6%83%91%E7%9A%84%E4%B8%80%E4%BA%9B%E5%8E%86%E5%8F%B2%E9%81%97%E7%95%99%E9%97%AE%E9%A2%98/" class="post-title-link" itemprop="url">三剑客的让人迷惑的一些历史遗留问题</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">Posted on</span>
+
+      <time title="Created: 2023-12-07 16:47:08" itemprop="dateCreated datePublished" datetime="2023-12-07T16:47:08+08:00">2023-12-07</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar-check"></i>
+      </span>
+      <span class="post-meta-item-text">Edited on</span>
+      <time title="Modified: 2023-12-10 10:09:05" itemprop="dateModified" datetime="2023-12-10T10:09:05+08:00">2023-12-10</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">In</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/%E6%8A%80%E6%9C%AF/" itemprop="url" rel="index"><span itemprop="name">技术</span></a>
+        </span>
+          , 
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/%E6%8A%80%E6%9C%AF/%E5%89%8D%E7%AB%AF/" itemprop="url" rel="index"><span itemprop="name">前端</span></a>
+        </span>
+          , 
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/%E6%8A%80%E6%9C%AF/%E5%89%8D%E7%AB%AF/%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/" itemprop="url" rel="index"><span itemprop="name">基础知识</span></a>
+        </span>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <blockquote>
+<p>该文会不断更新</p>
+</blockquote>
+<h1 id="button和input的一些迷惑之处"><a href="#button和input的一些迷惑之处" class="headerlink" title="button和input的一些迷惑之处"></a>button和input的一些迷惑之处</h1><p>让我们敲下面几行代码</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">&quot;button&quot;</span> <span class="attr">value</span>=<span class="string">&quot;点击&quot;</span> /&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">&quot;submit&quot;</span> <span class="attr">value</span>=<span class="string">&quot;点击&quot;</span> /&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">button</span> &gt;</span>点击<span class="tag">&lt;/<span class="name">button</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<p>有意思的是运行后，呈现的效果完全相同。</p>
+<blockquote>
+<p><a target="_blank" rel="noopener" href="https://www.zhihu.com/question/481307974">form提交应该使用input:submit还是button：submit? - 知乎 (zhihu.com)</a></p>
+</blockquote>
+<ul>
+<li><code>&lt;button&gt;</code> 元素是一个更灵活的按钮，可以<strong>自定义</strong>外观和样式（可以包含文本、图像或其他 HTML 元素），并且可以在点击时执行 JavaScript 操作。如果它位于表单中且没有指定 <code>type</code> 属性，则<strong>默认为 “submit” 类型</strong>，可以提交表单。</li>
+<li><code>&lt;input type=&quot;button&quot;&gt;</code> 是一个用于执行 JavaScript 操作的按钮，<strong>不会自动提交</strong>包含它的表单。</li>
+<li><code>&lt;input type=&quot;submit&quot;&gt;</code> 是一个用于提交表单的按钮，当用户点击它时，将触发表单的提交动作。</li>
+<li>旧版本的浏览器可能对 <code>&lt;button&gt;</code> 元素的行为和样式支持不一致。但<code>&lt;button&gt;</code> 元素通常被认为是更<strong>语义化</strong>的选择</li>
+</ul>
+<h1 id="明明getElementsByClassName-和querySelectorAll可以实现一样的功能为什么要弄两个"><a href="#明明getElementsByClassName-和querySelectorAll可以实现一样的功能为什么要弄两个" class="headerlink" title="明明getElementsByClassName 和querySelectorAll可以实现一样的功能为什么要弄两个"></a>明明<code>getElementsByClassName</code> 和<code>querySelectorAll</code>可以实现一样的功能为什么要弄两个</h1><p><code>getElementsByClassName</code> 是一个原生的 DOM 方法，快一些，返回的是一个动态的 <code>HTMLCollection</code> 对象，该对象会随着 DOM 的变化而实时更新。。</p>
+<p><code>querySelectorAll</code> 是在 DOM API 中引入的新方法,返回的是一个静态的 <code>NodeList </code>对象</p>
+<ol>
+<li>使用 <code>getElementsByClassName</code> 的应用场景：<ul>
+<li>动态更新的元素集合：如果需要选择的元素集合需要实时更新，例如在用户交互或事件处理程序中动态添加或删除元素时（比如写<code>todolist</code>）</li>
+<li>仅按类名选择元素：如果您只需要按类名选择元素，并且不需要使用其他选择器（如标签名、ID、属性等），<code>getElementsByClassName</code> 是一个更简洁的选择。</li>
+</ul>
+</li>
+<li>使用 <code>querySelectorAll</code> 的应用场景：<ul>
+<li>复杂的选择器需求：如果您需要使用更复杂的选择器，例如使用层级选择器、伪类选择器等来选择元素，<code>querySelectorAll</code> 提供了更灵活的选择器语法，使您能够使用更多种类的选择器。</li>
+<li>静态节点列表：如果您需要获取一个静态的节点列表，并且不需要实时更新，<code>querySelectorAll</code> 可以提供更适合的功能。</li>
+<li>使用其他选择器：如果您需要按照标签名、ID、属性等其他选择器选择元素，<code>querySelectorAll</code> 提供了更广泛的选择器选项。</li>
+</ul>
+</li>
+</ol>
+<h1 id="如何区分Nodelist和HtmlCollection"><a href="#如何区分Nodelist和HtmlCollection" class="headerlink" title="如何区分Nodelist和HtmlCollection"></a>如何区分<code>Nodelist</code>和<code>HtmlCollection</code></h1><p>一个例子(可以直接复制后运行)</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&lt;!DOCTYPE <span class="keyword">html</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">html</span> <span class="attr">lang</span>=<span class="string">&quot;en&quot;</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">head</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">meta</span> <span class="attr">charset</span>=<span class="string">&quot;UTF-8&quot;</span> /&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">meta</span> <span class="attr">name</span>=<span class="string">&quot;viewport&quot;</span> <span class="attr">content</span>=<span class="string">&quot;width=device-width, initial-scale=1.0&quot;</span> /&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">title</span>&gt;</span>Document<span class="tag">&lt;/<span class="name">title</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="name">head</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">ul</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">li</span> <span class="attr">class</span>=<span class="string">&quot;example&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">li</span> <span class="attr">class</span>=<span class="string">&quot;example&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">li</span> <span class="attr">class</span>=<span class="string">&quot;example&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">ul</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">script</span>&gt;</span><span class="language-javascript"></span></span><br><span class="line"><span class="language-javascript">    <span class="comment">// 使用querySelectorAll获取NodeList和getElementsByClassName获取HTMLCollection</span></span></span><br><span class="line"><span class="language-javascript">    <span class="keyword">const</span> nodeList = <span class="variable language_">document</span>.<span class="title function_">querySelectorAll</span>(<span class="string">&quot;li&quot;</span>);</span></span><br><span class="line"><span class="language-javascript">    <span class="keyword">const</span> htmlCollection = <span class="variable language_">document</span>.<span class="title function_">getElementsByClassName</span>(<span class="string">&quot;example&quot;</span>);</span></span><br><span class="line"><span class="language-javascript"></span></span><br><span class="line"><span class="language-javascript">    <span class="comment">// 访问节点数量</span></span></span><br><span class="line"><span class="language-javascript">    <span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">&quot;NodeList length:&quot;</span>, nodeList);</span></span><br><span class="line"><span class="language-javascript">    <span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">&quot;HTMLCollection length:&quot;</span>, htmlCollection);</span></span><br><span class="line"><span class="language-javascript">    <span class="comment">// 动态添加元素</span></span></span><br><span class="line"><span class="language-javascript">    <span class="keyword">const</span> ul = <span class="variable language_">document</span>.<span class="title function_">querySelector</span>(<span class="string">&quot;ul&quot;</span>);</span></span><br><span class="line"><span class="language-javascript">    <span class="keyword">const</span> li = <span class="variable language_">document</span>.<span class="title function_">createElement</span>(<span class="string">&quot;li&quot;</span>);</span></span><br><span class="line"><span class="language-javascript">    li.<span class="property">textContent</span> = <span class="string">&quot;New Element&quot;</span>;</span></span><br><span class="line"><span class="language-javascript">    li.<span class="property">className</span> = <span class="string">&quot;example&quot;</span>;</span></span><br><span class="line"><span class="language-javascript">    ul.<span class="title function_">appendChild</span>(li);</span></span><br><span class="line"><span class="language-javascript"></span></span><br><span class="line"><span class="language-javascript">    <span class="comment">// 验证差异</span></span></span><br><span class="line"><span class="language-javascript">    <span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">&quot;Updated NodeList length:&quot;</span>, nodeList.<span class="property">length</span>); <span class="comment">// 不会更新，3相当于快照</span></span></span><br><span class="line"><span class="language-javascript">    <span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">&quot;Updated HTMLCollection length:&quot;</span>, htmlCollection.<span class="property">length</span>); <span class="comment">// 实时更新，4</span></span></span><br><span class="line"><span class="language-javascript">  </span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<p>这里我就想到，react和vue的状态管理，react的状态管理是静态的，看官网的描述就知道，它提到了快照，vue了解不多，但它是基于MVVM的有双向绑定的特征</p>
+<h1 id="setPrototypeOf-与-Object-create区别"><a href="#setPrototypeOf-与-Object-create区别" class="headerlink" title="setPrototypeOf 与 Object.create区别"></a>setPrototypeOf 与 Object.create区别</h1><p>这里又涉及到了动静问题，如果你之前理解了它们之间的区别也会很好理解<br>功能不同：</p>
+<p>setPrototypeOf 方法用于直接修改一个对象的原型。它接受两个参数，第一个参数是要修改原型的对象，第二个参数是新的原型对象。这会改变对象的原型链，并且会立即生效。<br>Object.create 方法用于创建一个新对象，该新对象的原型被设置为传入的参数。它接受一个参数，即新对象的原型对象。它不会直接修改现有对象的原型链，而是创建一个新的对象，并将其原型设置为指定的原型对象。<br>兼容性差异：</p>
+<p>setPrototypeOf 方法是在 ECMAScript 2015 (ES6) 中引入的，因此在一些较旧的浏览器或环境中可能不受支持。<br>Object.create 方法在较新的浏览器和环境中得到广泛支持，包括现代的主流浏览器和 Node.js。<br>使用方式不同：</p>
+<p>setPrototypeOf 方法需要直接操作现有的对象，通过传递新的原型对象来修改对象的原型。例如：Object.setPrototypeOf(obj, newPrototype)。<br>Object.create 方法是一个静态方法，用于创建一个新对象并设置其原型。例如：Object.create(proto)。</p>
+
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
 
     
 
@@ -1362,262 +1608,6 @@
 <h3 id="更新：新老virtual对比，然后更新对应内容"><a href="#更新：新老virtual对比，然后更新对应内容" class="headerlink" title="更新：新老virtual对比，然后更新对应内容"></a>更新：新老virtual对比，然后更新对应内容</h3><p>第一次渲染页面是直接从virtualDOM-&gt;真实DOM；</p>
 <p>后期视图更新时，会经过一个DOM-DIFF的对比，计算出补丁包PATCH（两次视图差异的部分），把PATCH补丁包进行渲染！！</p>
 
-      
-    </div>
-
-    
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-</div>
-
-
-
-
-    
-
-
-<div class="post-block">
-  
-  
-
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2023/12/04/%E4%BA%92%E8%81%94%E7%BD%91/%E5%89%8D%E7%AB%AF/react%E7%B2%BE%E5%AD%A6/02-MVC%E5%92%8CMVVM/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/uploads/cat.jpg">
-      <meta itemprop="name" content="zono">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="ZONO's World">
-      <meta itemprop="description" content="人生长度无法强求,但厚度可以靠努力">
-    </span>
-
-    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
-      <meta itemprop="name" content="undefined | ZONO's World">
-      <meta itemprop="description" content="">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/2023/12/04/%E4%BA%92%E8%81%94%E7%BD%91/%E5%89%8D%E7%AB%AF/react%E7%B2%BE%E5%AD%A6/02-MVC%E5%92%8CMVVM/" class="post-title-link" itemprop="url">02.MVC和MVVM</a>
-        </h2>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">Posted on</span>
-      
-
-      <time title="Created: 2023-12-04 00:03:50 / Modified: 16:48:42" itemprop="dateCreated datePublished" datetime="2023-12-04T00:03:50+08:00">2023-12-04</time>
-    </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-folder"></i>
-      </span>
-      <span class="post-meta-item-text">In</span>
-        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/%E6%8A%80%E6%9C%AF/" itemprop="url" rel="index"><span itemprop="name">技术</span></a>
-        </span>
-          , 
-        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/%E6%8A%80%E6%9C%AF/%E5%89%8D%E7%AB%AF/" itemprop="url" rel="index"><span itemprop="name">前端</span></a>
-        </span>
-          , 
-        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/%E6%8A%80%E6%9C%AF/%E5%89%8D%E7%AB%AF/%E6%A1%86%E6%9E%B6/" itemprop="url" rel="index"><span itemprop="name">框架</span></a>
-        </span>
-    </span>
-
-  
-</div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          <h1 id="02-MVC和MVVM"><a href="#02-MVC和MVVM" class="headerlink" title="02.MVC和MVVM"></a>02.MVC和MVVM</h1><h2 id="虚拟DOM"><a href="#虚拟DOM" class="headerlink" title="虚拟DOM"></a>虚拟DOM</h2><p>主流的思想：不在直接去操作DOM，而是改为“数据驱动思想”</p>
-<p>操作DOM思想：</p>
-<ul>
-<li>操作DOM比较消耗性能「主要原因就是：可能会导致DOM重排(回流)/重绘」</li>
-<li>操作起来也相对来讲麻烦一些</li>
-</ul>
-<p>驱动思想：</p>
-<ul>
-<li>我们不会在直接操作DOM</li>
-<li>我们去操作数据「当我们修改了数据，框架会按照相关的数据，让页面重新渲染」</li>
-<li>框架底层实现视图的渲染，也是基于操作DOM完成的<ul>
-<li>构建了一套 <strong>虚拟DOM</strong>-&gt;真实DOM 的渲染体系</li>
-<li>有效避免了DOM的重排/重绘</li>
-</ul>
-</li>
-<li>开发效率更高、最后的性能也相对较好</li>
-</ul>
-<h2 id="状态管理"><a href="#状态管理" class="headerlink" title="状态管理"></a>状态管理</h2><blockquote>
-<p>不再获取DOM元素，直接用state。也就是数据驱动</p>
-</blockquote>
-<h2 id="MVC和MVVM"><a href="#MVC和MVVM" class="headerlink" title="MVC和MVVM"></a>MVC和MVVM</h2><blockquote>
-<p>React框架采用的是MVC体系；</p>
-<p>Vue框架采用的是MVVM体系；</p>
-<p>NG是MVVM，写法是MVC（不懂）   </p>
-</blockquote>
-<h3 id="MVC"><a href="#MVC" class="headerlink" title="MVC"></a>MVC</h3><blockquote>
-<p>model数据层 + view视图层 + controller控制层</p>
-</blockquote>
-<p>对应三层，我们的学习目标</p>
-<ol>
-<li><p>视图层：用专业的语法去构建视图\页面（React中是基于jsx语法来构建视图的）。</p>
-</li>
-<li><p>数据层：视图中，需要“动态”(需要变化，不论是样式还是内容)处理的数据，都要有对应的数据模型。</p>
-</li>
-<li><p>控制层：在视图中，根据业务需求，进行某些操作时，会修改相关数据，然后React会按最新的数据，重新渲染视图。</p>
-<ul>
-<li><p>数据驱动视图的渲染！！</p>
-</li>
-<li><p>视图中的表单内容改变，想要修改数据，需要开发者自己去写代码实现！！</p>
-<p> “单向驱动”</p>
-</li>
-</ul>
-</li>
-</ol>
-<p><img src="../../../../-img/%E6%8A%80%E6%9C%AF/%E5%89%8D%E7%AB%AF/%E6%A1%86%E6%9E%B6/2.png" alt="MVC图示"></p>
-<h3 id="MVVM"><a href="#MVVM" class="headerlink" title="MVVM"></a>MVVM</h3><blockquote>
-<p>model数据层 + view视图层 + viewModel数据/视图监听层（数据和视图都被wacher监听）</p>
-</blockquote>
-<ol>
-<li><p>数据驱动视图的渲染：监听数据的更新，让视图重新渲染</p>
-</li>
-<li><p>视图驱动数据的更改：监听页面中表单元素内容改变，自动去修改相关的数据</p>
-<p>“双向驱动”</p>
-</li>
-</ol>
-<img src="../../../../-img/技术/前端/框架/1.png" alt="VUE虚拟dom图示" style="zoom:50%;" />
-
-<ul>
-<li><ul>
-<li><pre><code>+
-</code></pre>
-</li>
-</ul>
-</li>
-</ul>
-<p><strong>MVC VS MVVM</strong></p>
-<h3 id="对比"><a href="#对比" class="headerlink" title="对比"></a>对比</h3><ul>
-<li>MVVM是双向驱动，MVC是单项驱动，表单更新MVVM会自动更新，而MVC需要开发者操作。</li>
-</ul>
-
-      
-    </div>
-
-    
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-</div>
-
-
-
-
-    
-
-
-<div class="post-block">
-  
-  
-
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2023/12/03/%E4%BA%92%E8%81%94%E7%BD%91/%E5%89%8D%E7%AB%AF/%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/js%E8%AE%B0%E5%BF%86%E8%BE%85%E5%8A%A9/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/uploads/cat.jpg">
-      <meta itemprop="name" content="zono">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="ZONO's World">
-      <meta itemprop="description" content="人生长度无法强求,但厚度可以靠努力">
-    </span>
-
-    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
-      <meta itemprop="name" content="undefined | ZONO's World">
-      <meta itemprop="description" content="">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/2023/12/03/%E4%BA%92%E8%81%94%E7%BD%91/%E5%89%8D%E7%AB%AF/%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/js%E8%AE%B0%E5%BF%86%E8%BE%85%E5%8A%A9/" class="post-title-link" itemprop="url">js记忆辅助</a>
-        </h2>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">Posted on</span>
-
-      <time title="Created: 2023-12-03 20:49:21" itemprop="dateCreated datePublished" datetime="2023-12-03T20:49:21+08:00">2023-12-03</time>
-    </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar-check"></i>
-      </span>
-      <span class="post-meta-item-text">Edited on</span>
-      <time title="Modified: 2023-12-04 19:26:25" itemprop="dateModified" datetime="2023-12-04T19:26:25+08:00">2023-12-04</time>
-    </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-folder"></i>
-      </span>
-      <span class="post-meta-item-text">In</span>
-        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/%E6%8A%80%E6%9C%AF/" itemprop="url" rel="index"><span itemprop="name">技术</span></a>
-        </span>
-          , 
-        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/%E6%8A%80%E6%9C%AF/%E5%89%8D%E7%AB%AF/" itemprop="url" rel="index"><span itemprop="name">前端</span></a>
-        </span>
-          , 
-        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/%E6%8A%80%E6%9C%AF/%E5%89%8D%E7%AB%AF/JavaScript%E5%9F%BA%E7%A1%80/" itemprop="url" rel="index"><span itemprop="name">JavaScript基础</span></a>
-        </span>
-    </span>
-
-  
-</div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          <blockquote>
-<p>基于阮一峰教程的目录，把常用内容只写结构，方便记忆(遇见就写)</p>
-</blockquote>
-<h1 id="标准库"><a href="#标准库" class="headerlink" title="标准库"></a>标准库</h1><h2 id="属性描述对象"><a href="#属性描述对象" class="headerlink" title="属性描述对象"></a>属性描述对象</h2><h1 id="DOM"><a href="#DOM" class="headerlink" title="DOM"></a>DOM</h1><h2 id="document节点"><a href="#document节点" class="headerlink" title="document节点"></a>document节点</h2><h3 id="属性"><a href="#属性" class="headerlink" title="属性"></a>属性</h3><h3 id="方法"><a href="#方法" class="headerlink" title="方法"></a>方法</h3><h4 id="2、获取Element-Node（x4）"><a href="#2、获取Element-Node（x4）" class="headerlink" title="2、获取Element Node（x4）"></a>2、获取Element Node（x4）</h4><p><code>document.getElementsByTagName()</code></p>
-<p><code>document.getElementsByClassName()</code></p>
-<p><code>document.getElementsByName()</code></p>
-<p><code>document.getElementById()</code></p>
-<hr>
-<hr>
-<h3 id="ES6"><a href="#ES6" class="headerlink" title="ES6"></a>ES6</h3>
       
     </div>
 

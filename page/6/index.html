@@ -121,7 +121,7 @@
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
         <a href="/archives/">
-          <span class="site-state-item-count">108</span>
+          <span class="site-state-item-count">110</span>
           <span class="site-state-item-name">posts</span>
         </a>
       </div>
@@ -160,6 +160,263 @@
     </div>
 
     <div class="main-inner index posts-expand">
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2023/11/25/%E4%BA%92%E8%81%94%E7%BD%91/%E5%89%8D%E7%AB%AF/%E4%BC%98%E5%8C%96/%E5%89%8D%E7%AB%AF%E6%80%A7%E8%83%BD%E4%BC%98%E5%8C%96/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/uploads/cat.jpg">
+      <meta itemprop="name" content="zono">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="ZONO's World">
+      <meta itemprop="description" content="人生长度无法强求,但厚度可以靠努力">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="undefined | ZONO's World">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/2023/11/25/%E4%BA%92%E8%81%94%E7%BD%91/%E5%89%8D%E7%AB%AF/%E4%BC%98%E5%8C%96/%E5%89%8D%E7%AB%AF%E6%80%A7%E8%83%BD%E4%BC%98%E5%8C%96/" class="post-title-link" itemprop="url">前端性能优化</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">Posted on</span>
+
+      <time title="Created: 2023-11-25 15:09:54" itemprop="dateCreated datePublished" datetime="2023-11-25T15:09:54+08:00">2023-11-25</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar-check"></i>
+      </span>
+      <span class="post-meta-item-text">Edited on</span>
+      <time title="Modified: 2023-11-24 16:35:19" itemprop="dateModified" datetime="2023-11-24T16:35:19+08:00">2023-11-24</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">In</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/%E6%8A%80%E6%9C%AF/" itemprop="url" rel="index"><span itemprop="name">技术</span></a>
+        </span>
+          , 
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/%E6%8A%80%E6%9C%AF/%E5%89%8D%E7%AB%AF/" itemprop="url" rel="index"><span itemprop="name">前端</span></a>
+        </span>
+          , 
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/%E6%8A%80%E6%9C%AF/%E5%89%8D%E7%AB%AF/%E6%80%A7%E8%83%BD%E4%BC%98%E5%8C%96/" itemprop="url" rel="index"><span itemprop="name">性能优化</span></a>
+        </span>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <h1 id="前端性能优化"><a href="#前端性能优化" class="headerlink" title="前端性能优化"></a>前端性能优化</h1><h2 id="优化目标"><a href="#优化目标" class="headerlink" title="优化目标"></a>优化目标</h2><p>pass</p>
+<h2 id="前端性能评估"><a href="#前端性能评估" class="headerlink" title="前端性能评估"></a>前端性能评估</h2><h3 id="2-5-8原则"><a href="#2-5-8原则" class="headerlink" title="2-5-8原则"></a>2-5-8原则</h3><h3 id="GOOGLE建议"><a href="#GOOGLE建议" class="headerlink" title="GOOGLE建议"></a><strong>GOOGLE</strong>建议</h3><ul>
+<li>页面加载时间(Page Load Time)</li>
+<li>首屏加载时间(First Contentful Paint)：FCP</li>
+</ul>
+<blockquote>
+<p>FCP&gt;=FP</p>
+</blockquote>
+<ul>
+<li>用户可交互时间：</li>
+<li>白屏时间：FP，首次绘制时间</li>
+</ul>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">whidow.<span class="property">performance</span>.<span class="title function_">getEntriesByType</span>(<span class="string">&#x27;paint&#x27;</span>)[<span class="number">0</span>].<span class="property">startTime</span></span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>资源文件大小</li>
+</ul>
+<h3 id="性能指标计算方法（RATL）"><a href="#性能指标计算方法（RATL）" class="headerlink" title="性能指标计算方法（RATL）"></a>性能指标计算方法（RATL）</h3><p><code>RAIL</code> 是 <code>Response</code>、<code>Animation</code>、<code>Idle</code> 和 <code>Load</code> 的首字母缩写</p>
+<h3 id="具体细节"><a href="#具体细节" class="headerlink" title="具体细节"></a>具体细节</h3><p><a target="_blank" rel="noopener" href="https://juejin.cn/post/7104310605091176456">浅谈前端性能指标</a></p>
+<h4 id="加载性能"><a href="#加载性能" class="headerlink" title="加载性能"></a>加载性能</h4><ul>
+<li>First Meaning Paint(FMP):首次关键内容绘制,指浏览器渲染出第一个关键内容的时间。</li>
+<li>Largest Contentful Paint(LCP):最大内容绘制</li>
+<li>Time to Interactive：（TTI）：可交互时间</li>
+</ul>
+<h4 id="渲染性能"><a href="#渲染性能" class="headerlink" title="渲染性能"></a>渲染性能</h4><h2 id="前端性能检测工具"><a href="#前端性能检测工具" class="headerlink" title="前端性能检测工具"></a>前端性能检测工具</h2><h3 id="performance"><a href="#performance" class="headerlink" title="performance"></a>performance</h3>
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2023/11/25/%E4%BA%92%E8%81%94%E7%BD%91/%E5%89%8D%E7%AB%AF/react%E7%B2%BE%E5%AD%A6/%E6%B7%B1%E5%85%A5react%E6%91%B8%E5%BA%95/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/uploads/cat.jpg">
+      <meta itemprop="name" content="zono">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="ZONO's World">
+      <meta itemprop="description" content="人生长度无法强求,但厚度可以靠努力">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="undefined | ZONO's World">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/2023/11/25/%E4%BA%92%E8%81%94%E7%BD%91/%E5%89%8D%E7%AB%AF/react%E7%B2%BE%E5%AD%A6/%E6%B7%B1%E5%85%A5react%E6%91%B8%E5%BA%95/" class="post-title-link" itemprop="url">深入react</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">Posted on</span>
+
+      <time title="Created: 2023-11-25 15:09:54" itemprop="dateCreated datePublished" datetime="2023-11-25T15:09:54+08:00">2023-11-25</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar-check"></i>
+      </span>
+      <span class="post-meta-item-text">Edited on</span>
+      <time title="Modified: 2023-11-24 16:35:16" itemprop="dateModified" datetime="2023-11-24T16:35:16+08:00">2023-11-24</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">In</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/%E6%8A%80%E6%9C%AF/" itemprop="url" rel="index"><span itemprop="name">技术</span></a>
+        </span>
+          , 
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/%E6%8A%80%E6%9C%AF/%E5%89%8D%E7%AB%AF/" itemprop="url" rel="index"><span itemprop="name">前端</span></a>
+        </span>
+          , 
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/%E6%8A%80%E6%9C%AF/%E5%89%8D%E7%AB%AF/%E6%A1%86%E6%9E%B6/" itemprop="url" rel="index"><span itemprop="name">框架</span></a>
+        </span>
+          , 
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/%E6%8A%80%E6%9C%AF/%E5%89%8D%E7%AB%AF/%E6%A1%86%E6%9E%B6/React/" itemprop="url" rel="index"><span itemprop="name">React</span></a>
+        </span>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <h1 id="深入react"><a href="#深入react" class="headerlink" title="深入react"></a>深入react</h1><h2 id="1-react合成事件（react18中不再使用）"><a href="#1-react合成事件（react18中不再使用）" class="headerlink" title="1. react合成事件（react18中不再使用）"></a>1. react合成事件（react18中不再使用）</h2><blockquote>
+<p><a target="_blank" rel="noopener" href="https://segmentfault.com/a/1190000038251163">javascript - 探索 React 合成事件 - 前端自习课 - SegmentFault 思否</a></p>
+</blockquote>
+<p>存在原因：兼容、垃圾回收</p>
+<p>前置知识树</p>
+<ol>
+<li><p>事件池：是浏览器事件处理中，为了节省内存和提高性能，对事件对象的重复利用。</p>
+<blockquote>
+<p>(待细看)<a target="_blank" rel="noopener" href="https://juejin.cn/post/6844903862285893639">React 合成事件系统之事件池 - 掘金 (juejin.cn)</a></p>
+</blockquote>
+</li>
+<li><p>生命周期（待看）</p>
+<blockquote>
+<p><a target="_blank" rel="noopener" href="https://juejin.cn/post/7285540804734468150">一看就懂的React生命周期 - 掘金 (juejin.cn)</a></p>
+<p>看样子react生命周期已经被取代了<a target="_blank" rel="noopener" href="https://blog.csdn.net/qq_44906900/article/details/111214531">【精选】【React全解4】useEffect–在函数组件中使用生命周期函数_react useeffect 生命周期-CSDN博客</a></p>
+</blockquote>
+</li>
+</ol>
+<h2 id="2-理解fiber"><a href="#2-理解fiber" class="headerlink" title="2. 理解fiber"></a>2. 理解fiber</h2><blockquote>
+<p><a target="_blank" rel="noopener" href="https://juejin.cn/post/7010263907008937997#heading-2">React 的 Fiber 树是什么？ - 掘金 (juejin.cn)</a></p>
+<p><a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/26027085">React Fiber是什么 - 知乎 (zhihu.com)</a></p>
+</blockquote>
+<p>前置知识树</p>
+<ol>
+<li><p><a target="_blank" rel="noopener" href="https://www.ruanyifeng.com/blog/2020/09/react-hooks-useeffect-tutorial.html">轻松学会 React 钩子：以 useEffect() 为例 - 阮一峰的网络日志 (ruanyifeng.com)</a></p>
+</li>
+<li><p><a target="_blank" rel="noopener" href="https://blog.csdn.net/wei1273356078/article/details/106543967">什么是DOM?你了解DOM树吗？-CSDN博客</a></p>
+</li>
+<li><p>虚拟dom：React 的虚拟 DOM 使用以 JavaScript 对象为基础的结构，而 Vue 的虚拟 DOM 使用以 VNode 对象为基础的结构。</p>
+<blockquote>
+<p> <a target="_blank" rel="noopener" href="https://juejin.cn/post/6997579802215448606">Vue 虚拟 DOM 搞不懂？这篇文章帮你彻底搞定虚拟 DOM - 掘金 (juejin.cn)</a></p>
+</blockquote>
+</li>
+</ol>
+<h2 id="3-React-hook"><a href="#3-React-hook" class="headerlink" title="3. React hook"></a>3. React hook</h2><blockquote>
+<p><a target="_blank" rel="noopener" href="https://www.ruanyifeng.com/blog/2019/09/react-hooks.html">React Hooks 入门教程 - 阮一峰的网络日志 (ruanyifeng.com)</a></p>
+</blockquote>
+<h3 id="3-2-useState"><a href="#3-2-useState" class="headerlink" title="3.2 useState"></a>3.2 useState</h3><blockquote>
+<p>一些理解：快照</p>
+</blockquote>
+<h3 id="3-1memo"><a href="#3-1memo" class="headerlink" title="3.1memo"></a>3.1memo</h3><blockquote>
+<p><a target="_blank" rel="noopener" href="https://b23.tv/aTsXvrQ">用代码实验的方式，让你彻底理解React.memo-哔哩哔哩</a></p>
+</blockquote>
+<p>用于优化，避免因为别的组件被渲染了，它就渲染</p>
+<p>​        useMemo和memo的区别</p>
+<h3 id="3-2-实现原理"><a href="#3-2-实现原理" class="headerlink" title="3.2 实现原理"></a>3.2 实现原理</h3><h3 id="4-redux"><a href="#4-redux" class="headerlink" title="4. redux"></a>4. redux</h3>
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
 
     
 
@@ -514,7 +771,7 @@
   
 
   <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2023/11/24/%E4%BA%92%E8%81%94%E7%BD%91/%E5%89%8D%E7%AB%AF/%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/%E4%BA%8B%E4%BB%B6%E8%BD%AE%E8%AF%A2%E7%B3%BB%E5%88%97/">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2023/11/24/%E4%BA%92%E8%81%94%E7%BD%91/%E5%89%8D%E7%AB%AF/%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/%E4%BA%8B%E4%BB%B6%E5%BE%AA%E7%8E%AF/%E4%BA%8B%E4%BB%B6%E8%BD%AE%E8%AF%A2%E7%B3%BB%E5%88%97/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/uploads/cat.jpg">
@@ -532,7 +789,7 @@
     </span>
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
-          <a href="/2023/11/24/%E4%BA%92%E8%81%94%E7%BD%91/%E5%89%8D%E7%AB%AF/%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/%E4%BA%8B%E4%BB%B6%E8%BD%AE%E8%AF%A2%E7%B3%BB%E5%88%97/" class="post-title-link" itemprop="url">异步系列问题</a>
+          <a href="/2023/11/24/%E4%BA%92%E8%81%94%E7%BD%91/%E5%89%8D%E7%AB%AF/%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/%E4%BA%8B%E4%BB%B6%E5%BE%AA%E7%8E%AF/%E4%BA%8B%E4%BB%B6%E8%BD%AE%E8%AF%A2%E7%B3%BB%E5%88%97/" class="post-title-link" itemprop="url">异步系列问题</a>
         </h2>
 
         <div class="post-meta-container">
@@ -721,7 +978,7 @@
   
 
   <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2023/11/24/%E4%BA%92%E8%81%94%E7%BD%91/%E5%89%8D%E7%AB%AF/%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/JavaScript%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E7%9F%A5%E8%AF%86%E7%82%B9%E4%B8%B2%E8%81%94/">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2023/11/24/%E4%BA%92%E8%81%94%E7%BD%91/%E5%89%8D%E7%AB%AF/%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1/JavaScript%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E7%9F%A5%E8%AF%86%E7%82%B9%E4%B8%B2%E8%81%94/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/uploads/cat.jpg">
@@ -739,7 +996,7 @@
     </span>
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
-          <a href="/2023/11/24/%E4%BA%92%E8%81%94%E7%BD%91/%E5%89%8D%E7%AB%AF/%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/JavaScript%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E7%9F%A5%E8%AF%86%E7%82%B9%E4%B8%B2%E8%81%94/" class="post-title-link" itemprop="url">JavaScript面向对象知识点串联</a>
+          <a href="/2023/11/24/%E4%BA%92%E8%81%94%E7%BD%91/%E5%89%8D%E7%AB%AF/%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1/JavaScript%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E7%9F%A5%E8%AF%86%E7%82%B9%E4%B8%B2%E8%81%94/" class="post-title-link" itemprop="url">JavaScript面向对象知识点串联</a>
         </h2>
 
         <div class="post-meta-container">
@@ -749,9 +1006,15 @@
         <i class="far fa-calendar"></i>
       </span>
       <span class="post-meta-item-text">Posted on</span>
-      
 
-      <time title="Created: 2023-11-24 13:17:08 / Modified: 16:33:50" itemprop="dateCreated datePublished" datetime="2023-11-24T13:17:08+08:00">2023-11-24</time>
+      <time title="Created: 2023-11-24 13:17:08" itemprop="dateCreated datePublished" datetime="2023-11-24T13:17:08+08:00">2023-11-24</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar-check"></i>
+      </span>
+      <span class="post-meta-item-text">Edited on</span>
+      <time title="Modified: 2023-12-08 14:54:51" itemprop="dateModified" datetime="2023-12-08T14:54:51+08:00">2023-12-08</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -782,40 +1045,71 @@
     
     <div class="post-body" itemprop="articleBody">
           <h1 id="JavaScript面向对象知识点串联"><a href="#JavaScript面向对象知识点串联" class="headerlink" title="JavaScript面向对象知识点串联"></a>JavaScript面向对象知识点串联</h1><blockquote>
-<p>本文我会尽可能的把面试有关的问题都加入进来，并把之前刚开始理解这个概念不懂的踩坑的地方告诉大家。</p>
+<p>本文我会尽可能的把面试有关的问题都加入进来，并把学习踩坑的地方告诉大家。（知识点可以点击我给的连接）</p>
 </blockquote>
 <h4 id="面试问题"><a href="#面试问题" class="headerlink" title="面试问题"></a>面试问题</h4><ol>
 <li>解释一下原型链</li>
-<li>instanceof的原理</li>
-<li>typeof的相关问题</li>
+<li><code>instanceof</code>的原理</li>
+<li><code>typeof</code>的相关问题</li>
 <li>new的原理</li>
 <li>this指向问题</li>
 <li>任何有关bind、call、apply的问题</li>
+<li>ES5继承的方法</li>
 </ol>
 <h4 id="前置知识"><a href="#前置知识" class="headerlink" title="前置知识"></a>前置知识</h4><p>要理解原型链，那我们就得先理解<a target="_blank" rel="noopener" href="https://blog.csdn.net/weixin_51201930/article/details/122652397">什么是面向对象，它的三个基本特征：封装、继承、多态_</a></p>
-<p>而原型链便是JavaScript实现面向对象的一种方式。</p>
+<blockquote>
+<p>❗❗❗巨坑注意：一定要区分好继承和实例化的区别，特别是像js这样的基于原型继承的语言，我就踩过😫，导致开始学时特别痛苦。</p>
+</blockquote>
 <h2 id="原型和原型链的理解"><a href="#原型和原型链的理解" class="headerlink" title="原型和原型链的理解"></a>原型和原型链的理解</h2><h3 id="原型和面向编程"><a href="#原型和面向编程" class="headerlink" title="原型和面向编程"></a>原型和面向编程</h3><p>相信很多同学都或多或少的接触过一定面向对象编程，也清楚的知道面向对象对于编程开发的重要性，那为什么到了JavaScript，我们说到面向对象就得说到原型呢？</p>
 <p>这要从JavaScript的源头说起。JavaScript是一种动态类型语言，区别于c++和Java，它实现继承的方法并不是靠类，而是靠原型。</p>
 <blockquote>
-<p>你可能会说ES6中不是有类吗？</p>
-<p>其实不然，ES6中的类并不是原生支持的类，而是一个语法糖，这也是为什么再使用ES6时，我们需要一些工具来将ES6转换为ES5，其实，底层逻辑是不一样的（你可能吐槽为什么JavaScript要去模仿那些静态语言，额，我也喜欢吐槽typescript，哈哈哈）</p>
+<p>又一个坑：你可能会说ES6中不是有类吗？</p>
+<p>其实不然，ES6中的类并不是原生支持的类，而是一个语法糖(底层并不是像c++那样，而是对JS（ES6之前的语法，以下都是这个意思）模拟继承的一种封装，这也是为什么再使用ES6时，我们需要一些工具（babel）来将ES6转换为ES5。</p>
 </blockquote>
-<h3 id="话归原题，那到底什么是原型和原型链呢？"><a href="#话归原题，那到底什么是原型和原型链呢？" class="headerlink" title="话归原题，那到底什么是原型和原型链呢？"></a>话归原题，那到底什么是原型和原型链呢？</h3><p>其实理解时，我们便可以把原型认为是类，但JavaScript是一种动态类型语言，所以原型的使用比类灵活许多。</p>
-<p>这样说可能不太容易理解，让我们先把原型和类的模型构建出来。</p>
-<p>这里得先提到JavaScript是如何创建对象的，先提出几个名词 <code>构造函数</code>、<code>__proto__</code>和<code>prototype</code>。</p>
+<h3 id="原型和原型链"><a href="#原型和原型链" class="headerlink" title="原型和原型链"></a>原型和原型链</h3><p>话归原题，那到底什么是原型和原型链呢？这就应该从实例化开始谈起。</p>
+<blockquote>
+<p>这里我就不细说了，可以看阮一峰的教程：<a target="_blank" rel="noopener" href="https://www.bookstack.cn/read/javascript-tutorial/docs-oop-new.md">面向对象编程 - 实例对象与 new 命令 - 《阮一峰 JavaScript 教程》 - 书栈网 · BookStack</a></p>
+</blockquote>
+<p> 到这里我可以认为你已经知道了构造函数和new的使用，也知道了prototype</p>
+<p>理解时，我们可以把原型认为是类。</p>
+<blockquote>
+<p>之前我迷惑的地方</p>
+</blockquote>
+<blockquote>
+<p>函数为什么是把原型传给对象，而不是本身传给对象？</p>
+<p>或者问为什么老是遇见构造函数里有原型，而原型里面又有构造函数</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">function</span> <span class="title function_">Person</span>(<span class="params">name, age</span>) &#123;</span><br><span class="line">  <span class="variable language_">this</span>.<span class="property">name</span> = name;</span><br><span class="line">  <span class="variable language_">this</span>.<span class="property">age</span> = age;</span><br><span class="line">&#125;</span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="title class_">Person</span>.<span class="property"><span class="keyword">prototype</span></span>.<span class="property">constructor</span> === <span class="title class_">Person</span>); <span class="comment">// true</span></span><br></pre></td></tr></table></figure>
+
+<p>答：函数本身就是一种数据类型，它有自己的任务。它来当构造函数相当于就是为了建立一个原型和对象的桥梁，相当于它生产了一个<code>类</code>（不严谨）,然后把这个<code>类</code>交给了新的实例。这也就解释了为什么构造函数的原型里面还要加一个构造函数，因为这个构造函数是给新生成的对象用的。</p>
+</blockquote>
 <p>pass</p>
 <p>（日后完善）</p>
 <p>让我们打开浏览器，按一下<code>f12</code>，再控制台中输入<code>Object()</code>,回车。我们就能看见一个空的对象。</p>
 <p><img src="D:\workspace\blog\myblog\source-img\技术\前端\image-20231124134648166.png" alt="image-20231124134648166"></p>
 <p>这就是JavaScript对象的结构了。</p>
 <p>我们先看一下重点，第一个<code>prototype</code>就是我们一直提到的原型，那为什么又要提到原型链呢？我们又来点开<code>__proto__</code>，我们可以看见</p>
-<p><img src="C:\Users\27421\AppData\Roaming\Typora\typora-user-images\image-20231124135440074.png" alt="image-20231124135440074"></p>
+<p>!(C:\Users\27421\AppData\Roaming\Typora\typora-user-images\image-20231124135440074.png)</p>
 <blockquote>
 <p><strong>原型链</strong>中就是<strong>实例对象</strong>和<strong>原型对象</strong>之间的链接</p>
 </blockquote>
 <p>原型（prototype，《高达00》曲</p>
 <p>array原型，</p>
 <p>基于原型和基于类</p>
+<h2 id="继承"><a href="#继承" class="headerlink" title="继承"></a>继承</h2><blockquote>
+<p>原本不难的继承，放到js里面居然变成了一个大关。</p>
+<p>js里面有很多办法实现继承，去翻翻js的教材，可以看到很多方法可以模拟继承。</p>
+<p>其实反过来想，如果没有静态语言给的继承这个概念，js是不是会灵活的多？</p>
+<p>所以我们要做自己（😊，反讽ing）</p>
+</blockquote>
+<p>ES6提供了很好用的class语法糖。</p>
+<blockquote>
+<p>这里就不谈js实现继承了，感觉这玩意就是为了考而考。</p>
+</blockquote>
+<p>那么继续开始踩坑。</p>
+<p>首先是对super的理解，第一次遇见super是在react的类组件里，class里面的constructor里面突兀出现一个super()，我是一点都无法理解这个取名的意义的。这里还是推荐看阮一峰的ES6教程</p>
+<blockquote>
+<p>PS:每次遇见新的语句，特别是在开发时遇见，不要去猜这个怎么用，而是马上去修补这块知识点，你这次猜对了，后面八成还有其他问题，跟谎言一样，应该杜绝第一次欺骗</p>
+</blockquote>
 
       
     </div>
@@ -1009,240 +1303,6 @@
 <p>我以前一直疑惑wlop为什么可以做到画画+工程都做，一个工科一个感性驱动，似乎这两件事风马牛不相及，如今倒是懂了几分，画画和技术开发都是一个化零为整的过程，把以往的通过不断训练得到的经历、积累，结合自己的情感、逻辑、创造力，就像搭积木一样，组合成为一个从前没有的东西。</p>
 <hr>
 <p>感觉自己其实没什么代码洁癖，想把代码写好更多的是想让自己以后能看懂，也为以后可能接手的人看懂。这样也算是面试官可能喜欢的一点吧。</p>
-
-      
-    </div>
-
-    
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-</div>
-
-
-
-
-    
-
-
-<div class="post-block">
-  
-  
-
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2023/11/21/%E4%BA%92%E8%81%94%E7%BD%91/%E5%89%8D%E7%AB%AF/%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/%E6%91%B8%E5%BA%95%E5%87%86%E5%A4%87/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/uploads/cat.jpg">
-      <meta itemprop="name" content="zono">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="ZONO's World">
-      <meta itemprop="description" content="人生长度无法强求,但厚度可以靠努力">
-    </span>
-
-    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
-      <meta itemprop="name" content="undefined | ZONO's World">
-      <meta itemprop="description" content="">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/2023/11/21/%E4%BA%92%E8%81%94%E7%BD%91/%E5%89%8D%E7%AB%AF/%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/%E6%91%B8%E5%BA%95%E5%87%86%E5%A4%87/" class="post-title-link" itemprop="url">摸底准备</a>
-        </h2>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">Posted on</span>
-
-      <time title="Created: 2023-11-21 18:16:14" itemprop="dateCreated datePublished" datetime="2023-11-21T18:16:14+08:00">2023-11-21</time>
-    </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar-check"></i>
-      </span>
-      <span class="post-meta-item-text">Edited on</span>
-      <time title="Modified: 2023-11-24 16:33:53" itemprop="dateModified" datetime="2023-11-24T16:33:53+08:00">2023-11-24</time>
-    </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-folder"></i>
-      </span>
-      <span class="post-meta-item-text">In</span>
-        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/%E6%8A%80%E6%9C%AF/" itemprop="url" rel="index"><span itemprop="name">技术</span></a>
-        </span>
-          , 
-        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/%E6%8A%80%E6%9C%AF/%E5%89%8D%E7%AB%AF/" itemprop="url" rel="index"><span itemprop="name">前端</span></a>
-        </span>
-          , 
-        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/%E6%8A%80%E6%9C%AF/%E5%89%8D%E7%AB%AF/JavaScript%E5%9F%BA%E7%A1%80/" itemprop="url" rel="index"><span itemprop="name">JavaScript基础</span></a>
-        </span>
-    </span>
-
-  
-</div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          <h1 id="八股第一部分"><a href="#八股第一部分" class="headerlink" title="八股第一部分"></a>八股第一部分</h1><h2 id="instanceof的原理"><a href="#instanceof的原理" class="headerlink" title="instanceof的原理"></a>instanceof的原理</h2><blockquote>
-<p>答：instanceof用于检测构造函数prototype属性是否出现在某个实例对象的原型链。</p>
-<p>​        它会检查右边构建函数的原型对象（prototype），是否在左边对象的原型链上。</p>
-</blockquote>
-<h3 id="手写"><a href="#手写" class="headerlink" title="手写"></a>手写</h3><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">function</span> <span class="title function_">myInstanceof</span>(<span class="params">Obj, constructor</span>) &#123;</span><br><span class="line">  <span class="keyword">let</span> proto = <span class="title class_">Object</span>.<span class="title function_">getPrototypeOf</span>(<span class="title class_">Obj</span>); <span class="comment">//获取原型</span></span><br><span class="line">  <span class="keyword">while</span> (proto) &#123;</span><br><span class="line">    <span class="keyword">if</span> (proto === constructor.<span class="property">pro</span>) &#123;</span><br><span class="line">      <span class="keyword">return</span> <span class="literal">true</span>;</span><br><span class="line">    &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">      proto = proto.<span class="title function_">getPrototypeOf</span>(proto); <span class="comment">//获取下一个原型</span></span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<h2 id="new的原理"><a href="#new的原理" class="headerlink" title="new的原理"></a>new的原理</h2><p>使用<code>new</code>命令时，它后面的函数依次执行下面的步骤。</p>
-<ol>
-<li>创建一个空对象，作为将要返回的对象实例。</li>
-<li>将这个空对象的原型，指向构造函数的<code>prototype</code>属性。</li>
-<li>将这个空对象赋值给函数内部的<code>this</code>关键字。</li>
-<li>开始执行构造函数内部的代码。</li>
-</ol>
-<h3 id="手写-1"><a href="#手写-1" class="headerlink" title="手写"></a>手写</h3><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">function</span> <span class="title function_">myNew</span>(<span class="params">constructor, ...args</span>) &#123;</span><br><span class="line">  <span class="comment">//1.创建一个空对象</span></span><br><span class="line">  <span class="keyword">let</span> obj = &#123;&#125;;</span><br><span class="line">  obj.<span class="property">__proto__</span> = constructor.<span class="property"><span class="keyword">prototype</span></span>;</span><br><span class="line">  <span class="keyword">let</span> result = constructor.<span class="title function_">apply</span>(obj, args);</span><br><span class="line">  <span class="keyword">return</span> result <span class="keyword">instanceof</span> <span class="title class_">Object</span> ? result : obj;</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">//这个实现并不完整，因为没有考虑到原型链的问题，如果构造函数的原型链上有属性，那么这个属性也会被继承到实例上</span></span><br><span class="line"></span><br></pre></td></tr></table></figure>
-
-<h2 id="js作用域的理解"><a href="#js作用域的理解" class="headerlink" title="js作用域的理解"></a>js作用域的理解</h2><h2 id="原型链"><a href="#原型链" class="headerlink" title="原型链"></a>原型链</h2><blockquote>
-<p>[Js中prototype、<a target="_blank" rel="noopener" href="https://blog.csdn.net/qq_38722097/article/details/88046377">[prototype]]和__proto__的区别和用法-CSDN博客</a></p>
-</blockquote>
-<h2 id="this指向问题"><a href="#this指向问题" class="headerlink" title="this指向问题"></a>this指向问题</h2><h1 id="八股第二部分react"><a href="#八股第二部分react" class="headerlink" title="八股第二部分react"></a>八股第二部分react</h1><h3 id="hooks的使用限制"><a href="#hooks的使用限制" class="headerlink" title="hooks的使用限制"></a>hooks的使用限制</h3><h4 id="通用限制"><a href="#通用限制" class="headerlink" title="通用限制"></a>通用限制</h4><p><a target="_blank" rel="noopener" href="https://juejin.cn/post/7020811068955951135">为什么React Hooks会有两条使用规则 - 掘金 (juejin.cn)</a></p>
-<ol>
-<li>只能在只能在函数组件的顶层使用或自定义Hooks中使用</li>
-<li>不能再条件语句中使用</li>
-</ol>
-<h5 id="一些反例"><a href="#一些反例" class="headerlink" title="一些反例"></a>一些反例</h5><ol>
-<li>在条件/循环语句中使用 Hooks：</li>
-</ol>
-<figure class="highlight jsx"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">function</span> <span class="title function_">MyComponent</span>(<span class="params"></span>) &#123;</span><br><span class="line">  <span class="keyword">if</span> (someCondition) &#123;</span><br><span class="line">    <span class="title function_">useState</span>(); <span class="comment">// 错误！Hooks 不应在条件语句中使用</span></span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  <span class="keyword">return</span> <span class="language-xml"><span class="tag">&lt;<span class="name">div</span>&gt;</span>Hello, World!<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">function</span> <span class="title function_">MyComponent</span>(<span class="params"></span>) &#123;</span><br><span class="line">  <span class="keyword">for</span> (<span class="keyword">let</span> i = <span class="number">0</span>; i &lt; <span class="number">5</span>; i++) &#123;</span><br><span class="line">    <span class="title function_">useState</span>(); <span class="comment">// 错误！Hooks 不应在循环中使用</span></span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  <span class="keyword">return</span> <span class="language-xml"><span class="tag">&lt;<span class="name">div</span>&gt;</span>Hello, World!<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<ol start="2">
-<li>在嵌套函数中使用 Hooks：</li>
-</ol>
-<figure class="highlight jsx"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">function</span> <span class="title function_">MyComponent</span>(<span class="params"></span>) &#123;</span><br><span class="line">  <span class="keyword">function</span> <span class="title function_">nestedFunction</span>(<span class="params"></span>) &#123;</span><br><span class="line">    <span class="title function_">useState</span>(); <span class="comment">// 错误！Hooks 不应在嵌套函数中使用</span></span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  <span class="keyword">return</span> <span class="language-xml"><span class="tag">&lt;<span class="name">div</span>&gt;</span>Hello, World!<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<ol start="3">
-<li>在类组件中使用 Hooks：</li>
-</ol>
-<figure class="highlight jsx"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">MyComponent</span> <span class="keyword">extends</span> <span class="title class_ inherited__">React.Component</span> &#123;</span><br><span class="line">  <span class="title function_">componentDidMount</span>(<span class="params"></span>) &#123;</span><br><span class="line">    <span class="title function_">useState</span>(); <span class="comment">// 错误！Hooks 不应在类组件中使用，Hooks 只能在函数组件的顶层使用</span></span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  <span class="title function_">render</span>(<span class="params"></span>) &#123;</span><br><span class="line">    <span class="keyword">return</span> <span class="language-xml"><span class="tag">&lt;<span class="name">div</span>&gt;</span>Hello, World!<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span>;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<ol start="4">
-<li>在普通 JavaScript 函数中使用 Hooks：</li>
-</ol>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">function</span> <span class="title function_">myFunction</span>(<span class="params"></span>) &#123;</span><br><span class="line">  <span class="title function_">useState</span>(); <span class="comment">// 错误！Hooks 只能在函数组件的顶层使用</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<h4 id="具体限制"><a href="#具体限制" class="headerlink" title="具体限制"></a>具体限制</h4><ol>
-<li>useState的值不能直接修改</li>
-<li>useEffect的回调函数中不能使用异步函数</li>
-<li>useContext必须再useContext所对应的Context.Provider中使用</li>
-</ol>
-<h2 id="react-hooks的原理"><a href="#react-hooks的原理" class="headerlink" title="react hooks的原理"></a>react hooks的原理</h2><p>函数组件和闭包</p>
-<h2 id="react-setState是同步还是异步-react的批量更新机制"><a href="#react-setState是同步还是异步-react的批量更新机制" class="headerlink" title="react setState是同步还是异步/react的批量更新机制"></a>react setState是同步还是异步/react的批量更新机制</h2><blockquote>
-<p>答：可能是同步也可能是异步，取决于执行环境</p>
-</blockquote>
-
-      
-    </div>
-
-    
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-</div>
-
-
-
-
-    
-
-
-<div class="post-block">
-  
-  
-
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2023/11/20/%E7%94%9F%E6%B4%BB/%E4%B8%AA%E4%BA%BA%E6%8F%90%E5%8D%87/blog%E5%8D%87%E7%BA%A7%E8%AE%B0%E5%BD%9501/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/uploads/cat.jpg">
-      <meta itemprop="name" content="zono">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="ZONO's World">
-      <meta itemprop="description" content="人生长度无法强求,但厚度可以靠努力">
-    </span>
-
-    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
-      <meta itemprop="name" content="undefined | ZONO's World">
-      <meta itemprop="description" content="">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/2023/11/20/%E7%94%9F%E6%B4%BB/%E4%B8%AA%E4%BA%BA%E6%8F%90%E5%8D%87/blog%E5%8D%87%E7%BA%A7%E8%AE%B0%E5%BD%9501/" class="post-title-link" itemprop="url">blog优化记录01</a>
-        </h2>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">Posted on</span>
-
-      <time title="Created: 2023-11-20 18:46:46" itemprop="dateCreated datePublished" datetime="2023-11-20T18:46:46+08:00">2023-11-20</time>
-    </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar-check"></i>
-      </span>
-      <span class="post-meta-item-text">Edited on</span>
-      <time title="Modified: 2023-11-24 15:37:25" itemprop="dateModified" datetime="2023-11-24T15:37:25+08:00">2023-11-24</time>
-    </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-folder"></i>
-      </span>
-      <span class="post-meta-item-text">In</span>
-        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/%E7%94%9F%E6%B4%BB/" itemprop="url" rel="index"><span itemprop="name">生活</span></a>
-        </span>
-          , 
-        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/%E7%94%9F%E6%B4%BB/%E4%B8%AA%E4%BA%BA%E6%8F%90%E5%8D%87/" itemprop="url" rel="index"><span itemprop="name">个人提升</span></a>
-        </span>
-    </span>
-
-  
-</div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          <h1 id="blog优化记录01"><a href="#blog优化记录01" class="headerlink" title="blog优化记录01"></a>blog优化记录01</h1><p>花了很多时间又把blog重新拾起了，比起以前，这次以后blog的内容更多的就是技术有关了。</p>
-<p>再就是在这里我会继续优化blog，可能下次就是动底层了。</p>
 
       
     </div>

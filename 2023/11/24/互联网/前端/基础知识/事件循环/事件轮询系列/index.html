@@ -15,28 +15,31 @@
 
 <script class="next-config" data-name="main" type="application/json">{"hostname":"example.com","root":"/","images":"/images","scheme":"Gemini","darkmode":false,"version":"8.18.2","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":{"enable":false,"style":null},"fold":{"enable":false,"height":500},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"Searching...","empty":"We didn't find any results for the search: ${query}","hits_time":"${hits} results found in ${time} ms","hits":"${hits} results found"}}</script><script src="/js/config.js"></script>
 
-    <meta name="description" content="transform transform:translate(负左正右，上下移动):可以放入单位、百分比（参照元素自身） transform:rotate(xxx):旋转，默认中心原点 transform-origin: xxx xxx:切换原点 transform:scale(xxx):缩放大小，两参数（宽高），默认中心原点 transform:skew(xxx xxx):一个参数水平移动（角度）">
+    <meta name="description" content="面试问题 事件轮询机制？   异步   要说异步我们先来讲讲为什么要异步？单线程是JavaScript的核心，js本身速度很快，但它的输入输出慢（也就是Ajax网络请求等），因为js是单线程如果有什么地方卡住了，那对于整个浏览器就会出现“卡死的情况”。于是为了解决这个问题就出现了“事件循环（Event Loop）”机制。 异步的概念要理解异步，我们就得把同步拿过来。同步就是按顺序一个一个做，异步就">
 <meta property="og:type" content="article">
-<meta property="og:title" content="css动画">
-<meta property="og:url" content="http://example.com/2023/12/02/%E4%BA%92%E8%81%94%E7%BD%91/%E5%89%8D%E7%AB%AF/%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/%E5%8A%A8%E7%94%BB/css%E5%8A%A8%E7%94%BB/index.html">
+<meta property="og:title" content="异步系列问题">
+<meta property="og:url" content="http://example.com/2023/11/24/%E4%BA%92%E8%81%94%E7%BD%91/%E5%89%8D%E7%AB%AF/%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/%E4%BA%8B%E4%BB%B6%E5%BE%AA%E7%8E%AF/%E4%BA%8B%E4%BB%B6%E8%BD%AE%E8%AF%A2%E7%B3%BB%E5%88%97/index.html">
 <meta property="og:site_name" content="ZONO&#39;s World">
-<meta property="og:description" content="transform transform:translate(负左正右，上下移动):可以放入单位、百分比（参照元素自身） transform:rotate(xxx):旋转，默认中心原点 transform-origin: xxx xxx:切换原点 transform:scale(xxx):缩放大小，两参数（宽高），默认中心原点 transform:skew(xxx xxx):一个参数水平移动（角度）">
+<meta property="og:description" content="面试问题 事件轮询机制？   异步   要说异步我们先来讲讲为什么要异步？单线程是JavaScript的核心，js本身速度很快，但它的输入输出慢（也就是Ajax网络请求等），因为js是单线程如果有什么地方卡住了，那对于整个浏览器就会出现“卡死的情况”。于是为了解决这个问题就出现了“事件循环（Event Loop）”机制。 异步的概念要理解异步，我们就得把同步拿过来。同步就是按顺序一个一个做，异步就">
 <meta property="og:locale" content="en_US">
-<meta property="article:published_time" content="2023-12-02T14:39:34.000Z">
-<meta property="article:modified_time" content="2023-12-02T14:41:32.288Z">
+<meta property="og:image" content="https://wangdoc.com/javascript/async/general">
+<meta property="og:image" content="https://wangdoc.com/javascript/async/timer">
+<meta property="article:published_time" content="2023-11-24T13:03:37.000Z">
+<meta property="article:modified_time" content="2023-11-26T08:18:36.420Z">
 <meta property="article:author" content="zono">
 <meta property="article:tag" content="技术">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://wangdoc.com/javascript/async/general">
 
 
-<link rel="canonical" href="http://example.com/2023/12/02/%E4%BA%92%E8%81%94%E7%BD%91/%E5%89%8D%E7%AB%AF/%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/%E5%8A%A8%E7%94%BB/css%E5%8A%A8%E7%94%BB/">
+<link rel="canonical" href="http://example.com/2023/11/24/%E4%BA%92%E8%81%94%E7%BD%91/%E5%89%8D%E7%AB%AF/%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/%E4%BA%8B%E4%BB%B6%E5%BE%AA%E7%8E%AF/%E4%BA%8B%E4%BB%B6%E8%BD%AE%E8%AF%A2%E7%B3%BB%E5%88%97/">
 
 
 
-<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"en","comments":true,"permalink":"http://example.com/2023/12/02/%E4%BA%92%E8%81%94%E7%BD%91/%E5%89%8D%E7%AB%AF/%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/%E5%8A%A8%E7%94%BB/css%E5%8A%A8%E7%94%BB/","path":"2023/12/02/互联网/前端/基础知识/动画/css动画/","title":"css动画"}</script>
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"en","comments":true,"permalink":"http://example.com/2023/11/24/%E4%BA%92%E8%81%94%E7%BD%91/%E5%89%8D%E7%AB%AF/%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/%E4%BA%8B%E4%BB%B6%E5%BE%AA%E7%8E%AF/%E4%BA%8B%E4%BB%B6%E8%BD%AE%E8%AF%A2%E7%B3%BB%E5%88%97/","path":"2023/11/24/互联网/前端/基础知识/事件循环/事件轮询系列/","title":"异步系列问题"}</script>
 
 <script class="next-config" data-name="calendar" type="application/json">""</script>
-<title>css动画 | ZONO's World</title>
+<title>异步系列问题 | ZONO's World</title>
   
 
 
@@ -109,7 +112,7 @@
       <div class="sidebar-panel-container">
         <!--noindex-->
         <div class="post-toc-wrap sidebar-panel">
-            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#transform"><span class="nav-number">1.</span> <span class="nav-text">transform</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#transition"><span class="nav-number">2.</span> <span class="nav-text">transition</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%BC%93%E5%8A%A8%E5%87%BD%E6%95%B0%EF%BC%9A"><span class="nav-number">2.1.</span> <span class="nav-text">缓动函数：</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%B4%9D%E5%A1%9E%E5%B0%94%E5%87%BD%E6%95%B0"><span class="nav-number">2.1.1.</span> <span class="nav-text">贝塞尔函数</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%BA%BF%E6%80%A7%E5%87%BD%E6%95%B0"><span class="nav-number">2.1.2.</span> <span class="nav-text">线性函数</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E9%98%B6%E8%B7%83"><span class="nav-number">2.1.3.</span> <span class="nav-text">阶跃</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#A"><span class="nav-number">3.</span> <span class="nav-text">A</span></a></li></ol></div>
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%9D%A2%E8%AF%95%E9%97%AE%E9%A2%98"><span class="nav-number">1.</span> <span class="nav-text">面试问题</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%BC%82%E6%AD%A5"><span class="nav-number"></span> <span class="nav-text">异步</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%BC%82%E6%AD%A5%E7%9A%84%E6%A6%82%E5%BF%B5"><span class="nav-number">1.</span> <span class="nav-text">异步的概念</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%BC%82%E6%AD%A5%E7%9A%84%E5%AE%9E%E7%8E%B0%E2%80%94%E2%80%94%E4%BA%8B%E4%BB%B6%E8%BD%AE%E8%AF%A2"><span class="nav-number">2.</span> <span class="nav-text">异步的实现——事件轮询</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%AE%9A%E6%97%B6%E5%99%A8setTimeout-%E3%80%81setInterval-%E8%AF%A6%E8%A7%A3"><span class="nav-number">3.</span> <span class="nav-text">定时器setTimeout()、setInterval()详解</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%9B%9E%E8%B0%83%E5%87%BD%E6%95%B0"><span class="nav-number">4.</span> <span class="nav-text">回调函数</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#promise"><span class="nav-number">5.</span> <span class="nav-text">promise</span></a></li></ol></div>
         </div>
         <!--/noindex-->
 
@@ -124,7 +127,7 @@
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
         <a href="/archives/">
-          <span class="site-state-item-count">108</span>
+          <span class="site-state-item-count">110</span>
           <span class="site-state-item-name">posts</span>
         </a>
       </div>
@@ -173,7 +176,7 @@
   
 
   <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="en">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2023/12/02/%E4%BA%92%E8%81%94%E7%BD%91/%E5%89%8D%E7%AB%AF/%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/%E5%8A%A8%E7%94%BB/css%E5%8A%A8%E7%94%BB/">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2023/11/24/%E4%BA%92%E8%81%94%E7%BD%91/%E5%89%8D%E7%AB%AF/%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/%E4%BA%8B%E4%BB%B6%E5%BE%AA%E7%8E%AF/%E4%BA%8B%E4%BB%B6%E8%BD%AE%E8%AF%A2%E7%B3%BB%E5%88%97/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/uploads/cat.jpg">
@@ -186,12 +189,12 @@
     </span>
 
     <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
-      <meta itemprop="name" content="css动画 | ZONO's World">
+      <meta itemprop="name" content="异步系列问题 | ZONO's World">
       <meta itemprop="description" content="">
     </span>
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
-          css动画
+          异步系列问题
         </h1>
 
         <div class="post-meta-container">
@@ -201,9 +204,15 @@
         <i class="far fa-calendar"></i>
       </span>
       <span class="post-meta-item-text">Posted on</span>
-      
 
-      <time title="Created: 2023-12-02 22:39:34 / Modified: 22:41:32" itemprop="dateCreated datePublished" datetime="2023-12-02T22:39:34+08:00">2023-12-02</time>
+      <time title="Created: 2023-11-24 21:03:37" itemprop="dateCreated datePublished" datetime="2023-11-24T21:03:37+08:00">2023-11-24</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar-check"></i>
+      </span>
+      <span class="post-meta-item-text">Edited on</span>
+      <time title="Modified: 2023-11-26 16:18:36" itemprop="dateModified" datetime="2023-11-26T16:18:36+08:00">2023-11-26</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -211,15 +220,19 @@
       </span>
       <span class="post-meta-item-text">In</span>
         <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/%E6%8A%80%E6%9C%AF/" itemprop="url" rel="index"><span itemprop="name">技术</span></a>
+          <a href="/categories/%E7%94%9F%E6%B4%BB/" itemprop="url" rel="index"><span itemprop="name">生活</span></a>
         </span>
           , 
         <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/%E6%8A%80%E6%9C%AF/%E5%89%8D%E7%AB%AF/" itemprop="url" rel="index"><span itemprop="name">前端</span></a>
+          <a href="/categories/%E7%94%9F%E6%B4%BB/%E6%8A%80%E6%9C%AF/" itemprop="url" rel="index"><span itemprop="name">技术</span></a>
         </span>
           , 
         <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/%E6%8A%80%E6%9C%AF/%E5%89%8D%E7%AB%AF/%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/" itemprop="url" rel="index"><span itemprop="name">基础知识</span></a>
+          <a href="/categories/%E7%94%9F%E6%B4%BB/%E6%8A%80%E6%9C%AF/%E5%89%8D%E7%AB%AF/" itemprop="url" rel="index"><span itemprop="name">前端</span></a>
+        </span>
+          , 
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/%E7%94%9F%E6%B4%BB/%E6%8A%80%E6%9C%AF/%E5%89%8D%E7%AB%AF/JavaScript%E5%9F%BA%E7%A1%80/" itemprop="url" rel="index"><span itemprop="name">JavaScript基础</span></a>
         </span>
     </span>
 
@@ -232,37 +245,21 @@
     
     
     
-    <div class="post-body" itemprop="articleBody"><h1 id="transform"><a href="#transform" class="headerlink" title="transform"></a>transform</h1><ul>
-<li><code>transform:translate(负左正右，上下移动)</code>:可以放入单位、百分比（参照元素自身）</li>
-<li><code>transform:rotate(xxx)</code>:旋转，默认中心原点</li>
-<li><code>transform-origin: xxx xxx</code>:切换原点</li>
-<li><code>transform:scale(xxx)</code>:缩放大小，两参数（宽高），默认中心原点</li>
-<li><code>transform:skew(xxx xxx)</code>:一个参数水平移动（角度），两参数（水平和锤子）</li>
-<li><code>transform:matrix(a,b,c,d,e,f)</code>:ad：缩放，bc：倾斜（斜切）、ef：元素平移<blockquote>
-<p>有设计软件，可以直接导出设置</p>
+    <div class="post-body" itemprop="articleBody"><h2 id="面试问题"><a href="#面试问题" class="headerlink" title="面试问题"></a>面试问题</h2><ol>
+<li>事件轮询机制？</li>
+<li></li>
+</ol>
+<h1 id="异步"><a href="#异步" class="headerlink" title="异步"></a>异步</h1><blockquote>
+<p><img src="https://wangdoc.com/javascript/async/general" alt="阮一峰大佬写的异步操作"></p>
 </blockquote>
-<h1 id="transition"><a href="#transition" class="headerlink" title="transition"></a>transition</h1><blockquote>
-<p><a target="_blank" rel="noopener" href="https://juejin.cn/post/6970885478967050254">https://juejin.cn/post/6970885478967050254</a></p>
+<p>要说异步我们先来讲讲为什么要异步？<br>单线程是JavaScript的核心，js本身速度很快，但它的输入输出慢（也就是Ajax网络请求等），因为js是单线程如果有什么地方卡住了，那对于整个浏览器就会出现“卡死的情况”。于是为了解决这个问题就出现了“事件循环（Event Loop）”机制。</p>
+<h2 id="异步的概念"><a href="#异步的概念" class="headerlink" title="异步的概念"></a>异步的概念</h2><p>要理解异步，我们就得把同步拿过来。同步就是按顺序一个一个做，异步就是同时做。（简单理解咯）</p>
+<h2 id="异步的实现——事件轮询"><a href="#异步的实现——事件轮询" class="headerlink" title="异步的实现——事件轮询"></a>异步的实现——事件轮询</h2><h2 id="定时器setTimeout-、setInterval-详解"><a href="#定时器setTimeout-、setInterval-详解" class="headerlink" title="定时器setTimeout()、setInterval()详解"></a>定时器setTimeout()、setInterval()详解</h2><blockquote>
+<p><img src="https://wangdoc.com/javascript/async/timer" alt="定时器"><br>**setTimeout()**用于在指定的毫秒数后调用函数或计算表达式</p>
 </blockquote>
-</li>
-</ul>
-<blockquote>
-<p>transition: &lt;property(需要过渡的属性)&gt; &lt;duration(过渡的时长)&gt; &lt;timing-function(缓动函数)&gt; &lt;delay(开始延迟时间)&gt;;</p>
-</blockquote>
-<h2 id="缓动函数："><a href="#缓动函数：" class="headerlink" title="缓动函数："></a>缓动函数：</h2><h3 id="贝塞尔函数"><a href="#贝塞尔函数" class="headerlink" title="贝塞尔函数"></a>贝塞尔函数</h3><ul>
-<li>ease：动画以低速开始，然后加快，在结束前变慢。</li>
-<li>ease-in：指数函数</li>
-<li>ease-out：log函数</li>
-<li>ease-in-out：慢开始加速后又慢</li>
-<li>cubic-bezier(n,n,n,n)    贝塞尔曲线（<a target="_blank" rel="noopener" href="https://cubic-bezier.com/#.22,.85,.95,.44">自定义数值</a>）</li>
-</ul>
-<h3 id="线性函数"><a href="#线性函数" class="headerlink" title="线性函数"></a>线性函数</h3><p>linear(<point-list>)<br>折线</p>
-<ul>
-<li>linear：固定时间</li>
-<li>linear(0,0.25,1):开始较慢，后面突然加快</li>
-</ul>
-<h3 id="阶跃"><a href="#阶跃" class="headerlink" title="阶跃"></a>阶跃</h3><p>step(&lt;&gt;)<br>step(2,end):分两次跳跃</p>
-<h1 id="A"><a href="#A" class="headerlink" title="A"></a>A</h1>
+<p>**setInterval()**在播放动画的时，每隔一定时间就调用函数，方法或对象</p>
+<p>用处：节流、防抖</p>
+<h2 id="回调函数"><a href="#回调函数" class="headerlink" title="回调函数"></a>回调函数</h2><h2 id="promise"><a href="#promise" class="headerlink" title="promise"></a>promise</h2>
     </div>
 
     
@@ -278,13 +275,13 @@
 
           <div class="post-nav">
             <div class="post-nav-item">
-                <a href="/2023/12/02/%E4%BA%92%E8%81%94%E7%BD%91/%E9%80%9A%E7%94%A8%E6%8A%80%E6%9C%AF/%E8%BF%90%E7%BB%B4/%E9%A1%B9%E7%9B%AE%E9%83%A8%E7%BD%B2/" rel="prev" title="部署">
-                  <i class="fa fa-angle-left"></i> 部署
+                <a href="/2023/11/24/%E7%94%9F%E6%B4%BB/%E4%B8%AA%E4%BA%BA%E6%8F%90%E5%8D%87/blog%E4%BC%98%E5%8C%96%E8%AE%B0%E5%BD%9502/" rel="prev" title="blog优化记录02">
+                  <i class="fa fa-angle-left"></i> blog优化记录02
                 </a>
             </div>
             <div class="post-nav-item">
-                <a href="/2023/12/03/%E4%BA%92%E8%81%94%E7%BD%91/%E5%89%8D%E7%AB%AF/react%E7%B2%BE%E5%AD%A6/01-creact-react-app%E8%84%9A%E6%89%8B%E6%9E%B6/" rel="next" title="01.creact-react-app脚手架的使用">
-                  01.creact-react-app脚手架的使用 <i class="fa fa-angle-right"></i>
+                <a href="/2023/11/25/%E4%BA%92%E8%81%94%E7%BD%91/%E5%89%8D%E7%AB%AF/react%E7%B2%BE%E5%AD%A6/Next.js/" rel="next" title="nextjs">
+                  nextjs <i class="fa fa-angle-right"></i>
                 </a>
             </div>
           </div>

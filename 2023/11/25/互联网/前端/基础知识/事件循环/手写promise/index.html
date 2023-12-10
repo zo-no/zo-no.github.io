@@ -18,7 +18,7 @@
     <meta name="description" content="基本使用12345678910111213const p1 &#x3D; new promise((resovle,reject)&#x3D;&gt;&amp;#123;  resolve(value);&#x2F;&#x2F;成功  reject(error);&#x2F;&#x2F;失败&amp;#125;)&#x2F;&#x2F;定义p1.then(  (value)&#x3D;&gt;&amp;#123;    console.log(&quot;成功:&quot;$&amp;#123;value&amp;#125;">
 <meta property="og:type" content="article">
 <meta property="og:title" content="手写promise">
-<meta property="og:url" content="http://example.com/2023/11/25/%E4%BA%92%E8%81%94%E7%BD%91/%E5%89%8D%E7%AB%AF/%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/%E6%89%8B%E5%86%99promise/index.html">
+<meta property="og:url" content="http://example.com/2023/11/25/%E4%BA%92%E8%81%94%E7%BD%91/%E5%89%8D%E7%AB%AF/%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/%E4%BA%8B%E4%BB%B6%E5%BE%AA%E7%8E%AF/%E6%89%8B%E5%86%99promise/index.html">
 <meta property="og:site_name" content="ZONO&#39;s World">
 <meta property="og:description" content="基本使用12345678910111213const p1 &#x3D; new promise((resovle,reject)&#x3D;&gt;&amp;#123;  resolve(value);&#x2F;&#x2F;成功  reject(error);&#x2F;&#x2F;失败&amp;#125;)&#x2F;&#x2F;定义p1.then(  (value)&#x3D;&gt;&amp;#123;    console.log(&quot;成功:&quot;$&amp;#123;value&amp;#125;">
 <meta property="og:locale" content="en_US">
@@ -31,11 +31,11 @@
 <meta name="twitter:image" content="https://cdn.jsdelivr.net/gh/zo-no/zono-img/4519d9fcc31145a78677e06dc8bec22d~tplv-k3u1fbpfcp-zoom-in-crop-mark:1512:0:0:0.awebp">
 
 
-<link rel="canonical" href="http://example.com/2023/11/25/%E4%BA%92%E8%81%94%E7%BD%91/%E5%89%8D%E7%AB%AF/%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/%E6%89%8B%E5%86%99promise/">
+<link rel="canonical" href="http://example.com/2023/11/25/%E4%BA%92%E8%81%94%E7%BD%91/%E5%89%8D%E7%AB%AF/%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/%E4%BA%8B%E4%BB%B6%E5%BE%AA%E7%8E%AF/%E6%89%8B%E5%86%99promise/">
 
 
 
-<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"en","comments":true,"permalink":"http://example.com/2023/11/25/%E4%BA%92%E8%81%94%E7%BD%91/%E5%89%8D%E7%AB%AF/%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/%E6%89%8B%E5%86%99promise/","path":"2023/11/25/互联网/前端/基础知识/手写promise/","title":"手写promise"}</script>
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"en","comments":true,"permalink":"http://example.com/2023/11/25/%E4%BA%92%E8%81%94%E7%BD%91/%E5%89%8D%E7%AB%AF/%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/%E4%BA%8B%E4%BB%B6%E5%BE%AA%E7%8E%AF/%E6%89%8B%E5%86%99promise/","path":"2023/11/25/互联网/前端/基础知识/事件循环/手写promise/","title":"手写promise"}</script>
 
 <script class="next-config" data-name="calendar" type="application/json">""</script>
 <title>手写promise | ZONO's World</title>
@@ -126,7 +126,7 @@
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
         <a href="/archives/">
-          <span class="site-state-item-count">108</span>
+          <span class="site-state-item-count">110</span>
           <span class="site-state-item-name">posts</span>
         </a>
       </div>
@@ -175,7 +175,7 @@
   
 
   <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="en">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2023/11/25/%E4%BA%92%E8%81%94%E7%BD%91/%E5%89%8D%E7%AB%AF/%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/%E6%89%8B%E5%86%99promise/">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2023/11/25/%E4%BA%92%E8%81%94%E7%BD%91/%E5%89%8D%E7%AB%AF/%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/%E4%BA%8B%E4%BB%B6%E5%BE%AA%E7%8E%AF/%E6%89%8B%E5%86%99promise/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/uploads/cat.jpg">
@@ -263,12 +263,12 @@
 
           <div class="post-nav">
             <div class="post-nav-item">
-                <a href="/2023/11/25/%E4%BA%92%E8%81%94%E7%BD%91/%E5%89%8D%E7%AB%AF/%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/%E5%8A%A8%E7%94%BB/css%E5%9B%9E%E9%A1%BE/" rel="prev" title="CSS回顾">
+                <a href="/2023/11/25/%E4%BA%92%E8%81%94%E7%BD%91/%E5%89%8D%E7%AB%AF/%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/%E5%8A%A8%E7%94%BB/css/css%E5%9B%9E%E9%A1%BE/" rel="prev" title="CSS回顾">
                   <i class="fa fa-angle-left"></i> CSS回顾
                 </a>
             </div>
             <div class="post-nav-item">
-                <a href="/2023/11/26/%E5%AD%A6%E4%B9%A0%E6%96%B9%E6%B3%95%E8%AE%BA/" rel="next" title="学习方法论">
+                <a href="/2023/11/26/%E4%BA%92%E8%81%94%E7%BD%91/%E5%89%8D%E7%AB%AF/%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/%E5%AD%A6%E4%B9%A0%E6%96%B9%E6%B3%95%E8%AE%BA/" rel="next" title="学习方法论">
                   学习方法论 <i class="fa fa-angle-right"></i>
                 </a>
             </div>
