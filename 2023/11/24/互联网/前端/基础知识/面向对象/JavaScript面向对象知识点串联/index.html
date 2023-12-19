@@ -24,7 +24,7 @@
 <meta property="og:locale" content="en_US">
 <meta property="og:image" content="d:/workspace/blog/myblog/source-img/技术/前端/image-20231124134648166.png">
 <meta property="article:published_time" content="2023-11-24T05:17:08.000Z">
-<meta property="article:modified_time" content="2023-12-08T06:54:51.308Z">
+<meta property="article:modified_time" content="2023-12-14T06:39:34.268Z">
 <meta property="article:author" content="zono">
 <meta property="article:tag" content="技术">
 <meta name="twitter:card" content="summary">
@@ -126,7 +126,7 @@
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
         <a href="/archives/">
-          <span class="site-state-item-count">110</span>
+          <span class="site-state-item-count">111</span>
           <span class="site-state-item-name">posts</span>
         </a>
       </div>
@@ -211,7 +211,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">Edited on</span>
-      <time title="Modified: 2023-12-08 14:54:51" itemprop="dateModified" datetime="2023-12-08T14:54:51+08:00">2023-12-08</time>
+      <time title="Modified: 2023-12-14 14:39:34" itemprop="dateModified" datetime="2023-12-14T14:39:34+08:00">2023-12-14</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -306,6 +306,9 @@
 <blockquote>
 <p>PS:每次遇见新的语句，特别是在开发时遇见，不要去猜这个怎么用，而是马上去修补这块知识点，你这次猜对了，后面八成还有其他问题，跟谎言一样，应该杜绝第一次欺骗</p>
 </blockquote>
+<p>对组合继承和寄生组合的理解</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 组合继承</span></span><br><span class="line"><span class="comment">// function NOO() &#123; &#125;</span></span><br><span class="line"><span class="comment">// console.log(NOO.prototype);</span></span><br><span class="line"><span class="comment">// // zono = new NOO();</span></span><br><span class="line"><span class="comment">// // console.log(zono);</span></span><br><span class="line"><span class="comment">// // zono.consctructor = NOO;</span></span><br><span class="line"><span class="comment">// function NOO2() &#123;&#125;</span></span><br><span class="line"><span class="comment">// NOO2.prototype = new NOO();</span></span><br><span class="line"><span class="comment">// NOO2.prototype.constructor = NOO2;</span></span><br><span class="line"><span class="comment">// console.log(NOO2.prototype);</span></span><br><span class="line"><span class="comment">// console.log(NOO2.prototype === NOO.prototype);</span></span><br><span class="line"></span><br><span class="line"><span class="comment">//寄生组合继承</span></span><br><span class="line"><span class="keyword">function</span> <span class="title function_">NOO</span>(<span class="params"></span>) &#123;&#125;</span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="variable constant_">NOO</span>.<span class="property"><span class="keyword">prototype</span></span>);</span><br><span class="line"><span class="keyword">function</span> <span class="title function_">NOO2</span>(<span class="params"></span>) &#123;&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">function</span> <span class="title function_">inheritPrototype</span>(<span class="params">subType, superType</span>) &#123;</span><br><span class="line">  <span class="comment">//使用寄生继承</span></span><br><span class="line">  <span class="comment">//就是把原型对象赋值给子类的原型对象，减少了一次调用父类构造函数</span></span><br><span class="line">  <span class="comment">//原版代码</span></span><br><span class="line">  <span class="comment">// NOO2.prototype = new NOO();//这里会调用一次父类构造函数,修改后就无需调用了</span></span><br><span class="line">  <span class="comment">// NOO2.prototype.constructor = NOO2;</span></span><br><span class="line">  <span class="keyword">const</span> prototype = <span class="title class_">Object</span>.<span class="title function_">create</span>(superType.<span class="property"><span class="keyword">prototype</span></span>);</span><br><span class="line">  prototype.<span class="property">constructor</span> = subType;</span><br><span class="line">  subType.<span class="property"><span class="keyword">prototype</span></span> = prototype;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="title function_">inheritPrototype</span>(<span class="title class_">NOO2</span>, <span class="variable constant_">NOO</span>);</span><br><span class="line"></span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="title class_">NOO2</span>.<span class="property"><span class="keyword">prototype</span></span>);</span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="title class_">NOO2</span>.<span class="property"><span class="keyword">prototype</span></span> === <span class="variable constant_">NOO</span>.<span class="property"><span class="keyword">prototype</span></span>);</span><br><span class="line"><span class="keyword">debugger</span>;</span><br></pre></td></tr></table></figure>
+
 
     </div>
 
