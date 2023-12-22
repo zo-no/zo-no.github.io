@@ -121,7 +121,7 @@
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
         <a href="/archives/">
-          <span class="site-state-item-count">111</span>
+          <span class="site-state-item-count">113</span>
           <span class="site-state-item-name">posts</span>
         </a>
       </div>
@@ -160,6 +160,426 @@
     </div>
 
     <div class="main-inner index posts-expand">
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2023/12/04/%E4%BA%92%E8%81%94%E7%BD%91/%E5%89%8D%E7%AB%AF/react%E7%B2%BE%E5%AD%A6/05-%E7%BB%84%E4%BB%B6%E5%8C%96/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/uploads/cat.jpg">
+      <meta itemprop="name" content="zono">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="ZONO's World">
+      <meta itemprop="description" content="人生长度无法强求,但厚度可以靠努力">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="undefined | ZONO's World">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/2023/12/04/%E4%BA%92%E8%81%94%E7%BD%91/%E5%89%8D%E7%AB%AF/react%E7%B2%BE%E5%AD%A6/05-%E7%BB%84%E4%BB%B6%E5%8C%96/" class="post-title-link" itemprop="url">05.组件化</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">Posted on</span>
+
+      <time title="Created: 2023-12-04 21:35:56" itemprop="dateCreated datePublished" datetime="2023-12-04T21:35:56+08:00">2023-12-04</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar-check"></i>
+      </span>
+      <span class="post-meta-item-text">Edited on</span>
+      <time title="Modified: 2023-12-06 14:35:35" itemprop="dateModified" datetime="2023-12-06T14:35:35+08:00">2023-12-06</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">In</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/%E6%8A%80%E6%9C%AF/" itemprop="url" rel="index"><span itemprop="name">技术</span></a>
+        </span>
+          , 
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/%E6%8A%80%E6%9C%AF/%E6%A1%86%E6%9E%B6/" itemprop="url" rel="index"><span itemprop="name">框架</span></a>
+        </span>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <h1 id="组件化开发"><a href="#组件化开发" class="headerlink" title="组件化开发"></a>组件化开发</h1><blockquote>
+<p>组件化开发的优势</p>
+<ul>
+<li>利于团队协作开发</li>
+<li>利于组件复用</li>
+<li>利于SPA单页面应用开发</li>
+<li>……</li>
+</ul>
+</blockquote>
+<h2 id="主流组件的对比"><a href="#主流组件的对比" class="headerlink" title="主流组件的对比"></a>主流组件的对比</h2><h3 id="Vue中的组件化开发："><a href="#Vue中的组件化开发：" class="headerlink" title="Vue中的组件化开发："></a><strong>Vue中的组件化开发：</strong></h3><blockquote>
+<p><a target="_blank" rel="noopener" href="http://fivedodo.com/upload/html/vuejs3/guide/migration/functional-components.html">http://fivedodo.com/upload/html/vuejs3/guide/migration/functional-components.html</a></p>
+</blockquote>
+<ol>
+<li>全局组件和局部组件</li>
+<li>函数组件（functional）和类组件(Vue3不具备functional函数组件」)</li>
+</ol>
+<h3 id="React中的组件化开发："><a href="#React中的组件化开发：" class="headerlink" title="React中的组件化开发："></a><strong>React中的组件化开发：</strong></h3><p>没有明确全局和局部的概念（可以理解为都是局部组件，不过可以把组件注册到React上，这样每个组件中只要导入React即可使用）</p>
+<ol>
+<li>函数组件</li>
+<li>类组件</li>
+<li>Hooks组件：在函数组件中使用React Hooks函数</li>
+</ol>
+<h2 id="React函数组件"><a href="#React函数组件" class="headerlink" title="React函数组件"></a>React函数组件</h2><h3 id="创建"><a href="#创建" class="headerlink" title="创建"></a>创建</h3><p>两个情况都是创建了一个函数组件：</p>
+<ol>
+<li>在SRC目录中，创建一个 xxx.jsx 的文件，就创建一个组件了；</li>
+<li>我们在此文件中，创建一个函数，让函数返回JSX视图（或者JSX元素、virtualDOM虚拟DOM对象）</li>
+</ol>
+<p>例子：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// views/FunctionComponent.jsx</span></span><br><span class="line"><span class="keyword">const</span> <span class="title class_">FunctionComponent</span> = <span class="keyword">function</span> <span class="title function_">FunctionComponent</span>(<span class="params"></span>) &#123;</span><br><span class="line">    <span class="keyword">return</span> <span class="language-xml"><span class="tag">&lt;<span class="name">div</span>&gt;</span></span></span><br><span class="line"><span class="language-xml">        我是函数组件</span></span><br><span class="line"><span class="language-xml">    <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span>;</span><br><span class="line">&#125;;</span><br><span class="line"><span class="keyword">export</span> <span class="keyword">default</span> <span class="title class_">FunctionComponent</span>;</span><br><span class="line"></span><br><span class="line"><span class="comment">// index.jsx</span></span><br><span class="line"><span class="keyword">import</span> <span class="title class_">React</span> <span class="keyword">from</span> <span class="string">&#x27;react&#x27;</span>;</span><br><span class="line"><span class="keyword">import</span> <span class="title class_">ReactDOM</span> <span class="keyword">from</span> <span class="string">&#x27;react-dom/client&#x27;</span>;</span><br><span class="line"><span class="keyword">import</span> <span class="title class_">FunctionComponent</span> <span class="keyword">from</span> <span class="string">&#x27;@/views/FunctionComponent&#x27;</span>;</span><br><span class="line"><span class="keyword">const</span> root = <span class="title class_">ReactDOM</span>.<span class="title function_">createRoot</span>(<span class="variable language_">document</span>.<span class="title function_">getElementById</span>(<span class="string">&#x27;root&#x27;</span>));</span><br><span class="line">root.<span class="title function_">render</span>(</span><br><span class="line">  <span class="language-xml"><span class="tag">&lt;&gt;</span></span></span><br><span class="line"><span class="language-xml">    <span class="tag">&lt;<span class="name">FunctionComponent</span>/&gt;</span></span></span><br><span class="line"><span class="language-xml">  <span class="tag">&lt;/&gt;</span></span></span><br><span class="line">);</span><br></pre></td></tr></table></figure>
+
+<h3 id="调用"><a href="#调用" class="headerlink" title="调用"></a>调用</h3><p>在文件中，可以基于ES6Module规范导入创建的组件(导入时可以忽略.jsx后缀名)，然后像写标签一样调用。</p>
+<figure class="highlight jsx"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//两种调用方式</span></span><br><span class="line">&lt;<span class="title class_">Component</span>/&gt; <span class="comment">//单闭合调用</span></span><br><span class="line"></span><br><span class="line"><span class="language-xml"><span class="tag">&lt;<span class="name">Component</span>&gt;</span> ... <span class="tag">&lt;/<span class="name">Component</span>&gt;</span></span> <span class="comment">//双闭合调用</span></span><br><span class="line"><span class="comment">//双闭合调用内可以放子节点，在传递函数的props时，会有一个children属性来存储这些子节点。</span></span><br></pre></td></tr></table></figure>
+
+<p>传递属性的规则：</p>
+<ul>
+<li><p>调用组件时，可以给被调用的组件设置(传递)各种各样的属性，例如：</p>
+<p><code>    &lt;DemoOne title=&quot;我是标题&quot; x=&#123;10&#125; data=&#123;[100, 200]&#125; className=&quot;box&quot; style=&#123;&#123; fontSize: '20px' &#125;&#125; /&gt;</code></p>
+</li>
+<li><p>若设置的属性值不是字符串格式，则需要基于<code>&#123;&#125;语法</code>进行嵌套。</p>
+</li>
+</ul>
+<h3 id="命名"><a href="#命名" class="headerlink" title="命名"></a>命名</h3><blockquote>
+<p>组件名，一般都采用<code>PascalCase</code>（大驼峰命名法）</p>
+</blockquote>
+<h3 id="渲染过程"><a href="#渲染过程" class="headerlink" title="渲染过程"></a>渲染过程</h3><blockquote>
+<p>由上两章可知组件的渲染过程是</p>
+</blockquote>
+<ol>
+<li>基于<code>babel-preset-react-app</code>把调用的组件转换为<code>createElement</code>格式</li>
+</ol>
+<figure class="highlight jsx"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="title class_">React</span>.<span class="title function_">createElement</span>(<span class="title class_">DemoOne</span>, &#123;</span><br><span class="line">  <span class="attr">title</span>: <span class="string">&quot;zono&quot;</span>,</span><br><span class="line">  <span class="attr">x</span>: <span class="number">10</span>,</span><br><span class="line">  <span class="attr">data</span>: [<span class="number">100</span>, <span class="number">200</span>],</span><br><span class="line">  <span class="attr">className</span>: <span class="string">&quot;box&quot;</span>,</span><br><span class="line">  <span class="attr">style</span>: &#123;</span><br><span class="line">    <span class="attr">fontSize</span>: <span class="string">&quot;20px&quot;</span>,</span><br><span class="line">  &#125;,</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+
+<ol start="2">
+<li>执行<code>createElement</code>方法创建一个<code>virtualDOM</code>对象</li>
+</ol>
+<figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="punctuation">&#123;</span></span><br><span class="line">    $$typeof<span class="punctuation">:</span> Symbol(react.element)<span class="punctuation">,</span></span><br><span class="line">    key<span class="punctuation">:</span> <span class="literal"><span class="keyword">null</span></span><span class="punctuation">,</span></span><br><span class="line">    props<span class="punctuation">:</span> <span class="punctuation">&#123;</span>title<span class="punctuation">:</span> &#x27;我是标题&#x27;<span class="punctuation">,</span> x<span class="punctuation">:</span> <span class="number">10</span><span class="punctuation">,</span> data<span class="punctuation">:</span> 数组<span class="punctuation">,</span> className<span class="punctuation">:</span> &#x27;box&#x27;<span class="punctuation">,</span> style<span class="punctuation">:</span> <span class="punctuation">&#123;</span>fontSize<span class="punctuation">:</span> &#x27;<span class="number">20</span>px&#x27;<span class="punctuation">&#125;</span><span class="punctuation">&#125;</span><span class="punctuation">,</span> <span class="comment">//如果有子节点「双闭合调用」，则也包含children！！</span></span><br><span class="line">    ref<span class="punctuation">:</span> <span class="literal"><span class="keyword">null</span></span><span class="punctuation">,</span></span><br><span class="line">    type<span class="punctuation">:</span> DemoOne</span><br><span class="line"><span class="punctuation">&#125;</span></span><br></pre></td></tr></table></figure>
+
+<ol start="3">
+<li>基于<code>root.render</code>把<code>virtualDOM</code>变为<code>真实的DOM</code></li>
+</ol>
+<p>type值不再是一个字符串，而是一个函数了，此时：</p>
+<ul>
+<li>函数执行→<code>DemoOne()</code></li>
+<li> 把<code>virtualDOM</code>中的<code>props</code>，作为实参传递给函数 <code>DemoOne()</code>→<code>DemoOne(props)</code></li>
+<li>接收函数执行的返回结果(也就是当前组件的virtualDOM对象)</li>
+<li>最后由render函数把组件返回的虚拟DOM变为真实DOM，插入到id=root的容器中！！</li>
+</ul>
+<h2 id="Props的处理"><a href="#Props的处理" class="headerlink" title="Props的处理"></a>Props的处理</h2><ul>
+<li>调用组件，传递进来的属性（Props）是“只读”的，原理是：props对象被冻结了<code>Object.freeze()</code>（见下文解释）</li>
+</ul>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//测试</span></span><br><span class="line"><span class="title class_">Object</span>.<span class="title function_">isFrozen</span>(props) <span class="comment">//output:true</span></span><br><span class="line">$ 获取：props.<span class="property">xxx</span></span><br><span class="line">$ 修改：props.<span class="property">xxx</span>=xxx  <span class="comment">//output:=&gt;报错</span></span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>回顾js知识点：关于对象的规则设置（了解可跳过）</p>
+<blockquote>
+<p> 阮老师单推人😘</p>
+<p><a target="_blank" rel="noopener" href="https://www.bookstack.cn/read/javascript-tutorial/docs-stdlib-attributes.md">标准库 - 属性描述对象 - 《阮一峰 JavaScript 教程》 - 书栈网 · BookStack</a></p>
+<p><strong>控制对象状态</strong>的一节，讲述了以下内容：</p>
+</blockquote>
+<ul>
+<li><p><strong>扩展</strong>（弱）:</p>
+<p><code>Object.*preventExtensions*()</code>:使得一个对象无法再添加新的属性<br><code>Object.isExtensible(obj)</code>:检测是否可扩展(返回bool值，下面都是)</p>
+</li>
+<li><p><strong>密封</strong>（较强）<br><code>Object.seal(obj)</code>：密封对象，使得一个对象既无法添加新属性，也无法删除旧属性。<br><code>Object.isSealed(obj)</code>：检测是否被密封</p>
+<ul>
+<li><em>被密封的对象</em>：可以修改成员的值，但也不能删、不能新增、不能劫持<code>Object.defineProperty</code></li>
+</ul>
+</li>
+<li><p><strong>冻结</strong>（强）<br><code>Object.freeze(obj)</code>:冻结对象，对象实际上变成了常量。<br><code>Object.isFrozen(obj) </code>检测是否被冻结</p>
+<ul>
+<li><em>被冻结的对象</em>：不能修改成员值、不能新增成员、不能删除现有成员、不能给成员做劫持<code>Object.defineProperty</code></li>
+</ul>
+</li>
+<li><p>局限性：可以通过改变原型对象，来为对象增加属性。（详见阮一峰教程）</p>
+</li>
+</ul>
+<ul>
+<li><p>劫持：(也在”属性描述对象’’同一章中)</p>
+<p><code>Object.defineProperty()</code>方法允许通过属性描述对象，定义或修改一个属性，然后返回修改后的对象()</p>
+</li>
+</ul>
+<p>👏tips：</p>
+<ul>
+<li>被设置不可扩展的对象：除了不能新增成员、其余的操作都可以处理！！</li>
+<li>被密封的对象，也是不可扩展的！！</li>
+<li>同理，被冻结的对象，即是不可扩展的，也是密封的！！</li>
+<li>通过三个方法的互相调用可以部分解封，但如果要加入新的属性那就只能创建一个新对象了</li>
+</ul>
+<p>💬Ps：</p>
+<ul>
+<li>越底层越要看js基础，看来八股并不是没用。</li>
+<li>是不是这部分我应该单独开一章🤦‍♂️🤦‍♀️</li>
+</ul>
+</blockquote>
+<p>然后让我们举一个传Props的例子：</p>
+<figure class="highlight jsx"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// src\index.jsx</span></span><br><span class="line"><span class="keyword">import</span> <span class="title class_">React</span> <span class="keyword">from</span> <span class="string">&#x27;react&#x27;</span>;</span><br><span class="line"><span class="keyword">import</span> <span class="title class_">ReactDOM</span> <span class="keyword">from</span> <span class="string">&#x27;react-dom/client&#x27;</span>;</span><br><span class="line"><span class="keyword">import</span> <span class="title class_">DemoOne</span> <span class="keyword">from</span> <span class="string">&#x27;@/views/DemoOne&#x27;</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> root = <span class="title class_">ReactDOM</span>.<span class="title function_">createRoot</span>(<span class="variable language_">document</span>.<span class="title function_">getElementById</span>(<span class="string">&#x27;root&#x27;</span>));</span><br><span class="line">root.<span class="title function_">render</span>(</span><br><span class="line">    <span class="language-xml"><span class="tag">&lt;&gt;</span></span></span><br><span class="line"><span class="language-xml">        <span class="tag">&lt;<span class="name">DemoOne</span> <span class="attr">title</span>=<span class="string">&quot;可以看见成功传入了值&quot;</span> <span class="attr">x</span>=<span class="string">&#123;10&#125;</span>&gt;</span></span></span><br><span class="line"><span class="language-xml">            <span class="tag">&lt;<span class="name">span</span>&gt;</span>哈哈哈<span class="tag">&lt;/<span class="name">span</span>&gt;</span></span></span><br><span class="line"><span class="language-xml">            <span class="tag">&lt;<span class="name">span</span>&gt;</span>呵呵呵<span class="tag">&lt;/<span class="name">span</span>&gt;</span></span></span><br><span class="line"><span class="language-xml">        <span class="tag">&lt;/<span class="name">DemoOne</span>&gt;</span></span></span><br><span class="line"><span class="language-xml"></span></span><br><span class="line"><span class="language-xml">        <span class="tag">&lt;<span class="name">DemoOne</span> <span class="attr">title</span>=<span class="string">&quot;尝试传入不同的值，实现了组件的复用，注意要用&lt;&gt;&lt;/&gt;包起来&quot;</span> /&gt;</span></span></span><br><span class="line"><span class="language-xml">    <span class="tag">&lt;/&gt;</span></span></span><br><span class="line">);</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight jsx"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// src\views\DemoOne.jsx</span></span><br><span class="line"><span class="keyword">import</span> <span class="title class_">PropTypes</span> <span class="keyword">from</span> <span class="string">&#x27;prop-types&#x27;</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> <span class="title class_">DemoOne</span> = <span class="keyword">function</span> <span class="title function_">DemoOne</span>(<span class="params">props</span>) &#123;</span><br><span class="line">    <span class="keyword">let</span> &#123; title &#125; = props;<span class="comment">//从父组件取值</span></span><br><span class="line">    <span class="keyword">let</span> x = props.<span class="property">x</span>;</span><br><span class="line">    x = <span class="number">1000</span>;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> <span class="language-xml"><span class="tag">&lt;<span class="name">div</span> <span class="attr">className</span>=<span class="string">&quot;demo-box&quot;</span>&gt;</span></span></span><br><span class="line"><span class="language-xml">        <span class="tag">&lt;<span class="name">h2</span> <span class="attr">className</span>=<span class="string">&quot;title&quot;</span>&gt;</span>&#123;title&#125;<span class="tag">&lt;/<span class="name">h2</span>&gt;</span></span></span><br><span class="line"><span class="language-xml">        <span class="tag">&lt;<span class="name">span</span>&gt;</span>&#123;x&#125;<span class="tag">&lt;/<span class="name">span</span>&gt;</span></span></span><br><span class="line"><span class="language-xml">    <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span>;</span><br><span class="line">&#125;;</span><br><span class="line"><span class="comment">/* 通过把函数当做对象，设置静态的私有属性方法，来给其设置属性的校验规则 */</span></span><br><span class="line"><span class="title class_">DemoOne</span>.<span class="property">defaultProps</span> = &#123;</span><br><span class="line">    <span class="attr">x</span>: <span class="number">0</span></span><br><span class="line">&#125;;</span><br><span class="line"><span class="title class_">DemoOne</span>.<span class="property">propTypes</span> = &#123;</span><br><span class="line">    <span class="comment">//组件属性：校验格式</span></span><br><span class="line">    <span class="attr">title</span>: <span class="title class_">PropTypes</span>.<span class="property">string</span>.<span class="property">isRequired</span>,<span class="comment">// 类型是字符串、必传</span></span><br><span class="line">    <span class="attr">x</span>: <span class="title class_">PropTypes</span>.<span class="property">number</span>,<span class="comment">// 类型是数字</span></span><br><span class="line">    <span class="attr">y</span>: <span class="title class_">PropTypes</span>.<span class="title function_">oneOfType</span>([</span><br><span class="line">        <span class="title class_">PropTypes</span>.<span class="property">number</span>,</span><br><span class="line">        <span class="title class_">PropTypes</span>.<span class="property">bool</span>,</span><br><span class="line">    ])<span class="comment">// 多种校验规则中的一个</span></span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="keyword">export</span> <span class="keyword">default</span> <span class="title class_">DemoOne</span>;</span><br></pre></td></tr></table></figure>
+
+<h3 id="属性的使用逻辑"><a href="#属性的使用逻辑" class="headerlink" title="属性的使用逻辑"></a>属性的使用逻辑</h3><ul>
+<li>父组件<code>index.jsx</code>调用子组件<code>DemoOne.jsx</code>的时候，可以基于属性，把<strong>不同的信息</strong>传递给子组件；</li>
+<li>子组件接收相应的属性值，呈现出不同的效果，让组件的复用性更强！！</li>
+</ul>
+<h3 id="对于传递进来的属性规则校验"><a href="#对于传递进来的属性规则校验" class="headerlink" title="对于传递进来的属性规则校验"></a>对于传递进来的属性规则校验</h3><ul>
+<li>原理：通过把函数当做对象，设置静态的私有属性方法，来给其设置属性的校验规则</li>
+<li>可以设置默认值（见上面代码）：</li>
+</ul>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/* 函数组件.defaultProps = &#123;</span></span><br><span class="line"><span class="comment">  x: 0,</span></span><br><span class="line"><span class="comment">  ......</span></span><br><span class="line"><span class="comment">&#125;;*/</span></span><br><span class="line"><span class="title class_">DemoOne</span>.<span class="property">defaultProps</span> = &#123;</span><br><span class="line">    <span class="attr">x</span>: <span class="number">0</span></span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li><p>设置其它规则，例如：数据值格式、是否必传… （依赖于官方的一个插件：<code>prop-types</code>）</p>
+</li>
+<li><p><a target="_blank" rel="noopener" href="https://juejin.cn/post/7218392277919662136">React 校验库 prop-types 安装与详细使用 - 掘金 (juejin.cn)</a></p>
+</li>
+<li><p><a target="_blank" rel="noopener" href="https://github.com/facebook/prop-types">https://github.com/facebook/prop-types</a></p>
+<p>这里就是用这个插件来进行类型检验，让原本动态的js能像c++、java这样的静态语言可以不用担心类型转换出现的问题。</p>
+<figure class="highlight jsx"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> <span class="title class_">PropTypes</span> <span class="keyword">from</span> <span class="string">&#x27;prop-types&#x27;</span>;</span><br><span class="line">函数组件.<span class="property">propTypes</span> = &#123;</span><br><span class="line">  <span class="attr">title</span>: <span class="title class_">PropTypes</span>.<span class="property">string</span>.<span class="property">isRequired</span>,<span class="comment">// 类型是字符串、必传</span></span><br><span class="line">  <span class="attr">x</span>: <span class="title class_">PropTypes</span>.<span class="property">number</span>,<span class="comment">// 类型是数字</span></span><br><span class="line">  <span class="attr">y</span>: <span class="title class_">PropTypes</span>.<span class="title function_">oneOfType</span>([</span><br><span class="line">      <span class="title class_">PropTypes</span>.<span class="property">number</span>,</span><br><span class="line">      <span class="title class_">PropTypes</span>.<span class="property">bool</span>,</span><br><span class="line">  ])<span class="comment">// 多种校验规则中的一个</span></span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+
+<p>传递进来的属性，首先会经历规则的校验，不管校验成功还是失败，最后都会把属性给形参props，只不过如果不符合设定的规则，控制台会抛出警告错误{不影响属性值的获取}！！</p>
+<blockquote>
+<p>🤔Tips:</p>
+<ul>
+<li><p>使用 TypeScript（TS）的话，通常不需要使用 prop-types 库。</p>
+</li>
+<li><p>之前写python也有类似的库，看样子动态语言都得被静态束缚。</p>
+</li>
+</ul>
+<p>（那python是不是强类型呢😅，与前端无关，可以忽略）</p>
+</blockquote>
+</li>
+</ul>
+<h3 id="修改props的规则"><a href="#修改props的规则" class="headerlink" title="修改props的规则"></a>修改props的规则</h3><ul>
+<li>把props中的某个属性赋值给其他内容（例如：变量、状态…）</li>
+<li>我们不直接操作props.xxx=xxx，但是我们可以修改变量/状态值！！</li>
+</ul>
+<hr>
+<h1 id="待规划文字（可以先不读，我复习时会把内容规整进入正文）"><a href="#待规划文字（可以先不读，我复习时会把内容规整进入正文）" class="headerlink" title="待规划文字（可以先不读，我复习时会把内容规整进入正文）"></a>待规划文字（可以先不读，我复习时会把内容规整进入正文）</h1><ul>
+<li>在JSX元素渲染的时候，如果type是函数，则把函数执行！<ul>
+<li>会把解析出来的props「含children」，传递给函数<ul>
+<li><p>  单闭合和双闭合调用的区别「插槽」</p>
+</li>
+<li><p>  React.Children</p>
+</li>
+<li><p>  props是只读的「被冻结」</p>
+</li>
+</ul>
+</li>
+<li>props的规则设置<ul>
+<li><p>  设置默认值</p>
+</li>
+<li><p>  设置属性规则「基于prop-types插件」</p>
+</li>
+</ul>
+</li>
+<li>  属性和插槽都可以让组件具备更强的复用性</li>
+</ul>
+</li>
+</ul>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// index.jsx</span></span><br><span class="line">root.<span class="title function_">render</span>(</span><br><span class="line">  <span class="language-xml"><span class="tag">&lt;&gt;</span></span></span><br><span class="line"><span class="language-xml">    <span class="tag">&lt;<span class="name">FunctionComponent</span> <span class="attr">x</span>=<span class="string">&#123;10&#125;</span> <span class="attr">title</span>=<span class="string">&quot;你好世界&quot;</span> <span class="attr">arr</span>=<span class="string">&#123;[10,</span> <span class="attr">20</span>, <span class="attr">30</span>]&#125;&gt;</span></span></span><br><span class="line"><span class="language-xml">      <span class="tag">&lt;<span class="name">div</span> <span class="attr">className</span>=<span class="string">&#x27;slot-box&#x27;</span>&gt;</span></span></span><br><span class="line"><span class="language-xml">        我是插槽信息</span></span><br><span class="line"><span class="language-xml">      <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span></span><br><span class="line"><span class="language-xml">    <span class="tag">&lt;/<span class="name">FunctionComponent</span>&gt;</span></span></span><br><span class="line"><span class="language-xml">  <span class="tag">&lt;/&gt;</span></span></span><br><span class="line">);</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// views/FunctionComponent.jsx</span></span><br><span class="line"><span class="keyword">import</span> <span class="title class_">React</span> <span class="keyword">from</span> <span class="string">&quot;react&quot;</span>;</span><br><span class="line"><span class="keyword">import</span> <span class="title class_">PropTypes</span> <span class="keyword">from</span> <span class="string">&#x27;prop-types&#x27;</span>;</span><br><span class="line"><span class="keyword">const</span> <span class="title class_">FunctionComponent</span> = <span class="keyword">function</span> <span class="title function_">FunctionComponent</span>(<span class="params">props</span>) &#123;</span><br><span class="line">    <span class="comment">/* 被冻结:不能修改/新增/删除/劫持...「可以赋值给其它状态再进行修改」 */</span></span><br><span class="line">    <span class="comment">// console.log(Object.isFrozen(props)); //-&gt;true</span></span><br><span class="line"></span><br><span class="line">    <span class="comment">/* 对props.children进行操作：count/forEach/map/toArray... */</span></span><br><span class="line">    <span class="comment">// console.log(React.Children);</span></span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> <span class="language-xml"><span class="tag">&lt;<span class="name">div</span>&gt;</span></span></span><br><span class="line"><span class="language-xml">        我是函数组件</span></span><br><span class="line"><span class="language-xml">    <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span>;</span><br><span class="line">&#125;;</span><br><span class="line"><span class="comment">// 赋值属性默认值</span></span><br><span class="line"><span class="title class_">FunctionComponent</span>.<span class="property">defaultProps</span> = &#123;</span><br><span class="line">    <span class="attr">x</span>: <span class="number">0</span>,</span><br><span class="line">    <span class="attr">title</span>: <span class="string">&#x27;&#x27;</span>,</span><br><span class="line">    <span class="attr">arr</span>: [],</span><br><span class="line">    <span class="attr">num</span>: <span class="number">0</span></span><br><span class="line">&#125;;</span><br><span class="line"><span class="comment">// 设置属性规则</span></span><br><span class="line"><span class="title class_">FunctionComponent</span>.<span class="property">propTypes</span> = &#123;</span><br><span class="line">    <span class="attr">x</span>: <span class="title class_">PropTypes</span>.<span class="property">number</span>,</span><br><span class="line">    <span class="attr">title</span>: <span class="title class_">PropTypes</span>.<span class="property">string</span>.<span class="property">isRequired</span>,</span><br><span class="line">    <span class="attr">arr</span>: <span class="title class_">PropTypes</span>.<span class="property">array</span>,</span><br><span class="line">    <span class="attr">num</span>: <span class="title class_">PropTypes</span>.<span class="property">any</span></span><br><span class="line">&#125;;</span><br><span class="line"><span class="keyword">export</span> <span class="keyword">default</span> <span class="title class_">FunctionComponent</span>;</span><br></pre></td></tr></table></figure>
+
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2023/12/04/%E4%BA%92%E8%81%94%E7%BD%91/%E5%89%8D%E7%AB%AF/react%E7%B2%BE%E5%AD%A6/04-JSX%E5%BA%95%E5%B1%82%E5%AE%9E%E6%93%8D/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/uploads/cat.jpg">
+      <meta itemprop="name" content="zono">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="ZONO's World">
+      <meta itemprop="description" content="人生长度无法强求,但厚度可以靠努力">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="undefined | ZONO's World">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/2023/12/04/%E4%BA%92%E8%81%94%E7%BD%91/%E5%89%8D%E7%AB%AF/react%E7%B2%BE%E5%AD%A6/04-JSX%E5%BA%95%E5%B1%82%E5%AE%9E%E6%93%8D/" class="post-title-link" itemprop="url">04.JSX底层实操</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">Posted on</span>
+
+      <time title="Created: 2023-12-04 15:46:46" itemprop="dateCreated datePublished" datetime="2023-12-04T15:46:46+08:00">2023-12-04</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar-check"></i>
+      </span>
+      <span class="post-meta-item-text">Edited on</span>
+      <time title="Modified: 2023-12-05 14:50:12" itemprop="dateModified" datetime="2023-12-05T14:50:12+08:00">2023-12-05</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">In</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/%E6%8A%80%E6%9C%AF/" itemprop="url" rel="index"><span itemprop="name">技术</span></a>
+        </span>
+          , 
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/%E6%8A%80%E6%9C%AF/%E5%89%8D%E7%AB%AF/" itemprop="url" rel="index"><span itemprop="name">前端</span></a>
+        </span>
+          , 
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/%E6%8A%80%E6%9C%AF/%E5%89%8D%E7%AB%AF/%E6%A1%86%E6%9E%B6/" itemprop="url" rel="index"><span itemprop="name">框架</span></a>
+        </span>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <blockquote>
+<p>巨量注释笔记😊因为自己写的处理jsx还是不够完善，后面的代码还是用会React官方的方法。所以可以先跳过本章</p>
+</blockquote>
+<h1 id="Part-1-jsx→viscalDOM"><a href="#Part-1-jsx→viscalDOM" class="headerlink" title="Part 1 jsx→viscalDOM"></a>Part 1 jsx→viscalDOM</h1><blockquote>
+<p>这里可以参看我的开源库</p>
+</blockquote>
+<figure class="highlight jsx"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/*</span></span><br><span class="line"><span class="comment">@Date		:2023/12/04 15:56:37</span></span><br><span class="line"><span class="comment">@Author		:zono</span></span><br><span class="line"><span class="comment">@Description:一个简单的JSX处理器</span></span><br><span class="line"><span class="comment">*/</span></span><br><span class="line"></span><br><span class="line"><span class="comment">/*createElement函数:用于构建虚拟DOM</span></span><br><span class="line"><span class="comment">----------------------------------------</span></span><br><span class="line"><span class="comment">1.参考react的createElement函数：</span></span><br><span class="line"><span class="comment">React.createElement(ele,props,...children)</span></span><br><span class="line"><span class="comment">- ele：元素标签名\组件名</span></span><br><span class="line"><span class="comment">- props：元素的属性集合(对象)（无属性，则此值为null）</span></span><br><span class="line"><span class="comment">- children：当前元素的子节点，第三个及以后的参数都是</span></span><br><span class="line"><span class="comment">- 返回虚拟DOM，可以看下文虚拟DOM结构</span></span><br><span class="line"><span class="comment">----------------------------------------</span></span><br><span class="line"><span class="comment">2. 参考react输出的虚拟DOM： </span></span><br><span class="line"><span class="comment">virtualDOM = &#123;</span></span><br><span class="line"><span class="comment">    $$typeof: Symbol(react.element), //react元素的标识</span></span><br><span class="line"><span class="comment">    ref: null,</span></span><br><span class="line"><span class="comment">    key: null,</span></span><br><span class="line"><span class="comment">    type: 标签名「或组件」, //h1、h2...</span></span><br><span class="line"><span class="comment">    // 存储了元素的相关属性 &amp;&amp; 子节点信息</span></span><br><span class="line"><span class="comment">    props: &#123;</span></span><br><span class="line"><span class="comment">        ..., // 元素的相关属性,如：className、style,</span></span><br><span class="line"><span class="comment">        children // 子节点信息（没有子节点则没有这个属性、属性值可能是一个值、也可能是一个数组）</span></span><br><span class="line"><span class="comment">    &#125;//必定存在，至少是个空对象</span></span><br><span class="line"><span class="comment">  &#125;</span></span><br><span class="line"><span class="comment">----------------------------------------</span></span><br><span class="line"><span class="comment">*/</span></span><br><span class="line"><span class="keyword">export</span> <span class="keyword">function</span> <span class="title function_">createElement</span>(<span class="params">ele, props, ...children</span>) &#123;</span><br><span class="line">  <span class="keyword">let</span> virtualDOM = &#123;</span><br><span class="line">    <span class="attr">$$typeof</span>: <span class="title class_">Symbol</span>.<span class="title function_">for</span>(<span class="string">&quot;react.element&quot;</span>),</span><br><span class="line">    <span class="attr">ref</span>: <span class="literal">null</span>,</span><br><span class="line">    <span class="attr">key</span>: <span class="literal">null</span>,</span><br><span class="line">    <span class="attr">type</span>: <span class="literal">null</span>,</span><br><span class="line">    <span class="attr">props</span>: &#123;&#125;,</span><br><span class="line">  &#125;;</span><br><span class="line">  <span class="keyword">let</span> len = children.<span class="property">length</span>;</span><br><span class="line"></span><br><span class="line">  <span class="comment">// 1.处理type</span></span><br><span class="line">  virtualDOM.<span class="property">type</span> = ele;</span><br><span class="line"></span><br><span class="line">  <span class="comment">// 2.处理props</span></span><br><span class="line">  <span class="keyword">if</span> (props) &#123;</span><br><span class="line">    virtualDOM.<span class="property">props</span> = &#123;</span><br><span class="line">      ...props,</span><br><span class="line">      children,</span><br><span class="line">    &#125;;</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  <span class="comment">// 3.处理children</span></span><br><span class="line">  <span class="keyword">if</span> (len === <span class="number">1</span>) virtualDOM.<span class="property">props</span>.<span class="property">children</span> = children[<span class="number">0</span>];</span><br><span class="line">  <span class="keyword">else</span> <span class="keyword">if</span> (len &gt; <span class="number">1</span>) virtualDOM.<span class="property">props</span>.<span class="property">children</span> = children;</span><br><span class="line">  <span class="keyword">else</span> virtualDOM.<span class="property">props</span>.<span class="property">children</span> = <span class="literal">null</span>;</span><br><span class="line"></span><br><span class="line">  <span class="keyword">return</span> virtualDOM;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>对应的index.js，这里我们用<code>03</code>的对象。</p>
+<figure class="highlight jsx"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// import React from &quot;react&quot;;</span></span><br><span class="line"><span class="keyword">import</span> <span class="title class_">ReactDOM</span> <span class="keyword">from</span> <span class="string">&quot;react-dom/client&quot;</span>;</span><br><span class="line"><span class="keyword">import</span> <span class="string">&quot;./index.less&quot;</span>;</span><br><span class="line"><span class="keyword">import</span> &#123; createElement,  &#125; <span class="keyword">from</span> <span class="string">&#x27;./myJSXhandle&#x27;</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> root = <span class="title class_">ReactDOM</span>.<span class="title function_">createRoot</span>(<span class="variable language_">document</span>.<span class="title function_">getElementById</span>(<span class="string">&quot;root&quot;</span>));</span><br><span class="line"></span><br><span class="line"><span class="keyword">let</span> styObj = &#123;</span><br><span class="line">    <span class="attr">color</span>: <span class="string">&#x27;red&#x27;</span>,</span><br><span class="line">    <span class="attr">fontSize</span>: <span class="string">&#x27;16px&#x27;</span></span><br><span class="line">&#125;;</span><br><span class="line"><span class="keyword">let</span> x = <span class="number">10</span>;</span><br><span class="line"><span class="keyword">let</span> y = <span class="number">20</span>;</span><br><span class="line"></span><br><span class="line"><span class="comment">//把react.createElement方法改成自己的方法</span></span><br><span class="line"><span class="comment">//把react.Fragment改为直接填写</span></span><br><span class="line"><span class="comment">//可以见到react已经没有被调用了</span></span><br><span class="line"><span class="keyword">let</span> jsxObj = <span class="title function_">createElement</span>(</span><br><span class="line">    <span class="comment">//   React.Fragment,</span></span><br><span class="line">    <span class="string">&quot;div&quot;</span>,</span><br><span class="line">  <span class="literal">null</span>,</span><br><span class="line">  <span class="title function_">createElement</span>(</span><br><span class="line">      <span class="string">&quot;h2&quot;</span>,</span><br><span class="line">    &#123;<span class="attr">className</span>: <span class="string">&quot;title&quot;</span>,</span><br><span class="line">     <span class="attr">style</span>: styObj,&#125;,</span><br><span class="line">    <span class="string">&quot;zono&quot;</span></span><br><span class="line">  ),</span><br><span class="line">  <span class="title function_">createElement</span>(</span><br><span class="line">    <span class="string">&quot;div&quot;</span>,</span><br><span class="line">    &#123;<span class="attr">className</span>: <span class="string">&quot;box&quot;</span>,&#125;,</span><br><span class="line">    <span class="string">&quot;牛&quot;</span>,</span><br><span class="line">    <span class="title function_">createElement</span>(<span class="string">&quot;span&quot;</span>, <span class="literal">null</span>, x),</span><br><span class="line">    <span class="title function_">createElement</span>(<span class="string">&quot;span&quot;</span>, <span class="literal">null</span>, y)</span><br><span class="line">  )</span><br><span class="line">);</span><br><span class="line"></span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(jsxObj);</span><br><span class="line"></span><br><span class="line">root.<span class="title function_">render</span>(jsxObj);</span><br></pre></td></tr></table></figure>
+
+<p>如此完成createElement的覆盖</p>
+<h1 id="Part-2-viscalDOM-→真实DOM"><a href="#Part-2-viscalDOM-→真实DOM" class="headerlink" title="Part 2 viscalDOM →真实DOM"></a>Part 2 viscalDOM →真实DOM</h1><figure class="highlight jsx"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/*part2.render函数：把虚拟DOM变为真实DOM（按v16），构建思路如下</span></span><br><span class="line"><span class="comment">\----------------------------------------</span></span><br><span class="line"><span class="comment">1.首先根据ReactDOM.render方法构建大体结构</span></span><br><span class="line"><span class="comment">ReactDOM.render(virtualDOM, container)</span></span><br><span class="line"><span class="comment">\----------------------------------------</span></span><br><span class="line"><span class="comment">2.由于函数涉及到递归对象取值，所以先定义一个对象迭代器,见下文</span></span><br><span class="line"><span class="comment">*/</span></span><br></pre></td></tr></table></figure>
+
+<p>定义一个对象迭代器:封装一个对象迭代的方法 </p>
+<ul>
+<li>基于传统的for/in循环，会存在一些弊端(性能较差(既可以迭代私有的，也可以迭代公有的)；只能迭代“可枚举、非Symbol类型的”属性…)<blockquote>
+<p>一般而言，内置属性都是不可枚举的（枚举：可以被列举、例如for/in、Object.keys等列举出来的）；自定义属性都是可枚举的，我们可以通过Object.defineProperty方法定义枚举属性</p>
+</blockquote>
+</li>
+</ul>
+<ul>
+<li>解决思路：获取对象所有的私有属性「私有的、不论是否可枚举、不论类型」<ul>
+<li>Object.getOwnPropertyNames(arr) -&gt; 获取对象非Symbol类型的私有属性「无关是否可枚举」</li>
+<li>Object.getOwnPropertySymbols(arr) -&gt; 获取Symbol类型的私有属性<br>获取所有的私有属性：<br>let keys = Object.getOwnPropertyNames(arr).concat(Object.getOwnPropertySymbols(arr));<br>可以基于ES6中的Reflect.ownKeys代替上述操作「弊端：不兼容IE」<br>let keys = Reflect.ownKeys(arr);</li>
+</ul>
+</li>
+</ul>
+<figure class="highlight jsx"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> <span class="keyword">function</span> <span class="title function_">iterator</span>(<span class="params">obj</span>) &#123;</span><br><span class="line">  <span class="keyword">let</span> arr = [];</span><br><span class="line">  <span class="keyword">for</span> (<span class="keyword">let</span> key <span class="keyword">in</span> obj) &#123;</span><br><span class="line">    arr.<span class="title function_">push</span>([key, obj[key]]);</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="keyword">return</span> arr;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>定义一个创建真实DOM的函数</p>
+<blockquote>
+<p>这里先不对ref（获取真实DOM）和key（用于优化）进行处理</p>
+</blockquote>
+<p>分析后函数<strong>任务</strong>就是：先根据type创建一个标签，然后把props中的属性设置给标签，最后把标签插入到指定的容器中。</p>
+<p>于是接下来按步骤处理：</p>
+<ul>
+<li>type：标签名</li>
+<li>className</li>
+<li>style</li>
+<li>children</li>
+</ul>
+<figure class="highlight jsx"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">export</span> <span class="keyword">function</span> <span class="title function_">render</span>(<span class="params">virtualDOM, container</span>) &#123;</span><br><span class="line">  <span class="comment">//获取虚拟DOM的类型</span></span><br><span class="line">  <span class="keyword">let</span> &#123; type, props &#125; = virtualDOM;</span><br><span class="line">  <span class="comment">//1. type处理</span></span><br><span class="line">  <span class="keyword">if</span> (<span class="keyword">typeof</span> type === <span class="string">&quot;string&quot;</span>) &#123;</span><br><span class="line">    <span class="keyword">let</span> ele = <span class="variable language_">document</span>.<span class="title function_">createElement</span>(type); <span class="comment">//动态创建一个string标签</span></span><br><span class="line">    <span class="comment">// 2.props处理：构建回调函数为标签设置相关的属性 &amp; 子节点，然后传入之前写好的对象迭代器</span></span><br><span class="line">    <span class="title function_">each</span>(props, <span class="function">(<span class="params">value, key</span>) =&gt;</span> &#123;</span><br><span class="line"></span><br><span class="line">      <span class="comment">/*TODO为元素设置属性（自定义、内置）有两种方式（待回看）</span></span><br><span class="line"><span class="comment">      1. 元素.属性=属性值</span></span><br><span class="line"><span class="comment">      原理：内置属性是设置在元素标签上的（可以通过元素对象获取到），</span></span><br><span class="line"><span class="comment">        自定义属性是设置在元素对象上，在对象的堆内存空间中新增成员（不会设置到标签上）</span></span><br><span class="line"><span class="comment">      获取：元素.属性</span></span><br><span class="line"><span class="comment">      删除：delete 元素.属性</span></span><br><span class="line"><span class="comment"></span></span><br><span class="line"><span class="comment">      2. 元素.setAttribute(属性名,属性值)</span></span><br><span class="line"><span class="comment">      原理：会直接写在元素的标签上</span></span><br><span class="line"><span class="comment">      获取：元素.getAttribute(属性名)</span></span><br><span class="line"><span class="comment">      删除：元素.removeAttribute(属性名)</span></span><br><span class="line"><span class="comment">      二者不能混淆（排除内置属性的特殊性）</span></span><br><span class="line"><span class="comment">      */</span></span><br><span class="line">      </span><br><span class="line">      <span class="comment">// 2.1className的处理：value存储的是样式类名</span></span><br><span class="line">      <span class="keyword">if</span> (key === <span class="string">&quot;className&quot;</span>) &#123;</span><br><span class="line">        ele.<span class="property">className</span> = value;</span><br><span class="line">        <span class="keyword">return</span>;</span><br><span class="line">      &#125;</span><br><span class="line"></span><br><span class="line">      <span class="comment">// 2.2.style的处理：value存储的是样式对象</span></span><br><span class="line">      <span class="keyword">if</span> (key === <span class="string">&quot;style&quot;</span>) &#123;</span><br><span class="line">        <span class="title function_">each</span>(value, <span class="function">(<span class="params">val, attr</span>) =&gt;</span> &#123;</span><br><span class="line">          ele.<span class="property">style</span>[attr] = val;</span><br><span class="line">        &#125;);</span><br><span class="line">        <span class="keyword">return</span>;</span><br><span class="line">      &#125;</span><br><span class="line"></span><br><span class="line">      <span class="comment">// 2.3.子节点的处理：value存储的children属性值</span></span><br><span class="line">      <span class="keyword">if</span> (key === <span class="string">&quot;children&quot;</span>) &#123;</span><br><span class="line">        <span class="keyword">let</span> children = value;</span><br><span class="line">        <span class="keyword">if</span> (!<span class="title class_">Array</span>.<span class="title function_">isArray</span>(children)) children = [children];<span class="comment">//如果不是数组，就包装成数组</span></span><br><span class="line">        children.<span class="title function_">forEach</span>(<span class="function">(<span class="params">child</span>) =&gt;</span> &#123;</span><br><span class="line">          <span class="comment">// 子节点是文本节点：直接插入即可</span></span><br><span class="line">          <span class="keyword">if</span> (<span class="regexp">/^(string|number)$/</span>.<span class="title function_">test</span>(<span class="keyword">typeof</span> child)) &#123;</span><br><span class="line">            <span class="comment">//.test():用于检测字符串是否匹配某个正则表达式，返回true/false</span></span><br><span class="line">            ele.<span class="title function_">appendChild</span>(<span class="variable language_">document</span>.<span class="title function_">createTextNode</span>(child));<span class="comment">//创建文本节点,并插入到标签中</span></span><br><span class="line">            <span class="keyword">return</span>;</span><br><span class="line">          &#125;</span><br><span class="line">          <span class="comment">// 子节点又是一个virtualDOM：递归处理</span></span><br><span class="line">          <span class="title function_">render</span>(child, ele);</span><br><span class="line">        &#125;);</span><br><span class="line">        <span class="keyword">return</span>;</span><br><span class="line">      &#125;</span><br><span class="line"></span><br><span class="line">      ele.<span class="title function_">setAttribute</span>(key, value);</span><br><span class="line">    &#125;);</span><br><span class="line">    <span class="comment">// 把新增的标签，增加到指定容器中</span></span><br><span class="line">    container.<span class="title function_">appendChild</span>(ele);</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>完整代码</p>
+<figure class="highlight jsx"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br><span class="line">111</span><br><span class="line">112</span><br><span class="line">113</span><br><span class="line">114</span><br><span class="line">115</span><br><span class="line">116</span><br><span class="line">117</span><br><span class="line">118</span><br><span class="line">119</span><br><span class="line">120</span><br><span class="line">121</span><br><span class="line">122</span><br><span class="line">123</span><br><span class="line">124</span><br><span class="line">125</span><br><span class="line">126</span><br><span class="line">127</span><br><span class="line">128</span><br><span class="line">129</span><br><span class="line">130</span><br><span class="line">131</span><br><span class="line">132</span><br><span class="line">133</span><br><span class="line">134</span><br><span class="line">135</span><br><span class="line">136</span><br><span class="line">137</span><br><span class="line">138</span><br><span class="line">139</span><br><span class="line">140</span><br><span class="line">141</span><br><span class="line">142</span><br><span class="line">143</span><br><span class="line">144</span><br><span class="line">145</span><br><span class="line">146</span><br><span class="line">147</span><br><span class="line">148</span><br><span class="line">149</span><br><span class="line">150</span><br><span class="line">151</span><br><span class="line">152</span><br><span class="line">153</span><br><span class="line">154</span><br><span class="line">155</span><br><span class="line">156</span><br><span class="line">157</span><br><span class="line">158</span><br><span class="line">159</span><br><span class="line">160</span><br><span class="line">161</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//src\jsxHandle.js</span></span><br><span class="line"><span class="comment">/*</span></span><br><span class="line"><span class="comment">@Date		:2023/12/04 15:56:37</span></span><br><span class="line"><span class="comment">@Author		:zono</span></span><br><span class="line"><span class="comment">@Description:一个简单的JSX处理器</span></span><br><span class="line"><span class="comment">*/</span></span><br><span class="line"></span><br><span class="line"><span class="comment">/*part1.createElement函数:用于构建虚拟DOM</span></span><br><span class="line"><span class="comment">----------------------------------------</span></span><br><span class="line"><span class="comment">1.参考react的createElement函数：</span></span><br><span class="line"><span class="comment">React.createElement(ele,props,...children)</span></span><br><span class="line"><span class="comment">- ele：元素标签名\组件名</span></span><br><span class="line"><span class="comment">- props：元素的属性集合(对象)（无属性，则此值为null）</span></span><br><span class="line"><span class="comment">- children：当前元素的子节点，第三个及以后的参数都是</span></span><br><span class="line"><span class="comment">- 返回虚拟DOM，可以看下文虚拟DOM结构</span></span><br><span class="line"><span class="comment">----------------------------------------</span></span><br><span class="line"><span class="comment">2. 参考react输出的虚拟DOM： </span></span><br><span class="line"><span class="comment">virtualDOM = &#123;</span></span><br><span class="line"><span class="comment">    $$typeof: Symbol(react.element), //react元素的标识</span></span><br><span class="line"><span class="comment">    ref: null,</span></span><br><span class="line"><span class="comment">    key: null,</span></span><br><span class="line"><span class="comment">    type: 标签名「或组件」, //h1、h2...</span></span><br><span class="line"><span class="comment">    // 存储了元素的相关属性 &amp;&amp; 子节点信息</span></span><br><span class="line"><span class="comment">    props: &#123;</span></span><br><span class="line"><span class="comment">        ..., // 元素的相关属性,如：className、style,</span></span><br><span class="line"><span class="comment">        children // 子节点信息（没有子节点则没有这个属性、属性值可能是一个值、也可能是一个数组）</span></span><br><span class="line"><span class="comment">    &#125;//必定存在，至少是个空对象</span></span><br><span class="line"><span class="comment">  &#125;</span></span><br><span class="line"><span class="comment">----------------------------------------</span></span><br><span class="line"><span class="comment">*/</span></span><br><span class="line"><span class="keyword">export</span> <span class="keyword">function</span> <span class="title function_">createElement</span>(<span class="params">ele, props, ...children</span>) &#123;</span><br><span class="line">  <span class="keyword">let</span> virtualDOM = &#123;</span><br><span class="line">    <span class="attr">$$typeof</span>: <span class="title class_">Symbol</span>.<span class="title function_">for</span>(<span class="string">&quot;react.element&quot;</span>),</span><br><span class="line">    <span class="attr">ref</span>: <span class="literal">null</span>,</span><br><span class="line">    <span class="attr">key</span>: <span class="literal">null</span>,</span><br><span class="line">    <span class="attr">type</span>: <span class="literal">null</span>,</span><br><span class="line">    <span class="attr">props</span>: &#123;&#125;,</span><br><span class="line">  &#125;;</span><br><span class="line">  <span class="keyword">let</span> len = children.<span class="property">length</span>;</span><br><span class="line"></span><br><span class="line">  <span class="comment">// 1.处理type</span></span><br><span class="line">  virtualDOM.<span class="property">type</span> = ele;</span><br><span class="line"></span><br><span class="line">  <span class="comment">// 2.处理props</span></span><br><span class="line">  <span class="keyword">if</span> (props) &#123;</span><br><span class="line">    virtualDOM.<span class="property">props</span> = &#123;</span><br><span class="line">      ...props,</span><br><span class="line">      children,</span><br><span class="line">    &#125;;</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  <span class="comment">// 3.处理children</span></span><br><span class="line">  <span class="keyword">if</span> (len === <span class="number">1</span>) virtualDOM.<span class="property">props</span>.<span class="property">children</span> = children[<span class="number">0</span>];</span><br><span class="line">  <span class="keyword">else</span> <span class="keyword">if</span> (len &gt; <span class="number">1</span>) virtualDOM.<span class="property">props</span>.<span class="property">children</span> = children;</span><br><span class="line">  <span class="keyword">else</span> virtualDOM.<span class="property">props</span>.<span class="property">children</span> = <span class="literal">null</span>;</span><br><span class="line"></span><br><span class="line">  <span class="keyword">return</span> virtualDOM;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">/*part2.render函数：把虚拟DOM变为真实DOM（按v16），构建思路如下</span></span><br><span class="line"><span class="comment">----------------------------------------</span></span><br><span class="line"><span class="comment">1.首先根据ReactDOM.render方法构建大体结构</span></span><br><span class="line"><span class="comment">ReactDOM.render(virtualDOM, container)</span></span><br><span class="line"><span class="comment">----------------------------------------</span></span><br><span class="line"><span class="comment">2.由于函数涉及到递归对象取值，所以先定义一个对象迭代器,见下文</span></span><br><span class="line"><span class="comment">*/</span></span><br><span class="line"></span><br><span class="line"><span class="comment">/*定义一个对象迭代器:封装一个对象迭代的方法 </span></span><br><span class="line"><span class="comment">  - 基于传统的for/in循环，会存在一些弊端「性能较差(既可以迭代私有的，也可以迭代公有的)；只能迭代“可枚举、非Symbol类型的”属性...」</span></span><br><span class="line"><span class="comment">  + 解决思路：获取对象所有的私有属性「私有的、不论是否可枚举、不论类型」</span></span><br><span class="line"><span class="comment">    + Object.getOwnPropertyNames(arr) -&gt; 获取对象非Symbol类型的私有属性「无关是否可枚举」</span></span><br><span class="line"><span class="comment">    + Object.getOwnPropertySymbols(arr) -&gt; 获取Symbol类型的私有属性</span></span><br><span class="line"><span class="comment">    获取所有的私有属性：</span></span><br><span class="line"><span class="comment">      let keys = Object.getOwnPropertyNames(arr).concat(Object.getOwnPropertySymbols(arr));</span></span><br><span class="line"><span class="comment">    可以基于ES6中的Reflect.ownKeys代替上述操作「弊端：不兼容IE」</span></span><br><span class="line"><span class="comment">      let keys = Reflect.ownKeys(arr);</span></span><br><span class="line"><span class="comment">*/</span></span><br><span class="line"><span class="keyword">const</span> <span class="title function_">each</span> = (<span class="params">obj, callback</span>) =&gt; &#123;</span><br><span class="line">  <span class="comment">// 1.参数校验,如果不是对象或者是null，直接抛出异常</span></span><br><span class="line">  <span class="keyword">if</span> (obj === <span class="literal">null</span> || <span class="keyword">typeof</span> obj !== <span class="string">&quot;object&quot;</span>)</span><br><span class="line">    <span class="keyword">throw</span> <span class="keyword">new</span> <span class="title class_">TypeError</span>(<span class="string">&quot;obj is not a object&quot;</span>);</span><br><span class="line">  <span class="comment">// 2.获取对象所有的私有属性「私有的、不论是否可枚举、不论类型」</span></span><br><span class="line">  <span class="keyword">let</span> keys = <span class="title class_">Reflect</span>.<span class="title function_">ownKeys</span>(obj);</span><br><span class="line">  <span class="comment">// 3.遍历所有的私有属性,每次迭代都执行回调函数</span></span><br><span class="line">  keys.<span class="title function_">forEach</span>(<span class="function">(<span class="params">key</span>) =&gt;</span> <span class="title function_">callback</span>(obj[key],key));</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="comment">/*定义一个创建真实DOM的函数</span></span><br><span class="line"><span class="comment">这里先不对ref（获取真实DOM）和key（用于优化）进行处理</span></span><br><span class="line"><span class="comment"></span></span><br><span class="line"><span class="comment">分析后函数任务就是：</span></span><br><span class="line"><span class="comment">先根据type创建一个标签，然后把props中的属性设置给标签，最后把标签插入到指定的容器中。</span></span><br><span class="line"><span class="comment"></span></span><br><span class="line"><span class="comment">于是接下来按步骤处理：</span></span><br><span class="line"><span class="comment">- type：标签名</span></span><br><span class="line"><span class="comment">props中的属性进行处理（粗略）</span></span><br><span class="line"><span class="comment">- className</span></span><br><span class="line"><span class="comment">- style</span></span><br><span class="line"><span class="comment">- children</span></span><br><span class="line"><span class="comment">*/</span></span><br><span class="line"><span class="keyword">export</span> <span class="keyword">function</span> <span class="title function_">render</span>(<span class="params">virtualDOM, container</span>) &#123;</span><br><span class="line">  <span class="comment">//获取虚拟DOM的类型</span></span><br><span class="line">  <span class="keyword">let</span> &#123; type, props &#125; = virtualDOM;</span><br><span class="line">  <span class="comment">//1. type处理</span></span><br><span class="line">  <span class="keyword">if</span> (<span class="keyword">typeof</span> type === <span class="string">&quot;string&quot;</span>) &#123;</span><br><span class="line">    <span class="keyword">let</span> ele = <span class="variable language_">document</span>.<span class="title function_">createElement</span>(type); <span class="comment">//动态创建一个string标签</span></span><br><span class="line">    <span class="comment">// 2.props处理：构建回调函数为标签设置相关的属性 &amp; 子节点，然后传入之前写好的对象迭代器</span></span><br><span class="line">    <span class="title function_">each</span>(props, <span class="function">(<span class="params">value, key</span>) =&gt;</span> &#123;</span><br><span class="line"></span><br><span class="line">      <span class="comment">/*TODO为元素设置属性（自定义、内置）有两种方式（待回看）</span></span><br><span class="line"><span class="comment">      1. 元素.属性=属性值</span></span><br><span class="line"><span class="comment">      原理：内置属性是设置在元素标签上的（可以通过元素对象获取到），</span></span><br><span class="line"><span class="comment">        自定义属性是设置在元素对象上，在对象的堆内存空间中新增成员（不会设置到标签上）</span></span><br><span class="line"><span class="comment">      获取：元素.属性</span></span><br><span class="line"><span class="comment">      删除：delete 元素.属性</span></span><br><span class="line"><span class="comment"></span></span><br><span class="line"><span class="comment">      2. 元素.setAttribute(属性名,属性值)</span></span><br><span class="line"><span class="comment">      原理：会直接写在元素的标签上</span></span><br><span class="line"><span class="comment">      获取：元素.getAttribute(属性名)</span></span><br><span class="line"><span class="comment">      删除：元素.removeAttribute(属性名)</span></span><br><span class="line"><span class="comment">      二者不能混淆（排除内置属性的特殊性）</span></span><br><span class="line"><span class="comment">      */</span></span><br><span class="line">      </span><br><span class="line">      <span class="comment">// 2.1className的处理：value存储的是样式类名</span></span><br><span class="line">      <span class="keyword">if</span> (key === <span class="string">&quot;className&quot;</span>) &#123;</span><br><span class="line">        ele.<span class="property">className</span> = value;</span><br><span class="line">        <span class="keyword">return</span>;</span><br><span class="line">      &#125;</span><br><span class="line"></span><br><span class="line">      <span class="comment">// 2.2.style的处理：value存储的是样式对象</span></span><br><span class="line">      <span class="keyword">if</span> (key === <span class="string">&quot;style&quot;</span>) &#123;</span><br><span class="line">        <span class="title function_">each</span>(value, <span class="function">(<span class="params">val, attr</span>) =&gt;</span> &#123;</span><br><span class="line">          ele.<span class="property">style</span>[attr] = val;</span><br><span class="line">        &#125;);</span><br><span class="line">        <span class="keyword">return</span>;</span><br><span class="line">      &#125;</span><br><span class="line"></span><br><span class="line">      <span class="comment">// 2.3.子节点的处理：value存储的children属性值</span></span><br><span class="line">      <span class="keyword">if</span> (key === <span class="string">&quot;children&quot;</span>) &#123;</span><br><span class="line">        <span class="keyword">let</span> children = value;</span><br><span class="line">        <span class="keyword">if</span> (!<span class="title class_">Array</span>.<span class="title function_">isArray</span>(children)) children = [children];<span class="comment">//如果不是数组，就包装成数组(对象方法少)</span></span><br><span class="line">        children.<span class="title function_">forEach</span>(<span class="function">(<span class="params">child</span>) =&gt;</span> &#123;</span><br><span class="line">          <span class="comment">// 子节点是文本节点：直接插入即可</span></span><br><span class="line">          <span class="keyword">if</span> (<span class="regexp">/^(string|number)$/</span>.<span class="title function_">test</span>(<span class="keyword">typeof</span> child)) &#123;</span><br><span class="line">            <span class="comment">//.test():用于检测字符串是否匹配某个正则表达式，返回true/false</span></span><br><span class="line">            ele.<span class="title function_">appendChild</span>(<span class="variable language_">document</span>.<span class="title function_">createTextNode</span>(child));<span class="comment">//创建文本节点,并插入到标签中</span></span><br><span class="line">            <span class="keyword">return</span>;</span><br><span class="line">          &#125;</span><br><span class="line">          <span class="comment">// 子节点又是一个virtualDOM：递归处理</span></span><br><span class="line">          <span class="title function_">render</span>(child, ele);</span><br><span class="line">        &#125;);</span><br><span class="line">        <span class="keyword">return</span>;</span><br><span class="line">      &#125;</span><br><span class="line"></span><br><span class="line">      ele.<span class="title function_">setAttribute</span>(key, value);</span><br><span class="line">    &#125;);</span><br><span class="line">    <span class="comment">// 把新增的标签，增加到指定容器中</span></span><br><span class="line">    container.<span class="title function_">appendChild</span>(ele);</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<figure class="highlight jsx"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//src\index.jsx</span></span><br><span class="line"><span class="comment">// import React from &quot;react&quot;;</span></span><br><span class="line"><span class="comment">// import ReactDOM from &quot;react-dom/client&quot;;</span></span><br><span class="line"><span class="keyword">import</span> <span class="string">&quot;./index.less&quot;</span>;</span><br><span class="line"><span class="keyword">import</span> &#123; createElement,render  &#125; <span class="keyword">from</span> <span class="string">&#x27;./myJSXhandle&#x27;</span>;</span><br><span class="line"><span class="comment">// import &#123; createElement, render &#125; from &#x27;./jsxHandle&#x27;;</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// const root = ReactDOM.createRoot(document.getElementById(&quot;root&quot;));</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">let</span> styObj = &#123;</span><br><span class="line">    <span class="attr">color</span>: <span class="string">&#x27;red&#x27;</span>,</span><br><span class="line">    <span class="attr">fontSize</span>: <span class="string">&#x27;16px&#x27;</span></span><br><span class="line">&#125;;</span><br><span class="line"><span class="keyword">let</span> x = <span class="number">10</span>;</span><br><span class="line"><span class="keyword">let</span> y = <span class="number">20</span>;</span><br><span class="line"></span><br><span class="line"><span class="comment">//把react.createElement方法改成自己的方法</span></span><br><span class="line"><span class="comment">//把react.Fragment改为直接填写</span></span><br><span class="line"><span class="comment">//可以见到react已经没有被调用了</span></span><br><span class="line"><span class="keyword">let</span> jsxObj = <span class="title function_">createElement</span>(</span><br><span class="line">    <span class="comment">//   React.Fragment,</span></span><br><span class="line">    <span class="string">&quot;div&quot;</span>,</span><br><span class="line">  <span class="literal">null</span>,</span><br><span class="line">  <span class="title function_">createElement</span>(</span><br><span class="line">      <span class="string">&quot;h2&quot;</span>,</span><br><span class="line">    &#123;<span class="attr">className</span>: <span class="string">&quot;title&quot;</span>,</span><br><span class="line">     <span class="attr">style</span>: styObj&#125;,</span><br><span class="line">    <span class="string">&quot;zono&quot;</span></span><br><span class="line">  ),</span><br><span class="line">  <span class="title function_">createElement</span>(</span><br><span class="line">    <span class="string">&quot;div&quot;</span>,</span><br><span class="line">    &#123;<span class="attr">className</span>: <span class="string">&quot;box&quot;</span>&#125;,</span><br><span class="line">    <span class="comment">// &quot;牛&quot;,</span></span><br><span class="line">    <span class="title function_">createElement</span>(<span class="string">&quot;span&quot;</span>, <span class="literal">null</span>, x),</span><br><span class="line">    <span class="title function_">createElement</span>(<span class="string">&quot;span&quot;</span>, <span class="literal">null</span>, y)</span><br><span class="line">  )</span><br><span class="line">);</span><br><span class="line"></span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(jsxObj);</span><br><span class="line"></span><br><span class="line"><span class="comment">//有了render方法，就不需要ReactDOM.render了</span></span><br><span class="line"><span class="comment">// root.render(jsxObj);</span></span><br><span class="line"><span class="title function_">render</span>(jsxObj,<span class="variable language_">document</span>.<span class="title function_">getElementById</span>(<span class="string">&quot;root&quot;</span>));</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<h1 id="踩坑"><a href="#踩坑" class="headerlink" title="踩坑"></a>踩坑</h1><p><img src="C:\Users\27421\AppData\Roaming\Typora\typora-user-images\image-20231204193150139.png" alt="image-20231204193150139"></p>
+<p>没想到运行时遇见这个，排错后发现是<code>src\jsxHandle.js</code>文件中，<code>each函数</code>的callback函数形参写反了</p>
+<p><img src="C:\Users\27421\AppData\Roaming\Typora\typora-user-images\image-20231204193911032.png" alt="image-20231204193911032"></p>
+<h1 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h1><ul>
+<li>底层真的用了很多js基础的内容</li>
+<li>数据结构的运用很重要</li>
+</ul>
+<blockquote>
+<p>因为自己写的处理jsx还是不够完善，后面的代码还是用会React官方的方法</p>
+</blockquote>
+
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
 
     
 
@@ -1210,227 +1630,6 @@
     
     <div class="post-body" itemprop="articleBody">
           <h1 id="SASS"><a href="#SASS" class="headerlink" title="SASS"></a>SASS</h1>
-      
-    </div>
-
-    
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-</div>
-
-
-
-
-    
-
-
-<div class="post-block">
-  
-  
-
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2023/11/30/%E4%BA%92%E8%81%94%E7%BD%91/%E5%90%8E%E7%AB%AF/nodejs/nodejs%E5%89%8D%E7%BD%AE/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/uploads/cat.jpg">
-      <meta itemprop="name" content="zono">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="ZONO's World">
-      <meta itemprop="description" content="人生长度无法强求,但厚度可以靠努力">
-    </span>
-
-    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
-      <meta itemprop="name" content="undefined | ZONO's World">
-      <meta itemprop="description" content="">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/2023/11/30/%E4%BA%92%E8%81%94%E7%BD%91/%E5%90%8E%E7%AB%AF/nodejs/nodejs%E5%89%8D%E7%BD%AE/" class="post-title-link" itemprop="url">nodejs前置学习</a>
-        </h2>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">Posted on</span>
-
-      <time title="Created: 2023-11-30 14:18:46" itemprop="dateCreated datePublished" datetime="2023-11-30T14:18:46+08:00">2023-11-30</time>
-    </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar-check"></i>
-      </span>
-      <span class="post-meta-item-text">Edited on</span>
-      <time title="Modified: 2023-12-01 21:49:15" itemprop="dateModified" datetime="2023-12-01T21:49:15+08:00">2023-12-01</time>
-    </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-folder"></i>
-      </span>
-      <span class="post-meta-item-text">In</span>
-        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/%E6%8A%80%E6%9C%AF/" itemprop="url" rel="index"><span itemprop="name">技术</span></a>
-        </span>
-          , 
-        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/%E6%8A%80%E6%9C%AF/%E5%90%8E%E7%AB%AF/" itemprop="url" rel="index"><span itemprop="name">后端</span></a>
-        </span>
-    </span>
-
-  
-</div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          <h1 id="Node-js"><a href="#Node-js" class="headerlink" title="Node.js"></a>Node.js</h1><h2 id="概念"><a href="#概念" class="headerlink" title="概念"></a>概念</h2><h3 id="1-Nodejs概述"><a href="#1-Nodejs概述" class="headerlink" title="1.  Nodejs概述"></a>1.  Nodejs概述</h3><h4 id="一些概念"><a href="#一些概念" class="headerlink" title="一些概念"></a>一些概念</h4><ul>
-<li>异步回调</li>
-</ul>
-<h4 id="适用场景（优缺点）"><a href="#适用场景（优缺点）" class="headerlink" title="适用场景（优缺点）"></a>适用场景（优缺点）</h4><ul>
-<li>不适合用于大型后端要求的项目，图像处理、视频转换等、文件压缩（用Ruby、PHP、python）</li>
-</ul>
-<h2 id="基础使用"><a href="#基础使用" class="headerlink" title="基础使用"></a>基础使用</h2><h3 id="0-模块导入"><a href="#0-模块导入" class="headerlink" title="0.模块导入"></a>0.模块导入</h3><p>一般有两种导入办法，commonjs和ESMoudle方法</p>
-<h3 id="1-repl"><a href="#1-repl" class="headerlink" title="1.repl"></a>1.repl</h3><h3 id="2-file"><a href="#2-file" class="headerlink" title="2.file"></a>2.file</h3><blockquote>
-<p><code>node:fs</code> 模块能够以标准 POSIX 函数为模型的方式与文件系统进行交互。</p>
-<p>人话：读写文档用的</p>
-</blockquote>
-<h4 id="同步办法"><a href="#同步办法" class="headerlink" title="同步办法"></a>同步办法</h4><p>同步（synchronous）代码也称为阻塞（blocking）代码，阻塞代码在执行完之前，后面的代码都不会执行</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> fs = <span class="built_in">require</span>(<span class="string">&quot;fs&quot;</span>);</span><br><span class="line"></span><br><span class="line"><span class="comment">//同步读取文件</span></span><br><span class="line"><span class="keyword">const</span> textIn = fs.<span class="title function_">readFileSync</span>(<span class="string">&quot;./txt/input.txt&quot;</span>, <span class="string">&quot;utf-8&quot;</span>);</span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(textIn); <span class="comment">//输出文件内容</span></span><br><span class="line"></span><br><span class="line"><span class="comment">//同步写入文件,</span></span><br><span class="line"><span class="keyword">const</span> textOut = <span class="string">`这是一个关于python输入输出的概述<span class="subst">$&#123;textIn&#125;</span>.\n写入时间是<span class="subst">$&#123;<span class="built_in">Date</span>.now()&#125;</span>`</span>;</span><br><span class="line">fs.<span class="title function_">writeFileSync</span>(<span class="string">&quot;./txt/output.txt&quot;</span>, textOut); <span class="comment">//python中的open(&quot;文件路径&quot;,&quot;w&quot;)方法</span></span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">&quot;文件写入成功&quot;</span>);</span><br></pre></td></tr></table></figure>
-
-<h4 id="异步办法"><a href="#异步办法" class="headerlink" title="异步办法"></a>异步办法</h4> <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//异步读取文件，读取完毕执行回调函数，回调函数中的第一个参数是错误信息，第二个参数是读取的数据</span></span><br><span class="line">fs.<span class="title function_">readFile</span>(<span class="string">&quot;./txt/start.txt&quot;</span>, <span class="string">&quot;utf-8&quot;</span>, <span class="function">(<span class="params">err, data</span>) =&gt;</span> &#123;</span><br><span class="line">  <span class="keyword">if</span> (err) <span class="keyword">return</span> <span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">&quot;读取文件失败&quot;</span>);</span><br><span class="line">  fs.<span class="title function_">readFile</span>(<span class="string">`./txt/<span class="subst">$&#123;data1&#125;</span>.txt`</span>, <span class="string">&quot;utf-8&quot;</span>, <span class="function">(<span class="params">err, data2</span>) =&gt;</span> &#123;</span><br><span class="line">      <span class="variable language_">console</span>.<span class="title function_">log</span>(data2);</span><br><span class="line">      fs.<span class="title function_">readFile</span>(<span class="string">&quot;./txt/append.txt&quot;</span>, <span class="string">&quot;utf-8&quot;</span>, <span class="function">(<span class="params">err, data3</span>) =&gt;</span> &#123;</span><br><span class="line">          <span class="variable language_">console</span>.<span class="title function_">log</span>(data3);</span><br><span class="line">          fs.<span class="title function_">writeFile</span>(<span class="string">&quot;./txt/final.txt&quot;</span>, <span class="string">`<span class="subst">$&#123;data2&#125;</span>\n<span class="subst">$&#123;data3&#125;</span>`</span>, <span class="string">&quot;utf-8&quot;</span>, <span class="function"><span class="params">err</span> =&gt;</span> &#123;</span><br><span class="line">              <span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">&quot;文件写入成功&quot;</span>);</span><br><span class="line">          &#125;);</span><br><span class="line">      &#125;);</span><br><span class="line">  &#125;);</span><br><span class="line">  <span class="variable language_">console</span>.<span class="title function_">log</span>(data);</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
-
-<blockquote>
-<p>光看可能还是不容易理解，这里记住同步就是要把文件读完后才会执行下面代码，异步就是会边读文件边运行回调函数</p>
-</blockquote>
-<h3 id="3-Server"><a href="#3-Server" class="headerlink" title="3.Server"></a>3.Server</h3><p>尝试第一个接口编写</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> http = <span class="built_in">require</span>(<span class="string">&quot;http&quot;</span>);</span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> server = http.<span class="title function_">createServer</span>(<span class="function">(<span class="params">req, res</span>) =&gt;</span> &#123;</span><br><span class="line">  <span class="variable language_">console</span>.<span class="title function_">log</span>(req);</span><br><span class="line">  <span class="comment">// console.log(res);</span></span><br><span class="line">  res.<span class="title function_">end</span>(<span class="string">&quot;Hello World&quot;</span>);</span><br><span class="line">&#125;);</span><br><span class="line"></span><br><span class="line">server.<span class="title function_">listen</span>(<span class="number">8000</span>, <span class="function">() =&gt;</span> &#123;</span><br><span class="line">  <span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">&quot;Server is running...&quot;</span>);</span><br><span class="line">&#125;);</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-
-<h3 id="4-Url"><a href="#4-Url" class="headerlink" title="4.Url"></a>4.Url</h3><p>这时我们可以尝试使用Url了</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> http = <span class="built_in">require</span>(<span class="string">&quot;http&quot;</span>);</span><br><span class="line"><span class="keyword">const</span> url = <span class="built_in">require</span>(<span class="string">&quot;url&quot;</span>);</span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> server = http.<span class="title function_">createServer</span>(<span class="function">(<span class="params">req, res</span>) =&gt;</span> &#123;</span><br><span class="line">  <span class="keyword">const</span> pathName = req.<span class="property">url</span>; <span class="comment">//获取请求的路径</span></span><br><span class="line">  <span class="keyword">if</span> (pathName === <span class="string">&quot;/&quot;</span> || pathName === <span class="string">&quot;/overview&quot;</span>) &#123;</span><br><span class="line">    res.<span class="title function_">end</span>(<span class="string">&quot;This is the OVERVIEW&quot;</span>); <span class="comment">//返回响应</span></span><br><span class="line">  &#125; <span class="keyword">else</span> <span class="keyword">if</span> (pathName === <span class="string">&quot;/product&quot;</span>) &#123;</span><br><span class="line">    res.<span class="title function_">end</span>(<span class="string">&quot;This is the PRODUCT&quot;</span>);</span><br><span class="line">  &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">    res.<span class="title function_">writeHead</span>(<span class="number">404</span>, &#123;</span><br><span class="line">      <span class="comment">//设置响应头</span></span><br><span class="line">      <span class="string">&quot;Content-type&quot;</span>: <span class="string">&quot;text/html&quot;</span>, <span class="comment">//设置响应类型</span></span><br><span class="line">      <span class="string">&quot;my-own-header&quot;</span>: <span class="string">&quot;hello-world&quot;</span>, <span class="comment">//设置自定义响应头</span></span><br><span class="line">    &#125;);</span><br><span class="line">    res.<span class="title function_">end</span>(<span class="string">&quot;&lt;h1&gt;Page not found!&lt;/h1&gt;&quot;</span>); <span class="comment">//返回响应</span></span><br><span class="line">  &#125;</span><br><span class="line">&#125;);</span><br><span class="line"></span><br><span class="line">server.<span class="title function_">listen</span>(<span class="number">8000</span>, <span class="function">() =&gt;</span> &#123;</span><br><span class="line">  <span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">&quot;Server is running...&quot;</span>);</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
-
-<p><code>__dirname</code>:当前文件所在位置</p>
-<h3 id="5-第一个APi"><a href="#5-第一个APi" class="headerlink" title="5.第一个APi"></a>5.第一个APi</h3><blockquote>
-<p>视频的013：9：56</p>
-<p>可以利用同步的缓存来优化文件输出，不用每次都得读一次文件，而是缓存后直接输出。 </p>
-</blockquote>
-<h3 id="6-path模块"><a href="#6-path模块" class="headerlink" title="6.path模块"></a>6.path模块</h3><blockquote>
-<p>对路径操作</p>
-</blockquote>
-<p>path.resolve()</p>
-<h3 id="7-使用npm"><a href="#7-使用npm" class="headerlink" title="7.使用npm"></a>7.使用npm</h3><blockquote>
-<p>npm（node package manager）node包管理器。我们可以从上面下载模块，并导入使用</p>
-</blockquote>
-<p>npm在node安装时，会自动安装。这里我们使用npm安装<code>nodemon</code>、<code>slugify</code>来优化项目。</p>
-<p><code>nodemon</code>：用于服务器热更新<br><code>slugify</code>:用于解析字符串、转换为url友好</p>
-<blockquote>
-<p>学了半天都是再讲概念（都是自己知道的，因为写过python后端），我真的会谢</p>
-</blockquote>
-
-      
-    </div>
-
-    
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-</div>
-
-
-
-
-    
-
-
-<div class="post-block">
-  
-  
-
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2023/11/29/%E4%BA%92%E8%81%94%E7%BD%91/%E9%80%9A%E7%94%A8%E6%8A%80%E6%9C%AF/%E7%AE%97%E6%B3%95/123/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/uploads/cat.jpg">
-      <meta itemprop="name" content="zono">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="ZONO's World">
-      <meta itemprop="description" content="人生长度无法强求,但厚度可以靠努力">
-    </span>
-
-    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
-      <meta itemprop="name" content="undefined | ZONO's World">
-      <meta itemprop="description" content="">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/2023/11/29/%E4%BA%92%E8%81%94%E7%BD%91/%E9%80%9A%E7%94%A8%E6%8A%80%E6%9C%AF/%E7%AE%97%E6%B3%95/123/" class="post-title-link" itemprop="url">Untitled</a>
-        </h2>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">Posted on</span>
-      
-
-      <time title="Created: 2023-11-29 22:21:37 / Modified: 22:48:35" itemprop="dateCreated datePublished" datetime="2023-11-29T22:21:37+08:00">2023-11-29</time>
-    </span>
-
-  
-</div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          var findMaxAverage = function (nums, k) {
-  var max = 0;
-  while (nums.length >= k) {
-    a = nums.slice(0, k);
-    n = sum(nums.slice(0, k));
-    console.log(n);
-    if (n > max) {
-      max = n;
-    }
-    nums.shift();
-  }
-  return max / k;
-};
-
-function sum(arr) {
-  var s = 0;
-  arr.forEach(function (val, idx, arr) {
-    s += val;
-  }, 0);
-  return s;
-}
-console.log(findMaxAverage([1, 12, -5, -6, 50, 3], 4));
-
       
     </div>
 
